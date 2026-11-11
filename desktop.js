@@ -24,7 +24,7 @@ var h='<a class="dk-brand" href="'+BASE+'index.html">'+(src?'<img alt="" src="'+
 h+='<div class="dk-cd" title="Examen le 30 novembre 2026"><div class="dk-cdn">'+cdTxt()+'</div><div class="dk-cdl">Examen le 30 novembre 2026</div></div><div class="dk-links">';
 var a=active();NAV.forEach(function(n){var badge=n[0]==="err"?'<em class="dk-n" id="dk-errn">'+errN()+'</em>':"";
 h+='<a class="dk-l'+(n[0]===a?' dk-on':'')+'" data-k="'+n[0]+'" href="'+BASE+n[1]+'"'+(n[0]===a?' aria-current="page"':'')+'><i>'+n[2]+'</i><div>'+n[3]+'</div>'+badge+'</a>';});
-h+='</div><button type="button" class="dk-help" id="dk-helpbtn">⌨ Raccourcis clavier <kbd>?</kbd></button>';
+h+='</div><button type="button" class="dk-help" id="dk-helpbtn">⌨ Raccourcis clavier <kbd>H</kbd></button>';
 side.innerHTML=h;D.body.appendChild(side);
 $("#dk-helpbtn").addEventListener("click",function(){toggleHelp();});
 if(type==="index")$$(".dk-l",side).forEach(function(l){var k=l.getAttribute("data-k");if(k==="home"||k==="themes"||k==="exams")l.addEventListener("click",function(e){if(typeof window.show==="function"){e.preventDefault();window.show(k);window.scrollTo(0,0);mark();}});});}
@@ -33,7 +33,7 @@ var SHORT={serie:[["1 – 4 ou A – D","cocher / décocher une réponse"],["Ent
 exam:[["1 – 4 ou A – D","cocher / décocher une réponse"],["Entrée, ↓ ou →","question suivante"],["↑ ou ←","question précédente"],["","La correction reste sur le bouton « Corriger le tout »"]],
 card:[["1 – 4 ou A – D","cocher / décocher une réponse"],["Entrée","valider, puis question suivante"],["→","question suivante (après validation)"]]};
 function toggleHelp(force){if(!help){help=el("div","");help.id="dk-helpov";help.setAttribute("role","dialog");help.setAttribute("aria-label","Raccourcis clavier");
-var rows=(SHORT[type]||[]).concat([["?","afficher / masquer cette aide"],["Échap","fermer"]]);
+var rows=(SHORT[type]||[]).concat([["H","afficher / masquer cette aide"],["Échap","fermer"]]);
 var h='<div class="dk-hbox"><div class="dk-htitle">Raccourcis clavier</div>'+(SHORT[type]?"":'<p class="dk-hnote">Les raccourcis de réponse fonctionnent sur les pages de QCM, d’examen, du mode aléatoire, des sigles et des erreurs.</p>')+'<table>';
 rows.forEach(function(r){h+="<tr><td>"+(r[0]?"<kbd>"+r[0]+"</kbd>":"")+"</td><td>"+r[1]+"</td></tr>";});h+='</table><button type="button" id="dk-hclose">Fermer</button></div>';
 help.innerHTML=h;D.body.appendChild(help);help.addEventListener("click",function(e){if(e.target===help||e.target.id==="dk-hclose")toggleHelp(false);});}
@@ -47,7 +47,7 @@ function move(d){var L=qs();if(!L.length)return;var i=cur?L.indexOf(cur):-1;if(i
 function onKey(e){if(!on||e.ctrlKey||e.metaKey||e.altKey)return;var t=e.target,tg=(t&&t.tagName)||"";
 if(e.key==="Escape"&&help&&help.classList.contains("dk-vis")){toggleHelp(false);return;}
 if(tg==="TEXTAREA"||tg==="SELECT"||(t&&t.isContentEditable)||(tg==="INPUT"&&t.type!=="checkbox"))return;
-if(e.key==="?"){e.preventDefault();toggleHelp();return;}
+if(e.key==="h"||e.key==="H"){e.preventDefault();toggleHelp();return;}
 if(help&&help.classList.contains("dk-vis"))return;
 if(type!=="serie"&&type!=="exam"&&type!=="card")return;
 var k=e.key,idx="1234".indexOf(k);if(idx<0&&k.length===1)idx="abcd".indexOf(k.toLowerCase());
