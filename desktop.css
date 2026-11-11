@@ -38,6 +38,7 @@ html.dk #mkbadge{left:12px!important;right:auto!important;bottom:12px!important;
 /* ---- éléments communs ---- */
 html.dk h1{font-size:1.75em!important;text-align:left!important;color:var(--navy);margin:4px 0 6px!important}
 html.dk .sub{text-align:left!important}
+html.dk .app-sub{text-align:left!important;margin:0 0 10px!important}
 html.dk a:focus-visible,html.dk button:focus-visible,html.dk summary:focus-visible,html.dk input:focus-visible,html.dk select:focus-visible,html.dk label:focus-within{outline:3px solid #2f6fd6;outline-offset:2px}
 html.dk button{cursor:pointer;transition:filter .15s,transform .15s,box-shadow .15s}
 html.dk button:hover:not(:disabled){filter:brightness(1.12)}

@@ -1,5 +1,5 @@
 # qcm-BC-suep2026
-QCM Brigadier-chef SUEP 2026 – examen le 30 novembre 2026
+QCM SUEP B/C – examen brigadier-chef le 30 novembre 2026
 
 Site : https://sanarkor.github.io/qcm-BC-suep2026/
 

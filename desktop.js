@@ -18,9 +18,9 @@ if(/^\d\d_/.test(file)&&!inDet)return "themes";if(/^examen_/.test(file))return "
 if(/^revisions/.test(file))return "rev";return {"aleatoire.html":"alea","sigles.html":"sigles","erreurs.html":"err","scores.html":"scores"}[file]||"";}
 var NAV=[["home","index.html","⌂","Accueil"],["themes","index.html#themes","☰","QCM par thème"],["alea","aleatoire.html","⤨","Mode aléatoire"],["exams","index.html#exams","⏱","Examens"],
 ["rev","revisions.html","✎","Révisions"],["revdet","revisions_detaillees.html","❐","Révisions détaillées"],["sigles","sigles.html","Aa","Sigles et acronymes"],["err","erreurs.html","↻","Mes erreurs"],["scores","scores.html","▦","Tableau de bord"]];
-function buildSide(){var ic=$('link[rel="icon"]'),src=ic?ic.getAttribute("href"):"";
+function buildSide(){var ic=$('link[rel="apple-touch-icon"]')||$('link[rel="icon"][sizes="192x192"]')||$('link[rel="icon"]'),src=ic?ic.getAttribute("href"):"";
 side=el("nav","");side.id="dk-side";side.setAttribute("aria-label","Navigation principale");
-var h='<a class="dk-brand" href="'+BASE+'index.html">'+(src?'<img alt="" src="'+src+'">':'')+'<div><div class="dk-t1">QCM Brigadier-chef</div><div class="dk-t2">SUEP 2026</div></div></a>';
+var h='<a class="dk-brand" href="'+BASE+'index.html">'+(src?'<img alt="" src="'+src+'">':'')+'<div><div class="dk-t1">QCM SUEP B/C</div><div class="dk-t2">30 novembre 2026</div></div></a>';
 h+='<div class="dk-cd" title="Examen le 30 novembre 2026"><div class="dk-cdn">'+cdTxt()+'</div><div class="dk-cdl">Examen le 30 novembre 2026</div></div><div class="dk-links">';
 var a=active();NAV.forEach(function(n){var badge=n[0]==="err"?'<em class="dk-n" id="dk-errn">'+errN()+'</em>':"";
 h+='<a class="dk-l'+(n[0]===a?' dk-on':'')+'" data-k="'+n[0]+'" href="'+BASE+n[1]+'"'+(n[0]===a?' aria-current="page"':'')+'><i>'+n[2]+'</i><div>'+n[3]+'</div>'+badge+'</a>';});
@@ -62,7 +62,7 @@ if(k==="ArrowUp"||k==="ArrowLeft"){if(type==="card")return;e.preventDefault();mo
 /* ---- historique des notes (enregistré seulement sur PC, dans une clé à part) ---- */
 function hist(){var tgt=type==="serie"?$("#score"):type==="exam"?$("#note"):null;if(!tgt)return;var last=tgt.textContent;
 try{new MutationObserver(function(){var x=tgt.textContent;if(!x||x===last)return;last=x;var m=x.match(/(\d+)\s*\/\s*(\d+)/);if(!m)return;var s=+m[1],n=+m[2];if(!n)return;
-var L=ld(KEYH,[]);if(!Array.isArray(L))L=[];L.push({k:file+location.search,t:(D.title||file).replace(/\s+–\s+Brigadier-chef SUEP 2026$/,""),s:s,n:n,sel:/Sélection/.test(x),d:Date.now()});
+var L=ld(KEYH,[]);if(!Array.isArray(L))L=[];L.push({k:file+location.search,t:(D.title||file).replace(/\s+–\s+Brigadier-chef SUEP 2026$/,"").replace(/\s+·\s+QCM SUEP B\/C$/,""),s:s,n:n,sel:/Sélection/.test(x),d:Date.now()});
 if(L.length>600)L=L.slice(-600);try{localStorage.setItem(KEYH,JSON.stringify(L));}catch(e){}}).observe(tgt,{childList:true,characterData:true,subtree:true});}catch(e){}}
 /* ---- fiches détaillées : sommaire actif ---- */
 var spy=null;
