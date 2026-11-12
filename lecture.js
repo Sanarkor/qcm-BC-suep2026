@@ -151,10 +151,23 @@ function romans(s){
   });
   return s;
 }
+/* « 1° », « 2° »… (énumérations juridiques) → premièrement, deuxièmement ; « 20 °C », « 3,5° », angles → degrés. */
+function degrees(s){
+  s=s.replace(/(\d+,\d+)\s?°/g,"$1 degrés").replace(/(\d+)\s?°\s?([CF])\b/g,"$1 degrés");
+  return s.replace(/(^|[^\d,])(\d{1,2})\s?°/g,function(m,pre,n,off,str){
+    var after=str.slice(off+m.length,off+m.length+30);
+    if(/cm|écart|angle/i.test(after))return pre+n+" degrés";
+    var k=parseInt(n,10);if(!k)return m;
+    /* Catégorie d'arme (A2 4°, B 6°) : « quatrième », pas « quatrièmement ». */
+    if(/\b[A-D]\s?\d?\s*\(?\s*$/.test(str.slice(Math.max(0,off-8),off)+pre))return pre+ordFr(k);
+    return pre+ordFr(k,true)+"ment";
+  });
+}
 function speakable(raw){
   var s=String(raw||"").replace(/\s+/g," ").trim();
   if(!s)return "";
   s=unspace(s);
+  s=degrees(s);
   s=s.replace(/art\.\s*/gi,"article ");
   s=romans(s);
   /* « n° 12 », « no 12 » → numéro (sans toucher « normales », « nous »…) */
@@ -369,7 +382,7 @@ function updateBtns(){
   var on=st.mode!=="idle";
   $$(".lec-mini,.lec-page").forEach(function(b){
     var src=b.getAttribute("data-lec");
-    var active=on&&((src==="page"&&st.src==="page")||(st.det&&st.det.getAttribute("data-lec-id")===src)||(src&&src.indexOf("h-")===0&&st.src===src));
+    var active=on&&((src&&src.indexOf("opti")===0&&st.src===src)||(src==="page"&&st.src==="page")||(st.det&&st.det.getAttribute("data-lec-id")===src)||(src&&src.indexOf("h-")===0&&st.src===src));
     b.setAttribute("aria-pressed",active?"true":"false");
   });
   updateBack();
@@ -831,6 +844,7 @@ function initGuest(){
   D.documentElement.classList.add("lec-ok","lec-guest");
   injectButtons();
   injectHelp();
+  loadOpti();
   D.addEventListener("keydown",function(e){
     if(e.ctrlKey||e.metaKey||e.altKey)return;
     var el=e.target,tg=(el&&el.tagName)||"";
@@ -838,6 +852,79 @@ function initGuest(){
     var help=$("#dk-helpov");if(help&&help.classList.contains("dk-vis"))return;
     if(e.key==="l"||e.key==="L"){e.preventDefault();try{GUEST.toggle();}catch(x){}}
   });
+}
+/* ===== Lecture optimisée (révisions synthétiques) : scripts rédigés dans lecture_opti/<page>.json ===== */
+var OPTI=null;
+var ICO_OPTI=svg('<path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/>');
+function optiUrl(){
+  var me=D.querySelector('script[src*="lecture.js"]'),src=me?me.getAttribute("src"):"lecture.js";
+  var base=src.replace(/lecture\.js.*$/,""),ver=(src.match(/[?&]v=([^&]+)/)||[])[1]||"";
+  var name=(location.pathname.split("/").pop()||"").replace(/\.html?$/,"");
+  return base+"lecture_opti/"+name+".json"+(ver?"?v="+ver:"");
+}
+function loadOpti(){
+  if(/\/detaillees\//.test(location.pathname)||!window.fetch)return;
+  fetch(optiUrl(),{cache:"no-cache"}).then(function(r){return r.ok?r.json():null;}).then(function(d){
+    if(!d||!d.sections)return;
+    OPTI=d;injectOpti();
+  }).catch(function(){});
+}
+function optiDet(n){
+  var ds=$$("details"),k,b;
+  for(k=0;k<ds.length;k++){b=ds[k].querySelector("summary .n");if(b&&b.textContent.trim()===String(n))return ds[k];}
+  return null;
+}
+function optiEl(det,a){
+  if(!det)return null;
+  var sum=det.querySelector("summary");
+  if(a==="s"||a==="r")return sum;
+  var m=/^([tn]?)(\d+)$/.exec(a);if(!m)return sum;
+  var k=parseInt(m[2],10),list=m[1]==="t"?$$("table",det):m[1]==="n"?$$("p.note",det):$$(".c li",det);
+  return list[k]||sum;
+}
+function optiSection(sec){
+  var det=optiDet(sec.n),label=det?titleOf(det,true):("Fiche "+sec.n),out=[];
+  sec.items.forEach(function(it){
+    var el=optiEl(det,it.a),sp=speakable(it.t);if(!sp)return;
+    splitText(sp).forEach(function(part){out.push({el:el,speak:part,label:label});});
+  });
+  return out;
+}
+function startOpti(n){
+  if(!OPTI)return;
+  var list=[],h1=$("h1");
+  if(n==null){
+    if(OPTI.intro)splitText(speakable(OPTI.intro)).forEach(function(p){list.push({el:h1,speak:p,label:"Lecture optimisée"});});
+    OPTI.sections.forEach(function(sec){list=list.concat(optiSection(sec));});
+    startList(list,"opti",null,"Lecture optimisée",0,true);
+  }else{
+    OPTI.sections.forEach(function(sec){if(String(sec.n)===String(n))list=optiSection(sec);});
+    var det=optiDet(n);if(det)det.open=true;
+    startList(list,"opti-"+n,det,det?titleOf(det,true):"Lecture optimisée",0,true);
+  }
+}
+function injectOpti(){
+  if(!OPTI||D.querySelector(".lec-opti"))return;
+  var pb=D.querySelector(".lec-page");
+  if(pb){
+    var b=D.createElement("button");
+    b.type="button";b.className="lec-page lec-opti";b.setAttribute("data-lec","opti");
+    b.setAttribute("aria-label","Lecture optimisée de la page");b.title="Lecture optimisée : le cours expliqué à l’oral, sans les tableaux lus ligne par ligne";
+    b.innerHTML=ICO_OPTI+" Lecture optimisée";
+    b.addEventListener("click",function(e){e.preventDefault();startOpti(null);});
+    pb.insertAdjacentElement("afterend",b);
+  }
+  OPTI.sections.forEach(function(sec){
+    var det=optiDet(sec.n),sum=det&&det.querySelector("summary");if(!sum||sum.querySelector(".lec-opti"))return;
+    var m=D.createElement("button");
+    m.type="button";m.className="lec-mini lec-opti";m.setAttribute("data-lec","opti-"+sec.n);
+    m.setAttribute("aria-label","Lecture optimisée de cette fiche");m.title="Lecture optimisée de cette fiche";
+    m.innerHTML=ICO_OPTI;
+    m.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();startOpti(sec.n);});
+    var first=sum.querySelector(".lec-mini");
+    if(first)first.insertAdjacentElement("afterend",m);else sum.appendChild(m);
+  });
+  updateBtns();
 }
 function isPhone(){
   try{
@@ -858,6 +945,7 @@ function init(){
   st.rate=(stored.rate&&RATES.indexOf(String(stored.rate))>=0)?String(stored.rate):DEF_RATE;
   injectButtons();
   buildBar();
+  loadOpti();
   watchVoices();
   var mq=window.matchMedia&&window.matchMedia("(min-width:1024px)");
   D.addEventListener("keydown",function(e){

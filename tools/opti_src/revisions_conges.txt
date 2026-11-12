@@ -1,0 +1,159 @@
+= Révisions synthétiques sur les congés et le temps de travail. On va parcourir les 14 fiches, une par une, en allant à l'essentiel.
+
+# 1
+@s Fiche 1 : la durée du travail et le travail de nuit. On va voir le texte de référence, les grandes durées à connaître, puis les règles propres à la nuit.
+@0 Tout part de l'APORTT, l'arrêté du 5 septembre 2019, applicable depuis le 1er janvier 2020. Il s'applique à la DGPN, à la DGSI et à la préfecture de police, et seulement en partie à la DCCRS.
+@1 Premier chiffre clé : la durée annuelle de travail est de 1607 heures, quel que soit le régime. C'est ce qui reste après déduction des repos, des congés annuels, des jours fériés et des ARTT.
+@2 Sur la semaine, la durée moyenne est de 48 heures au maximum par période de 7 jours, services supplémentaires compris. Attention : cette moyenne se calcule sur le semestre révolu, hors congés annuels et congés maladie.
+@3 La DMJ, la durée moyenne journalière, vaut un cinquième de la durée hebdomadaire en régime hebdomadaire. En régime cyclique, elle est tout simplement égale à la durée de la vacation.
+@4 Passons à la nuit. La période nocturne va de 21 heures à 6 heures.
+@5 On est travailleur de nuit si l'on fait au moins 3 heures dans cette période, 2 fois par semaine, ou bien 270 heures de nuit par année civile, hors services supplémentaires.
+@6 Le travail de nuit est limité à 8 heures en moyenne par 24 heures, moyenne calculée sur 3 mois civils. C'est le chef de service qui la suit, et si elle est dépassée, il impose des congés.
+@7 Enfin, un entretien annuel de suivi du temps de travail a lieu au moins une fois par an, avec l'outil GesTT.
+@r Ce qu'il faut retenir : l'APORTT du 5 septembre 2019 ; 1607 heures par an ; 48 heures maximum par semaine en moyenne sur le semestre ; la nuit, c'est de 21 heures à 6 heures ; et 8 heures de nuit au maximum en moyenne, sur 3 mois.
+
+# 2
+@s Fiche 2 : les repos et la pause.
+@0 Le repos journalier, c'est 11 heures consécutives par période de 24 heures, à compter de la prise de service effective.
+@1 Le repos hebdomadaire associe le RL, le repos légal, et le RC, le repos compensateur. Le minimum garanti est de 35 heures par période de 7 jours : 24 heures plus 11 heures.
+@2 Pour la pause : dès 6 heures de travail, on a droit à 20 minutes au minimum. Retenez bien la nuance : la pause est du temps de travail, alors que l'interruption de service est du temps de repos.
+@3 En régime hebdomadaire classique, l'interruption de service dure de 45 minutes à 2 heures, entre 11 heures 30 et 14 heures 30.
+@4 Enfin, le taux de présence est fixé par la direction. Il n'est jamais inférieur à 50 pour cent, et il n'est jamais de 100 pour cent, sauf décision du ministre en cas de circonstances exceptionnelles.
+@r Ce qu'il faut retenir : 11 heures de repos journalier ; 35 heures de repos hebdomadaire au minimum ; 20 minutes de pause dès 6 heures de travail ; la pause compte comme du travail, l'interruption comme du repos.
+
+# 3
+@s Fiche 3 : les dérogations, et la façon dont on restitue les repos manqués.
+@0 Plusieurs garanties peuvent faire l'objet de dérogations : le repos journalier, la pause, le repos hebdomadaire, la durée hebdomadaire, la durée maximale de nuit et les périodes de référence. Et cela vaut aussi pour la DCCRS.
+@1 Les cas de dérogation sont les suivants : le CCD et les chefs de service de l'article 10, les circonstances exceptionnelles, et les missions spécifiques.
+@2 Mais l'engagement reste limité : 12 jours pour les repos journaliers, et 21 jours pour les repos hebdomadaires, à compter du début de la mission.
+@3 À la fin de la mission, les repos manqués sont restitués immédiatement. C'est la période de neutralisation : pendant ce temps, un rappel n'est possible que sur décision du DGPN, du DGSI ou du préfet de police.
+@4 Pour chaque heure de repos journalier manqué, le coefficient est de 0,15, soit 9 minutes par heure.
+@5 Et un repos hebdomadaire manqué, accolé au repos de la période, est restitué à hauteur de 59 heures au minimum : 11, plus 24, plus 24.
+@r Ce qu'il faut retenir : 12 jours au plus pour le repos journalier, 21 jours pour le repos hebdomadaire ; restitution immédiate après la mission ; 0,15 par heure de repos journalier manqué ; 59 heures au minimum pour un repos hebdomadaire manqué.
+
+# 4
+@s Fiche 4 : les régimes hebdomadaires.
+@0 Le principe : 5 jours de travail, un RL le dimanche, et un RC le samedi ou le lundi. Il existe une variante en grande semaine, six-deux, et en petite semaine, quatre-deux.
+@1 La journée peut être avec interruption, c'est-à-dire coupée en 2 parties égales, à une heure près, ou sans interruption. Le régime sans interruption a été créé par l'APORTT ; il s'applique aussi quand la journée commence avant 7 heures ou se termine après 19 heures.
+@2 Avec les horaires variables, il y a 2 plages fixes de 2 heures, on badge 4 fois par jour, et la période de référence est de 4 semaines glissantes.
+@3 Si vous accumulez un crédit d'au moins un dixième de l'horaire hebdomadaire, vous gagnez une demi-journée de récupération, la RCB, à prendre dans les 4 semaines. Avec un plafond : 8 demi-journées par an.
+@4 À l'inverse, un débit d'au moins un dixième, mais de moins d'un cinquième, fait retirer une demi-journée d'ARTT. À partir d'un cinquième, c'est une ARTT entière, ou plus, qui est retirée.
+@5 Attention : les rappels et les reports de repos ne peuvent jamais porter sur plus de 2 semaines consécutives, sauf décision du ministre.
+@t0 Voyons maintenant les ARTT selon le régime. À 38 heures, pour les CEA et les PA, la vacation moyenne est de 7 heures 36 ; les CEA ont 17 ARTT attribués et 9 disponibles, les PA 17 attribués et 17 disponibles. À 39 heures, pour les PA, la vacation est de 7 heures 48, avec 22 ARTT, tous disponibles. À 39 heures 25, pour les CEA, la vacation est de 7 heures 53, avec 24 ARTT attribués et 16 disponibles. Et à 40 heures 30, pour les PA, la vacation est de 8 heures 06, avec 29 ARTT, tous disponibles.
+@n0 À noter : 8 ARTT sont indemnisés d'office, 16 en CRS service général, et 1 jour est retiré au titre de la journée de solidarité. Les PA, eux, sont exclus du rachat.
+@r Ce qu'il faut retenir : un crédit d'un dixième donne une demi-journée de RCB, 8 au maximum par an ; un débit d'un cinquième fait perdre une ARTT ; jamais plus de 2 semaines consécutives de rappels ou de reports ; et 8 ARTT indemnisés d'office.
+
+# 5
+@s Fiche 5 : les régimes cycliques.
+@0 Ici, des équipes se succèdent de jour comme de nuit, dimanches et jours fériés compris. Et seuls les cycles listés par l'APORTT sont admis.
+@1 En cycle de jour, le repos de cycle dure 2 jours : d'abord le RC, puis le RL, sauf pour le quatre-deux compressé. En forte amplitude, c'est 2 RC plus le RL.
+@2 En cycle de nuit, il y a une descente de nuit après chaque période, puis RC et RL en fin de cycle.
+@3 Le quatre-deux, qu'il soit classique, panaché ou compressé, a une vacation moyenne de 8 heures 10, avec une prise de service du matin entre 5 heures 20 et 6 heures 30.
+@4 Les cycles deux-deux, trois-trois, et deux-deux-trois, deux-deux-trois, ont des vacations de 11 heures 08 ou de 12 heures 08, avec 2 pauses de 20 minutes.
+@5 La vacation forte suit le rythme deux-deux, trois-deux, trois-deux, pour une vacation moyenne de 9 heures 31.
+@6 La prise de service décalée reste exceptionnelle : elle se fait dans la même journée, et l'agent doit être avisé avant la fin de sa dernière vacation. Elle est compensée à 0,25 sur un RC, et à 0,60 sur un RL ou un jour férié.
+@t0 Côté congés annuels, tout dépend du cycle : 25 jours en régime hebdomadaire, 23 en quatre-deux, 18 pour les cycles deux-deux, trois-trois et deux-deux-trois, et 20 en vacation forte.
+@r Ce qu'il faut retenir : quatre-deux, 8 heures 10 ; cycles longs, 11 heures 08 ou 12 heures 08 ; vacation forte, 9 heures 31 ; prise décalée compensée à 0,25 sur RC et 0,60 sur RL ou férié ; et 25, 23, 18 ou 20 jours de congés selon le cycle.
+
+# 6
+@s Fiche 6 : la permanence et l'astreinte. Deux notions qu'il ne faut surtout pas confondre.
+@0 La permanence n'existe qu'en régime hebdomadaire. C'est une présence effective pendant les RC, les RL, les jours fériés et les nuits, de 21 heures à 6 heures. Les tableaux sont diffusés au plus tard 14 jours avant, et les PA n'y participent que s'ils sont volontaires.
+@1 Pour les CEA et les PA, la permanence est compensée à 175 pour cent sur un RL ou un jour férié, à 125 pour cent sur un RC, à 200 pour cent la nuit du samedi au dimanche, et à 150 pour cent les autres nuits.
+@2 Les repos hebdomadaires manqués pendant une permanence sont restitués immédiatement ; les autres compensations, dans les 21 jours.
+@3 L'astreinte, elle, se situe hors temps de travail : l'agent reste à son domicile ou à proximité. Mais attention, s'il intervient, l'intervention est du temps de travail effectif.
+@4 L'astreinte concerne les 3 corps actifs en régime hebdomadaire ; les PA et les réservistes en sont exclus. Là encore, les tableaux sont établis 14 jours avant.
+@5 Elle est en priorité indemnisée, sinon compensée en temps, et les deux s'excluent. Pour une semaine complète : 149 euros 48, ou 14 heures 27.
+@6 En cas de rappel sur astreinte, on compte 100 pour cent du temps d'intervention, plus une heure forfaitaire de trajet aller-retour. Pas de forfait en télé-intervention.
+@r Ce qu'il faut retenir : la permanence est une présence effective, en régime hebdomadaire uniquement ; l'astreinte est hors temps de travail, sauf intervention ; tableaux 14 jours avant ; une semaine d'astreinte, c'est 149 euros 48 ou 14 heures 27 ; et un rappel, c'est 100 pour cent plus une heure de trajet.
+
+# 7
+@s Fiche 7 : le dépassement horaire, le rappel et le report de repos.
+@0 Le dépassement horaire est compensé temps pour temps, selon le régime. Et pour les PA, toute heure commencée est due.
+@1 Les RCSS se prennent dans l'année civile ; à défaut, ils restent dus. Au-delà de 160 heures sur le compte actif, il faut les récupérer dans les 30 jours.
+@2 On parle de rappel quand l'agent est avisé après avoir quitté le service. Ne peuvent pas être rappelés : les congés annuels, les congés bonifiés, le CET et les congés du plan prévisionnel, sauf décision du ministre.
+@3 En revanche, le chef de service peut décider d'un rappel sur les repos de cycle, les jours fériés, le crédit férié, les ARTT, les heures supplémentaires et les RPS pris annuellement.
+@4 Le report de RL, lui, porte sur une journée ou une vacation entière, et l'agent est avisé pendant son service. Il donne droit à une compensation forfaitaire de 2 journées. Les PATS, les PA et les contractuels en sont exclus.
+@5 Cas particulier des cycles de nuit de moins de 11 heures 08 : si le rappel se termine avant 13 heures, l'agent a au moins 8 heures de repos ; s'il se termine après 13 heures, il est exempté la nuit suivante.
+@t0 Pour les taux de compensation, retenez la logique. Sur un RL ou un jour férié, c'est 200 pour cent pour le dépassement, en cyclique comme en hebdomadaire, et pour le rappel en hebdomadaire. Sur un RC, et la nuit, c'est toujours 150 pour cent. Pour les autres périodes : 150 pour cent en cyclique, mais 100 pour cent en hebdomadaire. Seule exception : le rappel en cyclique sur un RL ou un férié se compte en vacations, 1 vacation jusqu'à 4 heures, 2 au-delà.
+@r Ce qu'il faut retenir : le rappel, on est avisé après avoir quitté le service ; le report de RL, on est avisé pendant le service, avec 2 journées forfaitaires ; 200 pour cent sur RL ou férié, 150 pour cent sur RC et la nuit ; et au-delà de 160 heures de RCSS, récupération sous 30 jours.
+
+# 8
+@s Fiche 8 : les congés annuels et le plan prévisionnel.
+@0 Les congés annuels valent 5 fois les obligations hebdomadaires, comptés en jours ouvrés, pour l'année du 1er janvier au 31 décembre.
+@1 L'absence est limitée à 31 jours consécutifs, repos compris. Deux exceptions : un CET accolé à des congés annuels ou à des ARTT, et le congé bonifié.
+@2 Les jours pris hors période, c'est-à-dire en dehors du 1er mai au 31 octobre, rapportent un bonus : un jour de plus pour 5 à 7 congés pris hors période, et 2 jours à partir de 8.
+@3 Le report est autorisé par le chef de service, pour nécessités de service ; les jours reportés se prennent avant le 1er mai de l'année suivante.
+@4 En cas de maladie ou de maternité, les congés sont reportables dans la limite de 4 semaines, sur 15 mois.
+@5 Le plan prévisionnel est obligatoire et établi par le chef de service. Il court du 15 mars au 14 mars de l'année suivante, avec une validation au 15 mars ; ou bien il est découpé en 2 périodes, validées au 15 février et au 15 octobre.
+@6 Une fois au plan, les congés annuels et les congés planifiés ne peuvent être annulés ou rappelés que sur décision du ministre de l'Intérieur.
+@7 Si moins de 10 jours d'ARTT ou de RPS figurent au plan, le reliquat jusqu'à 10 est protégé, et il se pose en 2 fois au maximum.
+@8 Enfin, le congé bonifié : 31 jours au maximum, tous les 2 ans, après 24 mois de services ininterrompus.
+@r Ce qu'il faut retenir : 5 fois les obligations hebdomadaires ; 31 jours consécutifs au maximum ; bonus hors période, un jour de 5 à 7 congés, 2 jours dès 8 ; report à prendre avant le 1er mai suivant ; et un plan qui court du 15 mars au 14 mars.
+
+# 9
+@s Fiche 9 : les ARTT, le crédit férié et les RPS.
+@0 Les ARTT servent à ramener la durée de travail à 1607 heures. Elles se comptent en jours en régime hebdomadaire, et en heures en cyclique. Elles ne sont pas reportables : non prises, elles sont perdues, sauf si on les verse sur le CET.
+@1 La journée de solidarité retire 7 heures d'ARTT ; la différence est abondée en RCSS, sauf pour les vacations de 11 heures 08 et de 12 heures 08, la vacation forte et l'article 10.
+@2 Le crédit férié n'existe qu'en régime cyclique : 109 heures 12 en métropole, 116 heures 12 dans les DOM, et 123 heures 12 en Alsace-Moselle.
+@3 Il se prend dans l'année, sans report, sauf à la DGPN, à la préfecture de police et à la DGSI, et il ne va pas sur le CET. Attention : une maladie d'au moins 15 jours consécutifs le réduit d'un vingt-quatrième, soit 3 heures 33.
+@4 Les RPS, les repos de pénibilité spécifique : leurs coefficients ne se cumulent pas, et ils excluent les services supplémentaires. On peut les inscrire au plan, 10 jours au maximum, mais ils ne vont pas sur le CET.
+@t0 Retenez bien les coefficients RPS : 0,1 pour la nuit travaillée, entre 21 heures et 6 heures ; 0,4 pour le dimanche en régime cyclique ; 0,25 pour une prise décalée sur un RC ; 0,60 pour une prise décalée sur un RL ou un jour férié ; et 0,15 par heure de repos journalier manqué.
+@r Ce qu'il faut retenir : le crédit férié, c'est seulement en cyclique, 109 heures 12 en métropole, sans report ni CET ; et pour les RPS, 0,1 la nuit, 0,4 le dimanche, 0,25 et 0,60 pour les prises décalées, 0,15 par heure de repos manqué.
+
+# 10
+@s Fiche 10 : maternité, paternité, adoption et congé parental.
+@t0 Commençons par la maternité. Pour un premier ou un deuxième enfant : 6 semaines avant, puis 10 semaines après. À partir du troisième : 8 semaines avant, ou 10, puis 18 semaines après, ou 16. Pour des jumeaux : 12 semaines avant, 22 après. Et pour des triplés ou plus : 24 semaines avant, 22 après.
+@2 S'y ajoutent les congés pathologiques : 2 semaines de plus pendant la grossesse, et 4 semaines après. Ils comptent comme de la maternité, et non comme un CMO.
+@0 La paternité : 25 jours calendaires, 32 en cas de naissance multiple, plus 3 jours de naissance. Attention : 4 jours sont obligatoires, juste après les 3 jours de naissance.
+@1 Le reste, 21 ou 28 jours, se prend en une fois ou en 2 périodes d'au moins 5 jours, dans les 6 mois. La demande se fait 1 mois avant la naissance présumée.
+@3 L'adoption : 16 semaines pour 0 ou 1 enfant, 18 semaines à partir de 2 enfants, 22 semaines en cas d'adoption multiple. On ajoute 25 jours, ou 32, si le congé est partagé entre les 2 parents. Il peut commencer jusqu'à 7 jours avant l'arrivée.
+@4 Le congé parental est sans traitement, jusqu'aux 3 ans de l'enfant, par périodes de 2 à 6 mois, et il se demande 2 mois avant. L'avancement est conservé 5 ans au maximum sur la carrière.
+@5 Le congé de présence parentale est de droit : on le demande 15 jours avant, pour 310 jours ouvrés au maximum sur 36 mois.
+@6 Enfin, le congé de proche aidant : 3 mois renouvelables, 1 an au maximum sur la carrière, non rémunéré. Et le congé de solidarité familiale : 3 mois, renouvelables une fois, non rémunéré.
+@r Ce qu'il faut retenir : maternité pour un premier ou deuxième enfant, 6 semaines avant et 10 après ; paternité, 25 jours plus 3 jours de naissance, dont 4 jours obligatoires ; adoption, 16 semaines de base ; et congé parental jusqu'aux 3 ans de l'enfant, sans traitement.
+
+# 11
+@s Fiche 11 : les autorisations spéciales d'absence, les ASA.
+@0 Elles sont accordées par le chef de service. Pour les événements de famille, on peut y ajouter des délais de route de 48 heures au maximum, aller-retour.
+@t0 Pour ces événements de famille : le mariage ou le PACS de l'agent, 5 jours ouvrables ; le mariage d'un enfant, 3 jours ; le mariage d'un parent ou d'un allié jusqu'au troisième degré, 1 jour. Le décès du conjoint, du partenaire de PACS, du père ou de la mère, 3 jours ; et le décès d'un parent ou d'un allié jusqu'au troisième degré, 1 jour.
+@n0 Petit rappel sur les degrés : au premier degré, les parents, beaux-parents et enfants ; au deuxième, les frères et sœurs, beaux-frères et belles-sœurs, grands-parents et petits-enfants ; au troisième, les oncles, tantes, neveux et nièces.
+@2 Le décès d'un enfant ouvre droit à 12 jours ouvrables, 14 si l'enfant a moins de 25 ans, plus 8 jours fractionnables dans l'année.
+@3 L'annonce d'un cancer, d'un handicap ou d'une pathologie chronique chez un enfant : 5 jours ouvrables.
+@1 Pour garder un enfant malade : les obligations hebdomadaires plus un jour, soit 6 jours, doublés, donc 12, si l'agent assume seul la charge. C'est par famille et par année civile, sans report, pour un enfant de 16 ans au plus, et sans limite d'âge en cas de handicap.
+@4 Les ASA syndicales : 10 jours par an, ou 20 si le syndicat est au CCFP, sans cumul. Et la formation syndicale : 12 jours ouvrables par an, à demander 1 mois avant.
+@5 Pour un concours ou un examen : la durée de l'épreuve plus les délais de route, et 1 jour la veille pour les concours ouverts par le ministre de l'Intérieur.
+@6 Pendant la grossesse : une demi-journée au maximum pour les séances et examens ; et pour l'allaitement, une heure par jour.
+@7 Enfin, le don du sang total : 6 fois par an pour un homme, 4 pour une femme, avec 8 semaines d'intervalle ; le plasma, 24 fois par an ; les plaquettes, 12 fois par an. L'exemption correspond au temps utile.
+@r Ce qu'il faut retenir : mariage ou PACS de l'agent, 5 jours ; décès du conjoint, du père ou de la mère, 3 jours ; enfant malade, 6 jours, 12 si l'agent est seul ; décès d'un enfant, 12 jours, 14 s'il a moins de 25 ans ; et ASA syndicales, 10 jours, 20 pour un syndicat au CCFP.
+
+# 12
+@s Fiche 12 : le temps partiel.
+@0 Le temps partiel n'est jamais inférieur au mi-temps. Il se demande 2 mois avant, auprès du SGAMI, avec l'avis du chef de service.
+@1 Il est de droit pour raisons familiales : à 50, 60, 70 ou 80 pour cent, jusqu'aux 3 ans de l'enfant. Dans ce cas, le chef de service ne peut refuser que les modalités.
+@2 Sinon, il est accordé sur autorisation, de 50 à 90 pour cent, et le 90 pour cent n'existe que sur autorisation. Tout refus est précédé d'un entretien.
+@3 En cyclique, on travaille moins de jours, sans réduire la vacation ; en hebdomadaire, on réduit soit la durée quotidienne, soit le nombre de vacations.
+@4 Un jour férié qui tombe un jour non travaillé n'est pas compensé. Les droits à congés sont proportionnels, et les ASA enfant malade sont proratisées.
+@5 Le CMO, le CLM et le CLD n'interrompent pas le temps partiel ; en revanche, la maternité, la paternité et l'adoption le suspendent.
+@6 Enfin, pour une création d'entreprise : 3 ans, plus 1 an ; et la retraite progressive est possible dès 60 ans.
+@r Ce qu'il faut retenir : jamais moins qu'un mi-temps ; une demande 2 mois avant ; de droit à 50, 60, 70 ou 80 pour cent jusqu'aux 3 ans de l'enfant ; et 90 pour cent seulement sur autorisation.
+
+# 13
+@s Fiche 13 : la maladie, l'accident de service et le temps partiel thérapeutique.
+@0 En cas de maladie, on prévient sa hiérarchie avant l'heure de prise de service, et on envoie le certificat sous 48 heures. Attention : au deuxième retard dans les 24 mois, la rémunération est réduite de moitié.
+@1 Après 30 jours de maladie sur 12 mois consécutifs, une visite du médecin statutaire a lieu à la reprise.
+@t0 Voyons les 3 grands congés maladie. Le CMO dure au maximum 1 an, soit 12 mois : 3 mois à plein traitement, puis 9 mois à demi-traitement. Le CLM dure 3 ans : 1 an à plein traitement, 2 ans à demi-traitement. Le CLD dure 5 ans : 3 ans à plein traitement, 2 ans à demi-traitement.
+@2 Pour le CMO, le comité médical intervient après 6 mois consécutifs, et la reprise après 12 mois se fait sur son avis.
+@n0 Le CLD concerne la tuberculose, la maladie mentale, le cancer, la poliomyélite et le déficit immunitaire grave. Le CLM et le CLD s'accordent par périodes de 3 à 6 mois, et le renouvellement se demande 1 mois avant.
+@3 Le CITIS, le congé pour invalidité temporaire imputable au service : déclaration sous 15 jours pour un accident, sous 2 ans pour une maladie professionnelle, et certificat sous 48 heures. Il n'a pas de durée maximale, et il est à plein traitement.
+@4 Le temps partiel thérapeutique : de 50 à 90 pour cent, par périodes de 1 à 3 mois, et 1 an au maximum. Au-delà de 3 mois, un médecin agréé intervient. Il est lui aussi à plein traitement.
+@r Ce qu'il faut retenir : certificat sous 48 heures ; CMO 1 an, CLM 3 ans, CLD 5 ans ; CITIS sans durée maximale, à plein traitement ; et temps partiel thérapeutique, 1 an au maximum.
+
+# 14
+@s Fiche 14 : le compte épargne-temps, et le don de jours.
+@0 On ne peut avoir qu'un seul CET à la fois. On l'alimente du 1er au 31 janvier, en jours entiers.
+@1 Il est alimenté par les congés annuels au-delà de 20 jours pris, par les ARTT, et par 5 jours au maximum de RCSS. Sont interdits : le crédit férié, les RPS et les jours reçus par don.
+@2 Jusqu'à 15 jours, le CET ne s'utilise qu'en congés. À partir du seizième jour, on a le choix : le maintien, avec 10 jours de plus par an et un plafond de 60, l'indemnisation, ou la RAFP, pour les titulaires seulement.
+@3 L'indemnisation est de 150 euros par jour en catégorie A, 100 euros en B et 83 euros en C.
+@4 L'utilisation est possible dès le premier jour, par demi-journée, sans préavis, avec l'accord du supérieur ; un refus doit être motivé. Et attention : CET plus congés annuels peuvent dépasser 31 jours.
+@5 Le don de jours est anonyme. Seuls les congés annuels au-delà de 20 jours peuvent être donnés ; les RC issus d'heures supplémentaires, d'astreinte ou de permanence, eux, ne le peuvent pas. Maximum : 90 jours par enfant et par an.
+@r Ce qu'il faut retenir : alimentation en janvier ; congés au-delà de 20 jours ; jusqu'à 15 jours, uniquement en congés ; plafond de 60 jours ; 150, 100 ou 83 euros par jour selon la catégorie ; et pour le don, 90 jours au maximum par enfant et par an.

@@ -1,0 +1,53 @@
+= Révisions synthétiques sur le RGEPN et l'arme individuelle. 6 fiches, qui croisent deux textes : le RGEPN, et l'instruction générale de la DGPN numéro 3 de 2024.
+
+# 1
+@s Fiche 1 : les matériels, la responsabilité, la perte et le vol. C'est l'article 114-1 du RGEPN.
+@0 Le principe est simple : le policier est responsable des matériels et des véhicules administratifs qu'il utilise, et ils ne servent que dans l'exercice de la fonction.
+@1 En cas de perte ou de vol, surtout pour les matériels sensibles, c'est-à-dire l'armement, les transmissions et les véhicules, on le signale à la hiérarchie sans délai, dès la découverte. Attention : un retard qui retarde les diffusions ou les neutralisations peut être imputé à l'agent.
+@2 Une perte ou une détérioration due à une négligence, ou au non-respect des instructions, est une faute disciplinaire. Et la responsabilité pécuniaire peut aussi être engagée.
+@3 L'instruction va dans le même sens : usage de l'arme, perte ou vol, c'est un compte rendu immédiat à la hiérarchie. Hors service, tout incident, perte, vol ou dégradation, est signalé immédiatement ; et une négligence avérée engage la responsabilité disciplinaire, sur le fondement de l'article R. 434-5 du CSI.
+@r Ce qu'il faut retenir : le policier est responsable de ses matériels ; perte ou vol, on signale sans délai ; la négligence est une faute disciplinaire, et la responsabilité pécuniaire peut s'y ajouter.
+
+# 2
+@s Fiche 2 : l'arme individuelle, sa dotation, son port, et la responsabilité qui va avec. C'est l'article 114-4.
+@0 L'arme individuelle est attribuée en dotation. Elle est portée en service, et elle peut être portée hors service. Son usage est soumis à la légitime défense et aux textes en vigueur.
+@1 Le port hors service est subordonné à une déclaration préalable au chef de service.
+@2 Cas particulier des élèves gardiens de la paix : pas de port hors service, et l'arme est déposée à l'armurerie du lieu de formation pratique à la fin de chaque vacation. Le port hors service devient possible à partir de la nomination comme stagiaire. Pour les élèves et stagiaires officiers et commissaires, il faut une autorisation individuelle du directeur de l'ENSP.
+@3 Les modalités et les restrictions au port de l'arme et du gilet pare-balles sont fixées par des circulaires, des instructions, ou des décisions individuelles motivées, selon l'article R. 411-3 du CSI.
+@4 Retenez bien cette formule : le policier est responsable de son arme en tous temps, en tous lieux et en toutes circonstances, sauf si elle est déposée à l'armurerie ou dans un lieu sécurisé autorisé. Et si l'agent est dans une indisponibilité majeure, c'est l'autorité hiérarchique qui se substitue à lui pour conserver l'arme.
+@5 À noter enfin : l'article 114-4-1 est abrogé.
+@r Ce qu'il faut retenir : port en service, port possible hors service après déclaration préalable ; pas de port hors service pour les élèves gardiens de la paix ; et une responsabilité en tous temps, en tous lieux et en toutes circonstances.
+
+# 3
+@s Fiche 3 : les moyens de force intermédiaire, le retrait de l'arme, l'armement personnel et les armes collectives. Ce sont les articles 114-5 à 114-8.
+@0 L'article 114-5 prévoit une dotation, individuelle ou collective, de moyens de force intermédiaire, dont les effets sont proportionnés au but à atteindre : notamment les menottes, les bâtons de défense à poignée latérale, les aérosols lacrymogènes ou incapacitants, le LBD et le PIE. Leur usage relève de la légitime défense ou des autres textes en vigueur.
+@1 L'article 114-6 permet à l'autorité hiérarchique de retirer son arme à l'agent qui présente un état de dangerosité, pour lui-même ou pour autrui. Il n'est réarmé qu'après une visite d'aptitude favorable auprès du service médical de la police.
+@2 Toujours à l'article 114-6 : en cas de suspension, l'arme est retirée, et la carte professionnelle est retenue, en lien avec l'article 114-2.
+@3 L'article 114-7 interdit de porter en service un armement et des munitions autres que ceux fournis par l'administration, qu'ils soient individuels ou collectifs.
+@4 Enfin, l'article 114-8 : les armes collectives ne sont confiées que pour des opérations particulières, au cas par cas, sur décision du responsable hiérarchique qui commande l'opération.
+@r Ce qu'il faut retenir : 114-5, les moyens de force intermédiaire ; 114-6, le retrait de l'arme pour dangerosité ou suspension ; 114-7, uniquement l'armement fourni par l'administration ; 114-8, les armes collectives au cas par cas.
+
+# 4
+@s Fiche 4 : les principes généraux en service, selon l'instruction.
+@0 Le port et la détention de l'arme ne sont autorisés que sur le territoire national. Les exceptions passent par des conventions internationales : droit de suite, patrouilles mixtes, missions à l'étranger.
+@1 En service, on porte l'arme et le gilet pare-balles, sauf dispense exceptionnelle et motivée de la hiérarchie d'emploi. Et l'arme est toujours portée cartouche chambrée.
+@2 En uniforme, on utilise l'étui administratif, en port médian déporté ou mi-cuisse articulé. En civil, l'étui est au choix ; mais si l'étui n'est pas fourni par l'administration, il faut une autorisation expresse du chef de service, après une séance de tir avec les FTSI.
+@3 Les contenants non agréés sont proscrits : sac à dos, sac à main, boîte à gants.
+@4 Enfin, la formation continue impose 3 séances et 90 cartouches au minimum par an, réparties sur l'année.
+@r Ce qu'il faut retenir : territoire national uniquement ; arme et gilet en service, cartouche chambrée ; pas de sac ni de boîte à gants ; et 3 séances, 90 cartouches minimum par an.
+
+# 5
+@s Fiche 5 : le port de l'arme hors service.
+@0 Pour le trajet domicile-travail, le port est autorisé sans déclaration. Mais si l'interruption de travail dépasse le repos de cycle ou le repos hebdomadaire, l'arme est déposée au service.
+@1 Dans les autres cas, il faut une déclaration préalable et écrite au chef de service, lors de la première affectation, puis à chaque nouvelle affectation. La fin de la conservation hors service doit aussi être déclarée. Et l'agent reçoit le vade-mecum.
+@2 Trois conditions cumulatives sont exigées : premièrement, la déclaration préalable ; deuxièmement, les tirs réglementaires sur les 12 derniers mois ; troisièmement, au moins une séance de tir dans les 4 derniers mois. Le port est alors possible en tout temps, sur tout le territoire national.
+@3 Attention : même si ces conditions sont réunies, le chef de service peut s'opposer au port. Il s'appuie alors sur l'article R. 434-64 du CSI, pour l'intégrité physique et la santé de ses subordonnés, ou sur l'article 114-6 du RGEPN, pour la dangerosité. L'opposition est écrite, avec un retrait conservatoire. Il peut aussi interdire le port après coup, en cas de faute.
+@4 Hors service, on a sur soi la carte professionnelle et le brassard police. L'arme n'est pas visible dans les lieux publics et les ERP ; on ne s'en sépare jamais, y compris au filtrage d'un ERP ; on ne la laisse jamais là où l'on n'est pas, hors domicile. Et au domicile, elle n'est jamais approvisionnée et chargée : elle est toujours séparée des munitions.
+@r Ce qu'il faut retenir : trajet domicile-travail sans déclaration ; sinon, trois conditions cumulatives, déclaration, tirs des 12 derniers mois, une séance dans les 4 derniers mois ; le chef de service peut s'opposer ; et à domicile, arme toujours séparée des munitions.
+
+# 6
+@s Fiche 6 : le dispositif Voyager-Protéger.
+@0 Il est en vigueur depuis le 1er janvier 2022. Il permet de voyager gratuitement sur certains réseaux SNCF, pour le trajet domicile-travail et pour les déplacements privés sur le réseau national. Il concerne les 3 corps actifs, mais pas les policiers adjoints ni les réservistes.
+@1 En contrepartie, il faut se présenter au chef de bord, sur le quai ou dans le train, avant de s'installer, et porter son arme. On a sur soi la carte professionnelle et le brassard ; l'arme est transportée réglementairement, donc pas dans un sac ; et à destination, elle est placée en lieu sécurisé.
+@2 L'intervention se justifie en cas de crime ou de délit flagrant, de personne en danger, ou de trouble à l'ordre public. On met le brassard et, si possible, le gilet. Et on rend compte par message électronique, ou par un rapport si l'intervention est complexe.
+@r Ce qu'il faut retenir : depuis le 1er janvier 2022 ; 3 corps actifs, sans les PA ni les réservistes ; on se présente au chef de bord avec son arme ; et compte rendu par message électronique.

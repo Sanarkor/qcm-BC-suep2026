@@ -51,3 +51,6 @@ html.lec-off .lec-page,html.lec-off .lec-mini,html.lec-off #lec-bar{display:none
 #lec-frame[hidden]{display:none!important}
 html.lec-framed,html.lec-framed body{overflow:hidden!important}
 #lec-bar .lec-back[hidden]{display:none!important}
+.lec-page.lec-opti{margin-left:8px;background:#1f5e3a}
+summary .lec-mini.lec-opti{margin-left:4px;color:#1f5e3a;background:rgba(31,94,58,.10)}
+summary .lec-mini.lec-opti[aria-pressed="true"],.lec-page.lec-opti[aria-pressed="true"]{background:#a3312a;color:#fff}
