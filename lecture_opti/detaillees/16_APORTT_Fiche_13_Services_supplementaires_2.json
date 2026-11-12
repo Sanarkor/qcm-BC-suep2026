@@ -1,0 +1,49 @@
+{
+"v": 1,
+"page": "detaillees/16_APORTT_Fiche_13_Services_supplementaires_2.html",
+"intro": "APORTT, fiche 13 : services supplémentaires, deuxième partie. Le dépassement horaire, puis le rappel au service et le report de repos.",
+"sections": [
+{
+"n": "1",
+"items": [
+{
+"a": "b0",
+"t": "Le dépassement horaire, c'est le temps fait au-delà de la durée réglementaire de la vacation ou de la journée. Il se calcule sur le temps réellement effectué."
+},
+{
+"a": "b1",
+"t": "Exception : pour les PATS, les ADS et les autres contractuels, l'heure n'est pas sécable au-delà de la journée paramétrée. Toute heure commencée est due."
+},
+{
+"a": "b2",
+"t": "Sont exclus du dépassement horaire : le CCD, les commissaires de l'article 10 et les PATS de l'article 10."
+}
+]
+},
+{
+"n": "2",
+"items": [
+{
+"a": "b0",
+"t": "Le rappel au service. Tout personnel peut être rappelé, en dehors des heures normales, pour les nécessités du service ou pour une convocation administrative ou judiciaire. Le taux de compensation est le même quel que soit le motif. Et les agents doivent tenir à jour les moyens de les joindre."
+},
+{
+"a": "b1",
+"t": "Le report de repos. Les policiers actifs ont une journée de repos légal par semaine, qui peut exceptionnellement être reportée si l'intérêt du service l'exige."
+},
+{
+"a": "b2",
+"t": "Ce report porte seulement sur une journée ou une vacation entière de repos légal. L'agent est prévenu pendant son service, le plus tôt possible, ou au plus tard avant la fin de sa dernière vacation ou journée. Sont exclus du report : les PATS, les ADS et les autres contractuels."
+},
+{
+"a": "b3",
+"t": "Enfin, sont exclus du rappel et du report les agents qui ont posé certains congés d'hiver sur le plan prévisionnel, et plus largement certains autres congés, les congés annuels par exemple, même hors plan."
+},
+{
+"a": "r",
+"t": "Ce qu'il faut retenir : dépassement au temps réel, mais heure due dès qu'elle est commencée pour les PATS, ADS et contractuels ; rappel possible pour tous, même taux quel que soit le motif ; report d'une journée entière de repos légal seulement, agent prévenu avant la fin de sa dernière vacation ; et pas de report pour les PATS, ADS et contractuels."
+}
+]
+}
+]
+}

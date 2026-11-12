@@ -1,0 +1,49 @@
+{
+"v": 1,
+"page": "detaillees/15_APORTT_Fiche_12_Services_supplementaires_1.html",
+"intro": "APORTT, fiche 12 : services supplémentaires, première partie. La permanence, puis l'astreinte.",
+"sections": [
+{
+"n": "1",
+"items": [
+{
+"a": "b0",
+"t": "La permanence n'existe qu'en régime hebdomadaire. Elle impose une présence effective au service, périodiquement et à tour de rôle, selon des listes établies au moins 14 jours avant, pendant les RC, les RL, les jours fériés, et la nuit de 21 heures à 6 heures. Elle concerne tous les personnels, et les ADS seulement sur volontariat."
+},
+{
+"a": "b1",
+"t": "L'amplitude de la journée de permanence correspond à la DMJ de l'agent. Pour les commissaires hors article 10, elle ne doit pas dépasser 12 heures."
+},
+{
+"a": "b2",
+"t": "Les repos hebdomadaires manqués à cause d'une permanence sont rendus immédiatement après, ou dans les plus brefs délais. Les autres compensations, hors dépassement, se prennent dans un délai de 21 jours, dès que le pourcentage de présence le permet."
+}
+]
+},
+{
+"n": "2",
+"items": [
+{
+"a": "b0",
+"t": "L'astreinte, c'est une période hors temps de travail : l'agent n'est pas à disposition permanente et immédiate, mais il doit rester à son domicile ou à proximité, pour intervenir au plus vite sur un travail qui ne peut pas attendre. Et la durée de l'intervention est du temps de travail effectif."
+},
+{
+"a": "b1",
+"t": "Si l'agent doit se déplacer, le temps de travail se compte à partir de son arrivée théorique au service. Il a droit à une heure forfaitaire de trajet, qui vaut l'aller-retour entre domicile et résidence administrative."
+},
+{
+"a": "b2",
+"t": "S'il intervient à distance, par télé-intervention, pas d'heure forfaitaire de trajet."
+},
+{
+"a": "b3",
+"t": "Tous les personnels sont soumis à l'astreinte, sauf les ADS. Ils ont droit à une rémunération ou à une compensation horaire, sauf notamment le CCD et les commissaires de l'article 10."
+},
+{
+"a": "r",
+"t": "Ce qu'il faut retenir : permanence en hebdomadaire seulement, listes 14 jours avant, ADS volontaires, 12 heures maximum pour les commissaires hors article 10, compensations sous 21 jours ; astreinte hors temps de travail, intervention comptée comme travail, une heure forfaitaire de trajet si déplacement, et pas d'astreinte pour les ADS."
+}
+]
+}
+]
+}

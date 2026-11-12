@@ -1,0 +1,11 @@
+= APORTT, fiche 11 : les services supplémentaires. Les principes, puis les repos compensateurs.
+# 1
+@0-4 Les missions de police entraînent parfois des services supplémentaires. Il en existe quatre types : la permanence, l'astreinte, les dépassements horaires, et les rappels et reports de repos.
+@5 Les repos compensateurs de services supplémentaires, les RCSS, se prennent dans l'année civile où ils sont attribués. Sinon, ils restent dus.
+# 2
+@0 On le répète : les RCSS se prennent dans l'année où ils ont été générés. S'ils ne sont pas liquidés et ne peuvent pas être versés sur un CET, ils restent dus.
+@1 Deux comptes les enregistrent : un compte historique et un compte actif. Au-delà de 160 heures, ils vont sur le compte historique ; entre 120 et 160 heures, ils peuvent aussi y aller. Le reste figure sur le compte actif.
+@2 Sur le compte actif, au-delà de 160 heures, l'agent récupère ses RCSS dans un délai de 30 jours, dès que le pourcentage de présence le permet.
+@3 À défaut, à la fin de ce délai, le chef de service prescrit la récupération, par journée et sous réserve des nécessités de service.
+@4 Les services supplémentaires peuvent aussi être indemnisés, dans les conditions fixées par décret. Mais attention : le paiement exclut toute compensation horaire pour la même période.
+@r Ce qu'il faut retenir : quatre types, permanence, astreinte, dépassement, rappel et report ; RCSS à prendre dans l'année, sinon dus ; compte historique au-delà de 160 heures ; récupération sous 30 jours ; et paiement ou repos, jamais les deux.

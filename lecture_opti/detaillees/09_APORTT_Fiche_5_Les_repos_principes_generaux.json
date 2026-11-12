@@ -1,0 +1,62 @@
+{
+"v": 1,
+"page": "detaillees/09_APORTT_Fiche_5_Les_repos_principes_generaux.html",
+"intro": "APORTT, fiche 5 : les repos, principes généraux. Les définitions, le point de départ des périodes de repos, puis la pause et l'interruption de service.",
+"sections": [
+{
+"n": "1",
+"items": [
+{
+"a": "b0",
+"t": "Premier principe : tout agent a droit, sur chaque période de 24 heures, à un repos journalier de 11 heures consécutives, qui suit directement une période de travail."
+},
+{
+"a": "b1",
+"t": "Deuxième principe : sur chaque période de sept jours, un repos hebdomadaire, composé d'un repos légal, le RL, et d'un repos compensateur, le RC."
+},
+{
+"a": "b2",
+"t": "Et dans ce cadre, on garantit au minimum 35 heures de repos : 24 heures, plus les 11 heures de repos journalier."
+}
+]
+},
+{
+"n": "2",
+"items": [
+{
+"a": "b0",
+"t": "D'où partent ces périodes ? Pour le repos journalier, quel que soit le régime, les 24 heures démarrent à la prise de service effective de la vacation ou de la journée de travail."
+},
+{
+"a": "b1-3",
+"t": "Pour le repos hebdomadaire, la période de sept jours démarre : en régime hebdomadaire, à la prise de service du premier jour de travail de la semaine civile ; en régime cyclique, à la prise de service de la première vacation travaillée du début de cycle."
+}
+]
+},
+{
+"n": "3",
+"items": [
+{
+"a": "b0",
+"t": "La pause, maintenant. Aucun temps de travail quotidien ne peut atteindre 6 heures sans une pause d'au moins 20 minutes."
+},
+{
+"a": "b1",
+"t": "Elle s'applique au régime cyclique, et au régime hebdomadaire continu créé par l'APORTT."
+},
+{
+"a": "b2",
+"t": "Attention : la pause est du temps de travail, puisque l'agent reste à la disposition de sa hiérarchie."
+},
+{
+"a": "b3",
+"t": "À l'inverse, l'interruption de service est du temps de repos. En régime hebdomadaire classique, elle dure de 45 minutes à 2 heures, et se place entre 11 heures 30 et 14 heures 30."
+},
+{
+"a": "r",
+"t": "Ce qu'il faut retenir : 11 heures de repos journalier consécutives ; un repos hebdomadaire RL plus RC, avec 35 heures minimum garanties ; le décompte part de la prise de service effective ; 20 minutes de pause avant 6 heures de travail ; la pause, c'est du travail, l'interruption, c'est du repos."
+}
+]
+}
+]
+}

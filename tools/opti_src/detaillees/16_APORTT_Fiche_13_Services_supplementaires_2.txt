@@ -1,0 +1,11 @@
+= APORTT, fiche 13 : services supplémentaires, deuxième partie. Le dépassement horaire, puis le rappel au service et le report de repos.
+# 1
+@0 Le dépassement horaire, c'est le temps fait au-delà de la durée réglementaire de la vacation ou de la journée. Il se calcule sur le temps réellement effectué.
+@1 Exception : pour les PATS, les ADS et les autres contractuels, l'heure n'est pas sécable au-delà de la journée paramétrée. Toute heure commencée est due.
+@2 Sont exclus du dépassement horaire : le CCD, les commissaires de l'article 10 et les PATS de l'article 10.
+# 2
+@0 Le rappel au service. Tout personnel peut être rappelé, en dehors des heures normales, pour les nécessités du service ou pour une convocation administrative ou judiciaire. Le taux de compensation est le même quel que soit le motif. Et les agents doivent tenir à jour les moyens de les joindre.
+@1 Le report de repos. Les policiers actifs ont une journée de repos légal par semaine, qui peut exceptionnellement être reportée si l'intérêt du service l'exige.
+@2 Ce report porte seulement sur une journée ou une vacation entière de repos légal. L'agent est prévenu pendant son service, le plus tôt possible, ou au plus tard avant la fin de sa dernière vacation ou journée. Sont exclus du report : les PATS, les ADS et les autres contractuels.
+@3 Enfin, sont exclus du rappel et du report les agents qui ont posé certains congés d'hiver sur le plan prévisionnel, et plus largement certains autres congés, les congés annuels par exemple, même hors plan.
+@r Ce qu'il faut retenir : dépassement au temps réel, mais heure due dès qu'elle est commencée pour les PATS, ADS et contractuels ; rappel possible pour tous, même taux quel que soit le motif ; report d'une journée entière de repos légal seulement, agent prévenu avant la fin de sa dernière vacation ; et pas de report pour les PATS, ADS et contractuels.

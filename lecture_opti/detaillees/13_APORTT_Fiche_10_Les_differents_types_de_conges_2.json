@@ -1,0 +1,61 @@
+{
+"v": 1,
+"page": "detaillees/13_APORTT_Fiche_10_Les_differents_types_de_conges_2.html",
+"intro": "APORTT, fiche 10 : les différents types de congés, deuxième partie. L'ARTT, puis les repos de pénibilité spécifique.",
+"sections": [
+{
+"n": "1",
+"items": [
+{
+"a": "b0",
+"t": "L'ARTT, l'aménagement et la réduction du temps de travail, sert à ramener la durée annuelle de travail effectif à 1607 heures. Ce crédit s'exprime en heures en régime cyclique, et en jours en régime hebdomadaire. Il varie selon le corps et le régime de travail."
+},
+{
+"a": "b1",
+"t": "Les ARTT peuvent être positionnés sur le plan prévisionnel des départs, sous réserve des nécessités de service et des pourcentages d'absence. Ils sont alors protégés comme les congés annuels."
+},
+{
+"a": "b2",
+"t": "La journée de solidarité retire une journée de 7 heures sur les droits ARTT. La différence entre la journée de solidarité et la journée d'ARTT déduite est créditée en repos compensateur de services supplémentaires, le RCSS."
+},
+{
+"a": "b3",
+"t": "Attention aux exclusions de cet abondement : les cycles binaires à 12 heures 08 et 11 heures 08, la vacation forte, et les agents à l'article 10, quel que soit leur cycle."
+}
+]
+},
+{
+"n": "2",
+"items": [
+{
+"a": "b0",
+"t": "Les RPS, les repos de pénibilité spécifique, réduisent les 1607 heures pour tenir compte de la pénibilité des rythmes. Ils reposent sur des coefficients non cumulables, exclusifs des services supplémentaires, dans quatre cas."
+},
+{
+"a": "b1",
+"t": "Un : en régime cyclique, la nuit ou le dimanche, à hauteur de la DMJ, avec un coefficient de 0,1 la nuit et 0,4 le dimanche."
+},
+{
+"a": "b2",
+"t": "Deux : en régime hebdomadaire, pour toute heure de travail habituel la nuit, coefficient 0,1."
+},
+{
+"a": "b3",
+"t": "Trois : pour une prise de service décalée sur un RC, un RL ou un jour férié, coefficient 0,25 sur un RC et 0,60 sur un RL ou un jour férié."
+},
+{
+"a": "b4",
+"t": "Quatre : pour la pénibilité des services supplémentaires, coefficient 0,15 par heure de repos journalier manqué."
+},
+{
+"a": "b5",
+"t": "Les RPS peuvent être inscrits sur le plan prévisionnel. Mais n'en bénéficient pas : le CCD, le CC, les PATS et les contractuels de l'article 10."
+},
+{
+"a": "r",
+"t": "Ce qu'il faut retenir : l'ARTT ramène à 1607 heures, en heures pour le cyclique, en jours pour l'hebdomadaire ; journée de solidarité de 7 heures ; RPS à 0,1 la nuit, 0,4 le dimanche, 0,25 sur RC, 0,60 sur RL ou férié, et 0,15 par heure de repos journalier manqué."
+}
+]
+}
+]
+}

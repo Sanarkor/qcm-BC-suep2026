@@ -1,0 +1,14 @@
+= APORTT, fiche 8 : les congés, généralités. Les dispositions communes, le volume des jours de congé, et le crédit férié.
+# 1
+@0 Sauf dispositions spécifiques, ce sont les textes de la fonction publique d'État qui s'appliquent à la police nationale.
+@1 Relèvent de ce régime général tous les types de congés : annuels, bonifiés, maternité, paternité, adoption, parentaux, ainsi que les autorisations d'absence, les facilités et exemptions de service, et la gestion du compte épargne-temps, le CET.
+@2 Chiffre clé : le pourcentage de présents dans un service, fixé par la direction, ne peut jamais être inférieur à 50 %, ni atteindre 100 %, sauf décision du ministre de l'Intérieur en cas de circonstances exceptionnelles.
+# 2
+@0 Quel que soit leur régime, les policiers ont droit à des jours de congé annuel, à des repos de pénibilité spécifique, et à un crédit annuel horaire de réduction du temps de travail : l'ARTT en régime hebdomadaire, l'ARTC en régime cyclique.
+@1 Point important : sur l'année civile, si moins de 10 jours d'ARTT ou de RPS sont positionnés sur le plan prévisionnel, la différence jusqu'à 10 jours est protégée. Ces congés, validés par le chef de service, sont posés en deux fois au maximum.
+@2 Les demandes de congés et de repos sont validées par le chef de service, et les demandes comme les validations doivent arriver dans un délai raisonnable.
+# 3
+@0 Le crédit férié, maintenant. Il ne concerne que le régime cyclique. Il est de 109 heures 12 par an en métropole, 116 heures 12 dans les départements d'outre-mer, et 123 heures 12 en Alsace-Moselle.
+@1 Il se prend dans l'année civile où il est attribué. Pas de report sur l'année suivante, sauf autorisation expresse. Et il ne peut pas alimenter un CET.
+@2 Attention enfin : un congé maladie ordinaire non imputable au service entraîne une déduction d'un vingt-quatrième du crédit annuel, par période d'absence d'au moins 15 jours consécutifs.
+@r Ce qu'il faut retenir : présence jamais sous 50 % ni à 100 % ; 10 jours d'ARTT ou de RPS protégés, posés en deux fois maximum ; crédit férié en cyclique seulement, 109 heures 12 en métropole, pris dans l'année, sans report ni CET ; et un vingt-quatrième retiré par période de 15 jours de maladie ordinaire.

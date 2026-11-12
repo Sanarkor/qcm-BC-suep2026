@@ -1,0 +1,68 @@
+{
+"v": 1,
+"page": "detaillees/07_APORTT_Fiche_3_La_duree_du_travail.html",
+"intro": "APORTT, fiche 3 : la durée du travail. On va voir comment elle se calcule, à l'année, à la semaine et à la journée.",
+"sections": [
+{
+"n": "1",
+"items": [
+{
+"a": "b0",
+"t": "La durée du travail s'apprécie de trois manières : annuelle, hebdomadaire et journalière."
+}
+]
+},
+{
+"n": "2",
+"items": [
+{
+"a": "b0",
+"t": "La durée annuelle, d'abord. On applique la règle de la fonction publique d'État : 1607 heures, quel que soit le régime, hebdomadaire ou cyclique."
+},
+{
+"a": "b1",
+"t": "Ces 1607 heures s'apprécient après déduction des repos hebdomadaires ou de cycle, des congés annuels, des jours fériés, et le cas échéant des jours d'ARTT, l'aménagement et la réduction du temps de travail."
+}
+]
+},
+{
+"n": "3",
+"items": [
+{
+"a": "b0",
+"t": "Il y a une exception : dans certains départements, la durée annuelle est réduite de quelques jours, pour tenir compte de particularismes régionaux. Ce sont l'Alsace-Moselle, la Guadeloupe, la Guyane, la Martinique, La Réunion et Mayotte."
+}
+]
+},
+{
+"n": "4",
+"items": [
+{
+"a": "b0",
+"t": "La durée hebdomadaire, ensuite. La durée moyenne de travail par période de sept jours ne doit pas dépasser 48 heures, services supplémentaires compris. Attention : cette moyenne se calcule sur le semestre révolu."
+},
+{
+"a": "b1",
+"t": "Et pour faire ce calcul, on exclut les congés annuels et les congés maladie de toute nature."
+}
+]
+},
+{
+"n": "5",
+"items": [
+{
+"a": "b0",
+"t": "Enfin, la durée journalière. On parle de durée moyenne journalière, la DMJ. Elle dépend du régime."
+},
+{
+"a": "b1-2",
+"t": "En régime hebdomadaire, c'est un cinquième de la durée légale hebdomadaire. En régime cyclique, c'est la durée de la vacation."
+},
+{
+"a": "r",
+"t": "Ce qu'il faut retenir : 1607 heures par an quel que soit le régime, réduites dans certains départements ; 48 heures maximum en moyenne par semaine, services supplémentaires compris, calculées sur le semestre révolu ; et une DMJ égale à un cinquième de la durée hebdomadaire en régime hebdomadaire, ou à la durée de la vacation en cyclique."
+}
+]
+}
+]
+}

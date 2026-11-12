@@ -365,10 +365,11 @@ function elVisibleDoc(el){
   if(doc===D)return !nav.shown;
   return nav.shown&&nav.frame&&nav.frame.contentDocument===doc;
 }
-function highlight(el){
+function highlight(el,more){
   clearHL();
   if(!el||!el.classList||!el.isConnected)return;
   el.classList.add("lec-cur");st.hlEl=el;
+  if(more)more.forEach(function(m){if(m&&m.classList&&m.isConnected)m.classList.add("lec-cur");});
   if(el===st.lastEl)return;
   if(!elVisibleDoc(el))return;
   st.lastEl=el;
@@ -505,7 +506,7 @@ function speakAt(i,fromUser){
     st.retried=0;
     showErr(false);
     dbg(how,"#"+i+" après "+(Date.now()-t0)+"ms");
-    highlight(ch.el);
+    highlight(ch.el,ch.more);
     updateBtns();
     armWatchdog(ch.speak,my,i);
   }
@@ -593,7 +594,7 @@ function toggle(){
     speakAt(st.i>=0?st.i:0,true);
     return;
   }
-  startPage();
+  if(OPTI)startOpti(null);
 }
 
 function buildBar(){
@@ -632,6 +633,8 @@ function buildBar(){
 }
 
 function injectButtons(){
+  /* Lecture classique retirée : seule la Lecture optimisée (scripts rédigés) reste. */
+  if(!CLASSIC)return;
   var h1=$("body>h1")||$("h1");
   if(h1&&!D.querySelector(".lec-page")){
     var b=D.createElement("button");
@@ -706,7 +709,7 @@ function watchVoices(){
 /* ===== Navigation sans couper la lecture (PC) =====
    Pendant une lecture, les liens internes s'ouvrent dans un cadre plein écran par-dessus la page lue :
    la page de lecture (et sa voix) reste vivante, la page ouverte a ses propres scripts intacts. */
-var GUEST=null;
+var GUEST=null,CLASSIC=false;
 try{if(window.parent&&window.parent!==window&&window.frameElement&&window.frameElement.id==="lec-frame"&&window.parent.qcmbcLectureHost)GUEST=window.parent.qcmbcLectureHost;}catch(e){GUEST=null;}
 var nav={frame:null,shown:false,hostUrl:location.href,hostTitle:D.title,pending:null};
 function samePage(a,b){try{var x=new URL(a,location.href),y=new URL(b,location.href);return x.origin===y.origin&&x.pathname.replace(/index\.html$/,"")===y.pathname.replace(/index\.html$/,"")&&x.search===y.search;}catch(e){return false;}}
@@ -786,7 +789,7 @@ function onFrameLoad(){
   if(st.docUrl&&samePage(href,st.docUrl)&&st.list.length){
     var all=$$("summary,h2,h3,h4,p,li,tr",doc);
     st.list.forEach(function(ch){if(ch.el&&!ch.el.isConnected&&ch.idx>=0&&all[ch.idx])ch.el=all[ch.idx];});
-    if(st.mode!=="idle"){st.lastEl=null;highlight(st.list[st.i]&&st.list[st.i].el);}
+    if(st.mode!=="idle"){st.lastEl=null;highlight(st.list[st.i]&&st.list[st.i].el,st.list[st.i]&&st.list[st.i].more);}
   }
   updateBack();
 }
@@ -804,7 +807,7 @@ function backToPassage(){
     return;
   }
   st.lastEl=null;
-  if(el&&el.isConnected){var d=el.closest&&el.closest("details");if(d)d.open=true;highlight(el);try{el.scrollIntoView({block:"center",behavior:"smooth"});}catch(e){}}
+  if(el&&el.isConnected){var d=el.closest&&el.closest("details");if(d)d.open=true;highlight(el,cur.more);try{el.scrollIntoView({block:"center",behavior:"smooth"});}catch(e){}}
   updateBack();
 }
 function onLinkClick(e){
@@ -856,15 +859,22 @@ function initGuest(){
 /* ===== Lecture optimisée (révisions synthétiques) : scripts rédigés dans lecture_opti/<page>.json ===== */
 var OPTI=null;
 var ICO_OPTI=svg('<path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/>');
-function optiUrl(){
+function optiBase(){
   var me=D.querySelector('script[src*="lecture.js"]'),src=me?me.getAttribute("src"):"lecture.js";
-  var base=src.replace(/lecture\.js.*$/,""),ver=(src.match(/[?&]v=([^&]+)/)||[])[1]||"";
+  return {base:src.replace(/lecture\.js.*$/,"")+"lecture_opti/",q:((src.match(/[?&]v=([^&]+)/)||[])[1]?"?v="+src.match(/[?&]v=([^&]+)/)[1]:"")};
+}
+function optiName(){
   var name=(location.pathname.split("/").pop()||"").replace(/\.html?$/,"");
-  return base+"lecture_opti/"+name+".json"+(ver?"?v="+ver:"");
+  return (/\/detaillees\//.test(location.pathname)?"detaillees/":"")+name;
 }
 function loadOpti(){
-  if(/\/detaillees\//.test(location.pathname)||!window.fetch)return;
-  fetch(optiUrl(),{cache:"no-cache"}).then(function(r){return r.ok?r.json():null;}).then(function(d){
+  if(!window.fetch)return;
+  var b=optiBase(),name=optiName();
+  /* index.json liste les pages qui ont un script : pas de requête inutile ailleurs. */
+  fetch(b.base+"index.json"+b.q,{cache:"no-cache"}).then(function(r){return r.ok?r.json():null;}).then(function(ix){
+    if(!ix||!ix.pages||ix.pages.indexOf(name)<0)return null;
+    return fetch(b.base+name+".json"+b.q,{cache:"no-cache"}).then(function(r){return r.ok?r.json():null;});
+  }).then(function(d){
     if(!d||!d.sections)return;
     OPTI=d;injectOpti();
   }).catch(function(){});
@@ -874,10 +884,24 @@ function optiDet(n){
   for(k=0;k<ds.length;k++){b=ds[k].querySelector("summary .n");if(b&&b.textContent.trim()===String(n))return ds[k];}
   return null;
 }
+var BLK="p,li,h2,h3,h4,h5,tr,blockquote,dt,dd,pre";
+function optiBlocks(det){
+  /* Blocs lisibles d'une partie (fiches détaillées) : p, li, titres, lignes de tableau… sans les blocs imbriqués dans un autre bloc. */
+  var c=det&&det.querySelector(".c");if(!c)return [];
+  return $$(BLK,c).filter(function(e){var p=e.parentElement;while(p&&p!==c){if(p.matches&&p.matches(BLK))return false;p=p.parentElement;}return !skipEl(e);});
+}
+function optiEls(det,a){
+  /* Ancre "b<k>" ou "b<k>-<m>" : bloc(s) de la partie. */
+  var m=/^b(\d+)(?:-(\d+))?$/.exec(a||"");if(!det||!m)return null;
+  var bl=optiBlocks(det),i=parseInt(m[1],10),j=m[2]?parseInt(m[2],10):i,out=[];
+  for(;i<=j;i++)if(bl[i])out.push(bl[i]);
+  return out.length?out:null;
+}
 function optiEl(det,a){
   if(!det)return null;
   var sum=det.querySelector("summary");
   if(a==="s"||a==="r")return sum;
+  var bs=optiEls(det,a);if(bs)return bs[0];
   var m=/^([tn]?)(\d+)$/.exec(a);if(!m)return sum;
   var k=parseInt(m[2],10),list=m[1]==="t"?$$("table",det):m[1]==="n"?$$("p.note",det):$$(".c li",det);
   return list[k]||sum;
@@ -885,8 +909,8 @@ function optiEl(det,a){
 function optiSection(sec){
   var det=optiDet(sec.n),label=det?titleOf(det,true):("Fiche "+sec.n),out=[];
   sec.items.forEach(function(it){
-    var el=optiEl(det,it.a),sp=speakable(it.t);if(!sp)return;
-    splitText(sp).forEach(function(part){out.push({el:el,speak:part,label:label});});
+    var el=optiEl(det,it.a),bs=optiEls(det,it.a),more=bs&&bs.length>1?bs.slice(1):null,sp=speakable(it.t);if(!sp)return;
+    splitText(sp).forEach(function(part){out.push({el:el,more:more,speak:part,label:label});});
   });
   return out;
 }
@@ -906,10 +930,14 @@ function startOpti(n){
 function injectOpti(){
   if(!OPTI||D.querySelector(".lec-opti"))return;
   var pb=D.querySelector(".lec-page");
+  if(!pb){
+    var h1=$("body>h1")||$("h1");pb=h1;
+    if(h1){var nx=h1.nextElementSibling;if(nx&&nx.classList&&nx.classList.contains("sub")){pb=nx;nx=nx.nextElementSibling;}if(nx&&nx.classList&&nx.classList.contains("note"))pb=nx;}
+  }
   if(pb){
     var b=D.createElement("button");
     b.type="button";b.className="lec-page lec-opti";b.setAttribute("data-lec","opti");
-    b.setAttribute("aria-label","Lecture optimisée de la page");b.title="Lecture optimisée : le cours expliqué à l’oral, sans les tableaux lus ligne par ligne";
+    b.setAttribute("aria-label","Lecture optimisée de la page");b.title="Lecture optimisée : le cours expliqué à l’oral (raccourci L sur ordinateur)";
     b.innerHTML=ICO_OPTI+" Lecture optimisée";
     b.addEventListener("click",function(e){e.preventDefault();startOpti(null);});
     pb.insertAdjacentElement("afterend",b);
@@ -918,7 +946,7 @@ function injectOpti(){
     var det=optiDet(sec.n),sum=det&&det.querySelector("summary");if(!sum||sum.querySelector(".lec-opti"))return;
     var m=D.createElement("button");
     m.type="button";m.className="lec-mini lec-opti";m.setAttribute("data-lec","opti-"+sec.n);
-    m.setAttribute("aria-label","Lecture optimisée de cette fiche");m.title="Lecture optimisée de cette fiche";
+    m.setAttribute("aria-label","Lecture optimisée de cette partie");m.title="Lecture optimisée de cette partie";
     m.innerHTML=ICO_OPTI;
     m.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();startOpti(sec.n);});
     var first=sum.querySelector(".lec-mini");
@@ -971,7 +999,7 @@ function init(){
   };
   D.addEventListener("click",onLinkClick);
   window.addEventListener("popstate",onPop);
-  window.qcmbcLectureText={speakable:speakable,romans:romans};
+  window.qcmbcLectureText={speakable:speakable,romans:romans,blocks:optiBlocks};
   if(DEBUG){dbg("debug actif","synth="+(!!synth)+" android="+ANDROID);}
 }
 function boot(){

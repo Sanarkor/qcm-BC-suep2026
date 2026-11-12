@@ -1,0 +1,14 @@
+= APORTT, fiche 15 : la restitution des repos manqués en cadre dérogatoire. Les principes, puis les repos journaliers et les repos hebdomadaires.
+# 1
+@0 En cadre dérogatoire, les repos manqués sont obligatoirement rendus immédiatement à la fin de la mission, et obligatoirement compensés par des périodes équivalentes.
+@1 Et parce que les services supplémentaires sont récurrents et pénibles en police nationale, on applique un coefficient de 0,15 par heure de repos journalier manqué.
+# 2
+@0 Comment rend-on les repos journaliers manqués ? Trois possibilités.
+@1 Si la continuité du service le permet, on retarde la prise de service du lendemain à hauteur du repos manqué, sans changer l'heure de fin habituelle.
+@2 Sinon, on peut avancer la fin de service à hauteur du repos manqué.
+@3 Et s'il est impossible de réduire la journée, le repos manqué est rendu sur le repos journalier suivant.
+@4 Retenez bien : ces trois solutions peuvent se cumuler.
+# 3
+@0 Les repos hebdomadaires manqués sont rendus immédiatement à la fin de la mission ou de la dérogation, même sur des jours de travail. Dans ce cas, on utilise les RCSS.
+@1 Et un repos hebdomadaire manqué, accolé au repos hebdomadaire de la période, est rendu au minimum sur 59 heures : 11 heures, plus 24 heures, plus 24 heures.
+@r Ce qu'il faut retenir : restitution immédiate et équivalente ; 0,15 par heure de repos journalier manqué ; trois façons de rendre un repos journalier, cumulables ; et 59 heures minimum pour un repos hebdomadaire manqué accolé au repos de la période.

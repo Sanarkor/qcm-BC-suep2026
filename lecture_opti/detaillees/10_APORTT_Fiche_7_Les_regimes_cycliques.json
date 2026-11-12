@@ -1,0 +1,67 @@
+{
+"v": 1,
+"page": "detaillees/10_APORTT_Fiche_7_Les_regimes_cycliques.html",
+"intro": "APORTT, fiche 7 : les régimes cycliques. Les généralités, les rythmes de travail, les différents cycles, et la prise de service décalée.",
+"sections": [
+{
+"n": "1",
+"items": [
+{
+"a": "b0",
+"t": "Le régime cyclique existe pour assurer la continuité du service public. Il fonctionne par équipes successives, de jour, de nuit ou les deux, dimanches et jours fériés compris."
+},
+{
+"a": "b1",
+"t": "Il s'applique à tous les corps actifs de la police nationale, ADS compris. Pour les PATS et les autres contractuels, c'est plus limité : les centres de commandement, les services de diffusion, ou le volontariat pour le travail de nuit."
+}
+]
+},
+{
+"n": "2",
+"items": [
+{
+"a": "b0",
+"t": "Les rythmes. En cycle de jour, après une période de travail, l'agent a un repos de cycle de deux jours consécutifs : un RC suivi d'un RL. Exception : le cycle quatre-deux compressé."
+},
+{
+"a": "b1",
+"t": "Les cycles de jour avec des vacations de forte amplitude peuvent aller jusqu'à trois jours d'absence consécutifs : deux RC suivis d'un RL."
+},
+{
+"a": "b2",
+"t": "En cycle de nuit, après une période de travail, l'agent a un repos appelé descente de nuit, la DN. Il se calcule de la fin de service jusqu'à la reprise de service théorique."
+}
+]
+},
+{
+"n": "3",
+"items": [
+{
+"a": "b0",
+"t": "Plusieurs régimes cycliques existent, mais seuls ceux définis par l'APORTT sont retenus."
+},
+{
+"a": "b1-4",
+"t": "Il y en a quatre : le quatre-deux, classique, panaché ou compressé ; le deux-deux, trois-trois, avec ses vacations de 11 heures 08 ou de 12 heures 08 ; la vacation forte ; et les cycles spécifiques des unités cynotechniques légères."
+},
+{
+"a": "b5",
+"t": "Les ARTT varient selon la durée moyenne journalière et selon le corps de l'agent."
+}
+]
+},
+{
+"n": "4",
+"items": [
+{
+"a": "b0",
+"t": "Enfin, la prise de service décalée. Elle fonctionne comme en régime hebdomadaire : des circonstances exceptionnelles, au cours de la même journée et sur toute la vacation, et un agent avisé au plus tard avant la fin de sa dernière vacation. Les compensations sont les mêmes : 0,25 sur un RC, et 0,60 sur un RL."
+},
+{
+"a": "r",
+"t": "Ce qu'il faut retenir : le cyclique assure la continuité, pour tous les actifs, ADS compris ; repos de cycle de deux jours, RC puis RL, sauf le quatre-deux compressé ; descente de nuit après un cycle de nuit ; seuls les cycles de l'APORTT sont admis ; décalage compensé 0,25 sur RC et 0,60 sur RL."
+}
+]
+}
+]
+}
