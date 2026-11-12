@@ -1,6 +1,6 @@
 /* Mode Lecture des révisions synthétiques et détaillées. Web Speech API (speechSynthesis), sans service externe. */
 (function(){
-var D=document,KEY="qcmbc:lecture",STORE_VER=2;
+var D=document,KEY="qcmbc:lecture",STORE_VER=3;
 var RATES=["1.00","1.25","1.50","1.75","2.00"],DEF_RATE="1.25";
 /* Sigles à ne pas épeler (liste volontairement vide : tous les sigles sont lus lettre par lettre).
    Pour laisser un sigle tel quel, l'ajouter ici, par ex. "UNESCO". */
@@ -141,15 +141,19 @@ var synth=null,primed=false,booted=false;
 function scoreVoice(v){
   var n=(v.name||"")+" "+(v.voiceURI||""),lang=(v.lang||"").toLowerCase();
   if(!/^fr([-_]|$)/.test(lang)&&!/french|fran[cç]ais/i.test(n))return -1;
+  var frFR=/fr-fr/.test(lang)||/french\s*\(?france\)/i.test(n);
   var s=0;
-  if(/fr-fr/.test(lang)||/french\s*\(?france\)/i.test(n))s+=20;
+  if(frFR)s+=20;
   else if(/fr-ca/.test(lang))s+=8;
   else s+=10;
+  /* 1. Google français (nom contenant « Google » et fr-FR) */
+  if(/google/i.test(n)&&frFR)s+=400;
+  else if(/google/i.test(n))s+=60;
+  /* 2. Microsoft Julie */
   if(/julie/i.test(n))s+=200;
-  if(/microsoft/i.test(n)&&/julie/i.test(n))s+=30;
-  if(/natural|online|neural|premium|enhanced|superieure|supérieure/i.test(n))s+=50;
-  if(/google/i.test(n)&&/fran[cç]ais|french|fr[-_]?fr/i.test(n))s+=40;
-  else if(/google/i.test(n))s+=28;
+  if(/microsoft/i.test(n)&&/julie/i.test(n))s+=20;
+  /* 3. Natural / Online fr-FR, puis les autres fr-FR / fr-* */
+  if(/natural|online|neural|premium|enhanced|superieure|supérieure/i.test(n))s+=frFR?80:30;
   if(/am[eé]lie/i.test(n))s+=22;
   if(/\bthomas\b/i.test(n))s+=18;
   if(/microsoft/i.test(n))s+=12;
