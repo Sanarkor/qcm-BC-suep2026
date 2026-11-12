@@ -5,7 +5,7 @@ h1{font-size:1.25em;color:#1f3b6f}.q{background:#fff;border-radius:10px;padding:
 input{transform:scale(1.3);margin-right:8px}button{margin-top:8px;padding:10px 14px;border:0;border-radius:8px;background:#1f3b6f;color:#fff;font-size:1em}
 .c{margin-top:8px;padding:10px;background:#eef3ff;border-left:4px solid #1f3b6f;font-size:.95em}.ok{border-color:#2a2;background:#efe}.ko{border-color:#c22;background:#fee}
 #home{display:inline-block;margin:6px 0 10px;padding:8px 14px;background:#1f4e79;color:#fff;border-radius:6px;text-decoration:none;font-weight:700}
-#score{font-size:1.2em;font-weight:700;margin:10px 0}</style><link rel="stylesheet" href="desktop.css?v=20261112e" media="(min-width:1024px)"></head><body>
+#score{font-size:1.2em;font-weight:700;margin:10px 0}</style><link rel="stylesheet" href="desktop.css?v=20261112f" media="(min-width:1024px)"></head><body>
 <a id="home" href="index.html">&#8592; Retour à l’accueil</a>
 <h1>Sigles et acronymes de la police nationale</h1><p>QCM SUEP B/C – 30 questions, une ou plusieurs bonnes réponses. Notation tout ou rien.</p>
 <div class="q" id="q1" data-a="A"><p class="s">Q1. Que signifie le sigle RC ?</p><label><input type="checkbox" name="q1" value="A"> <b>A.</b> Repos compensateur</label><label><input type="checkbox" name="q1" value="B"> <b>B.</b> Repos complémentaire</label><label><input type="checkbox" name="q1" value="C"> <b>C.</b> Repos conventionnel</label><label><input type="checkbox" name="q1" value="D"> <b>D.</b> Repos cumulé</label><button onclick="t(1)">Voir la correction</button><div class="c" id="c1" hidden><b>Réponse : A</b><br>RC = Repos compensateur.
@@ -159,4 +159,4 @@ if(anchor){var b=document.createElement("button");b.id="restart";b.textContent="
 b.onclick=function(){if(confirm("Effacer toutes les réponses et recommencer à zéro ?")){clear();window.done=true;graded=true;location.reload();}};
 anchor.parentNode.insertBefore(b,anchor.nextSibling);}
 window.addEventListener("beforeunload",function(e){if(!leaving&&!isDone()&&!graded&&document.querySelector("input[type=checkbox]:checked")){e.preventDefault();e.returnValue="";return "";}});
-})();</script><script src="erreurs.js"></script><script data-goatcounter="https://sanarkor.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script><script src="desktop.js?v=20261112e"></script></body></html>
+})();</script><script src="erreurs.js"></script><script data-goatcounter="https://sanarkor.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script><script src="desktop.js?v=20261112f"></script></body></html>
