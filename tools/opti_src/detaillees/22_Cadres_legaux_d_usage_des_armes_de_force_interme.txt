@@ -1,0 +1,13 @@
+= Les cadres légaux d'usage des armes de force intermédiaire, puis des armes de poing et d'épaule. Deux tableaux, qu'on va expliquer.
+# 1
+@0-1 Le premier tableau croise chaque arme de force intermédiaire avec six cadres : la légitime défense de l'article 122-5 du code pénal, l'état de nécessité de l'article 122-7, l'article L. 435-1 du code de la sécurité intérieure, puis trois moments du maintien de l'ordre : après deux sommations, après réitération de la dernière sommation, et en cas de voies de fait ou de violences, à l'initiative du commandant de la force publique.
+@2-3 Les générateurs d'aérosols et les grenades lacrymogènes à main sont autorisés partout, dans les six cadres.
+@4-7 Les grenades à main de désencerclement, les grenades à effet sonore, les grenades à effet sonore et lacrymogène, et les lanceurs de grenades de 56 et 40 millimètres sont autorisés partout, sauf en maintien de l'ordre après seulement deux sommations.
+@8 Le lanceur de balles de défense 40 par 46 est autorisé en légitime défense, en état de nécessité, au titre du L. 435-1, et en maintien de l'ordre seulement en cas de voies de fait ou de violences.
+@9 Le PIE est autorisé en légitime défense, en état de nécessité et au titre du L. 435-1, mais jamais en maintien de l'ordre.
+@10 À retenir : toutes les AFI sont utilisables en légitime défense, en état de nécessité et au titre du L. 435-1. En maintien de l'ordre, seuls les aérosols et les grenades lacrymogènes à main sont possibles dès les deux sommations ; le LBD seulement en cas de voies de fait ou de violences ; et le PIE jamais.
+# 2
+@0 Les armes à feu, maintenant. Rappel de l'article L. 435-1 : premièrement, la défense des personnes, sans sommation ; deuxièmement, la défense des lieux ou des personnes confiées, après deux sommations ; troisièmement, l'individu en fuite, après deux sommations ; quatrièmement, le véhicule en fuite, après un ordre d'arrêt ; cinquièmement, le périple meurtrier, sans sommation.
+@1-5 Arme de poing, fusil calibre 12, pistolet-mitrailleur et fusil d'assaut : même règle pour tous. Autorisés en légitime défense des personnes, en état de nécessité, et dans les cinq cas du L. 435-1. Interdits en légitime défense des biens, et interdits en maintien de l'ordre.
+@6 Une seule exception : le fusil de précision 7,62 par 51. Il suit la même règle, mais il peut être employé en maintien de l'ordre, en cas de voies de fait ou de violences, s'il y a ouverture du feu sur la force publique en unité constituée.
+@7 Ce qu'il faut retenir : les armes à feu sont interdites pour la défense des biens, et interdites en maintien de l'ordre, sauf le fusil de précision en cas d'ouverture du feu sur la force publique en unité constituée.

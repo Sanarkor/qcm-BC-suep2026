@@ -1,0 +1,15 @@
+= Les règles générales de sécurité et les procédures d'emploi du pistolet Glock 17 ou 26.
+# 1
+@0-2 Les trois règles de sécurité sont les mêmes que pour toute arme : toujours la considérer comme chargée ; garder l'index le long du pontet tant qu'il n'y a pas besoin de tirer ; et toujours diriger le canon vers une zone de sécurité.
+# 2
+@0-4 Premier temps, la perception. L'arme et les chargeurs sont transmis culasse accrochée à l'arrière, canon vers le haut, et puits de chargeur visible par celui qui reçoit.
+@5-7 On contrôle ensuite l'arme : le puits de chargeur est vide, et la chambre est vide.
+@8-11 Puis on vérifie le fonctionnement apparent : la safe action, l'accrochage des chargeurs, et l'arrêtoir de culasse.
+@12-17 Deuxième temps, la mise en service, qui suit obligatoirement le contrôle. On engage un chargeur en vérifiant qu'il est bien encliqueté, on charge une cartouche, on s'assure du chargement par un court recul de la culasse, et on vérifie le verrouillage de la culasse.
+@18-24 Troisième temps, la mise en sécurité. On désapprovisionne en retirant le chargeur. Puis on récupère la cartouche chambrée : on accroche la culasse sur l'arrêtoir, et on fait pivoter l'arme pour récupérer la cartouche éjectée avec la main faible. Et on termine par le contrôle de l'arme.
+@25-32 Quatrième temps, la réintégration, qui suit obligatoirement la mise en sécurité. On transmet l'arme comme à la perception : culasse accrochée à l'arrière, canon vers le haut, puits de chargeur visible. Et on rend les chargeurs dégarnis.
+# 3
+@0 Trois définitions pour finir. La zone de sécurité, c'est l'espace qui limite les effets d'un coup de feu accidentel. Attention : dans les locaux de police, il est obligatoire d'utiliser les dispositifs de mise en sécurité fournis, tubes de manipulation ou puits balistiques souples.
+@1 Le contrôle de l'arme permet de s'assurer, à l'œil et mécaniquement, qu'elle est absolument vide de toute munition.
+@2 La vérification du fonctionnement apparent permet de s'assurer que les mécanismes utilisés pendant un cycle de tir fonctionnent.
+@r Ce qu'il faut retenir : transmission culasse à l'arrière, canon vers le haut, puits visible ; mise en service seulement après contrôle ; réintégration seulement après mise en sécurité ; chargeurs rendus dégarnis ; et tubes de manipulation ou puits balistiques obligatoires dans les locaux.

@@ -1,0 +1,13 @@
+= Les éléments du maintien de l'ordre. On va voir les trois éléments, puis l'usage de la force selon le moment de la dispersion.
+# 1
+@0-1 Il faut trois éléments. Le premier, c'est un attroupement, défini à l'article 431-3 du code pénal : tout rassemblement de personnes sur la voie publique ou dans un lieu, susceptible de troubler l'ordre public.
+@2-8 Le deuxième, c'est une autorité habilitée à l'emploi de la force, l'AHEF. Son rôle : elle fixe la mission, donne les objectifs à atteindre, précise la conduite générale à tenir, conserve le contrôle des mesures mises en œuvre, et c'est elle qui fait les sommations.
+@9-13 Ses conditions, maintenant. C'est la seule autorité qui peut constater le délit d'attroupement. Elle doit impérativement être sur place, porter son écharpe tricolore, ou le brassard tricolore pour la gendarmerie. Et attention : elle ne peut pas cumuler ce rôle avec celui de commandant de la force publique.
+@14-17 Le troisième élément, c'est justement le commandant de la force publique, le CFP. Il est responsable de la stricte exécution de la réquisition de l'AHEF : il décide des moyens humains et matériels, et met en œuvre la force de manière nécessaire et proportionnée.
+# 2
+@0-3 Une fois l'attroupement qualifié par l'AHEF, l'usage de la force dépend du moment. Après deux sommations restées sans effet, l'attroupement devient un délit, selon l'article L. 211-9 du code de la sécurité intérieure. La force est alors utilisée sur ordre, et uniquement avec les grenades fumigènes ou lacrymogènes lancées à la main, et les générateurs d'aérosols incapacitants ou lacrymogènes, les GAIL.
+@4-10 Après réitération de la deuxième sommation, toujours sur ordre, on ajoute : les grenades à main de désencerclement, les GMD, aussi appelées GENL ; la grenade à main à effet sonore ; et les lanceurs toutes grenades, avec un binôme superviseur et tireur.
+@11 Retenez bien : à ce stade, le LBD est interdit, et le PIE aussi.
+@12-19 Cas particulier, le cadre dit de réaction : en cas de voies de fait, de violences, ou si les forces de l'ordre ne peuvent pas défendre autrement le terrain qu'elles occupent. Là, la force est utilisée sur initiative du commandant de la force publique, avec tous les moyens précédents, plus le LBD, avec binôme superviseur et tireur.
+@20 Et même dans ce cadre, le PIE reste interdit.
+@r Ce qu'il faut retenir : trois éléments, attroupement, AHEF et CFP ; l'AHEF est sur place, ceinte de l'écharpe, fait les sommations et ne cumule pas avec le CFP ; après deux sommations, seulement grenades à main lacrymogènes et GAIL ; après réitération, on ajoute GMD, grenade sonore et lanceurs ; le LBD seulement en cadre de réaction ; et le PIE jamais.

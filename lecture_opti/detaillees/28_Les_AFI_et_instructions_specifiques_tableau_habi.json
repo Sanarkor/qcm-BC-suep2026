@@ -1,0 +1,69 @@
+{
+"v": 1,
+"page": "detaillees/28_Les_AFI_et_instructions_specifiques_tableau_habi.html",
+"intro": "Les armes de force intermédiaire et les armes à feu : habilitation, recyclage, personnels concernés et instructions. Deux tableaux, qu'on va expliquer arme par arme.",
+"sections": [
+{
+"n": "1",
+"items": [
+{
+"a": "b0",
+"t": "Pour chaque arme, le tableau donne la catégorie, l'habilitation, le recyclage, les personnels autorisés, et l'instruction de référence. Point commun à retenir : l'habilitation est obligatoire pour toutes."
+},
+{
+"a": "b1",
+"t": "Les bâtons, catégorie D : recyclage triennal, pour les actifs, les policiers adjoints et les réservistes."
+},
+{
+"a": "b2",
+"t": "Le lanceur de 40 millimètres, munition de défense unique, catégorie A2 : recyclage triennal. Il concerne les actifs, et les réservistes retraités des corps actifs, s'ils étaient déjà habilités à leur intégration. Il est exclu pour les stagiaires, les policiers adjoints, les cadets et les réservistes. Références : l'instruction du 2 août 2017, et le décret du 27 janvier 2025."
+},
+{
+"a": "b3",
+"t": "Le pistolet à impulsions électriques, le Taser 7, catégorie B : recyclage triennal, pour les actifs, les policiers adjoints et les réservistes, sauf les cadets. Références : l'instruction du 17 janvier 2022, et le décret de 2025."
+},
+{
+"a": "b4",
+"t": "Le lanceur Cougar et ses munitions, catégorie A2 : recyclage triennal, pour les actifs uniquement, ni policiers adjoints, ni cadets, ni réservistes. Référence : l'instruction de 2017."
+},
+{
+"a": "b5",
+"t": "La grenade à main de désencerclement, catégorie A2 : recyclage triennal, pour les actifs, les policiers adjoints et les réservistes, sauf les cadets."
+},
+{
+"a": "b6",
+"t": "La grenade à main à effet sonore, Condor, catégorie A2 : recyclage triennal, pour les actifs seulement, ni policiers adjoints, ni cadets, ni réservistes. Référence : un télégramme DGPN du 2 juin 2025."
+}
+]
+},
+{
+"n": "2",
+"items": [
+{
+"a": "b0",
+"t": "Deuxième tableau, les armes à feu, avec la même logique."
+},
+{
+"a": "b1",
+"t": "Le pistolet SIG Sauer 2022 en 9 millimètres, catégorie B : on suit les tirs réglementaires. Il concerne les actifs, les policiers adjoints, les cadets et les réservistes. Référence : l'instruction sur l'arme individuelle de juin 2024."
+},
+{
+"a": "b2",
+"t": "Le Glock en 9 millimètres, catégorie B : tirs réglementaires aussi, mais pour les actifs des services spécialisés."
+},
+{
+"a": "b3",
+"t": "Le pistolet-mitrailleur HK UMP, catégorie A2 : recyclage annuel, pour les actifs et les réservistes retraités des corps actifs ; pas pour les policiers adjoints, les cadets ni les réservistes. Référence : l'instruction du 13 mars 2017."
+},
+{
+"a": "b4",
+"t": "Le fusil d'assaut HK G36 en 5,56, catégorie A2 : recyclage annuel, pour les actifs, et les réservistes retraités des corps actifs s'ils étaient déjà habilités à leur intégration ; pas pour les policiers adjoints, les cadets ni les réservistes. Références : l'instruction du 4 mars 2016 et le décret de 2025."
+},
+{
+"a": "r",
+"t": "Ce qu'il faut retenir : habilitation toujours obligatoire ; recyclage triennal pour les armes de force intermédiaire, annuel pour le pistolet-mitrailleur et le fusil d'assaut, tirs réglementaires pour les pistolets ; Cougar et grenade sonore pour les actifs seulement ; et pas de LBD pour les policiers adjoints ni les cadets."
+}
+]
+}
+]
+}
