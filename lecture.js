@@ -584,8 +584,17 @@ function watchVoices(){
   },400);
 }
 
+/* Smartphone (écran < 1024 px + tactile) : pas de mode Lecture du tout. Évalué au chargement. */
+function isPhone(){
+  try{
+    var small=window.matchMedia&&window.matchMedia("(max-width:1023px)").matches;
+    var touch=(window.matchMedia&&window.matchMedia("(pointer:coarse)").matches)||("ontouchstart" in window)||(navigator.maxTouchPoints||0)>0;
+    return !!(small&&touch);
+  }catch(e){return false;}
+}
 function init(){
   if(booted||!hasSynth())return;
+  if(isPhone()){booted=true;D.documentElement.classList.add("lec-off");return;}
   booted=true;
   synth=getSynth();
   D.documentElement.classList.add("lec-ok");
