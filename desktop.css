@@ -1,18 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap");
 /* Interface bureau : ne s'applique qu'à partir de 1024 px (attribut media du <link>) ET seulement quand desktop.js a posé la classe html.dk. */
 @media (min-width:1024px){
-html.dk{--sb:248px;--navy:#0b2a5b;--red:#a3312a;--bg:#eef2f8;--W:900px;--gut:max(40px,calc((100vw - var(--sb) - var(--W)) / 2));scroll-padding-top:24px}
+html.dk{--sb:248px;--navy:#0b1f4d;--red:#a3312a;--bg:#f5f7fb;--W:900px;--gut:max(40px,calc((100vw - var(--sb) - var(--W)) / 2));scroll-padding-top:24px}
 html.dk body{max-width:none!important;margin:0!important;box-sizing:border-box;min-height:100vh;padding:28px var(--gut) 72px calc(var(--sb) + var(--gut))!important;background:var(--bg)!important;font-size:16.5px;line-height:1.5}
 html.dk-index,html.dk-revdet,html.dk-rev,html.dk-scores{--W:1180px}
 html.dk-card{--W:860px}
 html.dk-fiche{--W:1080px}
 /* ---- barre latérale ---- */
-#dk-side{position:fixed;left:0;top:0;bottom:0;width:var(--sb);box-sizing:border-box;padding:18px 12px 64px;background:linear-gradient(180deg,#0b2a5b,#13386f);color:#fff;display:flex;flex-direction:column;gap:6px;z-index:9990;overflow-y:auto;font:15px/1.3 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;box-shadow:2px 0 12px #0003}
+#dk-side{position:fixed;left:0;top:0;bottom:0;width:var(--sb);box-sizing:border-box;padding:18px 12px 64px;background:linear-gradient(180deg,#0b1f4d,#12306b);color:#fff;display:flex;flex-direction:column;gap:6px;z-index:9990;overflow-y:auto;font:15px/1.3 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;box-shadow:2px 0 12px #0003}
 #dk-side[hidden]{display:none!important}
-#dk-side a{color:#fff;text-decoration:none;background:none;box-shadow:none;border-radius:10px;margin:0;padding:0}
+#dk-side a{color:#fff;text-decoration:none;background:none;box-shadow:none;border-radius:0;margin:0;padding:0}
 #dk-side .dk-brand{display:flex;align-items:center;gap:10px;padding:6px 8px 12px}
-#dk-side .dk-brand img{width:46px;height:46px;border-radius:12px;background:#fff;flex:none}
+#dk-side .dk-brand img{width:46px;height:46px;border-radius:0;background:#fff;flex:none}
 #dk-side .dk-t1{font-weight:700;font-size:1.02em}#dk-side .dk-t2{opacity:.75;font-size:.9em;margin-top:2px}
-#dk-side .dk-cd{margin:0 4px 10px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15)}
+#dk-side .dk-cd{margin:0 4px 10px;padding:10px 12px;border-radius:0;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15)}
 #dk-side .dk-cdn{font-size:1.45em;font-weight:800;letter-spacing:.5px}#dk-side .dk-cdl{font-size:.8em;opacity:.8;margin-top:2px}
 #dk-side .dk-links{display:flex;flex-direction:column;gap:4px}
 #dk-side a.dk-l{display:flex;align-items:center;gap:10px;padding:10px 12px;font-weight:600;opacity:.88;transition:background .15s,opacity .15s}
@@ -21,31 +22,31 @@ html.dk-fiche{--W:1080px}
 #dk-side a.dk-l:hover{background:rgba(255,255,255,.12);opacity:1}
 #dk-side a.dk-l:focus-visible,#dk-side .dk-help:focus-visible,#dk-side .dk-brand:focus-visible{outline:3px solid #ffd36b;outline-offset:1px;opacity:1}
 #dk-side a.dk-l.dk-on{background:#fff;color:var(--navy);opacity:1;box-shadow:0 2px 6px #0003;outline:1px solid #fff}
-#dk-side .dk-n{font-style:normal;font-size:.78em;background:var(--red);color:#fff;border-radius:10px;padding:1px 8px;font-weight:700}
-#dk-side .dk-help{margin:10px 4px 0;padding:9px 10px;width:auto;border:1px solid rgba(255,255,255,.25);border-radius:10px;background:none;color:#fff;font:600 13px system-ui,sans-serif;cursor:pointer;text-align:left;opacity:.85}
+#dk-side .dk-n{font-style:normal;font-size:.78em;background:var(--red);color:#fff;border-radius:0;padding:1px 8px;font-weight:700}
+#dk-side .dk-help{margin:10px 4px 0;padding:9px 10px;width:auto;border:1px solid rgba(255,255,255,.25);border-radius:0;background:none;color:#fff;font:600 13px system-ui,sans-serif;cursor:pointer;text-align:left;opacity:.85}
 #dk-side .dk-help:hover{opacity:1;background:rgba(255,255,255,.08)}
-#dk-side kbd,#dk-helpov kbd{display:inline-block;font:600 12px ui-monospace,Consolas,monospace;padding:1px 6px;border-radius:5px;background:#fff;color:var(--navy);border:1px solid #c6cfdd;box-shadow:0 1px 0 #c6cfdd}
+#dk-side kbd,#dk-helpov kbd{display:inline-block;font:600 12px ui-monospace,Consolas,monospace;padding:1px 6px;border-radius:0;background:#fff;color:var(--navy);border:1px solid #c6cfdd;box-shadow:0 1px 0 #c6cfdd}
 /* signature Duss : rangée en bas de la barre latérale */
 html.dk #mkbadge{left:12px!important;right:auto!important;bottom:12px!important;max-width:calc(var(--sb) - 24px)!important;background:rgba(255,255,255,.14)!important;white-space:normal!important;line-height:16px!important;padding:4px 10px 4px 4px!important;flex-wrap:wrap}
 /* aide clavier */
 #dk-helpov{position:fixed;inset:0;background:rgba(10,20,40,.45);z-index:10001;display:none;align-items:center;justify-content:center}
 #dk-helpov.dk-vis{display:flex}
-#dk-helpov .dk-hbox{background:#fff;color:#1a2238;border-radius:14px;padding:22px 26px;min-width:420px;max-width:560px;box-shadow:0 12px 40px #0005;font:15px/1.45 system-ui,sans-serif}
+#dk-helpov .dk-hbox{background:#fff;color:#0f172a;border-radius:0;padding:22px 26px;min-width:420px;max-width:560px;box-shadow:0 12px 40px #0005;font:15px/1.45 system-ui,sans-serif}
 #dk-helpov .dk-htitle{font-weight:800;font-size:1.15em;color:var(--navy);margin-bottom:10px}
 #dk-helpov table{border-collapse:collapse;width:100%;font-size:1em;margin:0}#dk-helpov td{border:0;padding:6px 8px;background:none!important;vertical-align:middle}#dk-helpov td:first-child{white-space:nowrap;width:1%}
 #dk-helpov .dk-hnote{font-size:.9em;color:#555;margin:0 0 8px}
-#dk-helpov button{margin-top:14px;width:auto;padding:9px 18px;border:0;border-radius:8px;background:var(--navy);color:#fff;font-size:.95em;cursor:pointer}
+#dk-helpov button{margin-top:14px;width:auto;padding:9px 18px;border:0;border-radius:0;background:var(--navy);color:#fff;font-size:.95em;cursor:pointer}
 /* ---- éléments communs ---- */
 html.dk h1{font-size:1.75em!important;text-align:left!important;color:var(--navy);margin:4px 0 6px!important}
 html.dk .sub{text-align:left!important}
 html.dk .app-sub{text-align:left!important;margin:0 0 10px!important}
-html.dk a:focus-visible,html.dk button:focus-visible,html.dk summary:focus-visible,html.dk input:focus-visible,html.dk select:focus-visible,html.dk label:focus-within{outline:3px solid #2f6fd6;outline-offset:2px}
+html.dk a:focus-visible,html.dk button:focus-visible,html.dk summary:focus-visible,html.dk input:focus-visible,html.dk select:focus-visible,html.dk label:focus-within{outline:3px solid #1e4fa3;outline-offset:2px}
 html.dk button{cursor:pointer;transition:filter .15s,transform .15s,box-shadow .15s}
 html.dk button:hover:not(:disabled){filter:brightness(1.12)}
 html.dk #rstmsg{left:calc(50% + var(--sb) / 2)!important}
 /* ---- accueil ---- */
 html.dk-index #home{grid-template-columns:repeat(4,1fr)!important;gap:16px!important;margin-top:18px!important}
-html.dk-index #home .big{padding:34px 18px!important;font-size:1.15em!important;border-radius:16px;min-height:120px;transition:transform .15s,box-shadow .15s,filter .15s}
+html.dk-index #home .big{padding:34px 18px!important;font-size:1.15em!important;border-radius:0;min-height:120px;transition:transform .15s,box-shadow .15s,filter .15s}
 html.dk-index #home .big:hover{transform:translateY(-3px);box-shadow:0 8px 20px #0003;filter:brightness(1.1)}
 html.dk-index #home .big span#errn{background:#fff;color:var(--red);margin-left:6px}
 html.dk-index #themes>ul,html.dk-index #exams>ul{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
@@ -56,27 +57,27 @@ html.dk-index .back{display:none}
 html.dk-index h2{font-size:1.35em;margin:18px 0 12px}
 #dk-hero{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:14px;margin:16px 0 6px}
 #dk-hero[hidden]{display:none}
-#dk-hero .dk-kpi{display:block;background:#fff;border-radius:14px;padding:16px 18px;box-shadow:0 1px 5px #0002;text-decoration:none;color:#1a2238;border:2px solid transparent;transition:border-color .15s}
+#dk-hero .dk-kpi{display:block;background:#fff;border-radius:0;padding:16px 18px;box-shadow:0 1px 5px #0002;text-decoration:none;color:#0f172a;border:2px solid transparent;transition:border-color .15s}
 #dk-hero a.dk-kpi:hover{border-color:var(--navy)}
 #dk-hero .dk-big{background:var(--navy);color:#fff}
 #dk-hero .dk-kv{font-size:1.7em;font-weight:800;color:inherit;background:none;padding:0}#dk-hero .dk-kl{font-size:.88em;opacity:.8;margin-top:4px;background:none;color:inherit;font-weight:normal;padding:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #dk-hero a .dk-kv{color:var(--navy)}
 /* ---- séries de QCM ---- */
-html.dk-serie .q,html.dk-exam .q{padding:22px 26px!important;margin:18px 0!important;border-radius:14px!important;border:2px solid transparent;transition:border-color .15s,box-shadow .15s}
+html.dk-serie .q,html.dk-exam .q{padding:22px 26px!important;margin:18px 0!important;border-radius:0!important;border:2px solid transparent;transition:border-color .15s,box-shadow .15s}
 html.dk-serie .q .s,html.dk-exam .q .s{font-size:1.1em;line-height:1.5;margin:0 0 14px!important}
-html.dk-serie label,html.dk-exam label,html.dk-card #opts label{padding:12px 14px!important;margin:8px 0!important;border-radius:10px!important;cursor:pointer;transition:background .12s,border-color .12s}
-html.dk-serie label:hover,html.dk-exam label:hover,html.dk-card #opts label:hover{background:#eef3ff;border-color:#9fb3d9}
-html.dk-serie label:has(input:checked),html.dk-exam label:has(input:checked),html.dk-card #opts label:has(input:checked){background:#e3ecff;border-color:#2f6fd6}
-html.dk-serie .q.dk-cur,html.dk-exam .q.dk-cur{border-color:#2f6fd6;box-shadow:0 4px 18px #2f6fd633}
+html.dk-serie label,html.dk-exam label,html.dk-card #opts label{padding:12px 14px!important;margin:8px 0!important;border-radius:0!important;cursor:pointer;transition:background .12s,border-color .12s}
+html.dk-serie label:hover,html.dk-exam label:hover,html.dk-card #opts label:hover{background:#e8eef9;border-color:#9fb3d9}
+html.dk-serie label:has(input:checked),html.dk-exam label:has(input:checked),html.dk-card #opts label:has(input:checked){background:#e3ecff;border-color:#1e4fa3}
+html.dk-serie .q.dk-cur,html.dk-exam .q.dk-cur{border-color:#1e4fa3;box-shadow:0 4px 18px #1e4fa333}
 html.dk-serie .q button{padding:10px 18px}
-html.dk-serie .q .c,html.dk-exam .q .c{border-radius:8px;padding:12px 14px}
+html.dk-serie .q .c,html.dk-exam .q .c{border-radius:0;padding:12px 14px}
 html.dk-exam #bar{left:var(--sb)!important}
 html.dk-exam h1{margin-top:56px!important}
-html.dk-exam #bar[style*="sticky"],html.dk-card #bar{border-radius:12px;margin:0 0 18px!important}
+html.dk-exam #bar[style*="sticky"],html.dk-card #bar{border-radius:0;margin:0 0 18px!important}
 html.dk-exam #qs~button,html.dk-exam body>button{max-width:420px;display:block;margin-left:auto;margin-right:auto}
 /* ---- mode aléatoire / sigles / erreurs ---- */
 html.dk-card #bar{position:sticky}
-html.dk-card .card{padding:26px 30px!important;border-radius:16px!important}
+html.dk-card .card{padding:26px 30px!important;border-radius:0!important}
 html.dk-card #stem{font-size:1.15em;line-height:1.5;margin-bottom:16px!important}
 html.dk-card #fb{padding:14px 16px!important}
 /* ---- révisions ---- */
@@ -90,9 +91,9 @@ html.dk-rev summary:hover,html.dk-revdet summary:hover,html.dk-fiche summary:hov
 html.dk-rev .nav,html.dk-fiche .nav,html.dk-revdet .nav{max-width:520px}
 html.dk-revdet details.grp{max-width:none}
 html.dk-revdet .cl{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:10px;padding:12px!important}
-html.dk-revdet .cl li{border:1px solid #e3e8f0!important;border-radius:10px;background:#fff}
-html.dk-revdet .cl a{height:100%;box-sizing:border-box;border-radius:10px;transition:background .12s,box-shadow .12s}
-html.dk-revdet .cl a:hover{background:#eef3ff;box-shadow:0 3px 10px #0001}
+html.dk-revdet .cl li{border:1px solid #e3e8f0!important;border-radius:0;background:#fff}
+html.dk-revdet .cl a{height:100%;box-sizing:border-box;border-radius:0;transition:background .12s,box-shadow .12s}
+html.dk-revdet .cl a:hover{background:#e8eef9;box-shadow:0 3px 10px #0001}
 html.dk-revdet .flt{max-width:560px}
 html.dk #top{right:24px}
 /* ---- fiches détaillées : sommaire collant à gauche (≥ 1280 px) ---- */
@@ -102,12 +103,24 @@ html.dk-fiche .c p,html.dk-fiche .c li{max-width:75ch}
 @media (min-width:1280px){
 html.dk-fiche body{display:grid!important;grid-template-columns:270px minmax(0,78ch);column-gap:36px;align-items:start;align-content:start}
 html.dk-fiche body>*{grid-column:2}
-html.dk-fiche body>.toc{grid-column:1;grid-row:1 / span 400;position:sticky;top:20px;max-height:calc(100vh - 40px);overflow:auto;margin:0!important;font-size:.9em;background:#fff;border-radius:12px;box-shadow:0 1px 5px #0002;padding:14px 12px 14px 4px}
+html.dk-fiche body>.toc{grid-column:1;grid-row:1 / span 400;position:sticky;top:20px;max-height:calc(100vh - 40px);overflow:auto;margin:0!important;font-size:.9em;background:#fff;border-radius:0;box-shadow:0 1px 5px #0002;padding:14px 12px 14px 4px}
 html.dk-fiche body>.toc ol{margin:6px 0 0;padding-left:28px}
 html.dk-fiche body>.toc li{margin:3px 0}
-html.dk-fiche body>.toc a{display:block;padding:4px 8px;border-radius:6px;text-decoration:none;color:#1a2238}
-html.dk-fiche body>.toc a:hover{background:#eef3ff}
+html.dk-fiche body>.toc a{display:block;padding:4px 8px;border-radius:0;text-decoration:none;color:#0f172a}
+html.dk-fiche body>.toc a:hover{background:#e8eef9}
 html.dk-fiche body>.toc a.dk-act{background:var(--navy);color:#fff}
 html.dk-fiche body>#dk-side,html.dk-fiche body>#mkbadge,html.dk-fiche body>#top,html.dk-fiche body>#dk-helpov{grid-column:auto}
 }
 @media (min-width:1600px){html.dk{--sb:272px}html.dk-index #home{grid-template-columns:repeat(4,1fr)!important}html.dk body{font-size:17px}}
+
+/* Signature PC : pied de page fixe, police Geist */
+@media (min-width:1024px){
+html.dk #mkbadge{display:none!important}
+html.dk #dk-sign{display:flex;position:fixed;left:var(--sb);right:0;bottom:0;height:40px;align-items:center;justify-content:center;gap:10px;background:#fff;border-top:1px solid #d9e0ec;box-shadow:0 -2px 10px rgba(11,31,77,.06);z-index:9000;font:500 13px/1 "Geist",system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.02em;color:#0b1f4d;font-feature-settings:"tnum"}
+html.dk #dk-sign b{font-weight:500;color:#5b6b88;text-transform:uppercase;font-size:11px;letter-spacing:.12em}
+html.dk #dk-sign i{font-style:normal;font-weight:600}
+html.dk #dk-sign::before{content:"";width:8px;height:8px;background:#1e4fa3;display:block}
+html.dk body{padding-bottom:88px!important}
+html.dk #lec-bar{bottom:56px!important}
+html.dk body:not(.lec-on) #top{bottom:56px!important}
+}

@@ -1,0 +1,7 @@
+/* Thème du site : angles droits partout, bleus profonds sur fond clair. */
+*,*::before,*::after{border-radius:0!important}
+/* Signature mobile inchangée */
+#mkbadge{border-radius:12px!important}
+#mkbadge img{border-radius:50%!important}
+/* Signature PC (affichée par desktop.css à partir de 1024 px) */
+#dk-sign{display:none}

@@ -1,26 +1,26 @@
 /* Mode Lecture : révisions synthétiques. Ne s'active que si lecture.js a posé html.lec-ok. */
-.lec-page{display:inline-flex;align-items:center;gap:8px;margin:4px 0 12px;padding:8px 14px;border:0;border-radius:10px;background:#0b2a5b;color:#fff;font:600 15px system-ui,sans-serif;cursor:pointer;box-shadow:0 1px 4px #0002}
+.lec-page{display:inline-flex;align-items:center;gap:8px;margin:4px 0 12px;padding:8px 14px;border:0;border-radius:0;background:#0b1f4d;color:#fff;font:600 15px system-ui,sans-serif;cursor:pointer;box-shadow:0 1px 4px #0002}
 .lec-page svg{width:18px;height:18px;display:block;flex:none}
 .lec-page:hover{filter:brightness(1.12)}
 .lec-page:focus-visible,.lec-mini:focus-visible,#lec-bar button:focus-visible,#lec-bar select:focus-visible{outline:3px solid #ffd36b;outline-offset:2px}
-.lec-mini{flex:none;width:36px;height:36px;min-width:36px;min-height:36px;margin-left:4px;border:0;border-radius:8px;background:rgba(11,42,91,.08);color:#0b2a5b;padding:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.lec-mini{flex:none;width:36px;height:36px;min-width:36px;min-height:36px;margin-left:4px;border:0;border-radius:0;background:rgba(11,31,77,.08);color:#0b1f4d;padding:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
 .lec-mini svg{width:18px;height:18px;display:block}
-.lec-mini:hover{background:rgba(11,42,91,.16)}
+.lec-mini:hover{background:rgba(11,31,77,.16)}
 .lec-mini[aria-pressed="true"],.lec-page[aria-pressed="true"]{background:#a3312a;color:#fff}
 @media (pointer:coarse){.lec-mini{width:40px;height:40px;min-width:40px;min-height:40px}}
-.lec-cur{background:#fff3b0!important;box-shadow:inset 0 0 0 2px #e2c34a;border-radius:6px;transition:background .2s}
+.lec-cur{background:#fff3b0!important;box-shadow:inset 0 0 0 2px #e2c34a;border-radius:0;transition:background .2s}
 tr.lec-cur td{background:#fff3b0!important}
-#lec-bar{position:fixed;left:50%;bottom:8px;transform:translateX(-50%);width:calc(100% - 16px);max-width:640px;z-index:10000;box-sizing:border-box;background:#0b2a5b;color:#fff;border-radius:14px;box-shadow:0 6px 24px #0005;padding:8px 10px 10px;font:14px/1.3 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+#lec-bar{position:fixed;left:50%;bottom:8px;transform:translateX(-50%);width:calc(100% - 16px);max-width:640px;z-index:10000;box-sizing:border-box;background:#0b1f4d;color:#fff;border-radius:0;box-shadow:0 6px 24px #0005;padding:8px 10px 10px;font:14px/1.3 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
 #lec-bar[hidden]{display:none!important}
 #lec-bar .lec-tit{font-weight:700;font-size:.92em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:2px 6px 4px;opacity:.95}
 #lec-bar .lec-row{display:flex;align-items:center;gap:6px}
 #lec-bar .lec-ctrls{display:flex;align-items:center;gap:4px;flex:none}
-#lec-bar button{width:44px;height:44px;min-width:44px;border:0;border-radius:10px;background:rgba(255,255,255,.12);color:#fff;padding:0;cursor:pointer;display:flex;align-items:center;justify-content:center}
+#lec-bar button{width:44px;height:44px;min-width:44px;border:0;border-radius:0;background:rgba(255,255,255,.12);color:#fff;padding:0;cursor:pointer;display:flex;align-items:center;justify-content:center}
 #lec-bar button svg{width:22px;height:22px;display:block}
 #lec-bar button:hover{background:rgba(255,255,255,.22)}
 #lec-bar button:disabled{opacity:.35;cursor:default}
 #lec-bar .lec-opts{display:flex;align-items:center;gap:6px;flex:1;min-width:0;justify-content:flex-end;flex-wrap:wrap}
-#lec-bar select{max-width:100%;min-width:0;height:40px;border:0;border-radius:8px;background:#fff;color:#0b2a5b;font:600 13px system-ui,sans-serif;padding:0 8px;cursor:pointer}
+#lec-bar select{max-width:100%;min-width:0;height:40px;border:0;border-radius:0;background:#fff;color:#0b1f4d;font:600 13px system-ui,sans-serif;padding:0 8px;cursor:pointer}
 #lec-bar .lec-rate{flex:none;width:auto;min-width:4.6em}
 #lec-bar .lec-voice{flex:1;min-width:7em;max-width:220px}
 body.lec-on{padding-bottom:130px!important}
@@ -33,7 +33,7 @@ html.dk body.lec-on #mkbadge{bottom:12px!important}
 summary .lec-mini{margin-left:auto}
 details summary::after{margin-left:6px}
 
-#lec-bar .lec-msg{display:none;margin:6px 4px 2px;padding:8px 10px;border-radius:8px;background:#fff3b0;color:#1a2238;font:600 12.5px/1.35 system-ui,sans-serif}
+#lec-bar .lec-msg{display:none;margin:6px 4px 2px;padding:8px 10px;border-radius:0;background:#fff3b0;color:#0f172a;font:600 12.5px/1.35 system-ui,sans-serif}
 #lec-bar .lec-msg.lec-msg-on,#lec-bar .lec-msg:not([hidden]){display:block}
 .c h2 .lec-mini,.c h3 .lec-mini{display:inline-flex;vertical-align:middle;margin-left:8px;width:32px;height:32px;min-width:32px;min-height:32px}
 body.lec-on #top{bottom:150px!important;z-index:10000}
@@ -51,17 +51,43 @@ html.lec-off .lec-page,html.lec-off .lec-mini,html.lec-off #lec-bar{display:none
 #lec-frame[hidden]{display:none!important}
 html.lec-framed,html.lec-framed body{overflow:hidden!important}
 #lec-bar .lec-back[hidden]{display:none!important}
-.lec-page.lec-opti{margin-left:0;background:#1f5e3a}
-summary .lec-mini.lec-opti{margin-left:4px;color:#1f5e3a;background:rgba(31,94,58,.10)}
+.lec-page.lec-opti{margin-left:0;background:#1e4fa3}
+summary .lec-mini.lec-opti{margin-left:4px;color:#1e4fa3;background:rgba(30,79,163,.10)}
 summary .lec-mini.lec-opti[aria-pressed="true"],.lec-page.lec-opti[aria-pressed="true"]{background:#a3312a;color:#fff}
 /* Lecture aléatoire (tableau de bord, PC) */
 .lec-rand-box{display:flex;flex-direction:column;gap:8px}
-.big.lec-rand-btn{background:#1d5a3a}
+.big.lec-rand-btn{background:#1e4fa3}
 .big.lec-rand-btn:disabled{opacity:.75;cursor:default}
-.lec-rand-new{align-self:center;background:none;border:0;color:#0b2a5b;text-decoration:underline;font:600 .95em system-ui,sans-serif;cursor:pointer;padding:4px 8px}
+.lec-rand-new{align-self:center;background:none;border:0;color:#0b1f4d;text-decoration:underline;font:600 .95em system-ui,sans-serif;cursor:pointer;padding:4px 8px}
 .lec-rand-new[hidden]{display:none!important}
 #lec-bar .lec-rrow{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
 #lec-bar .lec-rrow[hidden]{display:none!important}
 #lec-bar button.lec-txt{width:auto;min-width:0;height:36px;padding:0 12px;font:700 13px system-ui,sans-serif;flex:1}
 html.lec-off .lec-rand-box{display:none!important}
 @media (max-width:1023px) and (pointer:coarse){.lec-rand-box{display:none!important}}
+/* Tuile sur la page « Tableau de bord » (scores.html) */
+.lec-rand-slot:empty{display:none}
+.lec-rand-slot{margin:14px 0 18px}
+.lec-rand-slot .lec-rand-box{flex-direction:row;align-items:center;gap:14px}
+.lec-rand-slot .lec-rand-btn{background:#1e4fa3;color:#fff;border:0;border-radius:0;padding:20px 28px;font:700 1.15em system-ui,sans-serif;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.12);min-width:320px}
+.lec-rand-slot .lec-rand-btn:hover{filter:brightness(1.1)}
+.lec-rand-slot .lec-rand-btn:disabled{opacity:.75;cursor:default}
+html.lec-off .lec-rand-slot{display:none!important}
+@media (max-width:1023px) and (pointer:coarse){.lec-rand-slot{display:none!important}}
+/* PC : lecteur compact ancré à droite, sans masquer la colonne de contenu */
+#lec-bar #lec-min{display:none}
+html.dk #lec-bar{left:auto!important;right:16px;bottom:56px!important;transform:none!important;width:320px!important;max-width:320px;padding:8px 8px 10px;border:1px solid #1e4fa3;box-shadow:0 8px 28px rgba(11,31,77,.35);font-size:13px}
+html.dk #lec-bar .lec-tit{padding:3px 34px 7px 4px;font-size:12.5px;letter-spacing:.01em}
+html.dk #lec-bar .lec-row{flex-direction:column;align-items:stretch;gap:6px}
+html.dk #lec-bar .lec-ctrls{justify-content:space-between;gap:4px}
+html.dk #lec-bar button{width:auto;flex:1;height:36px;min-width:0}
+html.dk #lec-bar button svg{width:19px;height:19px}
+html.dk #lec-bar .lec-opts{flex-wrap:nowrap;justify-content:stretch;gap:4px}
+html.dk #lec-bar select{height:30px;font-size:12px}
+html.dk #lec-bar .lec-voice{max-width:none;flex:1}
+html.dk #lec-bar .lec-rrow{margin-top:6px;gap:4px;flex-wrap:nowrap}
+html.dk #lec-bar button.lec-txt{height:30px;padding:0 6px;font-size:12px;white-space:nowrap}
+html.dk #lec-bar #lec-min{display:flex;position:absolute;top:4px;right:4px;width:26px;height:22px;min-width:26px;flex:none;z-index:2;font:700 15px/1 system-ui,sans-serif}
+html.dk #lec-bar.lec-small .lec-opts,html.dk #lec-bar.lec-small .lec-rrow{display:none!important}
+html.dk body.lec-on{padding-right:max(var(--gut,40px),356px)!important}
+html.dk body.lec-on #top{bottom:56px!important;right:352px!important}

@@ -606,7 +606,7 @@ function toggle(){
 
 function buildBar(){
   var bar=D.createElement("div");bar.id="lec-bar";bar.hidden=true;bar.setAttribute("role","region");bar.setAttribute("aria-label","Lecture audio");
-  bar.innerHTML='<div class="lec-tit" id="lec-tit">Lecture</div><div class="lec-row"><div class="lec-ctrls">'+
+  bar.innerHTML='<button type="button" id="lec-min" aria-label="Réduire le lecteur" title="Réduire / agrandir le lecteur" aria-expanded="true">\u2013</button><div class="lec-tit" id="lec-tit">Lecture</div><div class="lec-row"><div class="lec-ctrls">'+
     '<button type="button" id="lec-prev" aria-label="Passage précédent" title="Passage précédent">'+ICO.prev+'</button>'+
     '<button type="button" id="lec-play" aria-label="Lecture" title="Lecture">'+ICO.play+'</button>'+
     '<button type="button" id="lec-next" aria-label="Passage suivant" title="Passage suivant">'+ICO.next+'</button>'+
@@ -634,6 +634,9 @@ function buildBar(){
     dbg("voix",st.sys?"système":vid(st.voice));
     if(st.mode==="playing")speakAt(st.i,true);
   });
+  (function(){var mb=$("#lec-min",bar);function setMin(on){bar.classList.toggle("lec-small",on);mb.textContent=on?"+":"\u2013";mb.setAttribute("aria-expanded",on?"false":"true");}
+    try{setMin(localStorage.getItem("qcmbc:lecmin")==="1");}catch(e){}
+    mb.addEventListener("click",function(){var on=!bar.classList.contains("lec-small");setMin(on);try{localStorage.setItem("qcmbc:lecmin",on?"1":"0");}catch(e){}});})();
   $("#lec-play",bar).addEventListener("click",toggle);
   $("#lec-stop",bar).addEventListener("click",userStop);
   ui.rrow=$("#lec-rrow",bar);
@@ -787,7 +790,7 @@ function onFrameLoad(){
     history.replaceState({lecFrame:href},"",href);
   }
   try{
-    var stl=doc.createElement("style");stl.textContent="body{padding-bottom:140px!important}";doc.head.appendChild(stl);
+    var stl=doc.createElement("style");stl.textContent="body{padding-bottom:140px!important}html.dk body{padding-right:max(var(--gut,40px),356px)!important}";doc.head.appendChild(stl);
     /* Liens qui sortiraient du cadre (target=_top/_parent) : on les garde dans le cadre. */
     doc.addEventListener("click",function(e){
       var a=e.target&&e.target.closest&&e.target.closest("a[href]");
@@ -972,7 +975,7 @@ function injectOpti(){
 /* ===== Lecture aléatoire (tableau de bord, PC) : enchaîne les scripts de la Lecture optimisée dans un ordre mélangé ===== */
 var RKEY="qcmbc:lecalea";
 var RAND={on:false,starting:false,units:null,order:[],pos:0,unit:null,cache:{},fails:0};
-function isDash(){return !!D.getElementById("home")&&!/\/detaillees\//.test(location.pathname)&&/(^|\/)(index\.html?)?$/.test(location.pathname);}
+function isDash(){return !!D.getElementById("lec-rand-slot")||!!D.getElementById("home")&&!/\/detaillees\//.test(location.pathname)&&/(^|\/)(index\.html?)?$/.test(location.pathname);}
 function uidOf(u){return u.p+"#"+(u.n==null?"":u.n);}
 function rLoad(){try{var o=JSON.parse(localStorage.getItem(RKEY)||"null");return o&&o.ids&&o.ids.length?o:null;}catch(e){return null;}}
 function rSave(){
@@ -981,11 +984,23 @@ function rSave(){
 }
 function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t;}return a;}
 function unitById(id){var k;for(k=0;k<RAND.units.length;k++)if(uidOf(RAND.units[k])===id)return RAND.units[k];return null;}
-function newOrder(avoid){
-  var ids=shuffle(RAND.units.map(uidOf));
-  if(avoid&&ids.length>1&&ids[0]===avoid){var t=ids[0];ids[0]=ids[1];ids[1]=t;}
-  return ids;
+function pageOf(id){return String(id).replace(/#.*$/,"");}
+function subjOf(id){
+  /* Matière : APORTT, TI, PPI, AFI, Instruction… (préfixe du nom de fiche détaillée) ; page entière pour les révisions synthétiques. */
+  var p=pageOf(id),m=p.match(/^detaillees\/\d+_([^_]+)/);return m?m[1].toUpperCase():p;
 }
+function spread(ids,prev){
+  /* Tirage mélangé, sans deux fiches d'affilée du même cours (quand c'est possible). */
+  var pool=shuffle(ids.slice()),out=[],last=prev?subjOf(prev):null,lastP=prev?pageOf(prev):null,k;
+  while(pool.length){
+    for(k=0;k<pool.length;k++)if(subjOf(pool[k])!==last)break;
+    if(k>=pool.length)for(k=0;k<pool.length;k++)if(pageOf(pool[k])!==lastP)break;
+    if(k>=pool.length)k=0;
+    var id=pool.splice(k,1)[0];out.push(id);last=subjOf(id);lastP=pageOf(id);
+  }
+  return out;
+}
+function newOrder(avoid){return spread(RAND.units.map(uidOf),avoid);}
 var RBASE=null;
 function rBase(){
   /* Adresses absolues figées au chargement : l'adresse affichée change (history.replaceState) quand une fiche est ouverte par-dessus. */
@@ -1015,7 +1030,7 @@ function unitData(u){
   return pr;
 }
 function unitList(u,data){
-  var lab=u.t+" ("+(u.k==="d"?"détaillé":"synthétique")+")",out=[],js=data.js;
+  var lab=(u.c?u.c+" – ":"")+u.t+" ("+(u.k==="d"?"détaillé":"synthétique")+")",out=[],js=data.js,ns=(u.ns||[u.n]).map(String);
   capsTables();
   var keep=PAGE_W;PAGE_W=data.words||{};
   function add(t,n,a){var sp=speakable(t);if(!sp)return;splitText(sp).forEach(function(p){out.push({el:null,speak:p,label:lab,rn:n,ra:a});});}
@@ -1024,7 +1039,7 @@ function unitList(u,data){
       if(js.intro)add(js.intro,null,"h1");
       js.sections.forEach(function(sec){sec.items.forEach(function(it){add(it.t,sec.n,it.a);});});
     }else{
-      js.sections.forEach(function(sec){if(String(sec.n)===String(u.n))sec.items.forEach(function(it){add(it.t,sec.n,it.a);});});
+      js.sections.forEach(function(sec){if(ns.indexOf(String(sec.n))>=0)sec.items.forEach(function(it){add(it.t,sec.n,it.a);});});
     }
   }finally{PAGE_W=keep;}
   return out;
@@ -1066,7 +1081,7 @@ function randStart(resume){
   if(sv){
     var known={},ids=[];RAND.units.forEach(function(u){known[uidOf(u)]=1;});
     sv.ids.forEach(function(id){if(known[id]&&ids.indexOf(id)<0)ids.push(id);});
-    var miss=shuffle(RAND.units.map(uidOf).filter(function(id){return ids.indexOf(id)<0;}));
+    var miss=spread(RAND.units.map(uidOf).filter(function(id){return ids.indexOf(id)<0;}),ids[ids.length-1]);
     RAND.order=ids.concat(miss);
     RAND.pos=Math.min(Math.max(0,sv.pos|0),RAND.order.length-1);
     if(sv.ids[sv.pos]===RAND.order[RAND.pos])from=sv.i|0;
@@ -1118,7 +1133,7 @@ function randInit(){
   fetch(b.base+"index.json"+b.q,{cache:"no-cache"}).then(function(r){return r.ok?r.json():null;}).then(function(ix){
     if(!ix||!ix.units||!ix.units.length)return;
     RAND.units=ix.units;
-    var home=D.getElementById("home");if(!home||D.getElementById("lec-rand-go"))return;
+    var home=D.getElementById("lec-rand-slot")||D.getElementById("home");if(!home||D.getElementById("lec-rand-go"))return;
     var wrap=D.createElement("div");wrap.className="lec-rand-box";
     var go=D.createElement("button");go.type="button";go.id="lec-rand-go";go.className="big lec-rand-btn";
     go.title="Écouter les fiches (synthétiques et détaillées) dans un ordre tiré au sort, sans s’arrêter";
@@ -1184,7 +1199,7 @@ function init(){
     e.preventDefault();e.stopImmediatePropagation();openInFrame(hu.href);
   },true);
   window.addEventListener("popstate",onPop);
-  window.qcmbcLectureText={speakable:speakable,romans:romans,blocks:optiBlocks,rand:function(){return {on:RAND.on,pos:RAND.pos,n:RAND.order.length,unit:RAND.unit&&uidOf(RAND.unit),units:RAND.units&&RAND.units.length};},randList:function(id){var u=RAND.units&&unitById(id);return u?unitData(u).then(function(d){return unitList(u,d).map(function(c){return c.speak;});}):Promise.resolve(null);}};
+  window.qcmbcLectureText={speakable:speakable,romans:romans,blocks:optiBlocks,rand:function(){return {on:RAND.on,pos:RAND.pos,n:RAND.order.length,unit:RAND.unit&&uidOf(RAND.unit),units:RAND.units&&RAND.units.length};},randOrder:function(){return RAND.order.slice();},randList:function(id){var u=RAND.units&&unitById(id);return u?unitData(u).then(function(d){return unitList(u,d).map(function(c){return c.speak;});}):Promise.resolve(null);}};
   if(DEBUG){dbg("debug actif","synth="+(!!synth)+" android="+ANDROID);}
 }
 function boot(){

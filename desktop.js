@@ -4,6 +4,8 @@ if(!window.matchMedia)return;
 var MQ=window.matchMedia("(min-width:1024px)"),H=document.documentElement,D=document;
 var me=D.currentScript||D.querySelector('script[src$="desktop.js"]'),BASE=me?me.getAttribute("src").replace(/desktop\.js.*$/,""):"";
 var path=location.pathname,file=(path.match(/[^\/]*$/)||[""])[0]||"index.html",inDet=/\/detaillees\//.test(path);
+function sign(){if(D.getElementById("dk-sign")||!D.body)return;var f=D.createElement("footer");f.id="dk-sign";f.innerHTML='<b>Made by</b><i>Damien M. &amp; Grok Bot</i>';D.body.appendChild(f);}
+if(D.body)sign();else D.addEventListener("DOMContentLoaded",sign);
 function $(s,r){return (r||D).querySelector(s);}function $$(s,r){return Array.prototype.slice.call((r||D).querySelectorAll(s));}
 var type=$("#themes")&&$("#exams")?"index":$("#dk-scores")?"scores":(inDet&&$(".toc,details"))?"fiche":$(".cl")?"revdet":/^revisions/.test(file)?"rev":$("#opts")&&$("#val")?"card":($("#timer")&&($(".q")||$("#qs")))?"exam":$(".q[data-a]")?"serie":"autre";
 var KEYH="qcmbc:historique";

@@ -30,14 +30,28 @@ for src in sorted(glob.glob(os.path.join(root,'tools','opti_src','*.txt'))+glob.
 import html as _h
 def _txt(x):return re.sub(r'\s+',' ',_h.unescape(re.sub(r'<[^>]+>','',x))).strip()
 units=[]
+def _sum(hp,n):
+    m=re.search(r'<summary[^>]*>\s*<span class="n">'+re.escape(str(n))+r'</span>(.*?)</summary>',hp,re.S)
+    return _txt(m.group(1)) if m else 'Partie '+str(n)
 for name in pages:
     hp=open(os.path.join(root,name+'.html'),encoding='utf-8').read()
     js=json.load(open(os.path.join(root,'lecture_opti',name+'.json'),encoding='utf-8'))
-    if name.startswith('detaillees/'):
-        m=re.search(r'<h1[^>]*>(.*?)</h1>',hp,re.S);units.append({'p':name,'n':None,'t':_txt(m.group(1)) if m else name,'k':'d'})
-    else:
-        for sec in js['sections']:
-            m=re.search(r'<summary[^>]*>\s*<span class="n">'+re.escape(str(sec['n']))+r'</span>(.*?)</summary>',hp,re.S)
-            units.append({'p':name,'n':sec['n'],'t':_txt(m.group(1)) if m else 'Fiche '+str(sec['n']),'k':'s'})
+    m=re.search(r'<h1[^>]*>(.*?)</h1>',hp,re.S);course=_txt(m.group(1)) if m else name
+    course=re.sub(r'^Révisions\s*[–-]\s*','',course)
+    det=name.startswith('detaillees/')
+    # Une unité = une fiche : chaque fiche synthétique ; pour un cours détaillé, chaque partie
+    # (les parties de moins de 3 passages sont regroupées avec la suivante, pour ne jamais lire une phrase isolée).
+    groups=[];cur=[]
+    for sec in js['sections']:
+        cur.append(sec)
+        if not det or sum(len(x['items']) for x in cur)>=3:groups.append(cur);cur=[]
+    if cur:
+        if groups:groups[-1]+=cur
+        else:groups.append(cur)
+    for g in groups:
+        t=re.sub(r'^\s*\d+(\.\d+)*\s*[-–.)]\s*','',_sum(hp,g[0]['n']))
+        u={'p':name,'n':g[0]['n'],'t':t,'c':course,'k':'d' if det else 's'}
+        if len(g)>1:u['ns']=[x['n'] for x in g]
+        units.append(u)
 json.dump({'v':1,'pages':pages,'units':units},open(os.path.join(root,'lecture_opti','index.json'),'w',encoding='utf-8'),ensure_ascii=False)
 print(len(pages),'pages dans index.json')
