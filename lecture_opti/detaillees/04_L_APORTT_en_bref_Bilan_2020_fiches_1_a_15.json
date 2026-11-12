@@ -1,0 +1,225 @@
+{
+"v": 1,
+"page": "detaillees/04_L_APORTT_en_bref_Bilan_2020_fiches_1_a_15.html",
+"intro": "L'APORTT en bref, le bilan 2020, en quinze fiches. On parcourt l'arrêté de bout en bout : temps et durée de travail, nuit, repos, régimes, congés, services supplémentaires, puis dérogations et restitution des repos manqués.",
+"sections": [
+{
+"n": "1",
+"items": [
+{
+"a": "b0-31",
+"t": "Le sommaire suit quinze fiches : la présentation, le temps de travail, la durée du travail, le travail de nuit, les repos, les régimes hebdomadaires et cycliques, les congés, les services supplémentaires, puis les dérogations et la restitution des repos manqués."
+},
+{
+"a": "b32-34",
+"t": "Fiche 1. L'APORTT, c'est l'arrêté du 5 septembre 2019 sur l'organisation du temps de travail dans la police nationale. Il s'applique depuis le 1er janvier 2020 à tous les services, DGPN, DGSI et préfecture de police, et à tous les corps, actifs et administratifs, sauf en partie la DCCRS."
+},
+{
+"a": "b35",
+"t": "Pourquoi ce texte ? Pour respecter la réglementation européenne sur les repos journalier et hebdomadaire, suivre les recommandations de la Cour des comptes, refondre un empilement de textes, comme l'IGOT de 2002, et réduire le stock d'heures supplémentaires."
+},
+{
+"a": "b36",
+"t": "Ses apports : la définition de la période nocturne et du travailleur de nuit ; la journée continue en régime hebdomadaire ; le travail en cycle pour les PATS ; la permanence sur volontariat des adjoints de sécurité ; un régime à variabilité pour les officiers ; des précisions sur la prise de service décalée, les rappels et le report de repos ; une nouvelle gestion des heures supplémentaires au-delà de 160 heures ; et des exceptions et dérogations aux temps de travail et de repos."
+},
+{
+"a": "b37-38",
+"t": "Fiche 2, le temps de travail. C'est le temps pendant lequel l'agent est à la disposition de son employeur et se conforme à ses directives, sans pouvoir vaquer librement à ses occupations personnelles."
+},
+{
+"a": "b39-40",
+"t": "Il est comptabilisé par un outil de gestion : Géopol, puis GesTT à partir de janvier 2022. Chaque agent y a un compte temps dématérialisé, avec des calculs automatisés. Et le suivi du temps de travail fait l'objet d'un entretien avec le responsable désigné, au moins une fois par an."
+},
+{
+"a": "b41",
+"t": "Deux régimes de travail : l'hebdomadaire, calqué sur la semaine civile, et le cyclique, en continu, par équipes successives de jour et de nuit, dimanches et fériés compris. La DCCRS a un régime mixte. Et seuls les régimes définis par l'APORTT sont admis."
+},
+{
+"a": "b42-44",
+"t": "Fiche 3, la durée du travail, appréciée à l'année, à la semaine et à la journée. À l'année : 1607 heures, comme dans toute la fonction publique de l'État, quel que soit le régime, après déduction des repos, congés annuels, jours fériés et jours d'ARTT."
+},
+{
+"a": "b45",
+"t": "Exception : elle est réduite de quelques jours en Alsace-Moselle, en Guadeloupe, en Guyane, en Martinique, à La Réunion et à Mayotte, pour tenir compte des particularismes locaux."
+},
+{
+"a": "b46",
+"t": "À la semaine : en moyenne, pas plus de 48 heures par période de sept jours, services supplémentaires compris, calculée sur le semestre écoulé, en excluant congés annuels et congés maladie."
+},
+{
+"a": "b47",
+"t": "À la journée : on parle de durée moyenne journalière, la DMJ. En régime hebdomadaire, c'est un cinquième de la durée hebdomadaire ; en cyclique, c'est la durée de la vacation."
+}
+]
+},
+{
+"n": "2",
+"items": [
+{
+"a": "b0",
+"t": "Fiche 4, le travail de nuit. Pour la première fois, l'APORTT, à son article 10, définit la période nocturne : de 21 heures à 6 heures."
+},
+{
+"a": "b1",
+"t": "Le travailleur de nuit est l'agent qui accomplit, hors services supplémentaires, soit au moins 3 heures dans la période nocturne au moins deux fois par semaine, soit au moins 270 heures de nuit sur l'année civile."
+},
+{
+"a": "b2",
+"t": "Le travail de nuit ne doit pas dépasser 8 heures en moyenne par 24 heures, sur trois mois civils. Le chef de service suit cette moyenne, et si elle est dépassée, il impose des congés à l'agent."
+},
+{
+"a": "b3",
+"t": "La pénibilité donne des repos de pénibilité spécifique, les RPS. En cycle de nuit, coefficient de 0,1 en semaine entre 21 heures et 6 heures, et de 0,4 le dimanche. Les adjoints de sécurité peuvent travailler de jour comme de nuit. Les PATS et contractuels doivent être volontaires pour la nuit en cycle. Et des dérogations existent quand l'agent est décalé pour certaines missions."
+},
+{
+"a": "b4-7",
+"t": "Fiche 5, les repos. Chaque agent a, sur 24 heures, 11 heures consécutives de repos journalier, juste après sa période de travail. Et sur sept jours, un repos hebdomadaire, fait d'un repos légal et d'un repos compensateur, avec au minimum 35 heures, soit 24 heures plus les 11 heures de repos journalier."
+},
+{
+"a": "b8-10",
+"t": "Les 24 heures du repos journalier se comptent à partir de la prise de service effective. Les sept jours du repos hebdomadaire démarrent à la prise de service du premier jour travaillé de la semaine en régime hebdomadaire, ou de la première vacation du cycle en régime cyclique."
+},
+{
+"a": "b11-12",
+"t": "La pause : pas de travail quotidien de 6 heures sans une pause d'au moins 20 minutes. Elle s'applique au régime cyclique et au régime hebdomadaire continu."
+},
+{
+"a": "b13",
+"t": "La pause est du temps de travail, car l'agent reste à disposition. L'interruption de service, elle, est du temps de repos : en régime hebdomadaire classique, de 45 minutes à 2 heures, entre 11 heures 30 et 14 heures 30."
+},
+{
+"a": "b14-15",
+"t": "Fiche 6, les régimes hebdomadaires, plus utilisés que le cyclique : fin 2020, environ 56 pour cent des agents contre 44 pour cent. Cinq jours de travail, puis un repos légal, en principe le dimanche, et un repos compensateur, le samedi ou le lundi. Variante : grande semaine de six jours et petite semaine de quatre. Il existe avec interruption de service, la journée étant coupée à midi, ou sans, en journée continue, ce qui vaut aussi pour toute journée commençant avant 7 heures ou finissant après 19 heures, avec 20 minutes de pause dès 6 heures de travail. Les volumes à temps plein sont de 40 heures 30, 39 heures 25, 39 heures ou 38 heures, avec possibilité d'horaires variables."
+},
+{
+"a": "b16-17",
+"t": "Les services supplémentaires n'ouvrent pas droit aux ARTT. Le crédit d'ARTT dépend du corps et du régime, dès que l'agent travaille au-delà de 1607 heures par an."
+},
+{
+"a": "b18-19",
+"t": "Fiche 7, les régimes cycliques, pour la continuité du service : des équipes successives, de jour ou de nuit, dimanches et fériés compris. Ils concernent tous les actifs, adjoints de sécurité compris, et plus rarement les PATS et contractuels, par exemple en centre de commandement ou pour la nuit sur volontariat."
+},
+{
+"a": "b20",
+"t": "En cycle de jour, deux jours de repos consécutifs après la période de travail, un repos compensateur puis un repos légal, sauf en quatre-deux compressé ; et jusqu'à trois jours pour les vacations de forte amplitude. En cycle de nuit, c'est la descente de nuit, de la fin de service à la reprise théorique."
+},
+{
+"a": "b21",
+"t": "Seuls les cycles de l'APORTT sont admis : le quatre-deux, classique, panaché ou compressé ; les cycles binaires en vacations de 11 heures 08 ou 12 heures 08 ; la vacation forte ; et les cycles des unités cynotechniques légères. Les ARTT varient selon la DMJ et le corps."
+},
+{
+"a": "b22",
+"t": "La prise de service décalée suit les mêmes règles qu'en hebdomadaire : circonstances exceptionnelles, même journée, toute la vacation, agent prévenu au plus tard avant la fin de sa dernière vacation. Compensation : 0,25 sur un repos compensateur, 0,60 sur un repos légal."
+},
+{
+"a": "b23-24",
+"t": "Fiche 8, les congés. Les règles de la fonction publique de l'État s'appliquent : congés annuels, bonifiés, maternité, paternité, adoption, parentaux, autorisations d'absence, et compte épargne-temps. Le taux de présence dans un service ne peut pas descendre sous 50 pour cent, ni atteindre 100 pour cent, sauf décision du ministre en circonstances exceptionnelles."
+},
+{
+"a": "b25",
+"t": "Chaque policier a des congés annuels, des RPS, et un crédit d'ARTT, en régime hebdomadaire, ou d'ARTC, en cyclique. Si moins de 10 jours d'ARTT ou de RPS sont inscrits au plan prévisionnel, la différence jusqu'à 10 jours est protégée, posée en deux fois maximum. Toutes les demandes sont validées par le chef de service, dans un délai raisonnable."
+},
+{
+"a": "b26",
+"t": "Le crédit férié, propre au cyclique : 109 heures 12 en métropole, 116 heures 12 outre-mer, 123 heures 12 en Alsace-Moselle. Il se prend dans l'année, sans report sauf autorisation expresse, et ne va pas sur un compte épargne-temps. Un congé maladie ordinaire de 15 jours consécutifs ou plus retire un vingt-quatrième du crédit annuel par période."
+},
+{
+"a": "b27-28",
+"t": "Fiche 9, les congés annuels : pour une année de service, cinq fois les obligations hebdomadaires, en jours ouvrés. Ils peuvent être inscrits au plan prévisionnel, sous réserve des nécessités et des taux d'absence."
+},
+{
+"a": "b29",
+"t": "Ils sont alors protégés, comme ceux posés hors plan : seul le ministre de l'Intérieur peut rappeler les agents."
+},
+{
+"a": "b30-31",
+"t": "Congés non pris pour maladie ou maternité : jusqu'à quatre semaines, à prendre dans les quinze mois suivant l'année. Congés reportés pour nécessité de service : à prendre avant le 1er mai suivant."
+},
+{
+"a": "b32",
+"t": "Pour d'autres motifs, pas de report, mais possibilité de les mettre sur le compte épargne-temps. Et les jours de fractionnement : un jour si 5 à 7 jours de congés sont pris hors de la période du 1er mai au 31 octobre, deux jours à partir de 8 jours."
+},
+{
+"a": "b33-36",
+"t": "Fiche 10. Les ARTT ramènent la durée annuelle à 1607 heures. Le crédit est en heures en cyclique, en jours en hebdomadaire, selon le corps et le régime. Inscrits au plan prévisionnel, ils sont protégés comme les congés annuels."
+},
+{
+"a": "b37-38",
+"t": "La journée de solidarité retire 7 heures d'ARTT. La différence avec la journée d'ARTT déduite va en repos compensateur de services supplémentaires. Ce complément ne s'applique pas aux cycles de 12 heures 08 et 11 heures 08, à la vacation forte, ni aux agents de l'article 10."
+},
+{
+"a": "b39-44",
+"t": "Les RPS réduisent la durée annuelle pour pénibilité, avec des coefficients non cumulables, dans quatre cas : en cyclique, la nuit et le dimanche, 0,1 et 0,4 ; en hebdomadaire, pour le travail habituel de nuit, 0,1 ; pour une prise décalée, 0,25 sur un repos compensateur, 0,60 sur un repos légal ou un férié ; et 0,15 par heure de repos journalier manqué."
+},
+{
+"a": "b45",
+"t": "Les RPS peuvent aller au plan prévisionnel. Les commissaires, les officiers, les PATS et contractuels de l'article 10 n'en bénéficient pas."
+},
+{
+"a": "b46-47",
+"t": "Fiche 11, les services supplémentaires, de quatre types : permanence, astreinte, dépassements horaires, rappels et reports de repos. Les repos compensateurs correspondants, les RCSS, se prennent dans l'année, sinon ils restent dus, s'ils ne vont pas sur un compte épargne-temps. Au-delà de 160 heures, ils vont sur un compte historique ; entre 120 et 160 heures, ils peuvent y aller ; les autres restent sur le compte actif. Au-delà de 160 heures sur le compte actif, l'agent récupère sous 30 jours, sinon le chef de service le prescrit. Ces services peuvent aussi être indemnisés, mais le paiement exclut la compensation horaire."
+}
+]
+},
+{
+"n": "3",
+"items": [
+{
+"a": "b0",
+"t": "Fiche 12. La permanence, seulement en régime hebdomadaire : une présence effective au service, à tour de rôle, sur listes établies au moins 14 jours avant, lors des repos, fériés ou de nuit. Tous y participent, les adjoints de sécurité sur volontariat. Elle dure une DMJ, et 12 heures maximum pour les officiers hors article 10. Les repos hebdomadaires manqués sont rendus juste après, et les autres compensations sous 21 jours. L'astreinte, elle, est hors temps de travail : l'agent reste chez lui ou à proximité, pour intervenir au plus vite ; seule l'intervention compte comme travail effectif."
+},
+{
+"a": "b1",
+"t": "S'il doit se déplacer, son temps de travail commence à son arrivée théorique au service, avec une heure forfaitaire de trajet aller-retour."
+},
+{
+"a": "b2",
+"t": "Sans déplacement, en télé-intervention, pas d'heure de trajet. Tous sont soumis à l'astreinte sauf les adjoints de sécurité, et ont droit à une rémunération ou une compensation, sauf notamment les commissaires et officiers de l'article 10."
+}
+]
+},
+{
+"n": "4",
+"items": [
+{
+"a": "b0",
+"t": "Fiche 13. Le dépassement horaire, c'est le temps fait au-delà de la vacation, compté au réel. Mais pour les PATS, adjoints de sécurité et contractuels, toute heure commencée est due. Les commissaires et les officiers et PATS de l'article 10 en sont exclus."
+},
+{
+"a": "b1",
+"t": "Le rappel peut toucher tout agent, pour les nécessités du service ou une convocation, avec la même compensation quel que soit le motif, et chacun reste joignable. Le report de repos légal est exceptionnel, sur une journée ou vacation entière, l'agent étant prévenu au plus tard avant la fin de sa dernière vacation. PATS, adjoints de sécurité et contractuels en sont exclus. Et certains congés, notamment ceux inscrits au plan prévisionnel, protègent du rappel et du report."
+}
+]
+},
+{
+"n": "5",
+"items": [
+{
+"a": "b0",
+"t": "Fiche 14, les dérogations : au repos journalier, à la pause, au repos hebdomadaire, à la durée hebdomadaire, au travail de nuit et aux périodes de référence, dans toutes les directions, CRS compris. La restitution est un droit, qui place l'agent en période de neutralisation : pas de rappel, sauf circonstances exceptionnelles et décision du DGPN, du DGSI ou du préfet de police. Elles visent les chefs de service de l'article 10, les circonstances exceptionnelles, comme une catastrophe naturelle ou une menace durable sur les institutions, et les missions spécifiques, judiciaires, de surveillance, de renseignement, de sécurité publique, ou hors du lieu habituel et de protection des personnalités. Dans ces deux derniers cas, engagement maximal de 12 jours pour les repos journaliers et de 21 jours pour les hebdomadaires."
+}
+]
+},
+{
+"n": "6",
+"items": [
+{
+"a": "b0-2",
+"t": "Fiche 15, la restitution. En cadre dérogatoire, les repos manqués sont obligatoirement rendus dès la fin de la mission, par des périodes équivalentes. Et chaque heure de repos journalier manqué donne un coefficient de 0,15."
+},
+{
+"a": "b3-8",
+"t": "Le repos journalier manqué se rend ainsi : on retarde la prise de service du lendemain, sans changer l'heure de fin ; sinon on avance la fin de service ; et si on ne peut pas réduire la journée, sur le repos journalier suivant. Ces trois solutions peuvent se cumuler."
+},
+{
+"a": "b9-10",
+"t": "Les repos hebdomadaires manqués sont rendus immédiatement à la fin de la mission, même sur des jours de travail, en utilisant les RCSS. Et un repos hebdomadaire manqué, accolé à celui de la période, fait au minimum 59 heures : 11 plus 24 plus 24."
+},
+{
+"a": "r",
+"t": "Ce qu'il faut retenir : 1607 heures par an ; 48 heures maximum en moyenne par semaine ; nuit de 21 heures à 6 heures ; 11 heures de repos journalier, 35 heures de repos hebdomadaire ; 20 minutes de pause dès 6 heures ; RPS de 0,1 la nuit, 0,4 le dimanche, 0,25 et 0,60 pour la prise décalée, 0,15 par heure de repos journalier manqué ; RCSS au-delà de 160 heures à récupérer sous 30 jours ; dérogations de 12 jours pour le journalier et 21 jours pour l'hebdomadaire, avec restitution obligatoire."
+}
+]
+}
+]
+}
