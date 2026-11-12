@@ -1,0 +1,233 @@
+{
+"v": 1,
+"page": "detaillees/39_Instruction_DGPN_19_12_2011_Traitement_de_suivi.html",
+"intro": "L'instruction DGPN du 19 décembre 2011 sur le traitement relatif au suivi de l'usage des armes, le TSUA. L'accès, le cadre juridique, les finalités, les utilisateurs, les usages concernés, et les restrictions.",
+"sections": [
+{
+"n": "1",
+"items": [
+{
+"a": "b0-3",
+"t": "Cette instruction informe les personnels qui alimentent le TSUA, mis en œuvre début 2012, de ses finalités et de ses modalités d'utilisation, dans le respect des règles de confidentialité."
+},
+{
+"a": "b4",
+"t": "Le TSUA est une application web, accessible depuis un poste de travail par l'intranet, après connexion au portail sécurisé CHEOPS NG."
+},
+{
+"a": "b5",
+"t": "Il concerne les policiers qui ont fait usage d'une ou plusieurs armes : actifs, adjoints de sécurité, cadets de la République, et le cas échéant réservistes civils. Il s'inscrit dans l'obligation de rendre compte prévue notamment par le code de déontologie et le RGEPN."
+},
+{
+"a": "b6-7",
+"t": "L'accès suppose une habilitation, délivrée par le gérant du portail CHEOPS NG."
+},
+{
+"a": "b8-9",
+"t": "Les chefs de service gèrent les droits de leurs collaborateurs. Localement, chacun désigne un administrateur, qui veille à la sécurité et qu'on contacte en cas de difficulté, notamment si l'agent qui doit déclarer n'a pas l'habilitation."
+},
+{
+"a": "b10",
+"t": "L'habilitation est personnelle et individuelle. Elle identifie l'utilisateur et détermine ses droits selon son profil : acteur utilisateur pour les agents, acteur chef de service pour leurs supérieurs."
+},
+{
+"a": "b11",
+"t": "Un profil consultation permet seulement la lecture des comptes rendus. Il est destiné aux services d'appui et de soutien."
+},
+{
+"a": "b12-13",
+"t": "Enfin, sous l'autorité du DGPN, un profil administrateur donne un accès illimité aux données."
+}
+]
+},
+{
+"n": "2",
+"items": [
+{
+"a": "b0",
+"t": "Le TSUA est un traitement de données personnelles. Selon la loi du 6 janvier 1978, il est autorisé par un arrêté du ministre de l'Intérieur du 16 novembre 2011, pris après avis de la CNIL."
+},
+{
+"a": "b1",
+"t": "Le droit d'accès et de rectification s'exerce directement auprès de la direction générale de la police nationale, par un rapport transmis par la voie hiérarchique."
+}
+]
+},
+{
+"n": "3",
+"items": [
+{
+"a": "b0",
+"t": "Le TSUA a une double finalité, opérationnelle et administrative : collecter en sécurité les informations sur les conditions d'usage des armes, et simplifier les déclarations."
+},
+{
+"a": "b1-2",
+"t": "Pour l'agent, il permet de rendre compte des circonstances et du contexte d'un ou plusieurs usages, en service ou hors service, dès lors qu'il y a un lien avec ses fonctions. S'il est indisponible, un collègue habilité peut déclarer provisoirement à sa place."
+},
+{
+"a": "b3",
+"t": "Pour l'administration, il permet de compter et d'analyser les usages, pour en tirer des conséquences stratégiques, pédagogiques pour la sécurité des interventions, logistiques pour adapter les équipements, et administratives pour simplifier les procédures."
+},
+{
+"a": "b4-5",
+"t": "Il permet d'enregistrer et de conserver, pour analyse, les déclarations des agents en France et à l'étranger. Retenez bien : ces informations ne préjugent en rien des suites judiciaires ou administratives."
+},
+{
+"a": "b6",
+"t": "Mais les comptes rendus peuvent, notamment à la demande de l'autorité judiciaire, documenter d'éventuelles enquêtes ou procédures."
+},
+{
+"a": "b7-8",
+"t": "Il permet aussi l'envoi électronique de certaines informations aux autorités habilitées, et des statistiques sur l'usage des armes dans la police nationale."
+},
+{
+"a": "b9",
+"t": "La déclaration se fait au plus près de l'action, définie par une unité de temps, de lieu et d'action. Cette proximité s'apprécie selon les contraintes opérationnelles des services."
+},
+{
+"a": "b10-13",
+"t": "Concrètement, l'agent remplit des formulaires, souvent avec des menus déroulants, valide par étapes successives, et transmet le compte rendu aux autorités désignées."
+},
+{
+"a": "b14",
+"t": "Un champ de texte libre, obligatoire, est réservé au rapport du déclarant. Selon les instructions de sa direction, ce rapport peut être la seule formalité exigée pour rendre compte."
+},
+{
+"a": "b15-17",
+"t": "Ce texte est intégré automatiquement dans le compte rendu d'utilisation, qui reprend les principales informations saisies."
+},
+{
+"a": "b18",
+"t": "À la fin de la déclaration, les informations sont immédiatement disponibles, pour l'opérationnel, l'analyse et les statistiques."
+},
+{
+"a": "b19",
+"t": "Une fois clôturée par son auteur, la déclaration validée est soumise au visa, c'est-à-dire au contrôle hiérarchique de l'autorité désignée, qui a le profil acteur chef de service."
+},
+{
+"a": "b20",
+"t": "À ce stade, le déclarant ne peut plus modifier ce qu'il a saisi, sauf si cette autorité retire la validation."
+}
+]
+},
+{
+"n": "4",
+"items": [
+{
+"a": "b0-1",
+"t": "Le déclarant d'abord. Alimenter le TSUA est une obligation, au titre du devoir de rendre compte prévu par le code de déontologie et le RGEPN."
+},
+{
+"a": "b2",
+"t": "Après la première connexion, ses données personnelles, matricule et affectation, sont mémorisées et reproposées ensuite."
+},
+{
+"a": "b3",
+"t": "Avec son identifiant et son mot de passe, il peut déclarer et commenter un ou plusieurs usages, en service ou hors service, pour son compte ou pour celui d'autrui."
+},
+{
+"a": "b4-5",
+"t": "En général, le déclarant est l'auteur de l'usage. S'il est indisponible, blessé par exemple, un tiers habilité déclare à sa place. Cette déclaration provisoire va jusqu'au bout de la validation, puis elle est supprimée par la hiérarchie quand l'intéressé peut déclarer lui-même. La première version ne l'engage pas : il refait toute la procédure. Et toutes les opérations restent tracées."
+},
+{
+"a": "b6",
+"t": "Les agents doivent s'assurer de valider, donc de clôturer, leurs déclarations, pour qu'elles passent sans délai au visa. Et ils signalent toute difficulté à la hiérarchie."
+},
+{
+"a": "b7-8",
+"t": "Attention : le traitement ne permet pas de déclarer un usage collectif, par exemple lors de violences urbaines avec plusieurs unités. Chaque policier déclare donc individuellement ses propres usages, ou un collègue habilité le fait pour lui."
+},
+{
+"a": "b9-10",
+"t": "Le déclarant peut à tout moment relire ses déclarations validées, visées ou non, grâce à l'historique. Pour une déclaration faite pour autrui, l'affichage est provisoire."
+},
+{
+"a": "b11-12",
+"t": "Chaque direction fixe le niveau hiérarchique du visa. L'autorité désignée peut déclarer ses propres usages, consulter et viser les déclarations de ses subordonnés. Mais elle ne peut pas les corriger de sa propre initiative."
+},
+{
+"a": "b13-14",
+"t": "Elle peut ensuite retirer son visa, ou modifier ce qu'elle a saisi elle-même sur les suites judiciaires ou administratives. Elle peut retirer la validation, pour permettre au déclarant de modifier. Et elle peut supprimer une déclaration, en indiquant pourquoi. La déclaration disparaît alors, et son numéro n'est jamais réattribué."
+},
+{
+"a": "b15-16",
+"t": "Selon la circulaire du 28 juillet 2006 sur l'autorité hiérarchique, elle s'implique dans le suivi des usages et des déclarations de ses subordonnés, et fait les rappels nécessaires pour que les déclarations soient finalisées au plus vite."
+}
+]
+},
+{
+"n": "5",
+"items": [
+{
+"a": "b0",
+"t": "Quels usages déclarer ? Tous les usages, y compris accidentels, dans ou à l'occasion des fonctions, et même dans un cadre privé s'il y a un lien avec les fonctions. Par exemple, une intervention sur le trajet domicile-travail, ou un tir accidentel à domicile avec l'arme de service."
+},
+{
+"a": "b1",
+"t": "En revanche, on ne déclare pas les tirs de formation initiale ou continue, ni les entraînements. Ni un acte d'auto-agression."
+},
+{
+"a": "b2-4",
+"t": "Sont concernées les armes à feu en dotation individuelle ou collective, les moyens de force intermédiaire à effet cinétique ou électrique, et leurs munitions, mais pas la plupart des grenades. Une liste est proposée selon le type d'arme, et on peut aussi déclarer une arme non remise en dotation."
+},
+{
+"a": "b5",
+"t": "L'événement, c'est l'intervention, la mission ou la circonstance au cours de laquelle les usages ont eu lieu, avec unité de temps, de lieu et d'action."
+},
+{
+"a": "b6-10",
+"t": "Deux types de données sont enregistrées. D'abord, sur les personnes : l'identité professionnelle et la situation de l'auteur, du tiers déclarant éventuel, qui explique alors pourquoi dans le champ observations, et de l'autorité qui vise ; et, de façon facultative, le niveau de formation de l'auteur aux armes utilisées."
+},
+{
+"a": "b11-14",
+"t": "Ensuite, sur les usages : le contexte, adresse, nature du lieu ; les circonstances, type de mission, mode d'intervention ; les armes et munitions utilisées, certains champs étant facultatifs, comme le numéro de série, et d'autres adaptés à l'arme, comme pour le LBD ou le PIE."
+},
+{
+"a": "b15-17",
+"t": "S'il y a lieu, les suites apparentes en cas de blessure, avec l'état de la personne et sa prise en charge médicale ; les suites judiciaires et administratives si on les connaît, qui peuvent être mises à jour ; et en cas de suppression, ses motifs."
+}
+]
+},
+{
+"n": "6",
+"items": [
+{
+"a": "b0-2",
+"t": "Les restrictions. On ne renseigne pas le TSUA pour les armes que le traitement ne propose pas, notamment la plupart des grenades, sauf le dispositif balistique de désencerclement, aussi appelé dispositif manuel de protection. Ni pour les bâtons de police, quels qu'ils soient."
+},
+{
+"a": "b3-4",
+"t": "Ni pour les usages en séance pédagogique, ni pour une tentative de suicide, même en déclarant pour autrui."
+},
+{
+"a": "b5-7",
+"t": "Rappel : l'envoi du compte rendu et l'export de données respectent le secret et la discrétion professionnels. Et on ne saisit aucune donnée nominative sur des tiers."
+},
+{
+"a": "b8",
+"t": "Les directions et les responsables chargés du visa suivent attentivement le TSUA : ils assurent la formation des agents et organisent le contrôle de son alimentation."
+},
+{
+"a": "b9",
+"t": "Cette veille permet de suivre le respect de la procédure, l'état des déclarations et leur validation."
+},
+{
+"a": "b10-11",
+"t": "Et on le rappelle : renseigner le TSUA ne préjuge en rien des suites administratives ou judiciaires. Rien ne doit donc empêcher de déclarer au plus près de l'usage. Toute difficulté est signalée à l'autorité qui vise."
+},
+{
+"a": "b12-14",
+"t": "Les données peuvent être exploitées à deux niveaux : local, sous le contrôle de la hiérarchie ; et national, avec un outil qui produit, par direction, des états non nominatifs sur le nombre d'usages par catégorie et par type d'arme."
+},
+{
+"a": "b15-16",
+"t": "À l'avenir, un infocentre devrait élargir les requêtes possibles, et le traitement évoluera avec l'institution : liste des armes et munitions, procédures d'intervention, formation."
+},
+{
+"a": "r",
+"t": "Ce qu'il faut retenir : TSUA accessible par CHEOPS NG, avec une habilitation personnelle ; obligation de rendre compte ; déclaration au plus près de l'action, unité de temps, de lieu et d'action ; déclaration provisoire possible par un collègue ; validation par l'agent puis visa hiérarchique ; usages accidentels compris, mais pas la formation, ni les bâtons, ni la plupart des grenades, ni une tentative de suicide ; et aucune donnée nominative sur des tiers."
+}
+]
+}
+]
+}

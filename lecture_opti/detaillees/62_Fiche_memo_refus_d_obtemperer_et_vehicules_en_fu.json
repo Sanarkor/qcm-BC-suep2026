@@ -1,0 +1,112 @@
+{
+"v": 1,
+"page": "detaillees/62_Fiche_memo_refus_d_obtemperer_et_vehicules_en_fu.html",
+"intro": "La fiche mémo de l'académie de police sur les refus d'obtempérer et les véhicules en fuite. Les règles d'intervention, puis les principes de sécurité avant, pendant la poursuite, et à l'arrêt du véhicule.",
+"sections": [
+{
+"n": "1",
+"items": [
+{
+"a": "b0-2",
+"t": "Comme toute intervention, elle repose sur la méthode de raisonnement opérationnel : l'analyse de la situation, le cadre juridique, et la tactique d'action."
+},
+{
+"a": "b3-4",
+"t": "Le délit de refus d'obtempérer, articles L. 233-1 et suivants du code de la route : tout conducteur qui n'obtempère pas à une sommation de s'arrêter, faite par un agent chargé de constater les infractions et portant les insignes apparents de sa qualité, encourt deux ans d'emprisonnement et 15000 euros d'amende."
+},
+{
+"a": "b5-6",
+"t": "Si la situation ne permet pas de prendre le véhicule en charge, on avise immédiatement le CIC, avec les éléments sur le véhicule et la direction de fuite."
+},
+{
+"a": "b7-8",
+"t": "Si elle le permet, la décision est concertée entre le chef de bord et le conducteur. Et on respecte les règles de l'instruction commune du 19 mai 2025 et du télégramme du 20 mai 2025."
+},
+{
+"a": "b9-15",
+"t": "On avise immédiatement le CIC, avec des comptes rendus précis et réguliers. Le CIC peut à tout moment faire cesser la poursuite. Il impose si besoin le silence et la discipline sur les ondes, coordonne les renforts avec un plan d'interception, notamment avec les équipages dotés de DIVA, avise les autorités et informe les services tiers."
+},
+{
+"a": "b16-18",
+"t": "On porte systématiquement la ceinture. On actionne les avertisseurs sonores et lumineux et la géolocalisation. Et on déclenche obligatoirement la caméra piéton, ou un autre moyen vidéo."
+},
+{
+"a": "b19",
+"t": "Pendant toute l'intervention, on tient compte de l'environnement, de la dangerosité du mis en cause, du niveau de risque, de la circulation, de la chaussée, de la météo, et de tout autre danger pour les policiers ou les tiers."
+},
+{
+"a": "b20",
+"t": "On privilégie les DIVA, quand ils sont disponibles et que la situation s'y prête."
+},
+{
+"a": "b21",
+"t": "Et l'arme de service ne s'utilise que dans le cadre de la légitime défense, article 122-5 du code pénal, ou de l'article L. 435-1 du code de la sécurité intérieure, avec absolue nécessité et proportionnalité."
+}
+]
+},
+{
+"n": "2",
+"items": [
+{
+"a": "b0",
+"t": "En plus de ces règles, d'autres principes de sécurité sont préconisés."
+}
+]
+},
+{
+"n": "3",
+"items": [
+{
+"a": "b0",
+"t": "À l'annonce de la poursuite : chercher à déployer des renforts sur les itinéraires possibles, pour pouvoir utiliser les DIVA, dans le strict respect de leurs protocoles."
+}
+]
+},
+{
+"n": "4",
+"items": [
+{
+"a": "b0",
+"t": "Pendant la poursuite : le véhicule poursuivant garde une distance de sécurité, pour éviter le choc en cas d'arrêt brutal, volontaire ou non, du véhicule en fuite."
+},
+{
+"a": "b1-2",
+"t": "On ne cherche pas à dépasser le véhicule poursuivi. Et on augmente la distance de sécurité entre les véhicules de police."
+},
+{
+"a": "b3-4",
+"t": "L'équipage se répartit les tâches pour soulager le conducteur : par exemple, annoncer les dangers, véhicules arrivant des rues latérales, particularités du terrain."
+},
+{
+"a": "b5",
+"t": "Répéter les informations radio importantes, qui ne sont pas toujours bien entendues ou comprises avec le stress et le deux-tons."
+},
+{
+"a": "b6",
+"t": "Et annoncer au CIC, ou noter en temps réel, les infractions du mis en cause, mise en danger, feux rouges, dégradations, pour alimenter ensuite la procédure."
+}
+]
+},
+{
+"n": "5",
+"items": [
+{
+"a": "b0-3",
+"t": "Quand le véhicule en fuite s'arrête : on l'annonce immédiatement sur les ondes, en précisant si l'arrêt est volontaire ou non. Cela permet aux véhicules qui suivent d'anticiper leur freinage, et à ceux engagés sur d'autres itinéraires d'adapter leur intervention."
+},
+{
+"a": "b4-6",
+"t": "On descend du véhicule de façon concertée et coordonnée : le conducteur annonce que le véhicule de police est arrêté, puis on annonce la décision d'interpeller. On ne détache sa ceinture qu'après validation du chauffeur ou du chef de bord. Et on tient compte de la circulation au moment de descendre."
+},
+{
+"a": "b7-8",
+"t": "Et la règle à retenir absolument : ne jamais se placer devant ou derrière le véhicule tant que le conducteur est au volant, même si le véhicule ne semble plus pouvoir rouler."
+},
+{
+"a": "r",
+"t": "Ce qu'il faut retenir : deux ans et 15000 euros d'amende ; décision concertée chef de bord et conducteur ; CIC avisé, qui peut tout arrêter ; ceinture, avertisseurs, géolocalisation, caméra piéton ; DIVA privilégiés ; ne pas dépasser le fuyard, garder ses distances ; annoncer l'arrêt ; et jamais devant ou derrière le véhicule tant que le conducteur est au volant."
+}
+]
+}
+]
+}
