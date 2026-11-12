@@ -32,6 +32,7 @@ var ICO={
   pause:svg('<rect x="6" y="5" width="4" height="14" rx="1" fill="currentColor" stroke="none"/><rect x="14" y="5" width="4" height="14" rx="1" fill="currentColor" stroke="none"/>'),
   stop:svg('<rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>'),
   prev:svg('<polygon points="19 6 9 12 19 18" fill="currentColor" stroke="none"/><rect x="5" y="6" width="2.5" height="12" rx="1" fill="currentColor" stroke="none"/>'),
+  back:svg('<path d="M9 14 4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/>'),
   next:svg('<polygon points="5 6 15 12 5 18" fill="currentColor" stroke="none"/><rect x="16.5" y="6" width="2.5" height="12" rx="1" fill="currentColor" stroke="none"/>')
 };
 
@@ -220,7 +221,7 @@ function splitText(sp){
 }
 function collect(det){
   var root=det.querySelector(".c")||det,out=[],seen={};
-  var title=titleOf(det);
+  var title=titleOf(det,true);
   /* La pastille numérotée (.n) n'est pas lue : seulement le titre. */
   var stitle=titleOf(det,true);
   if(stitle)out.push({el:det.querySelector("summary")||det,speak:speakable(stitle),label:title});
@@ -340,14 +341,26 @@ function fillVoices(){
   if(st.voicesReady)showNoFrMsg(!st.voices.length);
 }
 
-function clearHL(){$$(".lec-cur").forEach(function(e){e.classList.remove("lec-cur");});}
+function clearHL(){
+  $$(".lec-cur").forEach(function(e){e.classList.remove("lec-cur");});
+  if(st.hlEl){try{st.hlEl.classList.remove("lec-cur");}catch(e){}st.hlEl=null;}
+}
+function elVisibleDoc(el){
+  /* L'élément est-il dans le document actuellement affiché (page de lecture ou page ouverte par-dessus) ? */
+  if(!el||!el.isConnected)return false;
+  var doc=el.ownerDocument;
+  if(doc===D)return !nav.shown;
+  return nav.shown&&nav.frame&&nav.frame.contentDocument===doc;
+}
 function highlight(el){
   clearHL();
-  if(!el||!el.classList)return;
-  el.classList.add("lec-cur");
+  if(!el||!el.classList||!el.isConnected)return;
+  el.classList.add("lec-cur");st.hlEl=el;
   if(el===st.lastEl)return;
+  if(!elVisibleDoc(el))return;
   st.lastEl=el;
-  var r=el.getBoundingClientRect(),vh=window.innerHeight,bar=ui.bar,bh=bar&&!bar.hidden?bar.offsetHeight+16:16;
+  var w=el.ownerDocument.defaultView||window;
+  var r=el.getBoundingClientRect(),vh=w.innerHeight,bar=ui.bar,bh=bar&&!bar.hidden?bar.offsetHeight+16:16;
   if(r.top<80||r.bottom>vh-bh-20){
     try{el.scrollIntoView({block:"center",behavior:"smooth"});}catch(e){el.scrollIntoView(true);}
   }
@@ -359,6 +372,7 @@ function updateBtns(){
     var active=on&&((src==="page"&&st.src==="page")||(st.det&&st.det.getAttribute("data-lec-id")===src)||(src&&src.indexOf("h-")===0&&st.src===src));
     b.setAttribute("aria-pressed",active?"true":"false");
   });
+  updateBack();
   if(!ui.play)return;
   ui.play.innerHTML=st.mode==="playing"?ICO.pause:ICO.play;
   ui.play.setAttribute("aria-label",st.mode==="playing"?"Pause":"Lecture");
@@ -518,8 +532,11 @@ function speakAt(i,fromUser){
   if(recent)st.timer=setTimeout(launch,200);
   else launch();
 }
-function startList(list,src,det,label,from,fromUser){
+function startList(list,src,det,label,from,fromUser,url){
   if(!list||!list.length)return;
+  if(GUEST){try{GUEST.startList(list,src,det,label,from,fromUser,location.href);}catch(e){}return;}
+  st.docUrl=url||location.href;
+  markIdx(list);
   cancelSpeak();
   st.list=list;st.src=src;st.det=det||null;st.label=label||"";st.retried=0;
   speakAt(from==null?0:from,!!fromUser);
@@ -532,7 +549,7 @@ function startPage(){
 function startDet(det){
   if(!det||!isEligible(det))return;
   det.open=true;
-  startList(collect(det),det.getAttribute("data-lec-id")||"",det,titleOf(det),0,true);
+  startList(collect(det),det.getAttribute("data-lec-id")||"",det,titleOf(det,true),0,true);
 }
 function startFromEl(el){
   if(!el){startPage();return;}
@@ -546,7 +563,7 @@ function startFromEl(el){
     if(pos&Node.DOCUMENT_POSITION_FOLLOWING)break;
   }
   if(i>=list.length)i=0;
-  var label=(det?titleOf(det):textOf(el))||"Lecture";
+  var label=(det?titleOf(det,true):textOf(el))||"Lecture";
   var src=el.getAttribute&&el.getAttribute("data-lec-id")||(det&&det.getAttribute("data-lec-id"))||"page";
   startList(list,src,det||null,label,i,true);
 }
@@ -573,6 +590,7 @@ function buildBar(){
     '<button type="button" id="lec-play" aria-label="Lecture" title="Lecture">'+ICO.play+'</button>'+
     '<button type="button" id="lec-next" aria-label="Passage suivant" title="Passage suivant">'+ICO.next+'</button>'+
     '<button type="button" id="lec-stop" aria-label="Arrêter" title="Arrêter">'+ICO.stop+'</button>'+
+    '<button type="button" id="lec-back" class="lec-back" aria-label="Revenir au passage lu" title="Revenir au passage lu">'+ICO.back+'</button>'+
     '</div><div class="lec-opts">'+
     '<select class="lec-rate" id="lec-rate" aria-label="Vitesse de lecture"></select>'+
     '<select class="lec-voice" id="lec-voice" aria-label="Voix"></select>'+
@@ -593,7 +611,9 @@ function buildBar(){
     if(st.mode==="playing")speakAt(st.i,true);
   });
   $("#lec-play",bar).addEventListener("click",toggle);
-  $("#lec-stop",bar).addEventListener("click",stop);
+  $("#lec-stop",bar).addEventListener("click",userStop);
+  ui.back=$("#lec-back",bar);
+  ui.back.addEventListener("click",backToPassage);
   $("#lec-prev",bar).addEventListener("click",function(){if(!st.list.length)return;speakAt(Math.max(0,st.i-1),true);});
   $("#lec-next",bar).addEventListener("click",function(){if(!st.list.length)return;speakAt(Math.min(st.list.length-1,st.i+1),true);});
 }
@@ -670,6 +690,155 @@ function watchVoices(){
 }
 
 /* Smartphone (écran < 1024 px + tactile) : pas de mode Lecture du tout. Évalué au chargement. */
+/* ===== Navigation sans couper la lecture (PC) =====
+   Pendant une lecture, les liens internes s'ouvrent dans un cadre plein écran par-dessus la page lue :
+   la page de lecture (et sa voix) reste vivante, la page ouverte a ses propres scripts intacts. */
+var GUEST=null;
+try{if(window.parent&&window.parent!==window&&window.frameElement&&window.frameElement.id==="lec-frame"&&window.parent.qcmbcLectureHost)GUEST=window.parent.qcmbcLectureHost;}catch(e){GUEST=null;}
+var nav={frame:null,shown:false,hostUrl:location.href,hostTitle:D.title,pending:null};
+function samePage(a,b){try{var x=new URL(a,location.href),y=new URL(b,location.href);return x.origin===y.origin&&x.pathname.replace(/index\.html$/,"")===y.pathname.replace(/index\.html$/,"")&&x.search===y.search;}catch(e){return false;}}
+function markIdx(list){
+  var docs=[],maps=[];
+  list.forEach(function(ch){
+    var el=ch.el;if(!el||!el.ownerDocument)return;
+    var doc=el.ownerDocument,k=docs.indexOf(doc);
+    if(k<0){docs.push(doc);maps.push($$("summary,h2,h3,h4,p,li,tr",doc));k=docs.length-1;}
+    ch.idx=maps[k].indexOf(el);
+  });
+}
+function ensureFrame(){
+  if(nav.frame)return nav.frame;
+  var f=D.createElement("iframe");
+  f.id="lec-frame";f.title="Page du site";f.setAttribute("hidden","");
+  f.addEventListener("load",onFrameLoad);
+  D.body.appendChild(f);
+  nav.frame=f;
+  return f;
+}
+function frameHref(){try{return nav.frame&&nav.frame.contentWindow.location.href;}catch(e){return "";}}
+function showFrame(on){
+  nav.shown=!!on;
+  if(nav.frame){if(on)nav.frame.removeAttribute("hidden");else nav.frame.setAttribute("hidden","");}
+  D.documentElement.classList.toggle("lec-framed",!!on);
+  if(!on){D.title=nav.hostTitle;}
+  else{try{D.title=nav.frame.contentDocument.title||D.title;}catch(e){}}
+  updateBack();
+}
+function updateBack(){
+  if(!ui.back)return;
+  var cur=st.list[st.i],far=!!(cur&&cur.el&&!elVisibleDoc(cur.el));
+  ui.back.hidden=!(nav.shown||far);
+}
+function openInFrame(url,push){
+  if(samePage(url,nav.hostUrl)){
+    if(nav.shown){showFrame(false);history.pushState({lecHost:1},"",url);}
+    var h=new URL(url,location.href).hash;if(h){var t=D.getElementById(decodeURIComponent(h.slice(1)));if(t)t.scrollIntoView();}
+    return;
+  }
+  var f=ensureFrame();
+  dbg("nav",url);
+  if(samePage(frameHref(),url)&&frameHref()){showFrame(true);if(push!==false)history.pushState({lecFrame:url},"",url);return;}
+  f.src=url;
+  showFrame(true);
+  if(push!==false)history.pushState({lecFrame:url},"",url);
+}
+function onFrameLoad(){
+  var f=nav.frame,href=frameHref(),doc;
+  if(!href||href==="about:blank")return;
+  try{doc=f.contentDocument;}catch(e){return;}
+  if(samePage(href,nav.hostUrl)){
+    /* Retour sur la page lue : on la réaffiche, sans recharger. */
+    f.src="about:blank";showFrame(false);
+    history.replaceState({lecHost:1},"",href);
+    return;
+  }
+  if(nav.shown){
+    D.title=doc.title||D.title;
+    history.replaceState({lecFrame:href},"",href);
+  }
+  try{
+    var stl=doc.createElement("style");stl.textContent="body{padding-bottom:140px!important}";doc.head.appendChild(stl);
+    /* Liens qui sortiraient du cadre (target=_top/_parent) : on les garde dans le cadre. */
+    doc.addEventListener("click",function(e){
+      var a=e.target&&e.target.closest&&e.target.closest("a[href]");
+      if(a&&/^_(top|parent)$/i.test(a.getAttribute("target")||""))a.setAttribute("target","_self");
+    },true);
+  }catch(e){}
+  if(nav.pending!=null){
+    var idx=nav.pending;nav.pending=null;
+    var els=$$("summary,h2,h3,h4,p,li,tr",doc),el=els[idx];
+    if(el){var d=el.closest("details");if(d)d.open=true;try{el.scrollIntoView({block:"center"});}catch(e){}}
+  }
+  /* Rebrancher les passages lus si la page de lecture a été rechargée dans le cadre. */
+  if(st.docUrl&&samePage(href,st.docUrl)&&st.list.length){
+    var all=$$("summary,h2,h3,h4,p,li,tr",doc);
+    st.list.forEach(function(ch){if(ch.el&&!ch.el.isConnected&&ch.idx>=0&&all[ch.idx])ch.el=all[ch.idx];});
+    if(st.mode!=="idle"){st.lastEl=null;highlight(st.list[st.i]&&st.list[st.i].el);}
+  }
+  updateBack();
+}
+function backToPassage(){
+  var cur=st.list[st.i];
+  if(!cur){if(nav.shown){showFrame(false);history.pushState({lecHost:1},"",nav.hostUrl);}return;}
+  var el=cur.el;
+  if(el&&el.ownerDocument===D){
+    if(nav.shown){showFrame(false);history.pushState({lecHost:1},"",nav.hostUrl);}
+  }else if(el&&el.isConnected&&nav.frame&&el.ownerDocument===nav.frame.contentDocument){
+    if(!nav.shown){showFrame(true);history.pushState({lecFrame:frameHref()},"",frameHref());}
+  }else if(st.docUrl){
+    nav.pending=cur.idx;
+    openInFrame(st.docUrl);
+    return;
+  }
+  st.lastEl=null;
+  if(el&&el.isConnected){var d=el.closest&&el.closest("details");if(d)d.open=true;highlight(el);try{el.scrollIntoView({block:"center",behavior:"smooth"});}catch(e){}}
+  updateBack();
+}
+function onLinkClick(e){
+  if(st.mode==="idle"||e.defaultPrevented||e.button!==0||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;
+  var a=e.target&&e.target.closest&&e.target.closest("a[href]");
+  if(!a||a.hasAttribute("download"))return;
+  var tg=(a.getAttribute("target")||"").toLowerCase();
+  if(tg&&tg!=="_self")return;
+  var raw=a.getAttribute("href")||"";
+  if(!raw||raw.charAt(0)==="#"||/^(javascript|mailto|tel):/i.test(raw))return;
+  var u;try{u=new URL(a.href,location.href);}catch(x){return;}
+  if(u.origin!==location.origin)return;
+  if(!/(\/|\.html?)$/i.test(u.pathname))return;
+  if(samePage(u.href,location.href)&&u.hash)return;
+  e.preventDefault();
+  openInFrame(u.href);
+}
+function onPop(e){
+  var s=e.state||{};
+  if(s.lecFrame){
+    if(st.mode==="idle"&&!nav.frame){location.reload();return;}
+    var f=ensureFrame();
+    if(!samePage(frameHref(),s.lecFrame))f.src=s.lecFrame;
+    showFrame(true);
+  }else{
+    if(nav.shown)showFrame(false);
+  }
+}
+function userStop(){
+  /* Arrêt volontaire alors qu'une autre page est affichée : on y reste, en vraie page. */
+  var u=nav.shown?frameHref():"";
+  stop();
+  if(u&&u!=="about:blank")location.href=u;
+}
+function initGuest(){
+  booted=true;
+  D.documentElement.classList.add("lec-ok","lec-guest");
+  injectButtons();
+  injectHelp();
+  D.addEventListener("keydown",function(e){
+    if(e.ctrlKey||e.metaKey||e.altKey)return;
+    var el=e.target,tg=(el&&el.tagName)||"";
+    if(tg==="TEXTAREA"||tg==="SELECT"||(el&&el.isContentEditable)||(tg==="INPUT"&&el.type!=="checkbox"))return;
+    var help=$("#dk-helpov");if(help&&help.classList.contains("dk-vis"))return;
+    if(e.key==="l"||e.key==="L"){e.preventDefault();try{GUEST.toggle();}catch(x){}}
+  });
+}
 function isPhone(){
   try{
     var small=window.matchMedia&&window.matchMedia("(max-width:1023px)").matches;
@@ -678,7 +847,9 @@ function isPhone(){
   }catch(e){return false;}
 }
 function init(){
-  if(booted||!hasSynth())return;
+  if(booted)return;
+  if(GUEST){initGuest();return;}
+  if(!hasSynth())return;
   if(isPhone()){booted=true;D.documentElement.classList.add("lec-off");return;}
   booted=true;
   synth=getSynth();
@@ -705,6 +876,13 @@ function init(){
   window.addEventListener("beforeunload",stop);
   document.addEventListener("qcmbc:dictation-start",stop);
   window.qcmbcLectureStop=stop;
+  window.qcmbcLectureHost={
+    startList:function(list,src,det,label,from,fromUser,url){startList(list,src,det,label,from,fromUser,url);},
+    toggle:function(){toggle();},
+    stop:function(){stop();}
+  };
+  D.addEventListener("click",onLinkClick);
+  window.addEventListener("popstate",onPop);
   window.qcmbcLectureText={speakable:speakable,romans:romans};
   if(DEBUG){dbg("debug actif","synth="+(!!synth)+" android="+ANDROID);}
 }
