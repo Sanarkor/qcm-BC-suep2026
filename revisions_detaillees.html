@@ -43,6 +43,7 @@ function setListen(on){listen=on;btn.classList.toggle("listening",on);btn.setAtt
 function stop(){if(!listen&&!rec)return;setListen(false);try{if(rec)rec.stop();}catch(e){}}
 function start(){
 if(listen){stop();show("");return;}
+try{document.dispatchEvent(new CustomEvent("qcmbc:dictation-start"));}catch(e){}
 got=false;
 try{rec=new SR();}catch(e){show("La reconnaissance vocale n’est pas disponible sur ce navigateur.",true);return;}
 rec.lang="fr-FR";rec.interimResults=false;rec.maxAlternatives=1;rec.continuous=false;
