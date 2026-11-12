@@ -60,6 +60,11 @@ window.SIGLES_COMPLEMENTS = [
     "src": "révisions synthétiques"
   },
   {
+    "s": "DDPN-DIPN",
+    "m": "Direction départementale ou interdépartementale de forces mobiles de la police nationale",
+    "src": "révisions détaillées (guide VU)"
+  },
+  {
     "s": "DFPN",
     "m": "direction de la formation de la police nationale",
     "src": "révisions synthétiques"
@@ -184,4 +189,4 @@ window.SIGLES_COMPLEMENTS = [
     "m": "violences urbaines",
     "src": "révisions synthétiques"
   }
-];
+]
