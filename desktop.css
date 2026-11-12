@@ -15,8 +15,6 @@ html.dk-fiche{--W:1080px}
 #dk-side .dk-cd{margin:0 4px 10px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15)}
 #dk-side .dk-cdn{font-size:1.45em;font-weight:800;letter-spacing:.5px}#dk-side .dk-cdl{font-size:.8em;opacity:.8;margin-top:2px}
 #dk-side .dk-links{display:flex;flex-direction:column;gap:4px}
-#dk-side .dk-revgroup{display:flex;flex-direction:column;gap:6px;margin:4px 0;padding:2px 0}
-#dk-side .dk-sep{height:1px;margin:0 10px;background:rgba(255,255,255,.28);border:0;flex:none;pointer-events:none}
 #dk-side a.dk-l{display:flex;align-items:center;gap:10px;padding:10px 12px;font-weight:600;opacity:.88;transition:background .15s,opacity .15s}
 #dk-side a.dk-l i{font-style:normal;width:22px;text-align:center;font-size:1.05em;opacity:.9;flex:none;font-weight:700}
 #dk-side a.dk-l div{flex:1}
