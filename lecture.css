@@ -1,0 +1,34 @@
+/* Mode Lecture : révisions synthétiques. Ne s'active que si lecture.js a posé html.lec-ok. */
+.lec-page{display:inline-flex;align-items:center;gap:8px;margin:4px 0 12px;padding:8px 14px;border:0;border-radius:10px;background:#0b2a5b;color:#fff;font:600 15px system-ui,sans-serif;cursor:pointer;box-shadow:0 1px 4px #0002}
+.lec-page svg{width:18px;height:18px;display:block;flex:none}
+.lec-page:hover{filter:brightness(1.12)}
+.lec-page:focus-visible,.lec-mini:focus-visible,#lec-bar button:focus-visible,#lec-bar select:focus-visible{outline:3px solid #ffd36b;outline-offset:2px}
+.lec-mini{flex:none;width:36px;height:36px;min-width:36px;min-height:36px;margin-left:4px;border:0;border-radius:8px;background:rgba(11,42,91,.08);color:#0b2a5b;padding:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.lec-mini svg{width:18px;height:18px;display:block}
+.lec-mini:hover{background:rgba(11,42,91,.16)}
+.lec-mini[aria-pressed="true"],.lec-page[aria-pressed="true"]{background:#a3312a;color:#fff}
+@media (pointer:coarse){.lec-mini{width:40px;height:40px;min-width:40px;min-height:40px}}
+.lec-cur{background:#fff3b0!important;box-shadow:inset 0 0 0 2px #e2c34a;border-radius:6px;transition:background .2s}
+tr.lec-cur td{background:#fff3b0!important}
+#lec-bar{position:fixed;left:50%;bottom:8px;transform:translateX(-50%);width:calc(100% - 16px);max-width:640px;z-index:9980;box-sizing:border-box;background:#0b2a5b;color:#fff;border-radius:14px;box-shadow:0 6px 24px #0005;padding:8px 10px 10px;font:14px/1.3 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+#lec-bar[hidden]{display:none!important}
+#lec-bar .lec-tit{font-weight:700;font-size:.92em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:2px 6px 4px;opacity:.95}
+#lec-bar .lec-row{display:flex;align-items:center;gap:6px}
+#lec-bar .lec-ctrls{display:flex;align-items:center;gap:4px;flex:none}
+#lec-bar button{width:44px;height:44px;min-width:44px;border:0;border-radius:10px;background:rgba(255,255,255,.12);color:#fff;padding:0;cursor:pointer;display:flex;align-items:center;justify-content:center}
+#lec-bar button svg{width:22px;height:22px;display:block}
+#lec-bar button:hover{background:rgba(255,255,255,.22)}
+#lec-bar button:disabled{opacity:.35;cursor:default}
+#lec-bar .lec-opts{display:flex;align-items:center;gap:6px;flex:1;min-width:0;justify-content:flex-end;flex-wrap:wrap}
+#lec-bar select{max-width:100%;min-width:0;height:40px;border:0;border-radius:8px;background:#fff;color:#0b2a5b;font:600 13px system-ui,sans-serif;padding:0 8px;cursor:pointer}
+#lec-bar .lec-rate{flex:none;width:auto;min-width:4.6em}
+#lec-bar .lec-voice{flex:1;min-width:7em;max-width:220px}
+body.lec-on{padding-bottom:130px!important}
+body.lec-on #mkbadge{bottom:110px!important}
+html.dk #lec-bar{left:calc(50% + var(--sb,248px)/2);width:min(640px,calc(100vw - var(--sb,248px) - 40px));bottom:16px}
+html.dk body.lec-on #mkbadge{bottom:12px!important}
+@media (min-width:1024px){html.dk .lec-page{margin:6px 0 14px}}
+
+/* Place le bouton de fiche à droite, juste avant le + / − du <summary>. */
+summary .lec-mini{margin-left:auto}
+details summary::after{margin-left:6px}
