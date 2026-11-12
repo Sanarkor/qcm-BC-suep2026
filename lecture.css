@@ -54,3 +54,14 @@ html.lec-framed,html.lec-framed body{overflow:hidden!important}
 .lec-page.lec-opti{margin-left:0;background:#1f5e3a}
 summary .lec-mini.lec-opti{margin-left:4px;color:#1f5e3a;background:rgba(31,94,58,.10)}
 summary .lec-mini.lec-opti[aria-pressed="true"],.lec-page.lec-opti[aria-pressed="true"]{background:#a3312a;color:#fff}
+/* Lecture aléatoire (tableau de bord, PC) */
+.lec-rand-box{display:flex;flex-direction:column;gap:8px}
+.big.lec-rand-btn{background:#1d5a3a}
+.big.lec-rand-btn:disabled{opacity:.75;cursor:default}
+.lec-rand-new{align-self:center;background:none;border:0;color:#0b2a5b;text-decoration:underline;font:600 .95em system-ui,sans-serif;cursor:pointer;padding:4px 8px}
+.lec-rand-new[hidden]{display:none!important}
+#lec-bar .lec-rrow{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+#lec-bar .lec-rrow[hidden]{display:none!important}
+#lec-bar button.lec-txt{width:auto;min-width:0;height:36px;padding:0 12px;font:700 13px system-ui,sans-serif;flex:1}
+html.lec-off .lec-rand-box{display:none!important}
+@media (max-width:1023px) and (pointer:coarse){.lec-rand-box{display:none!important}}

@@ -26,5 +26,18 @@ for src in sorted(glob.glob(os.path.join(root,'tools','opti_src','*.txt'))+glob.
     json.dump(data,open(out,'w',encoding='utf-8'),ensure_ascii=False,indent=0)
     pages.append(name)
     print(name,len(data['sections']),'parties',sum(len(s['items']) for s in data['sections']),'passages')
-json.dump({'v':1,'pages':pages},open(os.path.join(root,'lecture_opti','index.json'),'w',encoding='utf-8'),ensure_ascii=False)
+# Unités de la « Lecture aléatoire » (tableau de bord) : chaque fiche synthétique (partie) et chaque fiche détaillée (entière).
+import html as _h
+def _txt(x):return re.sub(r'\s+',' ',_h.unescape(re.sub(r'<[^>]+>','',x))).strip()
+units=[]
+for name in pages:
+    hp=open(os.path.join(root,name+'.html'),encoding='utf-8').read()
+    js=json.load(open(os.path.join(root,'lecture_opti',name+'.json'),encoding='utf-8'))
+    if name.startswith('detaillees/'):
+        m=re.search(r'<h1[^>]*>(.*?)</h1>',hp,re.S);units.append({'p':name,'n':None,'t':_txt(m.group(1)) if m else name,'k':'d'})
+    else:
+        for sec in js['sections']:
+            m=re.search(r'<summary[^>]*>\s*<span class="n">'+re.escape(str(sec['n']))+r'</span>(.*?)</summary>',hp,re.S)
+            units.append({'p':name,'n':sec['n'],'t':_txt(m.group(1)) if m else 'Fiche '+str(sec['n']),'k':'s'})
+json.dump({'v':1,'pages':pages,'units':units},open(os.path.join(root,'lecture_opti','index.json'),'w',encoding='utf-8'),ensure_ascii=False)
 print(len(pages),'pages dans index.json')
