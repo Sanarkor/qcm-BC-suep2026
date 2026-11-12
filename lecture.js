@@ -1,7 +1,7 @@
 /* Mode Lecture des révisions synthétiques et détaillées. Web Speech API (speechSynthesis), sans service externe. */
 (function(){
-var D=document,KEY="qcmbc:lecture",STORE_VER=3;
-var RATES=["1.00","1.25","1.50","1.75","2.00"],DEF_RATE="1.25";
+var D=document,KEY="qcmbc:lecture",STORE_VER=4;
+var RATES=["1.00","1.25","1.50","1.75","2.00"],DEF_RATE="1.00";
 /* Sigles à ne pas épeler (liste volontairement vide : tous les sigles sont lus lettre par lettre).
    Pour laisser un sigle tel quel, l'ajouter ici, par ex. "UNESCO". */
 var SIGLES_TEL_QUEL=[];
@@ -19,8 +19,9 @@ function save(p){var o=load(),k;for(k in p)if(Object.prototype.hasOwnProperty.ca
 function migrate(){
   var o=load();
   if(o.v===STORE_VER)return o;
+  /* v4 : vitesse remise une fois à 1.00 (nouveau défaut) ; la voix choisie est gardée. */
   o.rate=DEF_RATE;
-  delete o.voice;
+  if(!o.v||o.v<3)delete o.voice;
   o.v=STORE_VER;
   try{localStorage.setItem(KEY,JSON.stringify(o));}catch(e){}
   return o;
@@ -51,10 +52,10 @@ function isNumbered(det){
   var s=(det.querySelector("summary")&&det.querySelector("summary").textContent)||"";
   return /^\s*\d+/.test(s);
 }
-function titleOf(det){
+function titleOf(det,noNum){
   var sum=det.querySelector("summary");if(!sum)return "Fiche";
   var c=sum.cloneNode(true);
-  $$(".lec-mini",c).forEach(function(b){b.remove();});
+  $$(".lec-mini"+(noNum?",.n":""),c).forEach(function(b){b.remove();});
   return c.textContent.replace(/\s+/g," ").trim();
 }
 function keepSigle(tok){
@@ -71,11 +72,59 @@ function spellSigles(s){
     return m.split("").join(" ");
   });
 }
+/* Chiffres romains (I à XLIX) lus comme des nombres, seulement dans des contextes sûrs. */
+var UNITS=["","un","deux","trois","quatre","cinq","six","sept","huit","neuf","dix","onze","douze","treize","quatorze","quinze","seize","dix-sept","dix-huit","dix-neuf"];
+var TENS={2:"vingt",3:"trente",4:"quarante"};
+var ROM="(?:XL|X{0,3})(?:IX|IV|V?I{0,3})";
+function romanVal(r){
+  if(!r||!new RegExp("^"+ROM+"$").test(r))return 0;
+  var m={I:1,V:5,X:10,L:50},n=0,i,a,b;
+  for(i=0;i<r.length;i++){a=m[r[i]];b=m[r[i+1]]||0;n+=a<b?-a:a;}
+  return n;
+}
+function cardFr(n){
+  if(n<20)return UNITS[n];
+  var t=Math.floor(n/10),u=n%10;
+  return TENS[t]+(u===0?"":u===1?" et un":"-"+UNITS[u]);
+}
+function ordFr(n,fem){
+  if(n===1)return fem?"première":"premier";
+  var w=cardFr(n);
+  if(/un$/.test(w))return w+"ième";
+  if(/cinq$/.test(w))return w+"uième";
+  if(/neuf$/.test(w))return w.replace(/f$/,"vième");
+  if(/e$/.test(w))return w.slice(0,-1)+"ième";
+  return w+"ième";
+}
+var ROM_KW=["titre","chapitre","partie","livre","section","sous-section","tome","annexe","article","fiche","volume","acte","phase","niveau","degré","catégorie","annexes","titres","chapitres","parties","livres"].map(function(w){return "["+w.charAt(0)+w.charAt(0).toUpperCase()+"]"+w.slice(1)+"|"+w.toUpperCase();}).join("|");
+var ROM_KINGS="Louis|Henri|Charles|François|Napoléon|Philippe|Jean|Paul|Pie|Léon|Benoît|Jean-Paul|Edouard|Édouard|Elisabeth|Élisabeth|Guillaume";
+function romans(s){
+  /* « Ier », « Ire » (Louis Ier, Ire République) */
+  s=s.replace(/\bIer\b/g,"premier").replace(/\bIre\b/g,"première");
+  /* Ordinaux : XXe, XIXe, IIIème, Ve… */
+  s=s.replace(new RegExp("\\b("+ROM+")(e|ème|eme)\\b","g"),function(m,r){var n=romanVal(r);return n?ordFr(n):m;});
+  /* Début de titre / d'élément : « I - », « II. », « III) », « IV – » (pas « V : », souvent une variable) */
+  s=s.replace(new RegExp("^("+ROM+")\\s*[-–—.)]\\s*(?=\\S)"),function(m,r){
+    var n=romanVal(r);if(!n)return m;var w=cardFr(n);return w.charAt(0).toUpperCase()+w.slice(1)+". ";
+  });
+  /* Après un mot-clé : Titre II, chapitre IV, partie III, Livre I… */
+  s=s.replace(new RegExp("\\b("+ROM_KW+")\\s+("+ROM+")\\b(?![-'’]?[A-Za-zÀ-ÿ])","g"),function(m,k,r){
+    var n=romanVal(r);return n?k+" "+cardFr(n):m;
+  });
+  /* Souverains : Louis XIV → Louis quatorze */
+  s=s.replace(new RegExp("\\b("+ROM_KINGS+")\\s+("+ROM+")\\b","g"),function(m,k,r){
+    var n=romanVal(r);return n?k+" "+cardFr(n):m;
+  });
+  return s;
+}
 function speakable(raw){
   var s=String(raw||"").replace(/\s+/g," ").trim();
   if(!s)return "";
   s=s.replace(/art\.\s*/gi,"article ");
-  s=s.replace(/n[°ºo]\s*/gi,"numéro ");
+  s=romans(s);
+  /* « n° 12 », « no 12 » → numéro (sans toucher « normales », « nous »…) */
+  s=s.replace(/\bn\s?[°º]\s*/gi,"numéro ");
+  s=s.replace(/\bno\.?\s*(?=\d)/gi,"numéro ");
   s=s.replace(/§\s*/g,"paragraphe ");
   s=s.replace(/\b1er\b/gi,"premier");
   s=s.replace(/\b1re\b/gi,"première");
@@ -138,7 +187,9 @@ function splitText(sp){
 function collect(det){
   var root=det.querySelector(".c")||det,out=[],seen={};
   var title=titleOf(det);
-  if(title)out.push({el:det.querySelector("summary")||det,speak:speakable(title),label:title});
+  /* La pastille numérotée (.n) n'est pas lue : seulement le titre. */
+  var stitle=titleOf(det,true);
+  if(stitle)out.push({el:det.querySelector("summary")||det,speak:speakable(stitle),label:title});
   $$("h2, h3, h4, p, li, tr",root).forEach(function(el){
     if(skipEl(el))return;
     if(el.tagName==="LI"&&el.querySelector("li,table"))return;
@@ -380,7 +431,7 @@ function speakAt(i,fromUser){
   updateBtns();
   var U=getUtt(),u=new U(ch.speak);
   u.lang="fr-FR";
-  u.rate=Math.min(2,Math.max(0.5,parseFloat(st.rate)||1.25));
+  u.rate=Math.min(2,Math.max(0.5,parseFloat(st.rate)||1));
   var v=currentVoice(),withVoice=!!v,started=false,done=false,t0=0;
   if(v)u.voice=v;
   st.utterance=u;keepRef(u);
@@ -620,6 +671,7 @@ function init(){
   window.addEventListener("beforeunload",stop);
   document.addEventListener("qcmbc:dictation-start",stop);
   window.qcmbcLectureStop=stop;
+  window.qcmbcLectureText={speakable:speakable,romans:romans};
   if(DEBUG){dbg("debug actif","synth="+(!!synth)+" android="+ANDROID);}
 }
 function boot(){
