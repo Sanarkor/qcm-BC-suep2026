@@ -1,0 +1,110 @@
+{
+"v": 1,
+"page": "detaillees/45_TI_Les_placements_vs_12_2022.html",
+"intro": "Techniques d'intervention : les placements, version de décembre 2022. Les placements du binôme, puis ceux du trinôme.",
+"sections": [
+{
+"n": "1",
+"items": [
+{
+"a": "b1-2",
+"t": "En patrouille ou en intervention, les policiers doivent approcher et interpeller des personnes, parfois volontairement, parfois contre leur gré, en cas d'agression. Interpeller, ici, c'est entrer en contact verbal ou physique avec quelqu'un."
+},
+{
+"a": "b3",
+"t": "Cette fiche donne des préconisations sur les placements pour intervenir."
+},
+{
+"a": "b4",
+"t": "Rappel : toute intervention commence par une phase d'analyse, avec la méthode de raisonnement opérationnel : analyse, cadre légal, tactique. Ensuite seulement, les policiers s'organisent et agissent, même si parfois ils doivent d'abord réagir, puis s'organiser."
+}
+]
+},
+{
+"n": "2",
+"items": [
+{
+"a": "b0-2",
+"t": "Premier placement, le binôme réuni. Les deux policiers sont côte à côte, à environ une longueur de bras l'un de l'autre, face au tiers. C'est la configuration des phases d'analyse et des patrouilles."
+},
+{
+"a": "b3-5",
+"t": "Elle permet de basculer ensuite vers le schéma le plus adapté : triangulation, binôme contact ou binôme éclaté. En cas d'agression, les policiers peuvent s'aider très vite. Et en cas de sortie d'arme, les axes de tir sont respectés : aucun policier ne risque un tir fratricide."
+},
+{
+"a": "b6-8",
+"t": "Deuxième placement, la triangulation latérale. Les policiers sont du même côté, l'un face à l'individu ou en trois quarts avant, l'autre en trois quarts arrière. On l'utilise quand le contexte est favorable et la situation figée, notamment pour un contrôle ou pour commencer une palpation."
+},
+{
+"a": "b9-10",
+"t": "Elle permet d'optimiser les secteurs d'observation."
+},
+{
+"a": "b11-12",
+"t": "Ses limites : elle n'est pas toujours possible selon la topographie. Et si le tiers se déplace, il peut vite rendre les axes de tir inopérants, ou éloigner les policiers l'un de l'autre. La parade : le suivre dans son sens de déplacement, en gardant la configuration."
+},
+{
+"a": "b13-14",
+"t": "Troisième placement, le binôme contact. Les deux policiers sont l'un derrière l'autre, appuis décalés, celui de derrière légèrement en retrait de son côté faible. Ils restent en contact par la main ou par le coude, posé sur l'épaule du policier de devant."
+},
+{
+"a": "b15-17",
+"t": "Les appuis de l'agent arrière ne gênent pas celui de devant. L'agent avant se concentre entièrement sur le tiers. L'agent arrière gère aussi le tiers, mais surtout l'environnement : la topographie en déplacement, la périphérie. Il guide, notamment dans les déplacements en arrière ou sur le côté."
+},
+{
+"a": "b18",
+"t": "On l'emploie quand le contexte est défavorable ou incertain."
+},
+{
+"a": "b19-24",
+"t": "Ses avantages : déployer très vite toutes les armes du binôme, mettre face à la menace l'arme la plus adaptée, changer facilement d'arme selon l'évolution, s'aider physiquement sans délai, notamment si le rapport de force est défavorable à l'un des deux, respecter les axes de tir, et faciliter la communication."
+},
+{
+"a": "b25-28",
+"t": "Ses inconvénients : des secteurs d'observation réduits. Et attention : c'est l'agent de devant qui sort son arme individuelle. Si nécessaire, celui de derrière peut saisir la sienne, mais alors il vaut mieux changer de configuration et passer en binôme éclaté. Enfin, la communication est fondamentale pour tirer parti de ce placement."
+},
+{
+"a": "b29-31",
+"t": "Quatrième placement, le binôme éclaté. Les deux policiers sont côte à côte, mais écartés, face au tiers. On l'utilise notamment quand le tiers exhibe une arme à feu."
+},
+{
+"a": "b32-34",
+"t": "L'objectif : ne pas offrir une seule et même cible. Si le tiers se déplace, le binôme bouge dans le même sens pour garder les axes de tir, et reste à une distance qui permet de reformer un binôme contact si la situation s'améliore, par exemple si l'arme est posée au sol."
+},
+{
+"a": "b35-43",
+"t": "En synthèse : binôme réuni pour l'analyse ; triangulation latérale dans un contexte favorable, avec une situation figée et un individu non dangereux ; binôme contact dans un contexte défavorable ou incertain, avec un individu dangereux ou une situation non figée ; binôme éclaté face à un individu armé d'une arme à feu."
+},
+{
+"a": "b44",
+"t": "Et si les policiers n'arrivent pas à faire évoluer la situation pour s'approcher en binôme contact et terminer l'intervention, ils temporisent en attendant des renforts, ou se replient."
+},
+{
+"a": "b45-46",
+"t": "Deux définitions. Un individu non dangereux est manifestement coopératif, mains apparentes. Un individu dangereux l'est par la situation, son gabarit, son état, ou parce qu'il détient ou exhibe une arme, tranchante, perforante, contondante, ou autre."
+}
+]
+},
+{
+"n": "3",
+"items": [
+{
+"a": "b0",
+"t": "Pour le trinôme, les deux premiers agents se concentrent sur la personne à gérer. Le troisième a pour missions prioritaires la liaison et la sécurité périphérique."
+},
+{
+"a": "b1",
+"t": "Quel que soit le schéma, il se place en retrait des deux premiers, assez près pour garder la communication."
+},
+{
+"a": "b2",
+"t": "Et attention : il ne doit jamais sortir son arme dans le dos des deux premiers."
+},
+{
+"a": "r",
+"t": "Ce qu'il faut retenir : analyse, cadre légal, tactique ; binôme réuni pour l'analyse ; triangulation quand c'est favorable et figé ; binôme contact quand c'est défavorable ou incertain, l'agent avant sort l'arme ; binôme éclaté face à une arme à feu ; à défaut, temporiser ou se replier ; et en trinôme, le troisième assure liaison et sécurité, en retrait, sans sortir son arme dans le dos des autres."
+}
+]
+}
+]
+}

@@ -1,0 +1,24 @@
+= Techniques d'intervention, fiche technique numéro 32 : l'intervention sur un cambriolage en cours. Les principes juridiques, la sécurité, et la tactique.
+# 1
+@0-2 Les objectifs : adapter les gestes et techniques, maîtriser les principes généraux de sécurité et d'action, et s'approprier les principes propres au cambriolage en cours.
+@3-9 Méthode habituelle de raisonnement opérationnel, en trois phases : l'analyse de la situation, le cadre juridique, et la tactique d'action.
+# 2
+@0 Le domicile, selon la jurisprudence, c'est toute demeure, permanente ou temporaire, occupée par celui qui y a droit, ou par un tiers avec son accord, ou le lieu où l'intéressé a le droit de se dire chez lui, qu'il y habite ou non. Appartement, maison, dépendances, caravane, squat.
+@1 Conséquence importante : en l'absence de l'occupant légal, les policiers ne peuvent entrer dans un lieu privé que pour porter secours, ou pour assurer leur propre sauvegarde, celle de tiers ou du bien, face à un danger actuel ou imminent.
+@2 Les locaux commerciaux ou industriels dont l'accès est réglementé et soumis à l'autorisation du propriétaire ou de l'exploitant sont aussi assimilés au domicile.
+@5-6 En revanche, le domicile suppose une notion concrète d'habitabilité. Sans elle, le lieu n'est qu'une adresse.
+@7 Retenez bien : la personne qui demande aux policiers d'entrer dans un domicile ne peut être que l'occupant légal, propriétaire, locataire, chef d'entreprise, contremaître. Jamais un témoin ou un tiers, sans l'accord de l'occupant légal.
+@8 Une nuance : selon l'article 126-1 du code de la construction et de l'habitation, les propriétaires ou exploitants d'immeubles d'habitation peuvent donner à la police ou à la gendarmerie une autorisation permanente d'entrer dans les parties communes.
+# 3
+@0 Les principes de sécurité. On s'équipe des protections individuelles ou collectives, comme les gilets pare-balles.
+@1-2 On recueille si possible auprès des témoins le nombre d'auteurs, leur signalement et leur armement éventuel. Et en terrain inconnu, quelques informations sur la topographie et sur les habitants.
+@3 On place un observateur à l'extérieur, qui assure la liaison radio avec le CIC.
+@4 Chaque policier doit être immédiatement identifiable par les autres pendant l'action : brassard police, uniforme.
+@5 On ne s'isole pas du dispositif en entrant dans les lieux. Et si des renforts arrivent, on les informe des mesures prises et du dispositif en place.
+# 4
+@0 La tactique. On arrive discrètement, sans avertisseurs sonores ni lumineux. Attention, surtout la nuit : on s'entend davantage, et les lumières se voient plus.
+@1-2 On établit un dispositif extérieur pour interpeller éventuellement les auteurs, en appliquant les principes généraux de sécurité, et chacun doit connaître son rôle.
+@3 On repère si possible le point d'effraction et toutes les issues : soupirails, fenêtres d'étage, ascenseur.
+@4 On communique avec discrétion, surtout la nuit, avec tous les policiers engagés, proches ou éloignés.
+@5 Enfin, si la surveillance s'éternise et semble infructueuse, la présence de l'officier de police judiciaire est obligatoire pour commencer la visite du domicile.
+@r Ce qu'il faut retenir : sans l'occupant légal, on n'entre que pour porter secours ou face à un danger actuel ou imminent ; seul l'occupant légal peut demander l'entrée ; observateur extérieur en liaison avec le CIC ; arrivée discrète ; repérage du point d'effraction et des issues ; et OPJ obligatoire pour visiter le domicile si la surveillance s'éternise.

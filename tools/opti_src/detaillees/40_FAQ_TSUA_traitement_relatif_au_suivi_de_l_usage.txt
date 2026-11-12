@@ -1,0 +1,33 @@
+= La foire aux questions sur le TSUA, le traitement relatif au suivi de l'usage des armes. Ce que c'est, qui le renseigne, l'obligation, l'accès, et comment déclarer.
+# 1
+@0 Le TSUA a une double finalité : opérationnelle et administrative.
+@1 C'est une application web qui permet à l'agent habilité de remplir son obligation de rendre compte de l'usage d'une ou de plusieurs armes.
+@2 Et retenez bien : le renseigner remplace les formalités qui existaient avant.
+@3 Il permet aussi à l'administration de compter et d'analyser les déclarations, pour mieux orienter la formation, adapter la logistique opérationnelle, et simplifier les déclarations.
+# 2
+@0 Qui le renseigne ? L'agent de la police nationale qui a fait usage d'une arme, dans ou en dehors de ses fonctions, qu'il soit actif, ADS ou réserviste civil, à condition d'être habilité par le gérant d'habilitation de CHEOPS NG.
+@1 Ou bien un collègue habilité, si l'agent ne peut pas rendre compte immédiatement de son action.
+@2 Une fois la déclaration validée par l'utilisateur, le supérieur hiérarchique habilité, chef de service ou adjoint, la vise. Si besoin, il peut permettre au déclarant de la modifier. Il peut aussi la supprimer, après avoir indiqué pourquoi.
+# 3
+@0 Est-ce obligatoire ? Oui : tout policier a l'obligation de rendre compte de ses actions.
+@1-2 Avant de déclarer, quelques précautions. Être habilité à l'accès par le gérant du portail CHEOPS NG ; en cas de difficulté, on contacte l'administrateur local référent.
+@3 Vérifier que l'usage doit bien être déclaré. Attention : les tirs de formation ou d'entraînement ne se déclarent pas.
+@4 Si besoin, même en cours de déclaration, consulter l'aide en ligne, accessible en un clic depuis la page d'accueil.
+@5-9 Les armes concernées : les armes à feu en dotation individuelle, les armes à feu en dotation collective, les moyens de force intermédiaire à effet cinétique ou électrique, et le cas échéant une autre arme, non remise en dotation.
+# 4
+@0 L'accès est réservé aux agents de la police nationale qui ont un code d'accès personnel, délivré par l'administrateur des habilitations du portail CHEOPS NG. On se connecte depuis un ordinateur relié à l'intranet du ministère de l'Intérieur.
+# 5
+@0 La page d'accueil commence par un rappel : on ne saisit pas les tirs d'entraînement et de formation. Elle indique aussi comment exercer son droit d'accès et de rectification, selon la loi du 6 janvier 1978.
+@1-6 Elle propose ensuite plusieurs commandes : lire la notice technique et le triptyque ; créer ou modifier une déclaration pas encore validée ; consulter l'historique des déclarations validées ; voir les déclarations des subordonnés, et gérer le visa hiérarchique, la validation ou la suppression, en accès restreint ; consulter les statistiques, en accès restreint aussi ; et quitter le TSUA.
+@7-8 Pour déclarer : après connexion, on choisit déclarer un nouvel événement si l'on a fait usage soi-même, ou déclarer pour le compte de, si l'on déclare à la place d'un collègue.
+@9 On valide ensuite les étapes une à une, et on saisit les armes utilisées avec le bouton ajouter du formulaire 4.
+@10 Le champ observations peut être enrichi de toute information utile. Mais attention : aucune donnée nominative sur des tiers ou des mis en cause.
+@12 Il faut respecter les règles de confidentialité et les instructions de sa direction pour transmettre par informatique les informations du TSUA, et notamment le compte rendu de déclaration.
+@14 Ne pas oublier la validation finale : c'est elle qui permet le visa hiérarchique du chef de service ou de son représentant.
+@16 Et dans tous les cas, signaler à la hiérarchie toute difficulté rencontrée.
+@11 À retenir sur la déclaration elle-même :
+@13 elle rend compte d'un ou plusieurs usages d'armes au cours d'un même événement, c'est-à-dire avec unité d'action, de lieu et de temps ;
+@15 elle doit être faite le plus tôt possible après l'action, par l'agent qui a utilisé l'arme, ou à défaut par un collègue, pour son compte ;
+@17 son auteur peut la modifier à tout moment tant qu'il ne l'a pas validée, mais elle n'est pas modifiable par la hiérarchie ;
+@18 et sa finalité principale est de réduire les problèmes opérationnels, en améliorant la formation et la logistique de terrain.
+@r Ce qu'il faut retenir : déclaration obligatoire pour tout usage d'arme, sauf tirs de formation et d'entraînement ; faite au plus tôt, par l'agent ou un collègue pour son compte ; un événement, c'est unité d'action, de lieu et de temps ; aucune donnée nominative de tiers ; et validation finale indispensable pour le visa hiérarchique.
