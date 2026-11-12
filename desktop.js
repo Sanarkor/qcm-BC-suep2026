@@ -15,9 +15,9 @@ var side=null,help=null,on=false,booted=false;
 function el(t,c,h){var e=D.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;}
 function active(){if(type==="index")return location.hash==="#themes"?"themes":location.hash==="#exams"?"exams":"home";
 if(/^\d\d_/.test(file)&&!inDet)return "themes";if(/^examen_/.test(file))return "exams";if(inDet||file==="revisions_detaillees.html")return "revdet";
-if(/^revisions/.test(file))return "rev";return {"aleatoire.html":"alea","sigles.html":"sigles","erreurs.html":"err","scores.html":"scores"}[file]||"";}
+if(/^revisions/.test(file))return "rev";if(/^sigles/.test(file))return "sigles";return {"aleatoire.html":"alea","erreurs.html":"err","scores.html":"scores"}[file]||"";}
 var NAV=[["home","index.html","⌂","Accueil"],["themes","index.html#themes","☰","QCM par thème"],["alea","aleatoire.html","⤨","Mode aléatoire"],["exams","index.html#exams","⏱","Examens"],
-["rev","revisions.html","✎","Révisions synthétiques"],["revdet","revisions_detaillees.html","❐","Révisions détaillées"],["sigles","sigles.html","Aa","Sigles et acronymes"],["err","erreurs.html","↻","Mes erreurs"],["scores","scores.html","▦","Tableau de bord"]];
+["rev","revisions.html","✎","Révisions synthétiques"],["revdet","revisions_detaillees.html","❐","Révisions détaillées"],["sigles","sigles_accueil.html","Aa","Sigles et acronymes"],["err","erreurs.html","↻","Mes erreurs"],["scores","scores.html","▦","Tableau de bord"]];
 function buildSide(){var ic=$('link[rel="apple-touch-icon"]')||$('link[rel="icon"][sizes="192x192"]')||$('link[rel="icon"]'),src=ic?ic.getAttribute("href"):"";
 side=el("nav","");side.id="dk-side";side.setAttribute("aria-label","Navigation principale");
 var h='<a class="dk-brand" href="'+BASE+'index.html">'+(src?'<img alt="" src="'+src+'">':'')+'<div><div class="dk-t1">QCM SUEP B/C</div><div class="dk-t2">30 novembre 2026</div></div></a>';
