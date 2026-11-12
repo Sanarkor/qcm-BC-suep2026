@@ -1,7 +1,16 @@
-/* Thème du site : angles droits partout, bleus profonds sur fond clair. */
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap");
+/* Thème du site : angles droits partout (PC et smartphone). */
 *,*::before,*::after{border-radius:0!important}
-/* Signature mobile inchangée */
-#mkbadge{border-radius:12px!important}
-#mkbadge img{border-radius:50%!important}
-/* Signature PC (affichée par desktop.css à partir de 1024 px) */
+/* PC (≥ 1024 px) : bleus profonds sur fond clair. Smartphone : couleurs d'origine (valeurs de repli des var()). */
+@media (min-width:1024px){
+:root{--p0b2a5b:#0b1f4d;--p1f3b6f:#12306b;--p1f4e79:#1e4fa3;--p2f6fd6:#1e4fa3;--pf4f6fa:#f5f7fb;--peef2f8:#f5f7fb;--peef3ff:#e8eef9;--p1a2238:#0f172a}
+}
+/* Signature « Made by Damien M. & Grok Bot en vibe coding » (Geist) : remplace l'ancienne pastille partout. */
+#mkbadge{display:none!important}
 #dk-sign{display:none}
+@media (max-width:1023px){
+#dk-sign{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px 8px;box-sizing:border-box;width:100%;margin:22px 0 0;padding:12px 12px calc(12px + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid #d9e0ec;font:500 12px/1.35 "Geist",system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.02em;color:#0b2a5b;text-align:center;clear:both}
+#dk-sign b{font-weight:500;color:#5b6b88;text-transform:uppercase;font-size:10px;letter-spacing:.12em}
+#dk-sign i{font-style:normal;font-weight:600}
+#dk-sign::before{content:"";width:7px;height:7px;background:#1f4e79;display:block;flex:none}
+}

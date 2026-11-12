@@ -91,3 +91,4 @@ html.dk #lec-bar #lec-min{display:flex;position:absolute;top:4px;right:4px;width
 html.dk #lec-bar.lec-small .lec-opts,html.dk #lec-bar.lec-small .lec-rrow{display:none!important}
 html.dk body.lec-on{padding-right:max(var(--gut,40px),356px)!important}
 html.dk body.lec-on #top{bottom:56px!important;right:352px!important}
+.lec-rand-hl{outline:3px solid #ffd36b!important;outline-offset:2px}

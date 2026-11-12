@@ -4,7 +4,7 @@ if(!window.matchMedia)return;
 var MQ=window.matchMedia("(min-width:1024px)"),H=document.documentElement,D=document;
 var me=D.currentScript||D.querySelector('script[src$="desktop.js"]'),BASE=me?me.getAttribute("src").replace(/desktop\.js.*$/,""):"";
 var path=location.pathname,file=(path.match(/[^\/]*$/)||[""])[0]||"index.html",inDet=/\/detaillees\//.test(path);
-function sign(){if(D.getElementById("dk-sign")||!D.body)return;var f=D.createElement("footer");f.id="dk-sign";f.innerHTML='<b>Made by</b><i>Damien M. &amp; Grok Bot</i>';D.body.appendChild(f);}
+function sign(){if(D.getElementById("dk-sign")||!D.body)return;var f=D.createElement("footer");f.id="dk-sign";f.innerHTML='<b>Made by</b><i>Damien M. &amp; Grok Bot en vibe coding</i>';D.body.appendChild(f);}
 if(D.body)sign();else D.addEventListener("DOMContentLoaded",sign);
 function $(s,r){return (r||D).querySelector(s);}function $$(s,r){return Array.prototype.slice.call((r||D).querySelectorAll(s));}
 var type=$("#themes")&&$("#exams")?"index":$("#dk-scores")?"scores":(inDet&&$(".toc,details"))?"fiche":$(".cl")?"revdet":/^revisions/.test(file)?"rev":$("#opts")&&$("#val")?"card":($("#timer")&&($(".q")||$("#qs")))?"exam":$(".q[data-a]")?"serie":"autre";
@@ -19,10 +19,11 @@ function active(){if(type==="index")return location.hash==="#themes"?"themes":lo
 if(/^\d\d_/.test(file)&&!inDet)return "themes";if(/^examen_/.test(file))return "exams";if(inDet||file==="revisions_detaillees.html")return "revdet";
 if(/^revisions/.test(file))return "rev";if(/^sigles/.test(file))return "sigles";return {"aleatoire.html":"alea","erreurs.html":"err","scores.html":"scores"}[file]||"";}
 var NAV=[["home","index.html","⌂","Accueil"],["themes","index.html#themes","☰","QCM par thème"],["alea","aleatoire.html","⤨","Mode aléatoire"],["exams","index.html#exams","⏱","Examens"],
-["rev","revisions.html","✎","Révisions synthétiques"],["revdet","revisions_detaillees.html","❐","Révisions détaillées"],["sigles","sigles_accueil.html","Aa","Sigles et acronymes"],["err","erreurs.html","↻","Mes erreurs"],["scores","scores.html","▦","Tableau de bord"]];
+["rev","revisions.html","✎","Révisions synthétiques"],["revdet","revisions_detaillees.html","❐","Révisions détaillées"],["sigles","sigles_accueil.html","Aa","Sigles et acronymes"],["err","erreurs.html","↻","Mes erreurs"],["scores","scores.html","▦","Tableau de bord"],["lecalea","index.html#lecture-aleatoire","♫","Lecture aléatoire"]];
 function buildSide(){var ic=$('link[rel="apple-touch-icon"]')||$('link[rel="icon"][sizes="192x192"]')||$('link[rel="icon"]'),src=ic?ic.getAttribute("href"):"";
 side=el("nav","");side.id="dk-side";side.setAttribute("aria-label","Navigation principale");
 var h='<a class="dk-brand" href="'+BASE+'index.html">'+(src?'<img alt="" src="'+src+'">':'')+'<div><div class="dk-t1">QCM SUEP B/C</div><div class="dk-t2">30 novembre 2026</div></div></a>';
+h+='<button type="button" class="dk-colbtn" id="dk-colbtn" aria-label="Réduire le menu" title="Réduire / déplier le menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></svg></button>';
 h+='<div class="dk-cd" title="Examen le 30 novembre 2026"><div class="dk-cdn">'+cdTxt()+'</div><div class="dk-cdl">Examen le 30 novembre 2026</div></div><div class="dk-links">';
 var a=active();NAV.forEach(function(n){var badge=n[0]==="err"?'<em class="dk-n" id="dk-errn">'+errN()+'</em>':"";
 h+='<a class="dk-l'+(n[0]===a?' dk-on':'')+'" data-k="'+n[0]+'" href="'+BASE+n[1]+'"'+(n[0]===a?' aria-current="page"':'')+'><i>'+n[2]+'</i><div>'+n[3]+'</div>'+badge+'</a>';
@@ -30,6 +31,8 @@ h+='<a class="dk-l'+(n[0]===a?' dk-on':'')+'" data-k="'+n[0]+'" href="'+BASE+n[1
 h+='</div><button type="button" class="dk-help" id="dk-helpbtn">⌨ Raccourcis clavier <kbd>H</kbd></button>';
 side.innerHTML=h;D.body.appendChild(side);
 $("#dk-helpbtn").addEventListener("click",function(){toggleHelp();});
+$("#dk-colbtn").addEventListener("click",function(){colSet(!H.classList.contains("dk-col"));});colApply();
+var la=$('.dk-l[data-k="lecalea"]',side);if(la)la.addEventListener("click",function(e){var R=window.qcmbcLectureRand;if(R&&R.ready()){e.preventDefault();R.click();}});
 if(type==="index")$$(".dk-l",side).forEach(function(l){var k=l.getAttribute("data-k");if(k==="home"||k==="themes"||k==="exams")l.addEventListener("click",function(e){if(typeof window.show==="function"){e.preventDefault();window.show(k);window.scrollTo(0,0);mark();}});});}
 function mark(){if(!side)return;var a=active();$$(".dk-l",side).forEach(function(l){var o=l.getAttribute("data-k")===a;l.classList.toggle("dk-on",o);if(o)l.setAttribute("aria-current","page");else l.removeAttribute("aria-current");});}
 var SHORT={serie:[["1 – 4 ou A – D","cocher / décocher une réponse"],["Entrée","voir la correction de la question"],["↓ ou →","question suivante"],["↑ ou ←","question précédente"]],
@@ -80,7 +83,13 @@ x.innerHTML='<div class="dk-kpi dk-big"><div class="dk-kv">'+cdTxt()+'</div><div
 '<a class="dk-kpi" href="aleatoire.html"><div class="dk-kv">'+(a&&a.n?Math.round(a.ok*100/a.n)+" %":"–")+'</div><div class="dk-kl">réussite en mode aléatoire'+(a&&a.n?" ("+a.ok+"/"+a.n+")":"")+'</div></a>'+
 '<a class="dk-kpi" href="scores.html"><div class="dk-kv">'+(last?(Math.round(last.s*200/last.n)/10).toString().replace(".",",")+"/20":"–")+'</div><div class="dk-kl">'+(last?"dernière note : "+last.t.replace(/</g,"&lt;"):"tableau de bord des scores")+'</div></a>';
 var h1=$("body>h1");if(h1)h1.parentNode.insertBefore(x,h1.nextSibling);}
-function enable(){if(on)return;on=true;H.classList.add("dk","dk-"+type);if(!side)buildSide();else side.hidden=false;var b=$("#dk-errn");if(b)b.textContent=errN();
+/* Menu de gauche repliable (état mémorisé : qcmbc:sidebar). */
+var KCOL="qcmbc:sidebar";
+function colGet(){try{return localStorage.getItem(KCOL)==="col";}catch(e){return false;}}
+function colApply(){var c=colGet();H.classList.toggle("dk-col",c);var b=D.getElementById("dk-colbtn");if(b){b.setAttribute("aria-expanded",c?"false":"true");b.setAttribute("aria-label",c?"Déplier le menu":"Réduire le menu");}}
+function colSet(c){try{localStorage.setItem(KCOL,c?"col":"open");}catch(e){}colApply();try{window.dispatchEvent(new Event("resize"));}catch(e){}}
+window.addEventListener("storage",function(e){if(e.key===KCOL)colApply();});
+function enable(){if(on)return;on=true;H.classList.add("dk","dk-"+type);colApply();setTimeout(function(){H.classList.add("dk-anim");},80);if(!side)buildSide();else side.hidden=false;var b=$("#dk-errn");if(b)b.textContent=errN();
 if(type==="index")hero();var hx=$("#dk-hero");if(hx)hx.hidden=false;
 if(!booted){booted=true;D.addEventListener("keydown",onKey);if(type==="serie"||type==="exam"){D.addEventListener("click",function(e){if(!on)return;var q=e.target.closest&&e.target.closest(".q");if(q&&qs().indexOf(q)>=0)setCur(q,false);});D.addEventListener("focusin",function(e){if(!on)return;var q=e.target.closest&&e.target.closest(".q");if(q&&qs().indexOf(q)>=0)setCur(q,false);});}
 hist();if(type==="fiche")fiche();if(type==="index")window.addEventListener("hashchange",function(){if(!on)return;var h=location.hash.slice(1);if(typeof window.show==="function")window.show(h==="themes"||h==="exams"?h:"home");mark();});}}

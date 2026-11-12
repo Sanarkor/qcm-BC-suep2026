@@ -380,6 +380,7 @@ function highlight(el,more){
   }
 }
 function updateBtns(){
+  try{sideUI();}catch(e){}
   var on=st.mode!=="idle";
   $$(".lec-mini,.lec-page").forEach(function(b){
     var src=b.getAttribute("data-lec");
@@ -601,7 +602,7 @@ function toggle(){
     return;
   }
   if(OPTI)startOpti(null);
-  else if(RAND.units)randStart(true);
+  else if(RAND.units&&isDash())randStart(true);
 }
 
 function buildBar(){
@@ -808,6 +809,7 @@ function onFrameLoad(){
     st.list.forEach(function(ch){if(ch.el&&!ch.el.isConnected&&ch.idx>=0&&all[ch.idx])ch.el=all[ch.idx];});
     if(st.mode!=="idle"){st.lastEl=null;highlight(st.list[st.i]&&st.list[st.i].el,st.list[st.i]&&st.list[st.i].more);}
   }
+  try{sideUI();setTimeout(sideUI,400);}catch(e){}
   if(RAND.on)randResolve();
   updateBack();
 }
@@ -862,6 +864,9 @@ function userStop(){
 }
 function initGuest(){
   booted=true;
+  window.qcmbcLectureRand={ready:function(){try{var R=window.parent.qcmbcLectureRand;return !!(R&&R.ready());}catch(e){return false;}},
+    on:function(){try{return window.parent.qcmbcLectureRand.on();}catch(e){return false;}},
+    click:function(){try{window.parent.qcmbcLectureRand.click();}catch(e){}}};
   D.documentElement.classList.add("lec-ok","lec-guest");
   injectButtons();
   injectHelp();
@@ -1118,7 +1123,21 @@ function randBack(){
   if(nav.shown&&samePage(frameHref(),url)){randResolve();var cur=st.list[st.i];if(cur&&cur.el){try{cur.el.scrollIntoView({block:"center",behavior:"smooth"});}catch(e){}}return;}
   openInFrame(url);
 }
+/* Entrée « Lecture aléatoire » du menu de gauche (PC) : lance / reprend, ou met en pause / relance pendant la lecture. */
+var RAPI={ready:function(){return !!RAND.units&&!!synth;},on:function(){return RAND.on;},
+  click:function(){if(!RAND.units||!synth)return;if(RAND.on)toggle();else randStart(true);}};
+function sideUI(){
+  var docs=[D];try{if(nav.frame&&nav.frame.contentDocument)docs.push(nav.frame.contentDocument);}catch(e){}
+  var playing=RAND.on&&st.mode==="playing",paused=RAND.on&&st.mode==="paused";
+  docs.forEach(function(d){$$('.dk-l[data-k="lecalea"]',d).forEach(function(a){
+    a.classList.toggle("dk-play",RAND.on);
+    a.setAttribute("aria-pressed",RAND.on?"true":"false");
+    var t=a.querySelector("div");if(t)t.textContent=playing?"Lecture aléatoire · en cours":paused?"Lecture aléatoire · en pause":rLoad()?"Reprendre la lecture aléatoire":"Lecture aléatoire";
+    a.title=RAND.on?"Pause / reprise de la lecture aléatoire":"Lancer la lecture aléatoire des fiches";
+  });});
+}
 function randUI(){
+  sideUI();
   var b=D.getElementById("lec-rand-go"),n=D.getElementById("lec-rand-new");
   if(!b)return;
   var sv=rLoad();
@@ -1133,7 +1152,8 @@ function randInit(){
   fetch(b.base+"index.json"+b.q,{cache:"no-cache"}).then(function(r){return r.ok?r.json():null;}).then(function(ix){
     if(!ix||!ix.units||!ix.units.length)return;
     RAND.units=ix.units;
-    var home=D.getElementById("lec-rand-slot")||D.getElementById("home");if(!home||D.getElementById("lec-rand-go"))return;
+    window.qcmbcLectureRand=RAPI;sideUI();
+    var home=isDash()?(D.getElementById("lec-rand-slot")||D.getElementById("home")):null;if(!home||D.getElementById("lec-rand-go"))return;
     var wrap=D.createElement("div");wrap.className="lec-rand-box";
     var go=D.createElement("button");go.type="button";go.id="lec-rand-go";go.className="big lec-rand-btn";
     go.title="Écouter les fiches (synthétiques et détaillées) dans un ordre tiré au sort, sans s’arrêter";
@@ -1143,6 +1163,7 @@ function randInit(){
     nw.addEventListener("click",function(e){e.preventDefault();try{localStorage.removeItem(RKEY);}catch(x){}randStart(false);});
     wrap.appendChild(go);wrap.appendChild(nw);home.appendChild(wrap);
     randUI();
+    if(location.hash==="#lecture-aleatoire"){try{go.scrollIntoView({block:"center"});go.focus();}catch(e){}go.classList.add("lec-rand-hl");setTimeout(function(){go.classList.remove("lec-rand-hl");},2600);}
   }).catch(function(){});
 }
 function isPhone(){
@@ -1165,7 +1186,7 @@ function init(){
   injectButtons();
   buildBar();
   loadOpti();
-  if(isDash())randInit();
+  randInit();
   watchVoices();
   var mq=window.matchMedia&&window.matchMedia("(min-width:1024px)");
   D.addEventListener("keydown",function(e){
