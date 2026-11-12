@@ -1173,7 +1173,7 @@ var M={a:null,list:[],i:-1,mode:"idle",label:"",rand:false,man:{},bar:null,gap:n
 var MKEY="qcmbc:lecm",MRKEY="qcmbc:lecalea_m",MRATES=["0.80","0.90","1.00","1.10","1.25","1.50"];
 function mGet(k){try{return JSON.parse(localStorage.getItem(k)||"null");}catch(e){return null;}}
 function mPut(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
-function mRate(){var s=mGet(MKEY)||{};return MRATES.indexOf(s.rate)>=0?s.rate:"1.00";}
+function mRate(){var s=mGet(MKEY)||{};return MRATES.indexOf(s.rate)>=0?s.rate:"1.10";}
 function mBase(){return rBase().base.replace(/lecture_opti\/$/,"lecture_audio/");}
 function mMan(pg){
   if(!M.man[pg])M.man[pg]=fetch(mBase()+pg+".json"+rBase().q,{cache:"no-cache"}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});
