@@ -1,0 +1,38 @@
+= Pratiques professionnelles en intervention : la progression face à une tuerie de masse, pour les intervenants de premier niveau, version d'août 2018.
+# 1
+@1-6 À l'arrivée sur une tuerie de masse, les primo-intervenants de premier niveau poursuivent quatre objectifs : prendre des renseignements ; neutraliser les auteurs si l'occasion se présente ; limiter la propagation, par la fixation ou le confinement ; et exfiltrer les victimes.
+@7 Pour cela, ils progressent de poste en poste, jusqu'à celui qui se trouve à distance opérationnelle d'intervention.
+@8 La progression est une manœuvre technique et tactique, individuelle, ou collective et coordonnée.
+# 2
+@0-1 Avant de progresser, il faut s'équiper. Impérativement : les protections balistiques, gilets pare-balles lourds, gilets porte-plaques, bouclier balistique souple avec ses plaques, casques ; l'armement collectif, pistolet-mitrailleur, voire fusil d'assaut ; et les radios.
+@2-4 Préconisation : une radio portative par policier, portée sur la tenue pour libérer les mains, avec micro déporté ou oreillette si possible. Et cet équipement se fait sous protection armée, hors de vue de la zone de tuerie.
+@5-6 Ensuite, s'organiser. Dès la descente du véhicule, avant tout mouvement, on observe, à la vue, à l'ouïe et à l'odorat, pour s'orienter vers les lieux. Le chef d'équipe répartit les rôles selon les effectifs et l'armement, et notamment la place de l'arme d'épaule, soutien-feu principal du dispositif.
+@7-11 L'organisation tactique vise deux choses : une protection mutuelle permanente, en se répartissant les secteurs d'observation et de riposte, et en gardant un contact visuel permanent ; et une progression rapide, si possible, jusqu'à une distance qui permet de recueillir le maximum de renseignements et d'utiliser ses armes.
+@12-13 La répartition des secteurs d'observation et de riposte, les SOR : le porteur de l'arme d'épaule couvre l'axe principal de progression, grâce à sa précision à longue distance et à sa puissance de feu.
+@14 Les coéquipiers couvrent les flancs droit et gauche, et l'arrière. La vigilance augmente à mesure qu'on se rapproche de la zone d'exclusion, ce qui ralentit la progression. Dans la phase finale, les points hauts, fenêtres et terrasses demandent une attention particulière, pendant toute l'intervention.
+@15-16 La coordination et des ordres adaptés assurent la complémentarité du groupe, gage d'une progression sûre. La complémentarité, c'est le partage d'une zone entre deux policiers ou plus, en secteurs d'observation et de riposte.
+# 3
+@0-1 La progression commence le plus souvent en champ ouvert : un lieu offrant un large espace, dont la maîtrise exige des actions conjointes et coordonnées.
+@2-3 Avant chaque mouvement, chacun fixe son point d'arrêt et son itinéraire. Et chaque point d'arrêt doit permettre d'être posté, selon la règle VITAL.
+@4-6 Il faut chercher autant que possible le cheminement : progresser hors de la vue des assaillants. C'est la meilleure des protections. Retenez la formule : ne pas être une cible protégera toujours mieux qu'un gilet pare-balles.
+@7-10 Le cheminement dépend du terrain : mobilier urbain, véhicules, végétation. Il peut se faire au contact, ou en éclaté.
+@11-15 Au contact, les équipiers sont proches. Avantage : une communication directe et simple, orale, corporelle, gestuelle. Inconvénient : on offre une seule et même cible, donc une grande vulnérabilité.
+@16 Sous le feu, on rompt donc cette formation.
+@17-22 En éclaté, selon le terrain, on élargit la zone couverte et observée. Avantages : moins de vulnérabilité, grâce à la dissimulation individuelle, et une riposte plus efficace, par la convergence des tirs de soutien. Inconvénient : la communication est plus difficile ; on passe alors aux gestes.
+@23-25 La limite de l'éclatement, c'est la rupture du contact visuel : chaque élément doit voir ou être vu par au moins un autre. Et dans les deux cas, la progression peut être simultanée ou décalée.
+@27-30 Le bond, maintenant. On y recourt quand le cheminement à couvert est impossible et qu'il faut se déplacer à découvert. C'est un déplacement court, rapide, vers un nouveau poste plus avantageux : meilleure observation, meilleur poste de tir, meilleure protection.
+@31-33 La surprise est son principal atout. On prépare son départ en l'annonçant au moins à son soutien-feu, et on évite d'attirer l'attention des assaillants avant de bouger.
+@34 Et la règle d'or : le bond se fait toujours sous la protection d'un soutien-feu. Pas un pas sans soutien.
+# 4
+@0-1 La distance opérationnelle d'intervention, la DOI. L'organisation de la zone d'exclusion répond à quatre impératifs. D'abord, répartir les secteurs d'observation et de riposte en les faisant converger vers la zone de danger et ses abords.
+@2 Ensuite, empêcher les assaillants de maîtriser le terrain, par la fixation ou le confinement. Et si cela impose de tirer, il faut économiser les munitions.
+@3-4 Puis, inviter les tiers à évacuer et empêcher toute incursion. Et enfin, neutraliser les assaillants si l'occasion se présente et que les conditions légales sont réunies.
+@5-6 Deux définitions à retenir. Fixer : en champ ouvert, entraver la manœuvre des auteurs pour réduire leur champ d'action. Confiner : exercer une pression suffisante pour maintenir les auteurs dans un lieu clos.
+# 5
+@0-1 Le bouclier balistique souple, le BBS. Sans ses plaques additionnelles, il protège comme un gilet pare-balles à port dissimulé, de classe 3 A : c'est insuffisant face aux munitions habituellement utilisées lors d'une tuerie de masse.
+@2-3 Avec les plaques, il atteint le niveau 4, que certaines munitions perforantes peuvent encore traverser.
+@4 Donc, retenez bien : le bouclier n'est pas une protection absolue, ni pour son porteur, ni pour les autres.
+@5 Avec ses plaques, il pèse environ 20 kilos, portés d'un seul bras si le porteur veut pouvoir tirer à une main.
+@6-8 Préconisation : toujours l'embarquer dans sa configuration optimale, plaques et crochets en place, armatures démontables rangées dans leur housse.
+@9 En milieu clos, son emploi est primordial. En champ ouvert, il dépend de l'analyse : abris naturels, besoin de mobilité. Et face à un engin explosif improvisé clairement identifié, si l'on ne peut pas respecter les distances de sécurité, il peut protéger en plus contre les projections et l'effet de souffle.
+@r Ce qu'il faut retenir : s'équiper hors de vue, sous protection ; arme d'épaule sur l'axe principal ; cheminer hors de vue, car ne pas être une cible protège mieux qu'un gilet ; contact ou éclaté, sans jamais perdre le contact visuel ; bond rapide et toujours sous soutien-feu, pas un pas sans soutien ; fixer en champ ouvert, confiner en lieu clos ; et le bouclier, 20 kilos avec plaques, n'est pas une protection absolue.
