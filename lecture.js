@@ -106,6 +106,35 @@ function textOf(el){
 function skipEl(el){
   return !el||el.closest("#lec-bar,.nav,.toc,.tools,.pn,.src,.lec-page,.lec-mini,#top,#mkbadge,#flt,.voix,#prOv,form");
 }
+/* Morceaux courts (≤ MAXC caractères) : les textes longs échouent souvent sur Android. */
+var MAXC=190;
+function splitText(sp){
+  if(sp.length<=MAXC)return [sp];
+  var out=[],buf="";
+  function pieces(t){
+    if(t.length<=MAXC)return [t];
+    var a=t.replace(/([,;:)])\s+/g,"$1\n").split("\n"),r=[],b="",i,w;
+    for(i=0;i<a.length;i++){
+      if(a[i].length>MAXC){
+        if(b){r.push(b);b="";}
+        w=a[i].split(" ");var c="",j;
+        for(j=0;j<w.length;j++){if(c&&(c.length+w[j].length+1)>MAXC){r.push(c);c=w[j];}else c=c?c+" "+w[j]:w[j];}
+        if(c)r.push(c);
+      }else if(b&&(b.length+a[i].length+1)>MAXC){r.push(b);b=a[i];}
+      else b=b?b+" "+a[i]:a[i];
+    }
+    if(b)r.push(b);
+    return r;
+  }
+  sp.replace(/([.!?…])\s+/g,"$1\n").split("\n").forEach(function(sent){
+    pieces(sent).forEach(function(pc){
+      if(buf&&(buf.length+pc.length+1)>MAXC){out.push(buf);buf=pc;}
+      else buf=buf?buf+" "+pc:pc;
+    });
+  });
+  if(buf)out.push(buf);
+  return out;
+}
 function collect(det){
   var root=det.querySelector(".c")||det,out=[],seen={};
   var title=titleOf(det);
@@ -117,14 +146,7 @@ function collect(det){
     var t=textOf(el);if(!t||t.length<2)return;
     if(seen[t]&&el.tagName!=="TR"&&!/^H[23]$/.test(el.tagName))return;seen[t]=1;
     var sp=speakable(t);if(!sp)return;
-    if(sp.length>240){
-      var parts=sp.replace(/([.!?…;:])\s+/g,"$1\n").split("\n"),buf="",i;
-      for(i=0;i<parts.length;i++){
-        if(buf&&(buf.length+parts[i].length)>220){out.push({el:el,speak:buf,label:title});buf=parts[i];}
-        else buf=buf?(buf+" "+parts[i]):parts[i];
-      }
-      if(buf)out.push({el:el,speak:buf,label:title});
-    }else out.push({el:el,speak:sp,label:title});
+    splitText(sp).forEach(function(part){out.push({el:el,speak:part,label:title});});
   });
   return out;
 }
@@ -134,9 +156,31 @@ function allChunks(){
   return list;
 }
 
-var st={mode:"idle",list:[],i:-1,tok:0,voice:null,rate:DEF_RATE,voices:[],timer:null,wd:null,utterance:null,retried:0,voicesReady:false};
-var ui={bar:null,tit:null,play:null,rate:null,voice:null,msg:null};
-var synth=null,primed=false,booted=false;
+var st={mode:"idle",list:[],i:-1,tok:0,voice:null,rate:DEF_RATE,voices:[],timer:null,wd:null,utterance:null,retried:0,voicesReady:false,sys:false,lastEl:null,canceledAt:0};
+var ui={bar:null,tit:null,play:null,rate:null,voice:null,msg:null,err:null};
+var synth=null,booted=false;
+var SYS="__sys";
+/* Références gardées : sinon Chrome peut ramasser l'énoncé et ne jamais appeler onend. */
+var KEEP=window.__qcmbcUtts||(window.__qcmbcUtts=[]);
+function keepRef(u){KEEP.push(u);if(KEEP.length>40)KEEP.splice(0,KEEP.length-40);}
+var DEBUG=/[?&]lecturedebug=1(?:&|$|#)/.test((location.search||"")+(location.hash||"")),LOG=[];
+function vid(v){return v?(v.voiceURI||v.name||""):"";}
+function dbg(type,info){
+  var t=new Date(),p=function(n,k){return ("00"+n).slice(-k);};
+  LOG.push(p(t.getMinutes(),2)+":"+p(t.getSeconds(),2)+"."+p(t.getMilliseconds(),3)+" "+type+(info?" "+info:""));
+  if(LOG.length>40)LOG.shift();
+  if(DEBUG)renderDbg();
+}
+function renderDbg(){
+  if(!D.body)return;
+  var p=$("#lec-dbg");
+  if(!p){p=D.createElement("pre");p.id="lec-dbg";p.title="Toucher pour réduire/agrandir";p.addEventListener("click",function(){p.classList.toggle("lec-dbg-min");});D.body.appendChild(p);}
+  var all=allVoices();
+  p.textContent="LECTURE DEBUG · "+(navigator.userAgent||"")+"\nvoix: "+all.length+" (fr: "+st.voices.length+") · choisie: "+
+    (st.sys||!st.voice?"voix système fr-FR":(st.voice.name+" ["+st.voice.lang+"] local="+st.voice.localService))+
+    " · mode="+st.mode+" #"+st.i+"/"+st.list.length+"\n"+LOG.slice().reverse().join("\n");
+}
+window.qcmbcLectureLog=LOG;
 
 function scoreVoice(v){
   var n=(v.name||"")+" "+(v.voiceURI||""),lang=(v.lang||"").toLowerCase();
@@ -188,7 +232,8 @@ function fillVoices(){
   st.voices=preferredVoices();
   var stored=load(),sel=ui.voice,v,i,opt,got=allVoices();
   if(got.length)st.voicesReady=true;
-  st.voice=pickVoice(st.voices,stored.voice||"");
+  st.sys=stored.sys===true||stored.voice===SYS;
+  st.voice=pickVoice(st.voices,stored.voice&&stored.voice!==SYS?stored.voice:"");
   if(sel){
     sel.innerHTML="";
     if(!st.voices.length){
@@ -198,11 +243,15 @@ function fillVoices(){
         v=st.voices[i];opt=D.createElement("option");
         opt.value=v.voiceURI||v.name;
         opt.textContent=v.name+(v.lang?" ("+v.lang+")":"");
-        if(st.voice&&(st.voice.voiceURI||st.voice.name)===opt.value)opt.selected=true;
+        if(!st.sys&&st.voice&&(st.voice.voiceURI||st.voice.name)===opt.value)opt.selected=true;
         sel.appendChild(opt);
       }
+      opt=D.createElement("option");opt.value=SYS;opt.textContent="Voix de l’appareil (système)";
+      if(st.sys)opt.selected=true;
+      sel.appendChild(opt);
     }
   }
+  if(DEBUG)renderDbg();
   if(st.voicesReady)showNoFrMsg(!st.voices.length);
 }
 
@@ -211,6 +260,8 @@ function highlight(el){
   clearHL();
   if(!el||!el.classList)return;
   el.classList.add("lec-cur");
+  if(el===st.lastEl)return;
+  st.lastEl=el;
   var r=el.getBoundingClientRect(),vh=window.innerHeight,bar=ui.bar,bh=bar&&!bar.hidden?bar.offsetHeight+16:16;
   if(r.top<80||r.bottom>vh-bh-20){
     try{el.scrollIntoView({block:"center",behavior:"smooth"});}catch(e){el.scrollIntoView(true);}
@@ -242,85 +293,148 @@ function clearTimers(){
   if(st.timer){clearTimeout(st.timer);st.timer=null;}
   if(st.wd){clearTimeout(st.wd);st.wd=null;}
 }
+function showErr(on,reason){
+  if(!ui.err)return;
+  if(on){
+    ui.err.textContent="La voix ne répond pas sur cet appareil. Monte le volume (son média), essaie une autre voix dans la liste, "+
+      "ou vérifie Paramètres → Synthèse vocale → moteur Google avec le français téléchargé. Puis appuie sur ▶."+(DEBUG&&reason?" ["+reason+"]":"");
+  }
+  ui.err.hidden=!on;
+  ui.err.classList.toggle("lec-msg-on",!!on);
+}
+function isBusy(){try{return !!(synth.speaking||synth.pending);}catch(e){return false;}}
 function cancelSpeak(){
   st.tok++;
   clearTimers();
   st.utterance=null;
-  try{if(synth)synth.cancel();}catch(e){}
+  /* On n'annule que si quelque chose parle : cancel() juste avant speak() fait perdre l'énoncé sur Chrome Android. */
+  if(synth&&isBusy()){try{synth.cancel();st.canceledAt=Date.now();dbg("cancel");}catch(e){}}
 }
 function stop(){
+  var was=st.mode!=="idle";
   cancelSpeak();
-  st.mode="idle";st.list=[];st.i=-1;st.det=null;st.src="";st.label="";st.retried=0;
+  st.mode="idle";st.list=[];st.i=-1;st.det=null;st.src="";st.label="";st.retried=0;st.lastEl=null;
   clearHL();
+  showErr(false);
   showBar(false);
   updateBtns();
-}
-function primeSynth(){
-  if(primed||!synth)return;
-  primed=true;
-  try{
-    var u=new (getUtt())(" ");
-    u.volume=0;u.rate=1;u.lang="fr-FR";
-    synth.speak(u);
-    synth.cancel();
-  }catch(e){primed=false;}
+  if(was)dbg("stop");
 }
 function armWatchdog(text,my,i){
   if(st.wd){clearTimeout(st.wd);st.wd=null;}
   var cps=10*(parseFloat(st.rate)||1);
-  var ms=Math.min(90000,Math.max(4000,((text||"").length/cps)*1000+2500));
+  var ms=Math.min(90000,Math.max(4000,((text||"").length/cps)*1000+3000));
+  /* Uniquement après un vrai démarrage : rattrape un onend jamais reçu (bug Chrome). */
   st.wd=setTimeout(function(){
     if(st.tok!==my||st.mode!=="playing")return;
+    if(isBusy()){armWatchdog(text,my,i);return;}
+    dbg("watchdog","#"+i+" fin non signalée");
     speakAt(i+1,false);
   },ms);
+}
+function currentVoice(){
+  if(st.sys||!st.voice)return null;
+  /* Toujours reprendre l'objet voix dans la liste actuelle (une liste périmée fait échouer speak). */
+  var id=vid(st.voice),all=allVoices(),k;
+  for(k=0;k<all.length;k++)if(vid(all[k])===id)return all[k];
+  return null;
+}
+function fail(reason,withVoice,my,i){
+  if(st.tok!==my)return;
+  clearTimers();
+  dbg("échec","#"+i+" "+reason+(withVoice?" (avec voix choisie)":" (voix système)"));
+  if(st.retried<1){
+    st.retried++;
+    if(withVoice){
+      /* Repli mémorisé : voix système fr-FR. */
+      st.sys=true;st.pendingSys=true;
+      if(ui.voice)ui.voice.value=SYS;
+      dbg("repli","voix système fr-FR");
+    }
+    if(isBusy()){try{synth.cancel();st.canceledAt=Date.now();}catch(e){}}
+    st.timer=setTimeout(function(){if(st.tok===my)speakAt(i,false);},350);
+    return;
+  }
+  /* Deuxième échec : on s'arrête sur ce passage, sans enchaîner. */
+  st.tok++;
+  if(isBusy()){try{synth.cancel();}catch(e){}}
+  st.mode="paused";st.retried=0;
+  if(st.pendingSys){
+    /* Le repli n'a pas marché non plus : on garde la voix choisie par Damien. */
+    st.pendingSys=false;st.sys=load().sys===true;
+    if(ui.voice&&!st.sys&&st.voice)ui.voice.value=vid(st.voice);
+  }
+  showErr(true,reason);
+  dbg("arrêt","en pause après 2 échecs, pas d'enchaînement");
+  showBar(true);updateBtns();
 }
 function speakAt(i,fromUser){
   if(!synth)return;
   if(i<0||i>=st.list.length){stop();return;}
   var ch=st.list[i],my=++st.tok;
   clearTimers();
-  st.i=i;st.mode="playing";st.retried=fromUser?0:st.retried;
-  if(ch.el&&ch.el.closest){var d=ch.el.closest("details");if(d)d.open=true;}
-  highlight(ch.el);
-  updateBtns();
+  if(fromUser){st.retried=0;showErr(false);}
+  st.i=i;st.mode="playing";
+  if(ch.el&&ch.el.closest){var d=ch.el.closest("details");if(d&&!d.open)d.open=true;}
   showBar(true);
-  var u=new (getUtt())(ch.speak);
+  updateBtns();
+  var U=getUtt(),u=new U(ch.speak);
   u.lang="fr-FR";
   u.rate=Math.min(2,Math.max(0.5,parseFloat(st.rate)||1.25));
-  if(st.voice)u.voice=st.voice;
-  st.utterance=u;
-  u.onend=function(){if(st.tok!==my)return;clearTimers();st.retried=0;speakAt(i+1,false);};
+  var v=currentVoice(),withVoice=!!v,started=false,done=false,t0=0;
+  if(v)u.voice=v;
+  st.utterance=u;keepRef(u);
+  function live(){return st.tok===my&&!done;}
+  function onStarted(how){
+    if(!live()||started)return;
+    started=true;
+    clearTimers();
+    if(st.pendingSys){st.pendingSys=false;save({sys:true});dbg("repli mémorisé","voix système");}
+    st.retried=0;
+    showErr(false);
+    dbg(how,"#"+i+" après "+(Date.now()-t0)+"ms");
+    highlight(ch.el);
+    updateBtns();
+    armWatchdog(ch.speak,my,i);
+  }
+  u.onstart=function(){onStarted("start");};
+  u.onboundary=function(){if(!started)onStarted("boundary");};
+  u.onend=function(){
+    var el=Date.now()-t0;
+    dbg("end","#"+i+" "+el+"ms"+(started?"":" SANS start")+(st.tok!==my?" (ancien)":""));
+    if(!live())return;
+    if(!started&&el<700){done=true;fail("fin immédiate sans démarrage",withVoice,my,i);return;}
+    done=true;clearTimers();
+    speakAt(i+1,false);
+  };
   u.onerror=function(ev){
-    if(st.tok!==my)return;
-    var err=(ev&&ev.error)||"";
-    if(err==="canceled"||err==="interrupted")return;
-    if((err==="synthesis-failed"||err==="synthesis-unavailable"||err==="network"||err==="audio-busy")&&st.retried<2){
-      st.retried++;
-      if(st.retried===1){
-        var loc=localFrench();
-        st.voice=loc||null;
-        if(ui.voice&&st.voice)ui.voice.value=st.voice.voiceURI||st.voice.name;
-      }else st.voice=null;
-      st.timer=setTimeout(function(){if(st.tok===my){st.tok--;speakAt(i,false);}},80);
-      return;
-    }
-    st.timer=setTimeout(function(){if(st.tok===my)speakAt(i+1,false);},80);
+    var err=(ev&&ev.error)||"inconnue";
+    dbg("error","#"+i+" "+err+(st.tok!==my?" (ancien)":""));
+    if(!live())return;
+    done=true;
+    fail("erreur "+err,withVoice,my,i);
   };
   function launch(){
     if(st.tok!==my)return;
-    try{synth.speak(u);}catch(e){speakAt(i+1,false);return;}
-    armWatchdog(ch.speak,my,i);
+    t0=Date.now();
+    dbg("speak","#"+i+" "+(v?v.name:"voix système fr-FR")+" x"+u.rate.toFixed(2)+" "+ch.speak.length+"c"+(fromUser?" (geste)":""));
+    try{synth.speak(u);}catch(e){done=true;fail("exception "+(e&&e.message),withVoice,my,i);return;}
+    try{if(synth.paused)synth.resume();}catch(e){}
+    /* Pas de démarrage en 6 s : échec (sauf si le moteur parle quand même sans signaler start). */
+    st.wd=setTimeout(function(){
+      if(!live()||started)return;
+      if(isBusy()&&synth.speaking){onStarted("speaking");return;}
+      done=true;fail("aucun démarrage après 6 s",withVoice,my,i);
+    },6000);
   }
-  var busy=false;
-  try{busy=!!(synth.speaking||synth.pending);}catch(e){}
-  if(busy){try{synth.cancel();}catch(e){}}
-  /* Premier speak dans le geste utilisateur : jamais de setTimeout (Chrome Android sinon n'émet rien). */
-  if(fromUser||ANDROID||!busy){launch();}
-  else{st.timer=setTimeout(launch,60);}
+  /* Premier speak du geste : synchrone. Après un cancel() récent, petit délai pour ne pas perdre l'énoncé. */
+  var recent=Date.now()-st.canceledAt<200;
+  if(isBusy()){try{synth.cancel();st.canceledAt=Date.now();}catch(e){}recent=true;}
+  if(recent)st.timer=setTimeout(launch,200);
+  else launch();
 }
 function startList(list,src,det,label,from,fromUser){
   if(!list||!list.length)return;
-  if(fromUser)primeSynth();
   cancelSpeak();
   st.list=list;st.src=src;st.det=det||null;st.label=label||"";st.retried=0;
   speakAt(from==null?0:from,!!fromUser);
@@ -378,15 +492,19 @@ function buildBar(){
     '<select class="lec-rate" id="lec-rate" aria-label="Vitesse de lecture"></select>'+
     '<select class="lec-voice" id="lec-voice" aria-label="Voix"></select>'+
     '</div></div>'+
+    '<div class="lec-msg lec-err" id="lec-err" role="alert" hidden></div>'+
     '<div class="lec-msg" id="lec-msg" hidden>Aucune voix française n’est installée. Sur Android : Paramètres → Synthèse vocale → Google, puis télécharge le français.</div>';
   D.body.appendChild(bar);
-  ui.bar=bar;ui.tit=$("#lec-tit",bar);ui.play=$("#lec-play",bar);ui.rate=$("#lec-rate",bar);ui.voice=$("#lec-voice",bar);ui.msg=$("#lec-msg",bar);
+  ui.bar=bar;ui.tit=$("#lec-tit",bar);ui.play=$("#lec-play",bar);ui.rate=$("#lec-rate",bar);ui.voice=$("#lec-voice",bar);ui.msg=$("#lec-msg",bar);ui.err=$("#lec-err",bar);
   RATES.forEach(function(r){var o=D.createElement("option");o.value=r;o.textContent=r;if(r===st.rate)o.selected=true;ui.rate.appendChild(o);});
   ui.rate.value=st.rate;
   ui.rate.addEventListener("change",function(){st.rate=RATES.indexOf(ui.rate.value)>=0?ui.rate.value:DEF_RATE;save({rate:st.rate});if(st.mode==="playing")speakAt(st.i,true);});
   ui.voice.addEventListener("change",function(){
-    st.voice=pickVoice(st.voices,ui.voice.value);
-    save({voice:ui.voice.value||""});
+    var val=ui.voice.value||"";
+    st.sys=val===SYS;
+    if(!st.sys)st.voice=pickVoice(st.voices,val);
+    save({voice:val,sys:st.sys});
+    dbg("voix",st.sys?"système":vid(st.voice));
     if(st.mode==="playing")speakAt(st.i,true);
   });
   $("#lec-play",bar).addEventListener("click",toggle);
@@ -493,6 +611,7 @@ function init(){
   window.addEventListener("beforeunload",stop);
   document.addEventListener("qcmbc:dictation-start",stop);
   window.qcmbcLectureStop=stop;
+  if(DEBUG){dbg("debug actif","synth="+(!!synth)+" android="+ANDROID);}
 }
 function boot(){
   if(hasSynth()){if(D.readyState==="loading")D.addEventListener("DOMContentLoaded",init);else init();return;}
