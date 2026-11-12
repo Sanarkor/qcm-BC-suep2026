@@ -1,0 +1,51 @@
+= Techniques d'intervention, fiche technique numéro 42 : les aspects pratiques de la perquisition. Le cadre juridique, puis le mode opératoire : avant, pendant, après.
+# 1
+@0-1 Les objectifs : adapter les gestes et techniques, maîtriser les conditions de la perquisition dans le respect du cadre légal et de la déontologie, et s'approprier sa méthode d'exécution.
+# 2
+@0 La perquisition est un acte déterminant de l'enquête. Mais c'est aussi une irruption dans la vie privée, lourde de conséquences, qui déroge aux libertés individuelles. C'est pourquoi elle obéit à des conditions juridiques strictes, et à des principes de déontologie et d'éthique qu'on ne peut pas ignorer.
+@1-6 Elle se prépare, comme toute intervention, avec la méthode de raisonnement opérationnel : l'analyse de la situation, le cadre juridique, puis la tactique d'action.
+# 3
+@0 Qui peut perquisitionner ? En enquête préliminaire, les agents de police judiciaire de l'article 20 peuvent le faire, sur instruction et sous le contrôle des officiers de police judiciaire, avec l'assentiment écrit de la personne chez qui on perquisitionne.
+@1 Cet assentiment est écrit de la main même de la personne, daté et signé. Il précise, le cas échéant, qu'il vaut pour le domicile, c'est-à-dire tout lieu où la personne se sent chez elle, mais aussi pour les dépendances : cave, garage, appentis.
+@2 On peut aussi perquisitionner des locaux professionnels, sous réserve de règles particulières pour certaines professions, comme les avocats ou les médecins.
+@3 En flagrant délit, la décision et la conduite de la perquisition appartiennent à l'officier de police judiciaire, qui respecte les articles 56 et suivants. Les agents de police judiciaire ne peuvent que l'assister.
+@4 Les agents de police judiciaire adjoints de l'article 21 peuvent aussi assister et seconder l'officier, notamment pendant la perquisition. Et ils peuvent seconder l'agent de police judiciaire en enquête préliminaire.
+@5 Même chose quand l'officier exerce les pouvoirs du juge d'instruction, sur commission rogatoire, articles 92 et 151 et suivants.
+@6 Dans tous les cas, et surtout en enquête préliminaire, article 76, les agents de police judiciaire doivent connaître les dispositions du code de procédure pénale sur la perquisition.
+# 4
+@0 Il est conseillé de se reporter aux documentations spécifiques selon l'infraction poursuivie, pour respecter le droit et les libertés.
+@1 Un exemple à retenir : sauf dispositions particulières, comme le trafic de stupéfiants, le proxénétisme, le travail clandestin ou le terrorisme, une perquisition ne peut pas commencer avant 6 heures ni après 21 heures. Mais commencée avant 21 heures, elle peut se poursuivre après.
+# 5
+@0 Le mode opératoire, maintenant, avec une priorité : la sécurité des personnes présentes.
+@1-3 Le danger peut venir de plusieurs choses. La personne chez qui l'on perquisitionne connaît les lieux, et peut à tout moment utiliser une arme ou un objet contre les policiers ou d'autres personnes. Une phase dépressive, liée ou non à l'opération, peut la pousser à fuir, à se blesser, voire à se suicider.
+@4-5 L'environnement peut être défavorable : lieux peu éclairés, espaces morcelés ou encombrés, très sales, voisinage hostile. Et il y a la routine, qui fait oublier qu'aucune perquisition ne ressemble à une autre.
+@6 D'où trois phases : avant, la préparation ; pendant, la phase active ; et après, le départ et le retour au service.
+# 6
+@0-1 Avant. On détermine le nombre de policiers et les moyens : véhicules, radios, lampe, pied-de-biche. Retenez : il faut être au moins trois. En revanche, un surnombre est déconseillé, sauf situation particulière, comme l'hébergement d'un individu dangereux.
+@2-3 On recueille des renseignements précis et fiables sur les lieux : l'adresse exacte, sans confondre place et square, rue et allée ou impasse ; le bon numéro, 1 ou 1 bis ; et le bon quartier, car un même nom de rue peut exister au centre et en périphérie.
+@4-5 Sur l'environnement : quartier calme ou à risque, animaux dangereux, chiens ou reptiles. Et sur l'entrée dans les lieux : combien de personnes peuvent s'y trouver.
+@6-7 On prévoit une arrivée discrète, et on définit à l'avance le rôle de chacun dans les trois fonctions du PLI.
+@8 On surveille en permanence la personne visée, placée en garde à vue, qui accompagne les policiers. Avec le rappel de l'article 803 du code de procédure pénale : menottes seulement si elle est dangereuse pour autrui ou pour elle-même, ou susceptible de fuir.
+@9 Et si la personne visée est trouvée sur place, mêmes mesures de sécurité.
+# 7
+@0 Pendant, c'est la phase active, où se rejoignent sécurité et enquête. Chaque situation est différente, et demande discernement, lucidité, et respect de la loi.
+@1 Les policiers se placent selon les règles de la fiche technique numéro 12 sur les déplacements et les progressions.
+@2-4 On sécurise immédiatement les lieux, avec méthode, avant de perquisitionner pièce par pièce. Sécuriser, c'est d'abord regrouper tous les occupants sous la surveillance d'un policier, et faire de même pour tout nouvel arrivant, avec une palpation de sécurité dans les deux cas.
+@5 S'il y a un animal gênant ou dangereux, on l'isole, au besoin avec un service spécialisé.
+@6-7 On évite d'être piégé par une porte verrouillée qui permettrait de fuir par une fenêtre ou un vasistas. Et on empêche le mis en cause ou un tiers de se débarrasser d'indices, par les toilettes ou le vide-ordures, ou de passer par un balcon ou une coursive pour ressurgir dans le dos des policiers.
+@8 On referme la porte d'entrée dès que tous les policiers sont entrés. Certains peuvent rester dehors, à des points stratégiques, issues secondaires ou sous les fenêtres, avec une radio. Et les clés du domicile restent dans la poche du policier qui dirige l'opération.
+@9 On ferme les fenêtres et portes-fenêtres, après avoir vérifié les rebords et les balcons.
+@10 Retenez bien : toutes les étapes se font en présence permanente de l'occupant, pièce par pièce. Jamais plusieurs pièces fouillées en même temps pour aller plus vite. C'est la présence de l'occupant, ou de deux témoins qui ne sont pas des policiers s'il est absent, qui valide la régularité des découvertes et des saisies.
+@11-12 La personne visée ne fouille pas elle-même et ne communique pas avec des tiers. On reste attentif à ses réactions, qu'on peut noter au procès-verbal, sans jamais se laisser influencer par son comportement.
+@13 On reste très prudent quand on accède à ses demandes : embrasser sa famille, boire, manger, se laver les mains, aller aux toilettes, se changer, prendre des médicaments.
+@14-16 On fouille avec méthode : pièce par pièce, par exemple dans le sens des aiguilles d'une montre ; et dans chaque pièce, de gauche à droite, du sol au plafond, sans oublier aucun tiroir, qui peut contenir une arme, avant de passer à la suivante.
+@17 Pour un engin explosif, une arme ou un objet dangereux, on se reporte aux fiches techniques sur la mise en sécurité d'une arme découverte, et sur l'objet suspect ou l'engin explosif improvisé.
+@18-19 Pour toute découverte utile à l'enquête, ou révélant une autre infraction, ce qu'on appelle une saisie incidente : on note l'emplacement précis et le moment, on confie l'objet à un policier chargé de sa garde, et on le montre à la personne avant même la saisie et la mise sous scellé.
+@20-21 On fouille aussi les dépendances : garage, cave, cellier, grenier, et les véhicules garés dans la rue dont on a trouvé les clés. Attention : mêmes règles de sécurité et de procédure partout, même si le véhicule n'est pas un domicile, sauf s'il est aménagé pour en être un.
+# 8
+@0 Après, c'est la clôture. Vigilance accrue, car la tension retombe.
+@1-3 On quitte les lieux discrètement. On verrouille toutes les entrées et ouvertures. Si les occupants ne peuvent pas revenir rapidement, on coupe l'eau, le gaz et l'électricité. Et on n'oublie pas les animaux éventuels.
+@4 S'il y a des mineurs, on s'assure de leur prise en charge par des majeurs désignés avec l'accord du parquet.
+@5 On emporte tous les objets et indices découverts, ainsi que le matériel administratif apporté.
+@6 Et toute perquisition se fait dans le strict respect du droit et de la déontologie.
+@r Ce qu'il faut retenir : assentiment manuscrit en préliminaire ; l'OPJ décide en flagrance ; entre 6 heures et 21 heures, sauf régimes particuliers ; au moins trois policiers ; sécuriser, regrouper et palper les occupants ; fouille pièce par pièce, en présence permanente de l'occupant ou de deux témoins ; objet montré avant la mise sous scellé ; et au départ, tout fermer et s'occuper des mineurs et des animaux.

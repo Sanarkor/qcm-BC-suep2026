@@ -1,0 +1,43 @@
+= Techniques de défense en intervention : la palpation de sécurité, version de juin 2021. La définition, le cadre légal, les principes, le déroulement, les techniques, et la découverte d'un objet dangereux.
+# 2
+@0 La palpation de sécurité est une mesure administrative. Elle protège les policiers, les tiers, et la personne contrôlée ou interpellée.
+@1 Elle consiste à détecter, à l'œil ou au toucher, sur la personne ou ses accessoires, tout objet qui peut être dangereux, pour l'écarter.
+@2 C'est le code de déontologie de la police et de la gendarmerie, dans la partie réglementaire du code de la sécurité intérieure, qui la définit.
+# 3
+@0 Article R. 434-16 du code de la sécurité intérieure : lors d'un contrôle d'identité autorisé par la loi, le policier ne se fonde sur aucune caractéristique physique ni aucun signe distinctif pour choisir les personnes à contrôler, sauf s'il a un signalement précis.
+@1 Le contrôle se déroule sans atteinte à la dignité. La palpation est exclusivement une mesure de sûreté, jamais systématique, réservée aux cas où elle paraît nécessaire à la sécurité du policier ou d'autrui. Son but : vérifier que la personne ne porte pas d'objet dangereux. Et chaque fois que possible, à l'abri du regard du public.
+@2-4 L'instruction DGPN de 2014 précise qu'elle se pratique sur des considérations objectives de dangerosité potentielle, lors d'opérations judiciaires, d'opérations administratives, ou de contrôles d'identité.
+@5-9 Elle peut être plus systématique dans trois cas : après une interpellation, quel qu'en soit le motif ; avant de prendre une personne en charge dans un véhicule administratif ; et lors des déplacements de toute personne gardée à vue, retenue ou détenue sous la responsabilité de la police. Elle est renouvelée chaque fois que nécessaire, par exemple après un déplacement ou une rupture de surveillance.
+# 4
+@0-2 Elle exige vigilance et rigueur. Sauf situation exceptionnelle, à cause du danger ou de l'urgence, elle est faite par une personne du même sexe. Toute dérogation doit être justifiée en détail, dans les formes administratives ou judiciaires.
+@3-5 Elle est minutieuse et méthodique, sans agressivité ni violence, avec discernement et respect. Elle se fait dans un environnement sécurisé, et si possible à l'abri du regard du public.
+@6-10 On évite les démonstrations ostensibles : bras levés, palpation avec appuis, amenée au sol. Sauf si le policier les subit malgré ses injonctions, elles donnent une image négative de la police, réduisent l'efficacité de l'intervention, et peuvent même mettre le policier en danger.
+@11-12 La mesure est peu intrusive, puisqu'il n'y a ni fouille ni retrait de vêtement. Mais elle peut être vécue comme vexatoire. Donc, dans tous les cas, politesse.
+@13 Les policiers préviennent la personne de la palpation et de son but, et lui demandent son concours pour faciliter les choses.
+@14-16 En action collective, un seul policier palpe, pendant qu'un ou plusieurs équipiers protègent l'intervention et l'environnement. Les rôles et les placements peuvent changer selon l'évolution, par exemple si la personne change de comportement.
+@17-19 Le policier qui palpe passe les mains par-dessus les vêtements. Attention à la technique : par pressions successives, avec l'intérieur des mains, et non en glissant, pour éviter de se piquer ou de se couper.
+@20 Le port de gants, de maintien de l'ordre ou en caoutchouc, peut s'imposer pour la sécurité, l'hygiène ou la préservation des traces, même si l'on perd en sensibilité.
+@21-22 La palpation concerne aussi les affaires que la personne garde avec elle, sac, sacoche, parapluie. Et un contrôle visuel des objets peut dispenser d'un contrôle tactile, si le policier le décide.
+# 5
+@0-1 Le déroulement. D'abord, vérifier que la personne ne cache rien dans le creux de ses mains, à l'œil, avec des injonctions si les mains ne sont pas visibles. Retenez la formule : mains égale danger.
+@2-6 Ensuite, palper en priorité les zones directement accessibles où l'on peut cacher une arme : le creux lombaire, la ceinture abdominale, et les aisselles selon la tenue. Puis on continue du haut du corps vers les jambes.
+# 6
+@0-2 La palpation arrière est à privilégier. C'est la position la plus sûre : le policier n'est pas exposé aux coups les plus dangereux. Avec un contrôle systématique du coude.
+# 7
+@0-2 La palpation avant est imposée par la situation, par exemple quand il faut palper beaucoup de monde, à l'entrée d'un stade ou d'un tribunal, ou par le lieu, un couloir, un espace restreint.
+@3-4 Elle peut aussi être un choix quand on privilégie la coopération de la personne : elle paraît moins coercitive et moins vexatoire.
+@5-6 Mais la sécurité du policier y est minimale : il est directement exposé aux coups les plus dangereux. Avec un contrôle systématique de l'avant-bras.
+# 8
+@0 Toute personne menottée doit être palpée dès que possible, et dans tous les cas avant qu'on lui retire les menottes.
+@1-5 On vérifie le creux des mains, puis on palpe en priorité le creux lombaire, la ceinture abdominale et les aisselles.
+@6-7 Si la personne a été menottée au sol, sur le ventre, on palpe la zone lombaire et la ceinture dorsale juste après la pose des menottes. Puis on la met sur un flanc, pour qu'elle respire normalement et pour palper la ceinture abdominale, puis sur l'autre flanc pour finir.
+@8 Le reste, jambes, torse, se palpe en position assise ou debout.
+@9 L'instruction du 4 novembre 2015, sur la maîtrise d'une personne en état de forte agitation, demande de limiter au maximum la position ventrale. Toute compression thoracique doit rester exceptionnelle, et la plus courte possible.
+# 9
+@0 Si le policier sent un objet dangereux, il prévient immédiatement ses coéquipiers, par la parole ou par un geste.
+@1 Dès que possible, il appréhende provisoirement l'objet, pour le remettre ensuite à l'OPJ territorialement compétent.
+@2-3 Deux hypothèses. Si l'objet peut représenter un danger vital et que la personne peut l'atteindre immédiatement, le policier le saisit pour l'écarter. S'il représente un danger vital mais qu'elle ne peut pas l'atteindre immédiatement, on la menotte d'abord, avec l'aide des coéquipiers, avant de saisir l'objet.
+@4 Après la découverte d'un objet dangereux, on refait une palpation.
+@5-6 Tout objet écarté est immédiatement montré à son détenteur avant d'être remis à l'OPJ. Et un objet qui s'avère sans danger ne lui est rendu qu'à la fin de la palpation complète.
+@7-8 Enfin, la palpation et ses motifs objectifs doivent toujours être mentionnés dans un acte, main courante, rapport ou procès-verbal, même si rien n'a été trouvé.
+@r Ce qu'il faut retenir : mesure de sûreté, jamais systématique sauf après interpellation, avant un transport ou lors des déplacements d'une personne retenue ; même sexe sauf exception justifiée ; à l'abri du public ; mains égale danger ; creux lombaire, ceinture, aisselles en priorité ; palpation arrière à privilégier, contrôle du coude ; personne menottée palpée avant le retrait des menottes ; et toujours une trace écrite.
