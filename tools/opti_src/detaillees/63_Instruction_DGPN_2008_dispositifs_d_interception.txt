@@ -1,0 +1,55 @@
+= Instruction DGPN de 2008 sur les dispositifs d'interception de véhicules automobiles, qu'on appelle les Diva. Leur principe, leur cadre juridique, leurs effets, et surtout leurs conditions d'emploi.
+# 1
+@5 L'instruction fixe les règles d'emploi des Diva. Leur effet repose sur la décélération puis l'immobilisation du véhicule, par une baisse progressive de la pression des pneus. Ils sont mis en dotation en application de l'article 4 de la loi du 23 janvier 2006 relative à la lutte contre le terrorisme.
+@6 Le but : intercepter les véhicules en préservant à la fois la sécurité des occupants, celle des policiers et celle des tiers.
+@7-9 L'instruction est complétée par des notices propres à chaque matériel et par une formation adaptée des utilisateurs. Elle vise à donner une information claire et concise, pour un usage efficace en toute sécurité.
+# 2
+@0 Le principe : des pointes creuses, qui se détachent de leur support et restent plantées dans le pneu. Le pneu se dégonfle donc progressivement.
+@1 Plusieurs matériels existent, selon les usages : véhicules légers ou lourds, à l'arrêt ou en mouvement, en barrage fixe, c'est l'utilisation statique, ou en interception, c'est l'utilisation dynamique.
+@2 Tous doivent répondre à des critères de sécurité stricts, pour les occupants, les utilisateurs et les tiers. Seuls ceux conformes aux normes de l'arrêté du 23 octobre 2006 sont mis en dotation.
+# 3
+@0-3 Le cadre juridique : la loi du 23 janvier 2006 a inséré un article 25-1 dans la loi d'orientation du 21 janvier 1995. Les policiers en uniforme, ou porteurs d'insignes apparents, peuvent utiliser des matériels pour immobiliser un véhicule dans trois cas. Premier cas : le conducteur ne s'arrête pas aux sommations. Deuxième cas : le comportement du conducteur ou des passagers met délibérément en danger la vie d'autrui ou la leur. Troisième cas : un crime ou un délit flagrant, quand l'immobilisation est nécessaire vu le comportement du conducteur ou les conditions de la fuite. Ces matériels doivent respecter des normes fixées par arrêté ministériel.
+@4 Cette même loi abroge l'ordonnance de 1958 sur les barrages. Conséquence : les herses métalliques à pointes fixes ne peuvent plus être utilisées. Elles seront remplacées par des modèles semblables, à pointes creuses amovibles.
+@5-6 L'arrêté du 23 octobre 2006 fixe les normes techniques. Son article 2 : les matériels provoquent une décélération rapide puis l'immobilisation, par une baisse progressive de la pression des pneus, grâce à des pointes adaptées.
+@7 Son article 3 : avant mise en service, chaque type de matériel est expérimenté et évalué. Au vu de cette évaluation, le directeur général de la police nationale fixe ses conditions et ses limites d'emploi.
+# 4
+@0-1 Les effets. Essais et expérimentations ont confirmé l'efficacité et la sécurité de ces dispositifs à pointes creuses amovibles.
+@2 Aucun éclatement de pneu n'a été constaté, et les véhicules sont restés stables, même en situation extrême : démarrage en trombe, freinage brutal, dispositif mal placé. Seuls les pneus à affaissement limité ont posé problème : sous-virage excessif et perte de direction en courbe.
+@3 Les pneus avant ont toujours été crevés, même avec un angle de 45 degrés ; les pneus arrière, de façon plus aléatoire, environ 40 pour cent.
+@8 En intervention réelle, les expérimentations ont permis l'interception dans près de 80 pour cent des cas. Les échecs venaient parfois d'un mauvais usage du matériel, ou de pneus à affaissement limité.
+@5-6 Le contrôle des dispositifs : leur bon état est vérifié au minimum une fois par semestre. Cette inspection est consignée sur une fiche qui accompagne chaque Diva, avec sa marque, son type et son numéro.
+@9 Chaque semestre, on y note la date précise de l'inspection, et l'identité, le grade et le service du fonctionnaire qui l'a faite.
+@10 Et en plus, après chaque emploi, on vérifie immédiatement le dispositif, même en utilisation statique, qu'un véhicule ait roulé dessus ou non.
+@11 Tout remplacement d'élément défectueux ou abîmé est mentionné sur la fiche d'inspection, avec le type et le nombre d'éléments.
+# 5
+@0 Les conditions d'emploi de chaque matériel figurent dans sa notice : catégories de véhicules, caractéristiques techniques et limites d'emploi.
+@1 Les Diva sont déployés par des policiers en tenue, ou porteurs des insignes apparents de leur qualité.
+@2 Dès qu'on décide de les utiliser, notamment pour un contrôle programmé, on prend toutes dispositions pour intercepter le véhicule, par exemple avec un équipage affecté à cette mission.
+@3-4 Les interdictions. Les Diva ne servent que pour des véhicules d'au moins quatre roues, en principe sur surface dure : asphalte, béton, bitume. Jamais pour un deux-roues, un trois-roues, ni un quad, même s'il a quatre roues.
+@5 Pas d'utilisation dans les courbes et virages pour intercepter un véhicule roulant.
+@6 Et un Diva à projeter devant un véhicule en fuite ne doit jamais être lancé depuis un véhicule de police : la manœuvre est trop aléatoire et dangereuse, notamment pour les tiers.
+@7-10 Les préconisations. Les Diva servent à stopper un véhicule ou à empêcher son redémarrage. Le choix du type dépend du véhicule à arrêter, des conditions d'intervention et des notices. Et l'adéquation du matériel à l'environnement est essentielle à la réussite.
+@11-12 Les précautions. Malgré leur conception protectrice, on stocke et on manipule les Diva avec précaution. Les policiers qui pourraient marcher ou tomber dessus respectent scrupuleusement les précautions de la notice.
+@13 Pour un véhicule roulant, interdiction dans les courbes, on l'a dit ; et le Diva doit être placé assez loin d'un virage pour que le conducteur puisse s'arrêter volontairement avant.
+@14 Les policiers tiennent compte des distances d'arrêt, évaluées à plusieurs centaines de mètres. Certains véhicules ont même continué plusieurs kilomètres, mais à vitesse très réduite.
+@15 En statique, sur un barrage fixe, le Diva est parfaitement visible. En poursuite, le responsable du dispositif choisit : visible, pour inciter le fuyard à s'arrêter, ou caché, pour être sûr qu'il roule dessus. Pas de choix, en revanche, pour un Diva jeté devant les roues ou placé contre un véhicule à l'arrêt : là, l'effet de surprise est essentiel.
+@16 Les policiers se placent de façon à assurer au mieux leur sécurité, en tenant compte des écarts de trajectoire, volontaires ou non, du véhicule.
+@17 On tient compte de l'environnement : largeur de voie, bas-côtés, glissières, trottoirs, chaussée humide, vent, piétons, eau ou voie ferrée à proximité. On place le Diva, autant que possible, perpendiculairement à la trajectoire. La sécurité des policiers et des tiers prime, et autant que possible celle des occupants.
+@18 L'emploi se fait après information et sous le contrôle du commandement. Le CIC, ou son équivalent, doit connaître la disponibilité de chaque véhicule équipé.
+@19-20 En poursuite, les véhicules équipés du dispositif signalent régulièrement au CIC leur position, et s'ils roulent, leur direction et leur vitesse. Les véhicules équipés à proximité mais hors dispositif se signalent aussi, et le CIC décide s'ils participent.
+@21 Si l'on vise un véhicule précis, on tient compte des conséquences sur les autres véhicules tout proches.
+@22-23 Après emploi. En cas de blessure, on fait appel à une assistance médicale, selon les règles générales de secours dues à toute personne.
+@24-25 Le Diva est retiré de la chaussée au plus vite après le passage d'un véhicule. Et les pointes tombées au sol, même peu dangereuses, sont soigneusement ramassées avant de rétablir la circulation.
+@26 Tout remplacement d'élément après usage est noté sur la fiche d'inspection, avec la mention : après usage.
+@27 Toute utilisation dynamique, qu'un véhicule ait roulé dessus ou non, donne lieu à un formulaire-type, dont toutes les rubriques doivent être remplies.
+@28 Si l'opération s'inscrit dans une enquête judiciaire, ou en déclenche une, les procès-verbaux décrivent précisément le déroulement et les conséquences de l'action, l'emplacement des Diva, des policiers et des véhicules, et l'état du matériel. On peut y joindre une copie des formulaires.
+@29-30 La formation relève de la direction de la formation de la police nationale, la DFPN, en lien avec les directions concernées.
+@31-33 Le suivi : la formation intègre les retours d'expérience du terrain. Les formulaires d'utilisation dynamique sont transmis au moins tous les trimestres à la DFPN, qui les exploite avec la direction de l'administration de la police nationale, la DAPN.
+@34 Et quand un élément défectueux est remplacé lors d'une vérification semestrielle, hors utilisation, la fiche d'inspection est transmise à la DAPN, pour détecter d'éventuels défauts de fabrication ou de conception.
+# 6
+@0 Le compte rendu d'utilisation : un formulaire pour chaque Diva utilisé de façon dynamique, qu'un véhicule ait roulé dessus ou non. Sont exclus les simples positionnements sans utilisation effective, sur un barrage ou au bord de la route.
+# 7
+@0-5 Partie A, dans tous les cas : l'utilisateur, le matériel et son numéro, la date et l'heure, le cadre juridique, le type d'utilisation, et les conditions, comme l'environnement et la luminosité.
+@8 Partie B, seulement si un ou plusieurs véhicules ont roulé sur le Diva : une partie B par véhicule, numérotées dans l'ordre de passage.
+@9-10 On y décrit le type de véhicule, sa vitesse, et les effets sur le véhicule et les personnes : arrêt ou non, pneus crevés, interpellations, accident, blessés ou décès.
+@r Ce qu'il faut retenir : Diva, des pointes creuses amovibles qui dégonflent progressivement les pneus ; trois cas d'emploi, refus d'obtempérer aux sommations, mise en danger délibérée de la vie, crime ou délit flagrant ; policiers en tenue ou porteurs d'insignes ; jamais sur deux-roues, trois-roues ou quad, jamais en courbe, jamais lancé depuis un véhicule de police ; inspection chaque semestre et après chaque emploi ; et un formulaire après chaque utilisation dynamique.

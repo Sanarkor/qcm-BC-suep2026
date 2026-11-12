@@ -1,0 +1,39 @@
+= Instruction DAPN de juin 2004, sur l'emploi des produits incapacitants, les bombes lacrymogènes, en particulier en milieu fermé. Le cadre légal, les effets, les précautions d'emploi, et la conduite à tenir après usage.
+# 2
+@0-1 L'instruction fixe des règles et des précautions d'emploi pour les lacrymogènes, surtout lorsqu'ils sont utilisés, de façon exceptionnelle, en milieu fermé. Elle vise les aérosols en dotation, servant à protéger le policier ou à neutraliser une personne menaçante ou dangereuse, pour elle-même ou pour autrui. Le maintien de l'ordre est hors de son champ.
+@2 Le but : une information claire et concise, pour des interventions efficaces et sans effet non recherché sur les personnes.
+@3 Des études ont montré l'intérêt de nouvelles bombes à l'oléorésine capsicum, des extraits de poivre : pas de toxicité, et moins volatiles que le produit actuel, le CS.
+# 3
+@0-2 Les lacrymogènes sont un moyen de défense intermédiaire. En plus de son arme à feu, le policier peut être doté, comme du bâton de défense, de « dispositifs intermédiaires de contrainte », dont les bombes lacrymogènes, dites incapacitantes. L'idée : une riposte strictement proportionnée à la menace.
+@3 Attention : seuls les produits fournis par l'administration peuvent être utilisés. Utiliser un produit non référencé est une faute professionnelle, passible de sanction.
+@4 C'est d'autant plus important qu'une concentration inadaptée peut être inefficace ou dangereuse, surtout en milieu fermé. Et certains produits du commerce contiennent un gaz propulseur inflammable, contrairement aux modèles administratifs.
+# 4
+@0 Au plan légal, le texte rappelle que les bombes lacrymogènes sont classées en sixième catégorie par le décret du 6 mai 1995.
+@1 L'utiliser, c'est employer la force. Ce n'est possible que dans les cas prévus par la loi, essentiellement en légitime défense, article 122-5 du code pénal.
+@2-5 En dehors de cette hypothèse principale, la force, toujours strictement nécessaire et proportionnée, est aussi envisageable dans trois cas : pour appréhender l'auteur d'un crime ou délit flagrant, article 73 du code de procédure pénale ; pour exécuter un mandat de justice ou une contrainte par corps ; et pour vaincre une résistance manifeste à une intervention légale, article 122-4 du code pénal, ce qui évite notamment d'utiliser l'arme ou d'autres moyens.
+# 5
+@0 L'aérosol atteint instantanément une ou plusieurs personnes jusqu'à 4 à 5 mètres, pour le plus gros conteneur.
+@1-4 Les effets du CS : forte irritation des yeux, avec douleur, brûlure, larmes et fermeture des paupières, pendant 5 à 10 minutes ; irritation des voies respiratoires, toux et gêne respiratoire ; et irritation de la peau, brûlure, rougeur, gonflement, voire allergies si les expositions se répètent.
+@5 La panique, le stress ou l'anxiété peuvent aggraver ces effets, surtout en milieu clos.
+@6-7 À l'inverse, l'état psychologique, ou une tolérance physiologique, peuvent réduire l'efficacité. Cela ne doit jamais conduire à pulvériser davantage, ce qui serait inefficace et dangereux, surtout en intérieur. Il faut plutôt recourir à un autre moyen de contrainte.
+# 6
+@0-1 L'intensité des effets dépend surtout de la quantité inhalée. D'où une riposte proportionnée, avec discernement, et en milieu fermé, un usage très exceptionnel.
+@2-3 Les précautions. D'abord, un usage prioritairement défensif, en légitime défense, face à une agression ou un comportement dangereux qui ne justifie pas, ou permet d'éviter, des moyens plus forts.
+@4 Des jets brefs, d'environ une seconde. En milieu fermé, cela évite de saturer le local : une forte inhalation de CS peut avoir des effets irréversibles, voire mortels dans des cas extrêmes.
+@5 Le moins de jets possible, et on arrête dès que l'agresseur est neutralisé. Plus le local est petit et mal aéré, plus on est strict.
+@6 Pas à moins d'un mètre d'une personne, dans la mesure du possible : à bout portant, on risque un choc oculaire dangereux. Si on y a été contraint, vers le visage, on conduit la personne aux urgences au moindre problème.
+@7-9 On pense aux effets collatéraux sur les personnes à proximité, surtout en lieu clos. Et dans les locaux, notamment ceux recevant du public, le CS imprègne objets et meubles, ce qui rend la décontamination difficile.
+@10-11 On tient compte de ce qu'on sait ou présume de l'état des personnes visées. La plus grande prudence s'impose avec les personnes fragiles : femmes enceintes, jeunes mineurs, personnes âgées, toxicomanes, surtout en local fermé.
+@12 Formellement interdit : utiliser un lacrymogène à l'intérieur d'un véhicule en mouvement, notamment pour le faire s'arrêter. La perte de contrôle pourrait causer de graves dommages aux tiers et engager la responsabilité de l'administration, avec une possible action récursoire contre l'utilisateur.
+@13 Et saturer l'atmosphère d'une pièce pour neutraliser ses occupants est réservé exclusivement aux unités spécialisées, Raid et GIPN.
+# 7
+@0-1 Après usage, une fois les personnes maîtrisées et entravées, on leur porte secours : le lacrymogène ne sert qu'à se défendre ou à interpeller.
+@2-3 Quitter la zone contaminée : sortir les personnes du local, ouvrir portes et fenêtres. Rassurer les personnes stressées ou paniquées.
+@4 Rincer abondamment à l'eau froide les zones touchées, surtout les yeux et le visage ; un décontaminant spécifique est possible. Mais jamais de crème ni d'huile, qui retiennent le gaz et le rendent plus actif.
+@5-7 Laisser les zones exposées à l'air frais. Faire retirer ses lentilles par la personne elle-même, mains lavées. Et conseiller d'enlever les vêtements contaminés.
+@8-12 Vérifier régulièrement son état. Appeler un médecin et garder la personne sous surveillance permanente si elle reste très stressée ou en état de choc, si elle semble sous l'emprise d'alcool, de drogues ou de médicaments, ou si elle a un problème médical que le produit pourrait aggraver. Et de même si elle demande un médecin.
+@13 Mentionner en procédure, au besoin par un procès-verbal distinct : l'usage de la force, le cadre légal, les modalités, nombre de jets et distance, et les diligences prises, décontamination, état de la personne, compte rendu à l'officier, avis ou visite du médecin.
+@14 Et faire l'inventaire des objets retirés pour la décontamination.
+# 8
+@0-2 La formation : les bombes lacrymogènes sont réglementairement une arme. Leur usage exige le respect du cadre légal et des précautions d'emploi. La DFPN et les directions actives doivent l'intégrer à la formation initiale et continue.
+@r Ce qu'il faut retenir : seuls les produits fournis par l'administration ; usage d'abord défensif, nécessaire et proportionné ; jets brefs d'environ une seconde, le moins possible ; pas à moins d'un mètre ; prudence avec les personnes fragiles ; interdit dans un véhicule en mouvement ; saturation d'une pièce réservée au Raid et au GIPN ; après usage, aérer, rincer à l'eau froide, jamais de crème, surveiller, et tout mentionner en procédure.

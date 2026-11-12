@@ -1,0 +1,42 @@
+= Instruction de mars 2016 sur l'emploi du fusil d'assaut HK G 36, calibre 5,56 millimètres. Pourquoi cette arme, son cadre juridique, ses conditions d'emploi, l'habilitation, et le stockage.
+# 2
+@0 Le contexte : face à des actes de violence ou de terrorisme à cinétique rapide, il faut pouvoir riposter contre des individus lourdement armés, déterminés, et souvent porteurs de gilets pare-balles capables d'arrêter le 9 millimètres du Sig Sauer, l'arme individuelle de tout policier. D'où une arme d'épaule en 5,56.
+@1 Les policiers peuvent donc se voir affecter temporairement, selon leur mission et après une habilitation individuelle, un HK G 36, arme en dotation collective.
+# 3
+@0-2 L'instruction définit les conditions et les cadres juridiques d'emploi de cette arme, pour une utilisation efficace en intervention, conforme aux contenus de formation pour l'habilitation et le recyclage.
+@3 Les directions dotées de cette arme la complètent par des notes adaptées à leurs missions.
+# 4
+@0 Le HK G 36 est classé en catégorie A. C'est une arme individuelle d'épaule, en dotation collective, pour les intervenants de deuxième ou troisième niveau, sur des missions sensibles ou dangereuses.
+@1-2 Son sélecteur a trois positions : la sûreté, qui bloque la détente ; le tir au coup par coup ; et la rafale limitée à deux coups. Le choix du mode revient au porteur, selon la dangerosité de la situation.
+@3 Le tireur tient compte de l'environnement pour éviter les dommages collatéraux, surtout en rafale, qui doit rester exceptionnelle.
+@4-5 Il est approvisionné par six boîtiers-chargeurs d'une capacité théorique de 30 cartouches.
+@6-8 Ses systèmes de visée électronique doivent être connus avant de prendre l'arme, et leurs réglages ne doivent jamais être modifiés par le porteur. Des rails permettent d'ajouter des accessoires, comme une lampe tactique.
+@9 Seuls les armements et équipements fournis par l'administration sont autorisés. Un élément non référencé, ou une modification des réglages, est une faute professionnelle passible de sanctions.
+@10-11 Le cadre juridique : l'arme n'est utilisée que si les conditions d'absolue nécessité et de proportionnalité sont réunies.
+@12-14 En riposte immédiate, c'est la légitime défense, article 122-5 du code pénal. Pour les personnes : n'est pas responsable celui qui, face à une atteinte injustifiée contre lui ou autrui, se défend dans le même temps, sauf disproportion entre la défense et la gravité de l'atteinte.
+@15-17 Pour les biens : n'est pas responsable celui qui, pour interrompre un crime ou un délit contre un bien, accomplit un acte de défense strictement nécessaire et proportionné, autre qu'un homicide volontaire. Donc tirer pour tuer l'auteur d'une atteinte à un bien est strictement interdit, même pendant l'atteinte.
+@18-19 L'arme peut aussi être employée, toujours nécessaire et proportionnée, en état de nécessité, article 122-7 : face à un danger actuel ou imminent qui menace une personne ou un bien, on accomplit l'acte nécessaire à sa sauvegarde, sauf disproportion avec la menace.
+# 5
+@0-4 L'affectation obéit à trois conditions cumulatives. Premièrement, seuls les policiers actifs avec une habilitation en cours de validité. Deuxièmement, elle répond aux besoins des missions définies par chaque direction, elle est donc temporaire ; et l'emploi en maintien de l'ordre en unité constituée est interdit, hors légitime défense ou état de nécessité. Troisièmement, elle se fait sur autorisation et sous le contrôle effectif de la hiérarchie.
+@5 Seules les munitions fournies pour cette arme sont utilisées. Et après tout usage, le policier fait sans délai une déclaration individuelle dans le traitement de suivi de l'usage des armes, le TSUA.
+@6-10 La sécurité : les règles générales de sécurité s'appliquent rigoureusement. Considérer toujours l'arme comme chargée ; garder l'index le long du pontet tant qu'on ne tire pas ; et diriger toujours le canon vers une zone de sécurité.
+@11 Ces règles sont affichées sur les lieux de stockage et de perception.
+@12 À la perception et à la réintégration, l'arme est mise en sécurité, sélecteur sur la sûreté, et présentée culasse fermée chambre vide ou bloquée en arrière, canon vers le haut, puits de chargeur vers le réceptionnaire.
+@13-14 Dans les locaux de police, on utilise obligatoirement les tubes de manipulation ou puits balistiques. Et on contrôle la quantité, la conformité et l'état des munitions à la remise.
+@15-16 L'emploi dépend soit d'un contexte exceptionnel, soit de la nature de la mission.
+@17 En mission courante, l'arme n'est pas portée, mais transportée de façon sécurisée : dans le coffre pour les véhicules légers, comme ceux des Bac, ou sur un râtelier dans les véhicules collectifs, compagnies d'intervention ou CRS. Culasse fermée, pas de chargeur engagé, pas de cartouche chambrée, sélecteur sur la sûreté.
+@18 Pour une situation exceptionnelle ou certaines missions listées par les directions, l'arme est portée chargeur engagé, cartouche chambrée, culasse fermée, sélecteur sur la sûreté, avec la bretelle.
+@19 Portée dans l'habitacle d'un véhicule : sélecteur sur la sûreté, canon vers le plancher, et ceinture de sécurité entre l'arme et le porteur, pour limiter les blessures en cas d'arrêt brutal.
+@20 Quand on porte le fusil, le gilet porte-plaques est obligatoire, avec selon le cas d'autres protections.
+@21 Le sélecteur ne quitte la sûreté que pour vérifier le fonctionnement de l'arme, et sur la voie publique, pour épauler en position contact face à une menace avérée ou une intervention à risque, ou pour tirer.
+@22-23 La mise en sécurité d'une arme chargée se fait uniquement dans les locaux, sauf circonstances particulières. Et la décision de porter le fusil appartient à la hiérarchie, selon le contexte et la mission.
+@24-26 L'habilitation : une habilitation individuelle initiale valide la parfaite maîtrise de l'arme, technique et juridique.
+@27-29 Pour la garder, il faut suivre un recyclage, technique et juridique, avec parfois des mises en situation. Deux recyclages ne peuvent pas être séparés de plus de 12 mois.
+@30-31 Un policier non habilité, ou dont l'habilitation est caduque faute de recyclage, ne peut en aucun cas percevoir l'arme.
+@32 En cas d'échec au recyclage, ou d'absence avant l'échéance, l'habilitation est suspendue jusqu'au recyclage. Et sans recyclage dans les 24 mois suivant l'habilitation ou le dernier recyclage, il faut une nouvelle habilitation.
+@33-34 Attention à une distinction importante : le droit de percevoir l'arme n'est pas le droit de l'utiliser. Un policier non habilité peut tout à fait devoir s'en servir, en absolue nécessité et proportionnalité, par exemple avec l'arme d'un collègue habilité blessé ou empêché. L'usage ne dépend que des règles juridiques.
+@35 Les contenus de formation, la documentation et l'évaluation sont élaborés par la sous-direction de la formation de la DRCPN.
+# 6
+@0-1 Le stockage : l'arme est mise en sécurité avant perception et réintégration. L'arme et ses munitions sont rangées en armurerie sécurisée ou en armoire forte dans un local sécurisé.
+@2-3 La traçabilité : le registre des mouvements d'armes et de munitions est obligatoirement rempli à la perception et à la réintégration, pour identifier le policier responsable de l'arme.
+@r Ce qu'il faut retenir : HK G 36, calibre 5,56, catégorie A ; contre des individus lourdement armés et protégés ; absolue nécessité et proportionnalité, légitime défense ou état de nécessité ; jamais en maintien de l'ordre en unité constituée, sauf légitime défense ; coup par coup ou rafale de deux coups, la rafale restant exceptionnelle ; recyclage au moins tous les 12 mois, nouvelle habilitation au-delà de 24 mois ; déclaration TSUA après tout usage ; et percevoir l'arme n'est pas la même chose que pouvoir l'utiliser.

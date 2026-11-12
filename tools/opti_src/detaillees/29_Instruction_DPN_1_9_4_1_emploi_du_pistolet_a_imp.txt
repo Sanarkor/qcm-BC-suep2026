@@ -1,0 +1,61 @@
+= Instruction sur l'emploi du pistolet à impulsions électriques, le PIE. Ses caractéristiques, ses cadres juridiques, ses modalités et précautions d'emploi, la conduite à tenir après usage, et l'habilitation.
+# 1
+@3-6 Les textes de référence : le code de la sécurité intérieure, notamment les articles L. 435-1 et R. 434-18 ; le code pénal, avec l'ordre de la loi, la légitime défense et l'état de nécessité ; et l'instruction du 2 août 2017 sur les armes de force intermédiaire.
+@7-8 Le PIE sert d'abord à protéger le policier, pour maîtriser une personne violente ou dangereuse, pour elle-même ou pour autrui.
+@9-11 Il peut être employé dans deux types de situations : celles où l'arme à feu serait légalement justifiée ; et des situations intermédiaires, où l'arme à feu ne serait pas justifiée, mais où le PIE, arme de force intermédiaire, est une réponse nécessaire et proportionnée.
+@12-13 C'est donc une réponse graduée, pour dissuader ou neutraliser une personne violente ou dangereuse. Les policiers peuvent en être équipés après une habilitation individuelle.
+@14 Le PIE n'est pas conçu pour tuer. Mais attention : c'est une arme, dont il ne faut pas sous-estimer la dangerosité.
+# 2
+@0 Arme individuelle en dotation collective, il neutralise par des impulsions électriques : une douleur en mode contact, ou une perte momentanée du contrôle des muscles en mode tir, qui peut faire chuter la personne.
+@2 Il peut contenir deux cartouches, ce qui permet un second tir immédiat sans recharger.
+@3 Il dispose d'une lampe et de deux pointeurs laser, qui montrent où vont arriver les deux sondes : le point vert fixe pour la sonde du haut, le point rouge clignotant pour celle du bas.
+@4-6 Deux cartouches existent : la courte portée, efficace d'environ 1 mètre 20 à plus de 3 mètres ; et la longue portée, d'environ 3 mètres 50 à plus de 7 mètres.
+@7 Sa prise en main ressemble à celle d'une arme de poing. Il est classé en catégorie B.
+@8-12 Deux modes permettent de graduer la force. Le mode dissuasif, d'abord : les pointeurs laser, à l'effet dissuasif démontré, et la lampe s'allument dès la mise sous tension, sauf en mode furtif. On peut aussi déclencher un arc électrique de dissuasion, avec un bouton latéral, sans retirer les cartouches.
+@13-16 Si la dissuasion ne suffit pas, le mode coercitif : soit en mode contact, en appliquant l'extrémité de l'arme sur la personne et en déclenchant l'arc ; soit en mode tir, avec la détente, qui projette deux sondes reliées à l'arme par deux fils.
+@17 Un cycle dure cinq secondes en continu, mais l'utilisateur peut l'interrompre à tout moment.
+@18-21 L'arme enregistre automatiquement son utilisation : mise sous tension, arcs, tirs, date, heure, nombre et durée des cycles. On dispose ainsi d'un historique complet.
+# 3
+@0 Le cadre juridique : utiliser le PIE, c'est employer la force. Quel que soit le fondement, il faut nécessité et proportionnalité.
+@1-2 Premier fondement : l'article L. 435-1 du code de la sécurité intérieure. En uniforme ou avec des insignes apparents, les policiers et gendarmes peuvent faire usage de leurs armes en cas d'absolue nécessité et de manière strictement proportionnée, dans cinq cas.
+@3-4 Premièrement, des atteintes à la vie ou à l'intégrité physique contre eux ou autrui, ou des personnes armées qui les menacent. Deuxièmement, après deux sommations à haute voix, la défense des lieux qu'ils occupent ou des personnes qui leur sont confiées.
+@5-6 Troisièmement, après deux sommations, arrêter des personnes qui leur échappent et qui sont susceptibles, dans leur fuite, de porter atteinte à la vie ou à l'intégrité physique. Quatrièmement, immobiliser un véhicule dont le conducteur n'obtempère pas, si ses occupants présentent ce même danger dans leur fuite.
+@7 Cinquièmement, empêcher la réitération rapprochée de meurtres venant d'être commis, quand elle est probable au vu d'éléments réels et objectifs.
+@8-12 Deuxième fondement, en riposte : la légitime défense, article 122-5 du code pénal. Pour les personnes, une défense immédiate et proportionnée. Pour les biens, un acte strictement nécessaire et proportionné, jamais un homicide volontaire.
+@13-15 Troisième fondement : l'état de nécessité, article 122-7, face à un danger actuel ou imminent. Et retenez : le PIE ne peut protéger qu'une valeur supérieure à celle qu'on sacrifie en l'utilisant.
+@16-18 Quatrième fondement : l'ordre ou l'autorisation de la loi, article 122-4 : n'est pas responsable celui qui accomplit un acte prescrit ou autorisé par la loi ou le règlement, ou commandé par l'autorité légitime, sauf acte manifestement illégal.
+# 4
+@0-1 Les modalités. Respect absolu des règles de manipulation et de sécurité, pour éviter les lésions. Comme toute arme, on le considère toujours chargé, et aucune manipulation sans les opérations de sécurité.
+@2-4 Seuls les armes et éléments fournis par l'administration, dans leur configuration d'origine. Tout produit non référencé ou modifié est une faute professionnelle passible de sanctions.
+@5 Le PIE se recharge sur une baie de chargement, qui peut être séparée de la base connectée à internet.
+@6-7 L'affectation temporaire concerne les policiers actifs, stagiaires compris. Les policiers adjoints et les réservistes ne peuvent pas en être dotés.
+@8-9 Chaque direction fixe le niveau hiérarchique qui décide de l'affectation. Et la hiérarchie veille à ce que les agents équipés soient habilités.
+@10-11 Les préconisations. En service, le PIE est porté dans son étui à rétention, avec deux cartouches, éteint ; deux cartouches de plus peuvent être dans un porte-cartouches. Exceptionnellement, dans les environnements à risque, comme le métro ou les gares, on peut le porter sans cartouche engagée.
+@12-13 Quand les circonstances le justifient, on avertit oralement la personne qu'on peut utiliser le PIE si elle n'obéit pas. Et si possible, on privilégie le pointage laser, en dissuasion, voire l'arc électrique.
+@14-15 La durée d'électrisation est strictement limitée à ce qu'exigent la maîtrise de la personne et la sécurité. Répéter les cycles est exceptionnel, seulement si c'est indispensable.
+@16 L'efficacité dépend de plusieurs paramètres : distance, mobilité de la personne, vêtements mouillés ou épais. L'utilisateur, formé, en tient compte pour choisir le PIE ou un autre moyen.
+@17-19 Les précautions. Elles ne sont pas opposables au policier quand l'arme à feu aurait été légalement justifiée. En revanche, elles s'appliquent quand l'arme à feu ne pourrait pas être utilisée.
+@20-21 On ne vise pas la tête avec le laser, à cause des yeux. Et en tir, on ne vise ni la tête ni le cou, à cause de la carotide, du larynx et des yeux.
+@22-23 On intègre le risque de chute, lié à la perte de contrôle musculaire. Et comme l'état psychologique ou la tolérance de la personne peuvent réduire l'efficacité, on ne multiplie pas les cycles, ce qui serait inefficace, voire dangereux.
+@24-28 On tient compte des personnes vulnérables : vêtements imprégnés de liquide ou de vapeurs inflammables, comme l'alcool ou le carburant ; blessés qui saignent beaucoup ; femmes enceintes ; et malades cardiaques.
+@29 Même vigilance en cas de risque d'incendie, d'explosion ou d'électrocution, par exemple dans une station-service. Près d'une ligne à haute tension, surtout en mode tir, on évite tout contact avec la ligne.
+@30-31 Et jamais de PIE en même temps ou juste après un aérosol à gaz propulseur inflammable : le risque d'inflammation est important.
+@32 On pense aussi aux dommages collatéraux sur les personnes proches, en cas de foule ou d'enfants.
+@33 Enfin, le PIE est interdit en maintien de l'ordre en unité constituée.
+@34-35 Après emploi, dès que la personne est maîtrisée et entravée, et si la situation le permet, on la prend en charge : récupération, vérification de son état de santé, et surveillance permanente.
+@36 Si une sonde l'a touchée à la tête ou au cou, on prévient immédiatement les secours.
+@37-42 Un examen médical rapide s'impose, après un contact ou un tir, si la personne reste en état de stress ou de choc ; semble sous l'emprise d'alcool, de drogues ou de médicaments ; présente ou signale un problème médical ; reste agitée ou paraît épuisée ; ou a subi plusieurs usages, ou un cycle de plus de 5 secondes.
+@43-45 En dehors de ces cas, si le policier le juge utile, on fait retirer les sondes par un service médical, surtout si c'est douloureux ou risqué. Et si la personne demande un médecin, on accède à sa demande.
+@46 Dans tous les cas, on vérifie régulièrement son état de santé.
+@47 On rend toujours compte par écrit : le cadre légal, les modalités, modes, nombre et durée des cycles, nombre de tirs, distance, et les diligences, compte rendu à l'officier de police judiciaire, avis du médecin, état de la personne.
+@48-49 On renseigne le TSUA, le traitement de suivi de l'usage des armes, utilisé dans les enquêtes administratives ou judiciaires. Ces déclarations, validées par la hiérarchie, sont confrontées aux données techniques enregistrées par l'arme.
+@50-55 La traçabilité se fait à trois niveaux : l'application Arès ou les registres, pour la perception et les mouvements ; le TSUA, pour tout usage, même un simple pointage dissuasif ; et le logiciel Log-Evidence, qui extrait les journaux d'utilisation sur le site Axon.
+@56-57 Les données remontent régulièrement sur le cloud Axon, ce qui exige une connexion internet. Aucune donnée personnelle n'est enregistrée : le champ cible d'affectation contient seulement le nom de la direction à laquelle le PIE est affecté.
+# 5
+@0-2 L'habilitation : le port du PIE exige une habilitation individuelle préalable, technique et juridique. Pour la garder, on suit une formation continue, avec des mises en situation. La régularité de cette formation garantit un emploi maîtrisé et professionnel.
+@3-4 Deux recyclages ne peuvent pas être séparés de plus de 36 mois. Et les contenus et l'évaluation, validés par la DGPN, ne souffrent aucune dérogation.
+# 6
+@0-1 Le contrôle : l'état du PIE et de ses munitions est vérifié à la perception et à la réintégration. Et on ne l'utilise pas si la batterie est sous 30 pour cent, signalée par une pile vide clignotante.
+@2 Les règles générales de sécurité s'appliquent rigoureusement, de la perception à la réintégration.
+@5-7 Elles sont affichées sur les lieux de stockage. Les PIE sont rangés en armurerie sécurisée ou en armoire forte, et leurs lieux de stockage sont intégrés au plan de protection du service.
+@r Ce qu'il faut retenir : le PIE, arme de force intermédiaire, n'est pas conçu pour tuer, mais reste une arme ; nécessité et proportionnalité ; dissuasion d'abord, laser et arc électrique ; cycle de 5 secondes, répétition exceptionnelle ; ni tête ni cou ; prudence avec les personnes vulnérables et les produits inflammables ; interdit en maintien de l'ordre en unité constituée ; pas pour les policiers adjoints ni les réservistes ; examen médical dans les cas prévus ; TSUA après tout usage ; recyclage au moins tous les 36 mois.
