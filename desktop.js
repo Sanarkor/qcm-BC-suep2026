@@ -17,13 +17,16 @@ function active(){if(type==="index")return location.hash==="#themes"?"themes":lo
 if(/^\d\d_/.test(file)&&!inDet)return "themes";if(/^examen_/.test(file))return "exams";if(inDet||file==="revisions_detaillees.html")return "revdet";
 if(/^revisions/.test(file))return "rev";return {"aleatoire.html":"alea","sigles.html":"sigles","erreurs.html":"err","scores.html":"scores"}[file]||"";}
 var NAV=[["home","index.html","⌂","Accueil"],["themes","index.html#themes","☰","QCM par thème"],["alea","aleatoire.html","⤨","Mode aléatoire"],["exams","index.html#exams","⏱","Examens"],
-["rev","revisions.html","✎","Révisions"],["revdet","revisions_detaillees.html","❐","Révisions détaillées"],["sigles","sigles.html","Aa","Sigles et acronymes"],["err","erreurs.html","↻","Mes erreurs"],["scores","scores.html","▦","Tableau de bord"]];
+["rev","revisions.html","✎","Révisions synthétiques"],["revdet","revisions_detaillees.html","❐","Révisions détaillées"],["sigles","sigles.html","Aa","Sigles et acronymes"],["err","erreurs.html","↻","Mes erreurs"],["scores","scores.html","▦","Tableau de bord"]];
 function buildSide(){var ic=$('link[rel="apple-touch-icon"]')||$('link[rel="icon"][sizes="192x192"]')||$('link[rel="icon"]'),src=ic?ic.getAttribute("href"):"";
 side=el("nav","");side.id="dk-side";side.setAttribute("aria-label","Navigation principale");
 var h='<a class="dk-brand" href="'+BASE+'index.html">'+(src?'<img alt="" src="'+src+'">':'')+'<div><div class="dk-t1">QCM SUEP B/C</div><div class="dk-t2">30 novembre 2026</div></div></a>';
 h+='<div class="dk-cd" title="Examen le 30 novembre 2026"><div class="dk-cdn">'+cdTxt()+'</div><div class="dk-cdl">Examen le 30 novembre 2026</div></div><div class="dk-links">';
 var a=active();NAV.forEach(function(n){var badge=n[0]==="err"?'<em class="dk-n" id="dk-errn">'+errN()+'</em>':"";
-h+='<a class="dk-l'+(n[0]===a?' dk-on':'')+'" data-k="'+n[0]+'" href="'+BASE+n[1]+'"'+(n[0]===a?' aria-current="page"':'')+'><i>'+n[2]+'</i><div>'+n[3]+'</div>'+badge+'</a>';});
+if(n[0]==="rev")h+='<div class="dk-revgroup" role="group" aria-label="Révisions">';
+if(n[0]==="revdet")h+='<div class="dk-sep" role="separator"></div>';
+h+='<a class="dk-l'+(n[0]===a?' dk-on':'')+'" data-k="'+n[0]+'" href="'+BASE+n[1]+'"'+(n[0]===a?' aria-current="page"':'')+'><i>'+n[2]+'</i><div>'+n[3]+'</div>'+badge+'</a>';
+if(n[0]==="revdet")h+='</div>';});
 h+='</div><button type="button" class="dk-help" id="dk-helpbtn">⌨ Raccourcis clavier <kbd>H</kbd></button>';
 side.innerHTML=h;D.body.appendChild(side);
 $("#dk-helpbtn").addEventListener("click",function(){toggleHelp();});
