@@ -16,7 +16,7 @@ select{font-size:1em;padding:6px;max-width:100%;margin-bottom:10px}.small{font-s
 <button id="val" onclick="valider()">Valider</button><button id="next" onclick="suivante()" disabled>Question suivante</button>
 <div id="fb"></div></div>
 <p class="small" id="left"></p><button id="reset" onclick="vider()">Vider la liste</button>
-<script src="pool.js?v=20261112d"></script><script>window.QERR_NOAUTO=true;</script><script src="erreurs.js"></script><script>var D=window.POOL_DATA,E=window.QERR,IX={},CA="",cur=null,F="all",nOk=0,nTot=0;
+<script src="pool.js?v=20261112g"></script><script>window.QERR_NOAUTO=true;</script><script src="erreurs.js"></script><script>var D=window.POOL_DATA,E=window.QERR,IX={},CA="",cur=null,F="all",nOk=0,nTot=0;
 D.q.forEach(function(q){IX[E.key(q.s)]=q;});
 function items(){var o=E.load();return Object.keys(o).map(function(k){var x=o[k],p=IX[k];if(p){if(!x.t)x.t=p.t;if(!x.e)x.e=p.e;}return x;});}
 function inF(x){return F==="all"||String(x.t||"0")===F;}

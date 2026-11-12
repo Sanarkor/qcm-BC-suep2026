@@ -14,7 +14,7 @@ button{font-size:1em;padding:11px 16px;border:0;border-radius:8px;background:#1f
 <button id="go" onclick="corr()">Corriger le tout</button>
 <button id="sel" onclick="corrSel()" style="background:#6b7a90">Cesser et corriger la sélection</button>
 <button id="restart" onclick="restart()" style="background:#a33">Recommencer (nouveau tirage)</button>
-<script src="pool.js?v=20261112d"></script><script>
+<script src="pool.js?v=20261112g"></script><script>
 var D=window.POOL_DATA,OKN=[5,10,20,30,40,50,60,70,80],N=parseInt(new URLSearchParams(location.search).get("n"),10);if(OKN.indexOf(N)<0)N=20;var DUR=N*30000,KEY="qcmbc:examen_aleatoire:"+N;
 function dlab(ms){var m=Math.floor(ms/60000),s=Math.round(ms%60000/1000);return m+" min"+(s?" "+s:"");}
 document.getElementById("ttl").textContent="Examen – "+N+" questions – "+dlab(DUR);document.title="Examen – "+N+" questions – "+dlab(DUR);var st=null,done=false,iv=null,CA=[];
