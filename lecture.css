@@ -92,3 +92,24 @@ html.dk #lec-bar.lec-small .lec-opts,html.dk #lec-bar.lec-small .lec-rrow{displa
 html.dk body.lec-on{padding-right:max(var(--gut,40px),356px)!important}
 html.dk body.lec-on #top{bottom:56px!important;right:352px!important}
 .lec-rand-hl{outline:3px solid #ffd36b!important;outline-offset:2px}
+/* Smartphone : lecture audio (fichiers pré-générés), couleurs d'origine, angles droits */
+.lecm-page{display:inline-flex;align-items:center;gap:8px;margin:4px 0 12px;padding:10px 14px;border:0;background:#0b2a5b;color:#fff;font:600 15px system-ui,sans-serif;cursor:pointer}
+.lecm-page svg{width:18px;height:18px;display:block;flex:none}
+.lecm-page b{font-weight:600}
+.lecm-mini{flex:none;width:40px;height:40px;min-width:40px;margin-left:6px;padding:0;border:0;background:rgba(11,42,91,.1);color:#0b2a5b;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;cursor:pointer}
+.lecm-mini svg{width:18px;height:18px;display:block}
+#lecm-bar{position:fixed;left:0;right:0;bottom:0;z-index:10000;box-sizing:border-box;background:#0b2a5b;color:#fff;padding:8px 10px calc(10px + env(safe-area-inset-bottom,0px));box-shadow:0 -4px 16px rgba(0,0,0,.3);font:14px/1.3 system-ui,-apple-system,Roboto,sans-serif}
+#lecm-bar[hidden]{display:none!important}
+#lecm-bar .lecm-tit{font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 2px 6px}
+#lecm-bar .lecm-row{display:flex;gap:6px;align-items:center}
+#lecm-bar .lecm-row button{flex:1;height:44px;min-width:0;padding:0;border:0;background:rgba(255,255,255,.14);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
+#lecm-bar .lecm-row svg{width:22px;height:22px;display:block}
+#lecm-bar select{flex:none;height:44px;border:0;background:#fff;color:#0b2a5b;font:700 14px system-ui,sans-serif;padding:0 6px}
+#lecm-bar .lecm-rrow{display:flex;gap:6px;margin-top:6px}
+#lecm-bar .lecm-rrow[hidden]{display:none!important}
+#lecm-bar .lecm-rrow button{flex:1;height:38px;min-width:0;padding:0 4px;border:0;background:#fff;color:#0b2a5b;font:700 13px system-ui,sans-serif;cursor:pointer}
+body.lecm-on{padding-bottom:170px!important}
+.lecm-new{display:block;margin:2px auto 0;background:none;border:0;color:#0b2a5b;text-decoration:underline;font:600 14px system-ui,sans-serif;cursor:pointer}
+.lecm-new[hidden]{display:none!important}
+.big.lecm-go{background:#1f4e79}
+.big.lecm-go:disabled{opacity:.8}

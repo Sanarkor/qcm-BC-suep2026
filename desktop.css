@@ -139,21 +139,27 @@ html.dk-index #home .lec-rand-new{position:absolute;right:6px;bottom:3px;color:#
 }
 /* Menu de gauche repliable */
 @media (min-width:1024px){
-#dk-side .dk-colbtn{display:flex;align-items:center;justify-content:center;align-self:flex-end;width:34px;height:34px;min-width:34px;padding:0;margin:-4px 0 6px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;cursor:pointer;flex:none}
+#dk-side .dk-colbtn{display:flex;align-items:center;justify-content:center;align-self:flex-start;width:34px;height:34px;min-width:34px;padding:0;margin:-4px 0 6px calc(100% - 34px);border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;cursor:pointer;flex:none}
 #dk-side .dk-colbtn:hover{background:rgba(255,255,255,.22)}
 #dk-side .dk-colbtn:focus-visible{outline:3px solid #ffd36b;outline-offset:1px}
-#dk-side .dk-colbtn svg{width:18px;height:18px;display:block;transition:transform .25s}
+#dk-side .dk-colbtn svg{width:18px;height:18px;display:block}
+/* Contenu du menu à largeur fixe : rien ne se reformate pendant l'animation, on ne fait que rogner et estomper. */
+#dk-side{overflow-x:hidden}
+#dk-side>.dk-brand,#dk-side>.dk-cd,#dk-side>.dk-links,#dk-side>.dk-help{width:calc(248px - 24px);box-sizing:border-box;flex:none}
+#dk-side .dk-brand>div,#dk-side>.dk-cd,#dk-side>.dk-links,#dk-side>.dk-help{opacity:1;visibility:visible}
 html.dk.dk-col{--sb:72px;--W:1076px}
 html.dk-col.dk-index,html.dk-col.dk-revdet,html.dk-col.dk-rev,html.dk-col.dk-scores{--W:1356px}
 html.dk-col.dk-card{--W:1036px}
 html.dk-col.dk-fiche{--W:1256px}
-html.dk-col #dk-side{padding:14px 10px;align-items:center;overflow:hidden}
-html.dk-col #dk-side .dk-brand{padding:4px 0 10px;justify-content:center}
-html.dk-col #dk-side .dk-brand>div,html.dk-col #dk-side .dk-cd,html.dk-col #dk-side .dk-links,html.dk-col #dk-side .dk-help{display:none!important}
-html.dk-col #dk-side .dk-brand img{width:46px;height:46px}
-html.dk-col #dk-side .dk-colbtn{align-self:center;margin:0}
+html.dk-col #dk-side{overflow:hidden}
+html.dk-col #dk-side .dk-brand>div,html.dk-col #dk-side>.dk-cd,html.dk-col #dk-side>.dk-links,html.dk-col #dk-side>.dk-help{opacity:0;visibility:hidden;pointer-events:none}
+html.dk-col #dk-side .dk-brand img{transform:translateX(-7px)}
+html.dk-col #dk-side .dk-colbtn{margin-left:7px}
 html.dk-col #dk-side .dk-colbtn svg{transform:rotate(180deg)}
-html.dk-anim #dk-side{transition:width .25s ease,padding .25s ease}
+html.dk-anim #dk-side{transition:width .25s ease;will-change:width}
+html.dk-anim #dk-side .dk-brand>div,html.dk-anim #dk-side>.dk-cd,html.dk-anim #dk-side>.dk-links,html.dk-anim #dk-side>.dk-help{transition:opacity .18s ease,visibility .25s}
+html.dk-anim #dk-side .dk-brand img,html.dk-anim #dk-side .dk-colbtn svg{transition:transform .25s ease}
+html.dk-anim #dk-side .dk-colbtn{transition:margin-left .25s ease}
 html.dk-anim body{transition:padding .25s ease}
 html.dk-anim #dk-sign,html.dk-anim #lec-bar{transition:left .25s ease}
 }

@@ -497,7 +497,7 @@ function speakAt(i,fromUser){
   if(ch.el&&ch.el.closest){var d=ch.el.closest("details");if(d&&!d.open)d.open=true;}
   showBar(true);
   updateBtns();
-  var U=getUtt(),u=new U(ch.speak);
+  var U=getUtt(),u=new U(pron(ch.speak));
   u.lang="fr-FR";
   u.rate=Math.min(2,Math.max(0.5,parseFloat(st.rate)||1));
   var v=currentVoice(),withVoice=!!v,started=false,done=false,t0=0;
@@ -1166,6 +1166,197 @@ function randInit(){
     if(location.hash==="#lecture-aleatoire"){try{go.scrollIntoView({block:"center"});go.focus();}catch(e){}go.classList.add("lec-rand-hl");setTimeout(function(){go.classList.remove("lec-rand-hl");},2600);}
   }).catch(function(){});
 }
+/* ===== Smartphone : lecture par fichiers audio pré-générés (voix neuronale « Vivienne »), lecteur <audio>. =====
+   La synthèse vocale du navigateur n'est pas fiable sur Android : ici, chaque passage des scripts optimisés
+   a son fichier MP3 (lecture_audio/a/<empreinte>.mp3) et chaque page son plan (lecture_audio/<page>.json). */
+var M={a:null,list:[],i:-1,mode:"idle",label:"",rand:false,man:{},bar:null,gap:null,errs:0,order:[],pos:0,unit:null};
+var MKEY="qcmbc:lecm",MRKEY="qcmbc:lecalea_m",MRATES=["0.80","0.90","1.00","1.10","1.25","1.50"];
+function mGet(k){try{return JSON.parse(localStorage.getItem(k)||"null");}catch(e){return null;}}
+function mPut(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
+function mRate(){var s=mGet(MKEY)||{};return MRATES.indexOf(s.rate)>=0?s.rate:"1.00";}
+function mBase(){return rBase().base.replace(/lecture_opti\/$/,"lecture_audio/");}
+function mMan(pg){
+  if(!M.man[pg])M.man[pg]=fetch(mBase()+pg+".json"+rBase().q,{cache:"no-cache"}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});
+  return M.man[pg];
+}
+function mAudio(){
+  if(!M.a){
+    M.a=new Audio();M.a.preload="auto";
+    M.a.addEventListener("ended",function(){if(M.mode!=="playing")return;clearTimeout(M.gap);M.gap=setTimeout(function(){mPlayAt(M.i+1);},350);});
+    M.a.addEventListener("error",function(){if(M.mode!=="playing")return;M.errs++;if(M.errs>4){mStop();return;}clearTimeout(M.gap);M.gap=setTimeout(function(){mPlayAt(M.i+1);},400);});
+    M.a.addEventListener("playing",function(){M.errs=0;});
+  }
+  return M.a;
+}
+function mHL(){
+  var it=M.list[M.i];clearHL();
+  if(!it||it.pg!==optiName())return;
+  var el=null,more=null;
+  if(it.a==="h1"||it.n==null)el=$("h1");
+  else{var det=optiDet(it.n);if(det){if(!det.open)det.open=true;el=optiEl(det,it.a);var bs=optiEls(det,it.a);more=bs&&bs.length>1?bs.slice(1):null;}}
+  if(el){st.lastEl=null;highlight(el,more);}
+}
+function mMeta(){
+  if(!("mediaSession" in navigator))return;
+  try{navigator.mediaSession.metadata=new MediaMetadata({title:M.label||"Lecture",artist:"QCM SUEP B/C",album:M.rand?"Lecture aléatoire":"Lecture optimisée"});
+    navigator.mediaSession.playbackState=M.mode==="playing"?"playing":"paused";}catch(e){}
+}
+function mPlayAt(i){
+  clearTimeout(M.gap);
+  if(i>=M.list.length){if(M.rand){mRandNext();return;}mStop();return;}
+  if(i<0)i=0;
+  var it=M.list[i],a=mAudio();M.i=i;M.mode="playing";
+  a.src=mBase()+"a/"+it.f+".mp3";a.defaultPlaybackRate=a.playbackRate=parseFloat(mRate());
+  var pr=a.play();if(pr&&pr.catch)pr.catch(function(){M.mode="paused";mUI();mMeta();});
+  if(M.list[i+1]){try{fetch(mBase()+"a/"+M.list[i+1].f+".mp3").catch(function(){});}catch(e){}}
+  if(M.rand)mRSave();
+  mHL();mUI();mMeta();
+}
+function mPause(){if(M.mode!=="playing")return;clearTimeout(M.gap);M.mode="paused";try{M.a.pause();}catch(e){}mUI();mMeta();}
+function mResume(){if(M.mode!=="paused")return;var a=mAudio();if(a.src&&a.currentTime>0&&!a.ended){M.mode="playing";a.playbackRate=parseFloat(mRate());var pr=a.play();if(pr&&pr.catch)pr.catch(function(){M.mode="paused";mUI();});mUI();mMeta();}else mPlayAt(M.i);}
+function mToggle(){if(M.mode==="playing")mPause();else if(M.mode==="paused")mResume();}
+function mStop(){
+  clearTimeout(M.gap);if(M.rand)mRSave();
+  M.mode="idle";M.rand=false;M.list=[];M.i=-1;try{if(M.a){M.a.pause();M.a.removeAttribute("src");M.a.load();}}catch(e){}
+  clearHL();mUI();mMeta();mRandUI();
+}
+function mStart(list,label,from,rand){M.rand=!!rand;M.list=list;M.label=label;M.errs=0;mPlayAt(from||0);}
+/* Lecture optimisée d'une page (ou d'une seule fiche) */
+function mPageItems(man,pg,n){return man.filter(function(x){return n==null||String(x.n)===String(n);}).map(function(x){return {f:x.f,n:x.n,a:x.a,pg:pg};});}
+function mInject(){
+  var pg=optiName();
+  mMan(pg).then(function(man){
+    if(!man||!man.length)return;
+    var h1=$("h1"),title=h1?h1.textContent.trim():D.title;
+    var b=D.createElement("button");b.type="button";b.className="lecm-page";b.innerHTML=ICO.play+"<b>Écouter (lecture audio)</b>";
+    b.addEventListener("click",function(e){e.preventDefault();mStart(mPageItems(man,pg,null),title,0,false);});
+    if(h1&&h1.parentNode)h1.parentNode.insertBefore(b,h1.nextSibling);
+    var seen={};
+    man.forEach(function(x){
+      if(x.n==null||seen[x.n])return;seen[x.n]=1;
+      var det=optiDet(x.n),sm=det&&det.querySelector("summary");if(!sm)return;
+      var m=D.createElement("button");m.type="button";m.className="lecm-mini";m.setAttribute("aria-label","Écouter cette fiche");m.innerHTML=ICO.play;
+      m.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();det.open=true;
+        var t=(sm.textContent||"").replace(/\s+/g," ").trim().replace(/^\d+\s*/,"");mStart(mPageItems(man,pg,x.n),t,0,false);});
+      sm.appendChild(m);
+    });
+    /* Retour depuis « Revenir au passage » : on se replace sur le passage lu, en pause. */
+    var sv=mGet(MRKEY);
+    if(sv&&sv.back&&RAND.units){
+      sv.back=false;mPut(MRKEY,sv);
+      var u=unitById(sv.ids[sv.pos]);
+      if(u&&u.p===pg){mRandRestore(sv);mRandPlay(sv.i|0,true);}
+    }
+  });
+}
+/* Lecture aléatoire (même tirage que sur PC : une fiche à la fois, matières alternées) */
+function mRSave(){if(!M.order.length)return;mPut(MRKEY,{ids:M.order,pos:M.pos,i:Math.max(0,M.i),t:Date.now()});}
+function mRandRestore(sv){
+  var known={},ids=[];RAND.units.forEach(function(u){known[uidOf(u)]=1;});
+  (sv.ids||[]).forEach(function(id){if(known[id]&&ids.indexOf(id)<0)ids.push(id);});
+  M.order=ids.concat(spread(RAND.units.map(uidOf).filter(function(id){return ids.indexOf(id)<0;}),ids[ids.length-1]));
+  M.pos=Math.min(Math.max(0,sv.pos|0),M.order.length-1);
+}
+function mRandPlay(from,paused){
+  var id=M.order[M.pos],u=unitById(id);if(!u){mRandNext();return;}
+  M.unit=u;
+  mMan(u.p).then(function(man){
+    var ns=(u.ns||[u.n]).map(String),list=(man||[]).filter(function(x){return x.n!=null&&ns.indexOf(String(x.n))>=0;}).map(function(x){return {f:x.f,n:x.n,a:x.a,pg:u.p};});
+    if(!list.length){M.pos++;if(M.pos>=M.order.length){M.order=spread(RAND.units.map(uidOf),id);M.pos=0;}mRandPlay(0,paused);return;}
+    var lab="Aléatoire "+(M.pos+1)+"/"+M.order.length+" · "+(u.c?u.c+" – ":"")+u.t;
+    from=Math.min(Math.max(0,from|0),list.length-1);
+    if(paused){M.rand=true;M.list=list;M.label=lab;M.i=from;M.mode="paused";mRSave();mHL();mUI();mMeta();mRandUI();return;}
+    mStart(list,lab,from,true);mRandUI();
+  });
+}
+function mRandNext(){
+  clearTimeout(M.gap);
+  var last=M.order[M.pos];M.pos++;
+  if(M.pos>=M.order.length){M.order=spread(RAND.units.map(uidOf),last);M.pos=0;}
+  M.i=0;mRSave();mRandPlay(0,false);
+}
+function mRandStart(resume){
+  if(!RAND.units)return;
+  var sv=resume?mGet(MRKEY):null;
+  if(sv&&sv.ids&&sv.ids.length){mRandRestore(sv);mRandPlay(sv.i|0,false);}
+  else{M.order=spread(RAND.units.map(uidOf));M.pos=0;mRandPlay(0,false);}
+}
+function mRandBack(){
+  if(!M.rand||!M.unit)return;
+  if(M.unit.p===optiName()){mHL();var el=st.hlEl;if(el){try{el.scrollIntoView({block:"center",behavior:"smooth"});}catch(e){}}return;}
+  mRSave();var sv=mGet(MRKEY);if(sv){sv.back=true;mPut(MRKEY,sv);}
+  M.mode="idle";try{M.a.pause();}catch(e){}
+  location.href=unitUrl(M.unit);
+}
+function mRandUI(){
+  var b=D.getElementById("lecm-go"),n=D.getElementById("lecm-new");if(!b)return;
+  var sv=mGet(MRKEY);
+  b.textContent=M.rand&&M.mode!=="idle"?"Lecture aléatoire en cours":sv?"Reprendre la lecture aléatoire":"Lecture aléatoire";
+  b.disabled=!!(M.rand&&M.mode!=="idle");if(n)n.hidden=!sv||(M.rand&&M.mode!=="idle");
+}
+/* Lecteur compact en bas d'écran */
+function mBar(){
+  if(M.bar)return M.bar;
+  var bar=D.createElement("div");bar.id="lecm-bar";bar.hidden=true;bar.setAttribute("role","region");bar.setAttribute("aria-label","Lecture audio");
+  bar.innerHTML='<div class="lecm-tit" id="lecm-tit"></div><div class="lecm-row">'+
+    '<button type="button" id="lecm-prev" aria-label="Passage précédent">'+ICO.prev+'</button>'+
+    '<button type="button" id="lecm-play" aria-label="Pause">'+ICO.pause+'</button>'+
+    '<button type="button" id="lecm-next" aria-label="Passage suivant">'+ICO.next+'</button>'+
+    '<button type="button" id="lecm-stop" aria-label="Arrêter">'+ICO.stop+'</button>'+
+    '<select id="lecm-rate" aria-label="Vitesse"></select></div>'+
+    '<div class="lecm-rrow" id="lecm-rrow" hidden><button type="button" id="lecm-rnext">Suivante</button><button type="button" id="lecm-rback">Revenir au passage</button><button type="button" id="lecm-rstop">Arrêter</button></div>';
+  D.body.appendChild(bar);M.bar=bar;
+  var sel=$("#lecm-rate",bar);MRATES.forEach(function(r){var o=D.createElement("option");o.value=r;o.textContent="×"+r;sel.appendChild(o);});sel.value=mRate();
+  sel.addEventListener("change",function(){var s=mGet(MKEY)||{};s.rate=sel.value;mPut(MKEY,s);if(M.a)M.a.playbackRate=M.a.defaultPlaybackRate=parseFloat(sel.value);});
+  $("#lecm-play",bar).addEventListener("click",mToggle);
+  $("#lecm-prev",bar).addEventListener("click",function(){mPlayAt(Math.max(0,M.i-1));});
+  $("#lecm-next",bar).addEventListener("click",function(){mPlayAt(M.i+1);});
+  $("#lecm-stop",bar).addEventListener("click",mStop);
+  $("#lecm-rstop",bar).addEventListener("click",mStop);
+  $("#lecm-rnext",bar).addEventListener("click",mRandNext);
+  $("#lecm-rback",bar).addEventListener("click",mRandBack);
+  return bar;
+}
+function mUI(){
+  var bar=mBar(),on=M.mode!=="idle";
+  bar.hidden=!on;D.body.classList.toggle("lecm-on",on);
+  $("#lecm-tit",bar).textContent=M.label+(M.list.length?" · "+(M.i+1)+"/"+M.list.length:"");
+  var p=$("#lecm-play",bar);p.innerHTML=M.mode==="playing"?ICO.pause:ICO.play;p.setAttribute("aria-label",M.mode==="playing"?"Pause":"Lecture");
+  $("#lecm-rrow",bar).hidden=!M.rand;
+}
+function mInit(){
+  D.documentElement.classList.add("lecm-ok");
+  if("mediaSession" in navigator){try{
+    navigator.mediaSession.setActionHandler("play",function(){mResume();});
+    navigator.mediaSession.setActionHandler("pause",function(){mPause();});
+    navigator.mediaSession.setActionHandler("previoustrack",function(){if(M.mode!=="idle")mPlayAt(Math.max(0,M.i-1));});
+    navigator.mediaSession.setActionHandler("nexttrack",function(){if(M.mode==="idle")return;if(M.rand)mRandNext();else mPlayAt(M.i+1);});
+    navigator.mediaSession.setActionHandler("stop",function(){mStop();});
+  }catch(e){}}
+  window.addEventListener("pagehide",function(){if(M.rand&&M.mode!=="idle")mRSave();});
+  var b=rBase();
+  fetch(b.base+"index.json"+b.q,{cache:"no-cache"}).then(function(r){return r.ok?r.json():null;}).then(function(ix){
+    if(ix&&ix.units)RAND.units=ix.units;
+    if(isDash()&&RAND.units){
+      var home=D.getElementById("home");
+      if(home&&!D.getElementById("lecm-go")){
+        var go=D.createElement("button");go.type="button";go.id="lecm-go";go.className="big lecm-go";
+        go.addEventListener("click",function(e){e.preventDefault();mRandStart(true);});
+        var nw=D.createElement("button");nw.type="button";nw.id="lecm-new";nw.className="lecm-new";nw.textContent="Nouveau tirage";nw.hidden=true;
+        nw.addEventListener("click",function(e){e.preventDefault();try{localStorage.removeItem(MRKEY);}catch(x){}mRandStart(false);});
+        home.appendChild(go);home.appendChild(nw);mRandUI();
+      }
+    }
+    if(ix&&ix.pages&&ix.pages.indexOf(optiName())>=0)mInject();
+  }).catch(function(){});
+}
+/* Corrections de prononciation (voix du navigateur, PC) : appliquées au texte prononcé seulement.
+   Pour en ajouter : [expression régulière (mot entier, insensible à la casse), remplacement]. */
+var PRON=[
+  [/\bcanons\b/gi,"canonts"],[/\bcanon\b/gi,"canont"],
+  [/\bpontets\b/gi,"pontés"],[/\bpontet\b/gi,"ponté"]
+];
+function pron(t){for(var k=0;k<PRON.length;k++)t=t.replace(PRON[k][0],PRON[k][1]);return t;}
 function isPhone(){
   try{
     var small=window.matchMedia&&window.matchMedia("(max-width:1023px)").matches;
@@ -1176,8 +1367,8 @@ function isPhone(){
 function init(){
   if(booted)return;
   if(GUEST){initGuest();return;}
+  if(isPhone()){booted=true;D.documentElement.classList.add("lec-off");try{mInit();}catch(e){}return;}
   if(!hasSynth())return;
-  if(isPhone()){booted=true;D.documentElement.classList.add("lec-off");return;}
   booted=true;
   synth=getSynth();
   D.documentElement.classList.add("lec-ok");
@@ -1220,7 +1411,7 @@ function init(){
     e.preventDefault();e.stopImmediatePropagation();openInFrame(hu.href);
   },true);
   window.addEventListener("popstate",onPop);
-  window.qcmbcLectureText={speakable:speakable,romans:romans,blocks:optiBlocks,rand:function(){return {on:RAND.on,pos:RAND.pos,n:RAND.order.length,unit:RAND.unit&&uidOf(RAND.unit),units:RAND.units&&RAND.units.length};},randOrder:function(){return RAND.order.slice();},randList:function(id){var u=RAND.units&&unitById(id);return u?unitData(u).then(function(d){return unitList(u,d).map(function(c){return c.speak;});}):Promise.resolve(null);}};
+  window.qcmbcLectureText={speakable:speakable,romans:romans,blocks:optiBlocks,rand:function(){return {on:RAND.on,pos:RAND.pos,n:RAND.order.length,unit:RAND.unit&&uidOf(RAND.unit),units:RAND.units&&RAND.units.length};},randOrder:function(){return RAND.order.slice();},pageList:function(pg){var u={p:pg,n:null,t:"",c:"",k:"d"};return unitData(u).then(function(d){return unitList(u,d).map(function(c){return {n:c.rn,a:c.ra,s:c.speak};});});},randList:function(id){var u=RAND.units&&unitById(id);return u?unitData(u).then(function(d){return unitList(u,d).map(function(c){return c.speak;});}):Promise.resolve(null);}};
   if(DEBUG){dbg("debug actif","synth="+(!!synth)+" android="+ANDROID);}
 }
 function boot(){
