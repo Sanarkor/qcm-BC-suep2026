@@ -1,0 +1,530 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png?v=20261112a"><link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48.png?v=20261112a"><link rel="icon" type="image/svg+xml" href="icons/icon.svg?v=20261112a"><link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png?v=20261112a"><link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png?v=20261112a"><link rel="manifest" href="manifest.webmanifest?v=20261112a"><meta name="theme-color" content="#1f3b6f"><meta name="application-name" content="QCM SUEP B/C"><meta name="apple-mobile-web-app-title" content="QCM SUEP B/C"><title>Fiche express · QCM SUEP B/C</title><style>
+html,body{overscroll-behavior-y:contain}
+body{font-family:system-ui,sans-serif;max-width:760px;margin:0 auto;padding:16px;background:var(--pf4f6fa,#f4f6fa);color:var(--p1a2238,#1a2238);line-height:1.4}
+h1{font-size:1.35em;text-align:center;color:var(--p0b2a5b,#0b2a5b);margin:8px 0 4px}
+h2{color:var(--p0b2a5b,#0b2a5b);font-size:1.12em;margin:22px 0 8px;padding-bottom:4px;border-bottom:2px solid var(--p0b2a5b,#0b2a5b)}
+h3{font-size:1em;margin:14px 0 4px;color:var(--p0b2a5b,#0b2a5b);display:flex;gap:8px;align-items:center}
+.sub{text-align:center;opacity:.75;font-size:.9em;margin:0 0 12px}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.nav a,.nav button{flex:1;min-width:120px;text-align:center;padding:10px;border-radius:0;border:0;background:var(--p0b2a5b,#0b2a5b);color:#fff;text-decoration:none;font-size:.95em;font-weight:bold;cursor:pointer}
+.nav .alt{background:#fff;color:var(--p0b2a5b,#0b2a5b);box-shadow:0 1px 4px #0002}
+article{background:#fff;border-radius:0;box-shadow:0 1px 4px #0002;margin:8px 0;padding:8px 14px 6px}
+h3 .n{background:var(--p0b2a5b,#0b2a5b);color:#fff;border-radius:0;padding:2px 7px;font-size:.85em;flex:none;font-weight:700}
+ul{padding-left:18px;margin:6px 0 8px}li{margin:5px 0}
+b{color:#a3312a}
+.note{font-size:.88em;background:#fff6e5;border-left:3px solid #e0a000;padding:6px 8px;border-radius:0}
+.src{font-size:.78em;opacity:.7;text-align:center;margin-top:14px}
+.toc{background:#fff;box-shadow:0 1px 4px #0002;padding:10px 12px;margin:0 0 14px}
+.toc b{color:var(--p0b2a5b,#0b2a5b);display:block;margin:0 0 6px;font-size:.95em}
+.toc .tg{margin:8px 0 2px;font-weight:700;font-size:.88em;color:var(--p0b2a5b,#0b2a5b)}
+.toc .tg a{color:var(--p0b2a5b,#0b2a5b);text-decoration:none}
+.toc .tg a:hover{text-decoration:underline}
+.toc .nums{display:flex;flex-wrap:wrap;gap:3px;margin:0 0 4px}
+.toc .nums a{display:inline-block;min-width:1.7em;text-align:center;padding:2px 5px;font-size:.78em;font-weight:700;text-decoration:none;color:#0f172a;border:1px solid #d5dbe6;background:#f4f6fa}
+.toc .nums a:hover,.toc .nums a.dk-act{background:var(--p0b2a5b,#0b2a5b);color:#fff;border-color:var(--p0b2a5b,#0b2a5b)}
+#top{position:fixed;right:12px;bottom:42px;width:44px;height:44px;border-radius:0;border:0;background:var(--p0b2a5b,#0b2a5b);color:#fff;font-size:1.3em;box-shadow:0 2px 6px #0004;display:none;z-index:50;cursor:pointer}
+#mkbadge{position:fixed;right:8px;bottom:6px;z-index:9999;font:11px/20px system-ui,Arial,sans-serif;color:#fff;background:rgba(31,59,111,.72);padding:2px 8px 2px 3px;border-radius:0;pointer-events:none;max-width:calc(100vw - 16px);white-space:nowrap;display:flex;align-items:center;gap:5px}
+#mkbadge img{width:20px;height:20px;border-radius:0;display:block}
+body{padding-bottom:34px!important}
+@media print{
+  .nav,#top,#mkbadge,#dk-side,#dk-sign,#dk-helpov,.lec-page{display:none!important}
+  html,body{max-width:none!important;margin:0!important;padding:10mm 12mm!important;background:#fff!important;color:#000!important;font-size:10.5pt;line-height:1.35;box-shadow:none}
+  .toc{position:static!important;box-shadow:none;border:1px solid #ccc;margin:0 0 8mm;max-height:none!important;break-after:avoid}
+  article{box-shadow:none;border:1px solid #ddd;break-inside:avoid;padding:6px 10px}
+  h2,h3{break-after:avoid;color:#0b2a5b}
+  b{color:#a3312a;font-weight:700}
+  a{color:inherit!important;text-decoration:none}
+  .note,.src{border:1px solid #ccc;background:#fff}
+  .toc .nums a{border-color:#999}
+}
+</style><link rel="stylesheet" href="desktop.css?v=20261116a" media="(min-width:1024px)"><link rel="stylesheet" href="lecture.css?v=20261115a"><link rel="stylesheet" href="theme.css?v=20261115a"></head><body id="haut"><div class="nav"><a href="index.html">⌂ Accueil</a><a class="alt" href="revisions.html">Révisions synthétiques</a><a class="alt" href="revisions_detaillees.html">Révisions détaillées</a></div><h1>Fiche express</h1><p class="sub">Tous les cours, l’essentiel en un seul regard — 64 cours, 207 points clés</p><p class="note">Une seule fiche, très condensée, qui enchaîne les points à retenir. Les <b>chiffres, durées, seuils, articles et règles impératives</b> sont en gras rouge. Rien n’est ajouté par rapport à tes cours. Les cours scannés ont été relus ; en cas de doute sur un chiffre, vérifie le document original.</p><nav class="toc" aria-label="Sommaire"><b>Sommaire</b><div class="tg"><a href="#tt">Temps de travail (APORTT)</a></div><div class="nums"><a href="#c01">01</a><a href="#c02">02</a><a href="#c03">03</a><a href="#c04">04</a><a href="#c05">05</a><a href="#c06">06</a><a href="#c07">07</a><a href="#c08">08</a><a href="#c09">09</a><a href="#c10">10</a><a href="#c11">11</a><a href="#c12">12</a><a href="#c13">13</a><a href="#c14">14</a><a href="#c15">15</a><a href="#c16">16</a><a href="#c17">17</a><a href="#c18">18</a></div><div class="tg"><a href="#mo">Maintien de l’ordre et violences urbaines</a></div><div class="nums"><a href="#c19">19</a><a href="#c20">20</a><a href="#c21">21</a><a href="#c22">22</a><a href="#c23">23</a><a href="#c24">24</a></div><div class="tg"><a href="#armes">Armes, AFI, habilitation et TSUA</a></div><div class="nums"><a href="#c25">25</a><a href="#c26">26</a><a href="#c27">27</a><a href="#c28">28</a><a href="#c29">29</a><a href="#c30">30</a><a href="#c31">31</a><a href="#c32">32</a><a href="#c33">33</a><a href="#c34">34</a><a href="#c35">35</a><a href="#c36">36</a><a href="#c37">37</a><a href="#c38">38</a><a href="#c39">39</a><a href="#c40">40</a></div><div class="tg"><a href="#interp">Interpellation, palpation, menottage et placements</a></div><div class="nums"><a href="#c41">41</a><a href="#c42">42</a><a href="#c43">43</a><a href="#c44">44</a><a href="#c45">45</a><a href="#c46">46</a><a href="#c47">47</a></div><div class="tg"><a href="#lieux">Interventions selon les lieux</a></div><div class="nums"><a href="#c48">48</a><a href="#c49">49</a><a href="#c50">50</a><a href="#c51">51</a><a href="#c52">52</a></div><div class="tg"><a href="#att">Forcené, agressions armées et attentats</a></div><div class="nums"><a href="#c53">53</a><a href="#c54">54</a><a href="#c55">55</a><a href="#c56">56</a><a href="#c57">57</a><a href="#c58">58</a><a href="#c59">59</a><a href="#c60">60</a></div><div class="tg"><a href="#refus">Refus d’obtempérer et interception</a></div><div class="nums"><a href="#c61">61</a><a href="#c62">62</a><a href="#c63">63</a></div><div class="tg"><a href="#aps">Activités physiques</a></div><div class="nums"><a href="#c64">64</a></div></nav><section id="tt">
+<h2>Temps de travail (APORTT)</h2>
+<article id="c01">
+<h3><span class="n">01</span>DocPro – Gestion du temps de travail (avril 2026)</h3>
+<ul>
+<li>Support officiel de l’examen brigadier-chef, édition <b>avril 2026</b>. Ce module vise les agents du <b>corps d’encadrement et d’application (CEA)</b> et les <b>policiers adjoints (PA)</b>.</li>
+<li>Congés annuels : <b>5 fois</b> les obligations hebdomadaires, en jours ouvrés, pour l’année du <b>1<sup>er</sup> janvier au 31 décembre</b> : <b>25 CA</b> en régime hebdomadaire ; <b>23 CA</b> en cycle 4/2 ; <b>18 CA</b> en cycles 2/2, 3/3 et 2/2/3/2/2/3 ; <b>20 CA</b> en vacation forte.</li>
+<li>Fractionnement hors période : <b>+1 CA</b> pour <b>5 à 7</b> CA pris hors période, <b>+2 CA</b> à partir de <b>8</b>.</li>
+<li>En régime cyclique, il n’y a <b>pas de jours ARTT</b> mais un <b>crédit horaire annuel</b>, prenable à tout moment ; le reliquat au soir du <b>31 décembre</b> est perdu.</li>
+<li>Temps partiel de droit pour raisons familiales : élever un enfant jusqu’au <b>3<sup>e</sup> anniversaire</b> (ou <b>3 ans</b> après l’arrivée d’un enfant adopté) ; ou prodiguer des soins à un enfant à charge, un conjoint ou un ascendant atteint d’un handicap ou d’une maladie grave.</li>
+</ul></article>
+<article id="c02">
+<h3><span class="n">02</span>Guide des principales règles de gestion du temps de travail (ARTT, CET…)</h3>
+<ul>
+<li>Guide détaillé des règles ARTT, CET, congés, ASA, temps partiel et services supplémentaires, qui précise les dispositifs repris dans l’APORTT et les fiches 06 à 18.</li>
+<li>CET : un seul compte à la fois ; alimentation du <b>1<sup>er</sup> au 31 janvier</b>, en jours entiers, par les CA au-delà de <b>20 jours</b> pris, les ARTT et au plus <b>5 jours</b> de RCSS. <b>Interdit</b> d’y verser le crédit férié, les RPS et les jours reçus par don.</li>
+<li>Seuil du CET : jusqu’à <b>15 jours</b>, utilisation uniquement en congés ; à partir du <b>16<sup>e</sup> jour</b> : maintien (<b>+10 jours/an</b>, plafond <b>60</b>), indemnisation ou RAFP (<b>titulaires seulement</b>). Indemnisation : <b>150 €</b> (A), <b>100 €</b> (B), <b>83 €</b> (C) par jour.</li>
+<li>Don de jours : anonyme ; seuls les CA au-delà de <b>20 jours</b> sont donnables ; <b>90 jours</b> max par enfant et par an.</li>
+</ul></article>
+<article id="c03">
+<h3><span class="n">03</span>Présentation de l’APORTT (diaporama)</h3>
+<ul>
+<li>L’<b>APORTT</b> (arrêté portant organisation relative au temps de travail) est l’arrêté du <b>5 septembre 2019</b>, applicable depuis le <b>1<sup>er</sup> janvier 2020</b>.</li>
+<li>Champ : <b>DGPN</b>, <b>DGSI</b>, <b>préfecture de police</b> ; <b>DCCRS</b> (CRS) de façon partielle.</li>
+<li>Deux grandes familles de régimes : <b>hebdomadaire</b> et <b>cyclique</b>. Seuls les cycles listés par l’arrêté sont admis.</li>
+<li>Durée annuelle de référence : <b>1 607 heures</b>, quel que soit le régime.</li>
+</ul></article>
+<article id="c04">
+<h3><span class="n">04</span>L’APORTT en bref – Bilan 2020 (fiches 1 à 15)</h3>
+<ul>
+<li>Recueil des <b>15 fiches</b> APORTT (durée, nuit, repos, régimes, congés, services supplémentaires, dérogations) : c’est la synthèse officielle dont les fiches 06 à 18 reprennent le détail.</li>
+<li>Les durées s’apprécient de manière <b>annuelle, hebdomadaire et journalière</b>. Moyenne hebdomadaire : <b>48 h max</b> sur le <b>semestre révolu</b> (services supplémentaires compris, hors CA et congés maladie).</li>
+</ul></article>
+<article id="c05">
+<h3><span class="n">05</span>Circulaire DGPN du 26/01/2022 – plan prévisionnel annuel des départs en congés</h3>
+<ul>
+<li>Circulaire du <b>26 janvier 2022</b> (NOR <b>INTC2204998C</b>) : le plan prévisionnel est <b>obligatoire</b>. Les agents formulent leurs dates au plus tard <b>15 jours</b> avant la validation du plan.</li>
+<li>Un agent ne peut pas être absent plus de <b>31 jours calendaires consécutifs</b> (CA, RTT, repos, RCSS, RPS/TC, jours de temps partiel et fériés compris). Exceptions, à la discrétion du chef de service : <b>congés bonifiés</b> (décret n° <b>2020-851</b>) avec ASA d’une vacation aller et une au retour ; et jours de <b>CET</b> accolés à des CA ou RTT.</li>
+<li>Taux de présence : entre le minimum opérationnel, jamais <b>inférieur à 50 %</b>, et jusqu’à <b>75 %</b> si circonstances particulières. Un événement important peut le rehausser sur décision de la direction centrale.</li>
+<li>Si moins de <b>10 jours</b> de RTT et/ou RPS sont positionnés sur le plan, le reliquat jusqu’à 10 est <b>protégé</b> (posé en <b>2 fois</b> maximum, sous validation du chef de service).</li>
+<li>Priorité : <b>75 %</b> des départs aux agents élevant des enfants ou ayant un droit de garde, visite ou garde alternée d’enfants d’âge scolaire (<b>3-16 ans</b>). Les parents d’enfants handicapés (quel que soit l’âge) sont classés en <b>première position</b> dans ces 75 %, pour coïncider avec la fermeture de l’établissement d’accueil.</li>
+<li>Les départs pris sur un <b>CET</b> déjà accordés, et le rappel d’un agent déjà en congé CET, ne peuvent être suspendus que par décision du <b>ministre de l’Intérieur</b>.</li>
+</ul></article>
+<article id="c06">
+<h3><span class="n">06</span>APORTT Fiche 2 – Le temps de travail</h3>
+<ul>
+<li>Le temps de travail effectif comprend le temps pendant lequel l’agent est à la disposition de l’administration et doit se conformer à ses directives, <b>sans pouvoir vaquer librement à ses occupations personnelles</b>.</li>
+<li>Sont notamment du temps de travail : la <b>pause</b> (à la différence de l’interruption de service, qui est du temps de repos), le temps d’habillage/déshabillage imposé, et le temps d’intervention sur astreinte.</li>
+<li>L’<b>astreinte</b> elle-même (obligation de rester joignable au domicile ou à proximité) n’est <b>pas</b> du temps de travail, tant qu’il n’y a pas d’intervention.</li>
+</ul></article>
+<article id="c07">
+<h3><span class="n">07</span>APORTT Fiche 3 – La durée du travail</h3>
+<ul>
+<li>La durée s’apprécie de manière <b>annuelle, hebdomadaire et journalière</b>.</li>
+<li>Durée annuelle : <b>1 607 heures</b>, quel que soit le régime (hebdomadaire ou cyclique), après déduction des repos hebdomadaires ou de cycle, des CA, des jours fériés et, le cas échéant, des ARTT.</li>
+<li>Exception : réduction de certains jours pour particularismes régionaux (<b>Alsace-Moselle</b>, <b>Guadeloupe</b>, <b>Guyane</b>, <b>Martinique</b>, <b>La Réunion</b> et <b>Mayotte</b>).</li>
+<li>Durée hebdomadaire : la moyenne sur chaque période de <b>7 jours</b> ne doit pas excéder <b>48 heures</b>, services supplémentaires compris, calculée sur le <b>semestre révolu</b>. Cette moyenne <b>exclut les CA et les congés maladie</b> de toute nature.</li>
+<li>Durée moyenne journalière (DMJ) : en régime hebdomadaire, <b>1/5</b> de la durée légale hebdomadaire ; en régime cyclique, la <b>durée de la vacation</b>.</li>
+</ul></article>
+<article id="c08">
+<h3><span class="n">08</span>APORTT Fiche 4 – Le travail de nuit</h3>
+<ul>
+<li>Période nocturne : <b>21 h – 6 h</b>.</li>
+<li>Est travailleur de nuit l’agent qui accomplit au moins <b>3 heures</b> dans cette période <b>2 fois par semaine</b>, ou au moins <b>270 heures</b> de nuit par année civile (hors services supplémentaires).</li>
+<li>Le travail de nuit est limité à <b>8 heures max en moyenne par 24 h</b>, calculées sur <b>3 mois civils</b>. Le suivi appartient au <b>chef de service</b>, qui impose des congés si la moyenne est dépassée.</li>
+<li>Un entretien annuel de suivi du temps de travail a lieu au moins <b>1 fois par an</b> ; outil <b>GesTT</b>.</li>
+</ul></article>
+<article id="c09">
+<h3><span class="n">09</span>APORTT Fiche 5 – Les repos : principes généraux</h3>
+<ul>
+<li>Repos journalier : <b>11 heures consécutives</b> par période de 24 h (point de départ : la prise de service effective).</li>
+<li>Repos hebdomadaire = <b>RL</b> (repos légal) + <b>RC</b> (repos compensateur). Minimum garanti : <b>35 heures</b> (24 h + 11 h) par période de 7 jours.</li>
+<li>Pause : dès <b>6 heures</b> de travail, pause minimale de <b>20 minutes</b>. La pause est du <b>temps de travail</b> ; l’interruption de service est du temps de repos.</li>
+<li>Interruption de service (régime hebdomadaire classique) : de <b>45 min à 2 h</b>, entre <b>11 h 30 et 14 h 30</b>.</li>
+<li>Taux de présence fixé par la direction : jamais <b>&lt; 50 %</b>, ni <b>100 %</b> (sauf décision du <b>ministre</b> en circonstances exceptionnelles).</li>
+</ul></article>
+<article id="c10">
+<h3><span class="n">10</span>APORTT Fiche 7 – Les régimes cycliques</h3>
+<ul>
+<li>Fonctionnement en équipes successives jour/nuit, dimanches et fériés compris. Seuls les cycles listés par l’APORTT sont admis.</li>
+<li>Cycles de jour : repos de cycle de <b>2 jours</b> (RC puis RL), sauf 4/2 compressé ; en forte amplitude : <b>2 RC + RL</b>.</li>
+<li>Cycles de nuit : <b>descente de nuit (DN)</b> après chaque période, puis RC + RL en fin de cycle.</li>
+<li>Cycle <b>4/2</b> (classique, panaché, compressé) : vacation moyenne <b>8 h 10</b>, prise du matin entre <b>5 h 20 et 6 h 30</b>.</li>
+<li>Cycles <b>2/2 – 3/3 – 2/2/3/2/2/3</b> : vacations de <b>11 h 08</b> ou <b>12 h 08</b>, avec <b>2 pauses de 20 min</b>.</li>
+<li>Vacation forte : rythme 2-2 / 3-2 / 3-2, vacation moyenne <b>9 h 31</b>.</li>
+<li>Prise de service décalée : exceptionnelle, le même jour ; agent avisé <b>avant la fin de la dernière vacation</b>. Compensation : coefficient <b>0,25</b> sur un RC, <b>0,60</b> sur un RL ou un jour férié.</li>
+</ul></article>
+<article id="c11">
+<h3><span class="n">11</span>APORTT Fiche 8 – Les congés : généralités</h3>
+<ul>
+<li>Les dispositions communes de la fonction publique d’État s’appliquent à la police nationale (annuels, bonifiés, maternité, etc.).</li>
+<li>Congé bonifié : <b>31 jours</b> maximum, tous les <b>2 ans</b>, après <b>24 mois</b> de services ininterrompus.</li>
+<li>Report des CA : possible sur décision du chef de service (nécessités de service), à prendre <b>avant le 1<sup>er</sup> mai</b> de l’année suivante. En cas de maladie ou maternité : report dans la limite de <b>4 semaines</b>, sur <b>15 mois</b>.</li>
+<li>Plan prévisionnel obligatoire, établi par le chef de service. CA et congés du plan : annulation ou rappel <b>uniquement sur décision du ministre de l’Intérieur</b>.</li>
+</ul></article>
+<article id="c12">
+<h3><span class="n">12</span>APORTT Fiche 9 – Les différents types de congés (1)</h3>
+<ul>
+<li>CA = <b>5 fois</b> les obligations hebdomadaires, en jours <b>ouvrés</b>.</li>
+<li>Période normale de prise : <b>1<sup>er</sup> mai – 31 octobre</b>. Hors période : <b>+1</b> jour pour <b>5 à 7</b> CA, <b>+2</b> à partir de <b>8</b> CA.</li>
+<li>Absence limitée à <b>31 jours consécutifs</b> (repos compris), hors exceptions (CET accolé, congé bonifié).</li>
+</ul></article>
+<article id="c13">
+<h3><span class="n">13</span>APORTT Fiche 10 – Les différents types de congés (2)</h3>
+<ul>
+<li>Les jours ARTT ramènent la durée annuelle à <b>1 607 h</b> : en <b>jours</b> (régime hebdomadaire) ou en <b>heures</b> (régime cyclique). Ils sont <b>non reportables</b> (perdus, sauf versement au CET).</li>
+<li>Journée de solidarité : retire <b>7 heures</b> d’ARTT.</li>
+<li>Crédit férié (<b>cyclique uniquement</b>) : <b>109 h 12</b> en métropole, <b>116 h 12</b> dans les DOM, <b>123 h 12</b> en Alsace-Moselle (soit <b>14 jours</b>). Pris dans l’année, <b>pas de report</b> (sauf DGPN/PP/DGSI), <b>ne va pas sur le CET</b>. Maladie ≥ <b>15 jours</b> consécutifs : <b>– 1/24</b> (3 h 33).</li>
+<li>RPS (repos de pénibilité spécifique) : coefficients <b>non cumulables</b>, exclusifs des services supplémentaires ; inscriptibles au plan (<b>10 jours</b> max), <b>ne vont pas sur le CET</b>. Nuit travaillée : <b>0,1</b> ; dimanche (cyclique) : <b>0,4</b> ; prise décalée sur RC : <b>0,25</b> ; sur RL ou JF : <b>0,60</b> ; heure de repos journalier manqué : <b>0,15</b>.</li>
+</ul></article>
+<article id="c14">
+<h3><span class="n">14</span>APORTT Fiche 11 – Les services supplémentaires</h3>
+<ul>
+<li>Quatre types : <b>permanence</b>, <b>astreinte</b>, <b>dépassement horaire</b>, <b>rappel</b> et <b>report de repos</b>.</li>
+<li>Les compensations se font en temps (RCSS) et/ou en indemnisation selon les cas, dans les délais fixés par l’arrêté.</li>
+</ul></article>
+<article id="c15">
+<h3><span class="n">15</span>APORTT Fiche 12 – Services supplémentaires (1) : permanence et astreinte</h3>
+<ul>
+<li>Permanence : <b>régime hebdomadaire uniquement</b> ; présence effective lors des RC, RL, jours fériés et nuits (<b>21 h – 6 h</b>). Tableaux diffusés au plus tard <b>14 jours</b> avant. Les PA sont <b>volontaires</b>.</li>
+<li>Compensation de permanence (CEA, PA) : <b>175 %</b> les RL et JF, <b>125 %</b> les RC, <b>200 %</b> la nuit du samedi au dimanche, <b>150 %</b> les autres nuits. Repos hebdomadaires manqués : restitués <b>immédiatement</b> ; autres compensations dans les <b>21 jours</b>.</li>
+<li>Astreinte : hors temps de travail (rester au domicile ou à proximité) ; l’intervention devient du temps de travail effectif. Ouverte aux <b>3 corps actifs</b> en régime hebdomadaire ; <b>PA et réservistes exclus</b>. Tableaux <b>14 jours</b> avant.</li>
+<li>Astreinte : indemnisation <b>prioritaire</b>, sinon compensation en temps (l’une exclusive de l’autre). Semaine complète : <b>149,48 €</b> ou <b>14 h 27</b>. Rappel sur astreinte : <b>100 %</b> du temps d’intervention + <b>1 h forfaitaire</b> de trajet A/R (pas de forfait en télé-intervention).</li>
+</ul></article>
+<article id="c16">
+<h3><span class="n">16</span>APORTT Fiche 13 – Services supplémentaires (2) : dépassement, rappel, report</h3>
+<ul>
+<li>Dépassement horaire : compensation <b>temps pour temps</b> selon le régime. Pour les PA, <b>toute heure commencée est due</b>.</li>
+<li>RCSS à prendre dans l’<b>année civile</b> ; sinon ils restent dus. Au-delà de <b>160 h</b> sur le compte actif : récupération dans les <b>30 jours</b>.</li>
+<li>Rappel : agent avisé <b>après avoir quitté le service</b>. Non rappelables (sauf décision du <b>ministre</b>) : CA, congés bonifiés, CET, congés du plan prévisionnel. Rappelables sur décision du <b>chef de service</b> : repos de cycle, JF, crédit férié, ARTT, HS, RPS pris annuellement.</li>
+<li>Report de RL : une journée ou vacation entière, agent avisé <b>pendant le service</b> ; compensation forfaitaire de <b>2 journées</b>. <b>PATS, PA et contractuels exclus</b>.</li>
+<li>Cycles de nuit de moins de 11 h 08 : si le rappel finit avant <b>13 h</b> → <b>8 h</b> de repos minimum ; après 13 h → exempté la nuit suivante.</li>
+<li>Dépassement : <b>200 %</b> sur RL/JF en cyclique comme en hebdomadaire ; <b>150 %</b> sur RC et de nuit ; les autres heures : <b>150 %</b> en cyclique, <b>100 %</b> en hebdomadaire.</li>
+</ul></article>
+<article id="c17">
+<h3><span class="n">17</span>APORTT Fiche 14 – Dérogations aux temps de travail et de repos</h3>
+<ul>
+<li>Dérogations possibles : repos journalier, pause, repos hebdomadaire, durée hebdomadaire, durée maximale de nuit, périodes de référence (y compris DCCRS).</li>
+<li>Cas : membres du <b>CCD</b> et du <b>CC chefs de service art. 10</b> ; <b>circonstances exceptionnelles</b> ; <b>missions spécifiques</b>.</li>
+<li>Durée maximale d’engagement : <b>12 jours</b> (repos journaliers) et <b>21 jours</b> (repos hebdomadaires) à compter du début de la mission. Les agents sont ensuite <b>neutralisés</b> : rappel seulement sur décision du <b>DGPN, du DGSI ou du préfet de police</b>.</li>
+</ul></article>
+<article id="c18">
+<h3><span class="n">18</span>APORTT Fiche 15 – Restitution des repos manqués en cadre dérogatoire</h3>
+<ul>
+<li>Les repos manqués sont <b>obligatoirement restitués immédiatement</b> à l’issue de la mission et compensés par une période de temps équivalente.</li>
+<li>Coefficient <b>0,15</b> par heure de repos journalier manqué (soit <b>9 min/h</b>).</li>
+<li>Repos journalier manqué : prise de service déplacée le lendemain sans changer l’heure de fin ; ou fin anticipée ; ou report sur le repos journalier suivant. Les trois hypothèses peuvent être <b>cumulatives</b>.</li>
+<li>Repos hebdomadaire manqué : restitution immédiate, y compris sur des journées de travail, en utilisant les <b>RCSS</b>. Accolé au repos de la période, il est restitué <b>a minima 59 heures</b> (11 h + 24 h + 24 h).</li>
+</ul></article>
+</section>
+<section id="mo">
+<h2>Maintien de l’ordre et violences urbaines</h2>
+<article id="c19">
+<h3><span class="n">19</span>Schéma national du maintien de l’ordre (déc. 2021)</h3>
+<ul>
+<li>La liberté de manifester est <b>protégée constitutionnellement</b>. Le maintien de l’ordre vise à prévenir, contenir et réduire les troubles, avec un <b>emploi maîtrisé</b> de la force.</li>
+<li>Manifestation : régime de <b>déclaration préalable</b> (<b>art. L. 211-1 CSI</b>), <b>3 jours francs</b> au moins avant, auprès du maire, du préfet de police à Paris, ou du préfet en zone police d’État.</li>
+<li>Organisation d’une manifestation non déclarée ou interdite : sanctions pénales (<b>art. 431-9 CP</b>). La seule participation à une manifestation interdite est une <b>contravention</b> (décret <b>2019-208</b>).</li>
+<li>Interdiction possible, pendant les <b>24 heures</b> qui précèdent et jusqu’à la dispersion, du port ou transport sans motif légitime d’objets pouvant constituer une arme (<b>art. 132-75 CP</b>), dans un périmètre proportionné.</li>
+<li>Le <b>DSO</b> et les <b>CSO</b> conduisent la communication avec les manifestants et sont habilités à procéder aux <b>sommations</b> (<b>art. R. 211-11 CSI</b>). La dispersion d’un attroupement relève de l’<b>autorité habilitée à l’emploi de la force (AHEF)</b> ; le <b>commandant de la force publique (CFP)</b> exécute dans les limites fixées.</li>
+<li>La dernière sommation est <b>réitérée</b> avant l’usage des armes mentionnées à l’<b>art. R. 211-11 CSI</b> (lanceurs, GMD, grenades à effet sonore).</li>
+<li>Chaque policier doit respecter le <b>code de déontologie</b> de la PN et de la GN (<b>art. R. 434-1 et s. CSI</b>).</li>
+<li>Dissimulation volontaire du visage, sans motif légitime, dans une manifestation ou à ses abords où des troubles sont commis ou risquent de l’être : <b>art. 431-9-1 CP</b>.</li>
+<li>Droit à l’image : les forces de l’ordre ne peuvent pas s’opposer à la captation dans les lieux publics, sauf personnels légalement soumis à l’<b>anonymat</b> (arrêté du <b>27 juin 2008</b>). La publication d’un fichier recensant des policiers ou gendarmes est une infraction.</li>
+</ul></article>
+<article id="c20">
+<h3><span class="n">20</span>Les éléments du maintien de l’ordre (fiche)</h3>
+<ul>
+<li>Attroupement : <b>art. 431-3 CP</b> (rassemblement sur la voie publique susceptible de troubler l’ordre public), qualifié par l’<b>AHEF</b>.</li>
+<li>L’autorité civile porte son <b>écharpe tricolore</b> (brassard tricolore pour la gendarmerie).</li>
+<li>Si les sommations restent sans effet, l’attroupement devient un délit (<b>art. L. 211-9 CSI</b>). L’usage de la force se fait <b>sur ordre</b> uniquement.</li>
+</ul></article>
+<article id="c21">
+<h3><span class="n">21</span>Usage des AFI en maintien de l’ordre (dispersion d’attroupement)</h3>
+<ul>
+<li>Après les <b>2 sommations</b> : grenades lacrymogènes à main et <b>GAIL</b>. La dernière sommation est <b>réitérée</b> avant lanceurs, <b>GMD</b> et grenades à effet sonore.</li>
+<li>En cas de <b>voies de fait, violences</b>, ou si le terrain ne peut être défendu autrement (initiative du <b>CFP</b>) : en plus, le <b>LBD 40</b> avec binôme <b>superviseur/tireur</b>.</li>
+<li>Le <b>PIE est interdit</b> dans tous les cas pour disperser un attroupement.</li>
+</ul></article>
+<article id="c22">
+<h3><span class="n">22</span>Cadres légaux d’usage des armes de force intermédiaire</h3>
+<ul>
+<li>Toutes les AFI sont utilisables en <b>légitime défense</b> (<b>art. 122-5 CP</b>), en <b>état de nécessité</b> (<b>art. 122-7 CP</b>) et sur le fondement de l’<b>art. L. 435-1 CSI</b>.</li>
+<li>En maintien de l’ordre : seuls les <b>aérosols</b> et <b>grenades lacrymogènes à main</b> dès les 2 sommations ; le <b>LBD</b> seulement en cas de voies de fait ou violences (initiative du CFP) ; le <b>PIE jamais</b>.</li>
+<li>Armes à feu : <b>interdites pour la défense des biens</b> (<b>art. 122-5 al. 2 CP</b>) et <b>interdites en maintien de l’ordre</b>, sauf le fusil de précision <b>7,62 × 51</b> en cas d’ouverture de feu sur la force publique en unité constituée.</li>
+</ul></article>
+<article id="c23">
+<h3><span class="n">23</span>Usage des AFI en violences urbaines</h3>
+<ul>
+<li>En violences urbaines, toutes ces AFI sont autorisées dans les trois cadres : <b>état de nécessité (122-7 CP)</b>, <b>légitime défense (122-5 CP)</b> et <b>art. L. 435-1 CSI</b>.</li>
+<li>Les lanceurs de grenades s’emploient avec un binôme <b>superviseur/tireur</b>.</li>
+<li>La force peut être employée <b>sans sommation</b> dès qu’il y a violences ou voies de fait, ou si les policiers ne peuvent défendre autrement les lieux qu’ils occupent.</li>
+</ul></article>
+<article id="c24">
+<h3><span class="n">24</span>Guide opérationnel des violences urbaines (PN, sept. 2025)</h3>
+<ul>
+<li>Guide de la police nationale (septembre 2025) : préparer (connaître le territoire, plans, moyens, formation, partenariat), conduire (signaux faibles, stratégie, interpellations, remontée d’information) et clôturer (compte rendu, enquête dédiée, RETEX, résilience).</li>
+<li>En VU, le <b>cadre de réaction</b> est privilégié, distinct du maintien de l’ordre (réponse graduée décidée par l’AHEF et exécutée par le CFP).</li>
+<li>Fondements : légitime défense, état de nécessité, dissipation d’attroupement (<b>L. 211-9 CSI</b>) et <b>L. 435-1 CSI</b>.</li>
+<li>Former au cadre juridique des VU et au cadre d’emploi des AFI ; assurer le maintien en condition opérationnelle ; anticiper les circuits de demande de renforts et une chaîne de traitement dédiée.</li>
+</ul></article>
+</section>
+<section id="armes">
+<h2>Armes, AFI, habilitation et TSUA</h2>
+<article id="c25">
+<h3><span class="n">25</span>Instruction DGPN n°3/2024 – arme individuelle ou de service</h3>
+<ul>
+<li>Arme <b>individuelle</b> : conservée par le policier actif pendant <b>toute sa carrière</b>. Arme <b>de service</b> : remise temporairement (PA, réservistes, élèves).</li>
+<li>Pistolet <b>SIG Sauer SP 2022</b> (9 × 19 mm), chargeur de <b>15 cartouches</b> : environ <b>800 à 830 g</b> à vide, <b>980 à 995 g</b> chargé. Règle générale de sécurité : une arme est toujours considérée comme <b>chargée</b>.</li>
+<li>Détachement hors du ministère : arme <b>restituée</b>. Restitution aussi en cas d’<b>exclusion temporaire</b> (quelle que soit la durée) et de <b>congé de maternité ou de paternité</b>.</li>
+<li>Dépôt ou stockage : chargeur retiré, aucune cartouche chambrée, <b>témoin de chambre vide</b> apparent. En armurerie, arme neutralisée par retrait d’une pièce (SIG : <b>le canon</b>) ; compétence du <b>RAM</b> sous la responsabilité du chef de service.</li>
+<li>Casiers individuels : au moins <b>2 compartiments</b> (arme / munitions). Les PA et réservistes <b>n’ont pas la clé</b>.</li>
+<li>Conditions d’usage des armes (<b>art. L. 435-1 CSI</b>) : dans l’exercice des fonctions, en <b>uniforme ou insignes apparents</b>, en cas d’<b>absolue nécessité</b> et de <b>stricte proportionnalité</b>.</li>
+<li>Les 7 cas de l’art. L. 435-1 : 1° atteintes ou menaces armées à la vie ou à l’intégrité ; 2° après <b>2 sommations à haute voix</b>, impossible de défendre autrement les lieux ou les personnes confiées ; puis les autres cas légaux (dont véhicule qui n’obtempère pas, etc.).</li>
+</ul></article>
+<article id="c26">
+<h3><span class="n">26</span>Instruction DGPN/DGGN du 2/08/2017 – usage et emploi des AFI</h3>
+<ul>
+<li>Les AFI ne sont ni conçues ni destinées à tuer ; leur emploi reste un <b>emploi de la force</b>, soumis à nécessité et proportionnalité.</li>
+<li><b>LBD 40 mm</b> : catégorie <b>A2 (4°)</b>, dotation collective. Munition <b>CTS</b> : intervalle <b>10 à 50 m</b>, optimum <b>30 m</b>. Munition <b>MDU</b> : <b>3 à 35 m</b> (DOE réglé à 25 m). Porté approvisionné à <b>1 cartouche</b> ; un seul type de munition (<b>panachage interdit</b>). Visée normale : <b>DOE</b>.</li>
+<li><b>GMD</b> (grenade à main de désencerclement) : <b>18 galets</b> en caoutchouc, rayon d’efficacité <b>10 m</b>, retard <b>1,5 s</b> ; lancée <b>au ras du sol</b>, jamais avec un lanceur.</li>
+<li>Lanceur de grenades (Cougar, multi-coups à <b>6 chambres</b>) : <b>tir courbe uniquement</b>, sur <b>ordre hiérarchique</b>. Proscrit : tir vers le conducteur d’un véhicule en mouvement ; tirs dans des locaux de faible capacité.</li>
+<li>Le <b>GAIL</b> est une AFI ; usage = emploi de la force (<b>art. R. 434-18 CSI</b>), seulement si nécessaire. Hors MO, cadre principal : légitime défense. Seuls les produits <b>fournis par l’administration</b> (tout autre produit = faute professionnelle).</li>
+</ul></article>
+<article id="c27">
+<h3><span class="n">27</span>Instruction DGPN n°15/2025 – AFI des policiers adjoints et réservistes</h3>
+<ul>
+<li>L’instruction n° <b>15/2025</b> fixe les AFI accessibles aux <b>policiers adjoints</b> et aux <b>réservistes</b>, ainsi que les conditions d’habilitation et de recyclage.</li>
+<li>Les PA et réservistes ne sont pas habilités à toutes les AFI (voir le tableau du cours 28) : notamment, certains lanceurs et grenades à effet sonore leur sont fermés.</li>
+</ul></article>
+<article id="c28">
+<h3><span class="n">28</span>Les AFI et instructions spécifiques (tableau habilitation / recyclage)</h3>
+<ul>
+<li><b>Bâtons</b> : habilitation <b>D2</b> obligatoire, recyclage <b>triennal</b> ; actifs, PA et réservistes.</li>
+<li><b>Lanceur 40 mm / MDU</b> : <b>A2-4</b>, recyclage <b>triennal</b> ; actifs et réservistes retraités des corps actifs déjà habilités ; <b>sauf stagiaires, PA, cadets et réservistes</b>. Instruction du <b>2/08/2017</b> / décret n° <b>2025/70</b> du 27 janvier 2025.</li>
+<li><b>PIE Taser 7</b> : <b>B6</b>, recyclage <b>triennal</b> ; actifs, PA et réservistes, <b>sauf cadets</b>. Instruction du <b>17/01/2022</b> / décret n° <b>2025/70</b>.</li>
+<li><b>Lanceur Cougar</b> et munitions balistiques : <b>A2</b>, recyclage <b>triennal</b> ; actifs seulement (<b>sauf PA, cadets et réservistes</b>).</li>
+<li><b>GMD (GENL)</b> : <b>A2-6</b>, recyclage <b>triennal</b> ; actifs, PA et réservistes, <b>sauf cadets</b>.</li>
+<li><b>Grenade à main à effet sonore Condor</b> : <b>A2-6</b>, recyclage <b>triennal</b> ; actifs <b>sauf PA, cadets et réservistes</b> (TG DGPN du <b>02/06/2025</b>).</li>
+<li><b>PA SIG Sauer 2022</b> et <b>PA Glock</b> 9 mm : habilitation <b>B1</b>, <b>tirs réglementaires</b> (instruction arme individuelle, juin 2024). SIG : actifs, PA, cadets et réservistes. Glock : actifs des services spécialisés.</li>
+<li><b>PM HK UMP</b> : <b>A2</b>, recyclage <b>annuel</b> ; actifs et réservistes retraités des corps actifs, sauf PA, cadets et réservistes (instruction du <b>13/03/2017</b>).</li>
+<li><b>Fusil HK G36 5,56 mm</b> : <b>A2</b>, recyclage <b>annuel</b> ; mêmes publics, instruction du <b>4/03/2016</b> et décret n° <b>2025/70</b>.</li>
+</ul></article>
+<article id="c29">
+<h3><span class="n">29</span>Instruction DPN-1.9.4.1 – emploi du pistolet à impulsions électriques (PIE)</h3>
+<ul>
+<li>PIE (Taser 7) classé <b>B 6°</b> ; 2 cartouches (la 2<sup>e</sup> peut être tirée sans recharger) ; porté dans l’étui, <b>éteint</b>.</li>
+<li>Modes : <b>dissuasif</b> (laser, arc), <b>contact</b> (douleur), <b>tir</b> (perte du contrôle locomoteur). Cycle de <b>5 secondes</b>, interruptible ; ne pas multiplier les cycles ; ne pas viser la <b>tête</b> ni le <b>cou</b>.</li>
+<li>Emploi soumis à nécessité et proportionnalité, dans les cadres légaux d’usage de la force. <b>Interdit pour disperser un attroupement</b>.</li>
+</ul></article>
+<article id="c30">
+<h3><span class="n">30</span>Instruction DPN-1.9.2 (13/03/2017) – pistolets mitrailleurs 9 mm</h3>
+<ul>
+<li>Arme d’épaule <b>individuelle en dotation collective</b>. Emploi en <b>maintien de l’ordre en unité constituée : proscrit</b>.</li>
+<li>Missions courantes <b>sensibles ou dangereuses</b> ; cartouche <b>COP 9 × 19 mm</b>. Affectation notée au <b>registre</b> (et à la MCI).</li>
+<li>Porté avec bretelle, <b>chargeur engagé, cartouche chambrée</b>, culasse fermée, <b>sûreté</b> mise. Recyclage <b>annuel</b> (habilitation A2).</li>
+</ul></article>
+<article id="c31">
+<h3><span class="n">31</span>Instruction (mars 2016) – fusil d’assaut HK G36 5,56 mm</h3>
+<ul>
+<li>Arme d’épaule en dotation collective ; calibre <b>5,56 mm</b>. Comme le PM, emploi en <b>MO en unité constituée proscrit</b>.</li>
+<li>Habilitation <b>A2</b>, recyclage <b>annuel</b>. Public : actifs et réservistes retraités déjà habilités ; <b>sauf PA, cadets et réservistes</b>.</li>
+</ul></article>
+<article id="c32">
+<h3><span class="n">32</span>Instruction DAPN 2004/40 – produits incapacitants en milieu fermé</h3>
+<ul>
+<li>L’emploi de produits incapacitants en <b>milieu fermé</b> (locaux, véhicules, espaces confinés) obéit à des précautions renforcées : ventilation, protection des tiers, évacuation et prise en charge des personnes exposées.</li>
+<li>Seuls les produits <b>fournis par l’administration</b> sont autorisés. Le cadre reste celui de l’emploi de la force (nécessité, proportionnalité, légitime défense notamment).</li>
+</ul></article>
+<article id="c33">
+<h3><span class="n">33</span>Télégramme DGPN 2020 – LBD 40 : binôme superviseur-tireur en MO</h3>
+<ul>
+<li>En maintien de l’ordre, le LBD 40 s’emploie en <b>binôme superviseur / tireur</b>.</li>
+<li>Le superviseur apprécie le cadre légal, l’opportunité et la zone de tir ; le tireur exécute le tir dans les distances et avec la munition prévues. <b>Panachage des munitions interdit</b>.</li>
+</ul></article>
+<article id="c34">
+<h3><span class="n">34</span>Télégramme DGPN (L. Laugier) – nouvelles grenades à main à effet sonore</h3>
+<ul>
+<li>La grenade à main à effet sonore est une <b>AFI</b>, destinée à déstabiliser un groupe violent et/ou armé par un effet sonore intense, en MO, rétablissement de l’ordre ou trouble à l’ordre public.</li>
+<li>Deux modèles acquis par le SAILMI : <b>GL-304 Condor</b> (Rivolier) et <b>GR MA EF SON</b> (Alsetex). Elles minimisent les dommages aux tiers (moindre projection d’éléments résiduels).</li>
+<li>Mesures de sécurité : lancer <b>à la main et au ras du sol</b> ; à distance du dispositif policier, après appréciation de la trajectoire et du point d’explosion.</li>
+<li>La mallette pédagogique de l’Académie de police porte sur l’emploi, l’habilitation et le recyclage de la <b>GL-304</b>, utilisable en opération dès formation et habilitation. Un travail similaire précédera la mise à disposition de la GR MA EF SON.</li>
+<li>Le régime transitoire du télégramme n° <b>2022-738D</b> du 16 mars 2022 (dotation exceptionnelle Alsetex type ASSD) est <b>abrogé</b>. Toute difficulté d’usage est signalée <b>sans délai</b> au pôle Missions de police du cabinet DGPN.</li>
+</ul></article>
+<article id="c35">
+<h3><span class="n">35</span>Télégramme DGPN 05/09/2025 – AFI (aérosol incapacitant / décontamination)</h3>
+<ul>
+<li>Télégramme du <b>5 septembre 2025</b> relatif à l’aérosol incapacitant et à la <b>décontamination</b> après exposition.</li>
+<li>Rappel : le GAIL n’est employé que si c’est <b>nécessaire</b> ; seuls les produits administratifs ; prévoir l’accueil et la décontamination des personnes exposées (agents compris).</li>
+</ul></article>
+<article id="c36">
+<h3><span class="n">36</span>Règles de sécurité – procédure d’emploi du pistolet automatique (affiche)</h3>
+<ul>
+<li>Affiche des règles générales de sécurité et de la procédure d’emploi du pistolet automatique : une arme est toujours considérée comme <b>chargée</b> ; doigt hors de la détente jusqu’au tir ; jamais de canon dirigé vers une zone non visée.</li>
+<li>Contrôle du témoin de chambre vide, retrait du chargeur, et respect de la séquence d’emploi et de remise en sûreté.</li>
+</ul></article>
+<article id="c37">
+<h3><span class="n">37</span>Règles générales de sécurité – procédures d’emploi PA Glock 17/26</h3>
+<ul>
+<li>Mêmes principes de sécurité que pour tout PA, appliqués aux <b>Glock 17</b> et <b>Glock 26</b> (services spécialisés, habilitation B1, tirs réglementaires).</li>
+<li>Arme toujours considérée comme chargée ; procédures propres au modèle (culasse, sûreté interne, démontage) à respecter à l’instruction et en service.</li>
+</ul></article>
+<article id="c38">
+<h3><span class="n">38</span>Déclaration préalable d’intention de tir sportif avec l’arme individuelle</h3>
+<ul>
+<li>Le tir sportif avec l’arme individuelle est soumis à une <b>déclaration préalable d’intention</b>.</li>
+<li>L’arme reste soumise aux règles de conservation, de transport et de sécurité de l’instruction n° <b>3/2024</b> ; ce n’est pas un usage opérationnel.</li>
+</ul></article>
+<article id="c39">
+<h3><span class="n">39</span>Instruction DGPN 19/12/2011 – Traitement de suivi de l’usage des armes (TSUA)</h3>
+<ul>
+<li>Le TSUA concerne les armes à feu (dotation individuelle et collective) et les <b>AFI cinétiques et électriques</b>, pour les actifs, réservistes et PA.</li>
+<li>Déclaration individuelle <b>sans délai</b>, au plus près de l’action (unité de temps, de lieu et d’action). <b>Chacun</b> déclare ses propres usages.</li>
+</ul></article>
+<article id="c40">
+<h3><span class="n">40</span>FAQ TSUA (suivi de l’usage des armes)</h3>
+<ul>
+<li>Accès au TSUA par habilitation <b>CHEOPS NG</b>. Après validation, <b>visa</b> du supérieur (profil acteur-chef de service).</li>
+<li>La FAQ précise les cas à déclarer, les délais et le circuit de validation : en cas de doute, <b>déclarer</b>.</li>
+</ul></article>
+</section>
+<section id="interp">
+<h2>Interpellation, palpation, menottage et placements</h2>
+<article id="c41">
+<h3><span class="n">41</span>Instruction DGPN/DGGN – palpations de sécurité (R. 434-16 CSI)</h3>
+<ul>
+<li>La palpation de sécurité est prévue par l’<b>art. R. 434-16 CSI</b> : mesure de <b>sûreté</b>, <b>non systématique</b>, fondée sur des éléments objectifs de dangerosité.</li>
+<li>Elle devient plus systématique <b>après interpellation</b>, avant d’embarquer dans un véhicule administratif.</li>
+</ul></article>
+<article id="c42">
+<h3><span class="n">42</span>TDI – La palpation de sécurité (vs 06-2021)</h3>
+<ul>
+<li>Ordre des actes : <b>remise volontaire → détection → information → palpation</b>, à l’abri des regards si possible.</li>
+<li>Mesure de sûreté, distincte de la fouille judiciaire. Elle se limite à ce qui est nécessaire pour écarter un danger immédiat.</li>
+</ul></article>
+<article id="c43">
+<h3><span class="n">43</span>TDI – Menottage (vs 01-2022)</h3>
+<ul>
+<li><b>Art. 803 CPP</b> : les menottes ne sont utilisées que si la personne est <b>dangereuse</b> (pour autrui ou elle-même) ou risque de <b>fuir</b>. La motivation figure dans le PV.</li>
+<li>Principe de <b>non-coopération</b> ; menottage <b>dans le dos</b> ; bracelets <b>verrouillés</b> ; jamais d’entrave à un <b>point fixe</b> ; pas au niveau du creux lombaire.</li>
+<li>Fin de menottage : annonce « <b>menotté</b> » et tape sur l’épaule de la protection ; palpation avant de retirer les entraves.</li>
+</ul></article>
+<article id="c44">
+<h3><span class="n">44</span>Note DGPN 13/09/2004 – droits et devoirs relatifs à l’utilisation des menottes</h3>
+<ul>
+<li>La note rappelle que le menottage n’est <b>pas automatique</b> : il doit rester proportionné, motivé et limité aux hypothèses de l’<b>art. 803 CPP</b>.</li>
+<li>Droits de la personne menottée et devoirs de l’agent : éviter tout usage humiliant ou douloureux, surveiller l’état de la personne, lever les entraves dès que le risque disparaît.</li>
+</ul></article>
+<article id="c45">
+<h3><span class="n">45</span>TI – Les placements (vs 12-2022)</h3>
+<ul>
+<li>Les placements (au sol, contre un plan vertical, etc.) visent à <b>contrôler</b> une personne tout en préservant sa sécurité et celle des agents.</li>
+<li>Éviter les positions qui gênent la respiration ; réévaluer en continu ; coordination de l’équipage avant tout déplacement ou menottage.</li>
+</ul></article>
+<article id="c46">
+<h3><span class="n">46</span>TI – Protection, liaison, interpellation (PLI)</h3>
+<ul>
+<li>Schéma <b>PLI</b> : un agent en <b>protection</b>, un en <b>liaison</b> (radio, environnement), un qui procède à l’<b>interpellation</b>.</li>
+<li>Les rôles sont distincts et peuvent tourner ; la protection reste prioritaire jusqu’à la fin de l’action (y compris au démenottage).</li>
+</ul></article>
+<article id="c47">
+<h3><span class="n">47</span>TI – Points clés du signalement</h3>
+<ul>
+<li>Le signalement doit être <b>précis, structuré et transmissible</b> (radio, MCI, collègues) : sexe, âge apparent, taille, morphologie, vêtements, signes particuliers, direction de fuite, moyens (arme, véhicule).</li>
+<li>Priorité aux éléments <b>stables et discriminants</b>, puis aux éléments variables (vêtement, accessoire). Corriger ou compléter dès qu’une information nouvelle est certaine.</li>
+</ul></article>
+</section>
+<section id="lieux">
+<h2>Interventions selon les lieux</h2>
+<article id="c48">
+<h3><span class="n">48</span>TI FT n°11 – intervention selon les lieux (données sociologiques / topographiques)</h3>
+<ul>
+<li>Avant d’intervenir, prendre en compte les données du lieu : <b>topographie</b> (issues, étages, vis-à-vis, éclairage) et <b>contexte sociologique</b> (quartier, fréquentation, horaires, tensions).</li>
+<li>Ces éléments alimentent la méthode de raisonnement opérationnel et le choix d’intervenir, de différer ou de se replier.</li>
+</ul></article>
+<article id="c49">
+<h3><span class="n">49</span>TI FT n°20 – interventions dans les lieux publics</h3>
+<ul>
+<li>Lieu public : accessibilité au public, règles propres (sûreté, exploitant, éventuelle vidéoprotection).</li>
+<li>Y adapter l’approche, le contact et le recours à la force ; anticiper le flux de tiers et les issues.</li>
+</ul></article>
+<article id="c50">
+<h3><span class="n">50</span>TI – Conflits dans les lieux privés</h3>
+<ul>
+<li>Lieu privé : le droit d’y entrer est encadré (flagrance, commission rogatoire, assise légale précise). Hors ces cas, pas d’intrusion.</li>
+<li>Un conflit intrafamilial ou de voisinage se traite d’abord par le <b>calme</b>, la <b>séparation</b> des parties et l’analyse du cadre juridique (violence, mineur, personne en danger).</li>
+</ul></article>
+<article id="c51">
+<h3><span class="n">51</span>TI FT n°32 – Intervention sur un cambriolage en cours</h3>
+<ul>
+<li>Priorité : <b>sécurité des victimes et des équipages</b>, périmètre, non-précipitation, information du CIC.</li>
+<li>Ne pas se placer dans l’axe d’une issue ; attendre les renforts adaptés si le rapport de force est défavorable ; préserver les traces dès que les lieux sont sûrs.</li>
+</ul></article>
+<article id="c52">
+<h3><span class="n">52</span>TI FT n°42 – Aspects pratiques de la perquisition</h3>
+<ul>
+<li>La perquisition s’inscrit dans un <b>cadre légal précis</b> (flagrance, commission rogatoire, accord, etc.) et suit des règles d’horaires, de présence et de saisie.</li>
+<li>Aspects pratiques : organisation de l’équipe, protection, méthodologie de fouille, verbalisation, conservation des scellés et respect des droits des occupants.</li>
+</ul></article>
+</section>
+<section id="att">
+<h2>Forcené, agressions armées et attentats</h2>
+<article id="c53">
+<h3><span class="n">53</span>TI – Conduite à tenir face à un forcené retranché</h3>
+<ul>
+<li>Forcené retranché : poser un <b>périmètre de sécurité</b>, arriver <b>sans précipitation</b>, renseigner le CIC, ne pas s’exposer inutilement.</li>
+<li>L’interpellation est confiée à la <b>FIPN</b> (force d’intervention de la police nationale), <b>sauf péril immédiat</b> justifiant une action des primo-intervenants.</li>
+</ul></article>
+<article id="c54">
+<h3><span class="n">54</span>PPI – Les facteurs de prise de décision (vs 10-2015)</h3>
+<ul>
+<li>Trois types de missions : sur <b>instructions</b>, sur <b>initiative</b> (observation, analyse, anticipation) et sur <b>réquisition</b> du public. Le <b>code de déontologie</b> fait obligation de répondre aux réquisitions du public.</li>
+<li>Méthode de raisonnement opérationnel (MRO) en 3 phases : <b>Analyse de la situation</b> (que se passe-t-il ?) → <b>Cadre juridique</b> (quel cadre légal ?) → <b>Tactique d’action</b> (comment intervenir ?).</li>
+<li>Analyse : pourquoi, quand, où, environnement, qui (rapport de force, mineur, connu, agressivité). Estimer le danger et peser bénéfices et risques, dans le respect du cadre légal et des règles déontologiques.</li>
+<li>Options tactiques : intervenir, <b>différer</b> ou se <b>replier</b>. Différer ou se replier ne signifie <b>pas</b> abandonner le terrain, mettre un terme à l’action ou renoncer à la mission : cela vise la sécurité des personnels et des tiers, et la réorganisation du dispositif.</li>
+<li>Le repli se fait de préférence en bon ordre, vers une zone reconnue et sécurisée (observation à <b>360°</b>), avec un lieu de repli annoncé et des itinéraires préservés.</li>
+<li>Toute intervention doit s’inscrire dans un cadre légal. Une arrestation illégale peut entraîner l’<b>annulation de la procédure</b> et des poursuites pénales et administratives. La notion de danger reste permanente.</li>
+</ul></article>
+<article id="c55">
+<h3><span class="n">55</span>PPI – Principes de levée de doute lors d’agressions armées</h3>
+<ul>
+<li>La levée de doute face à une agression armée vise à <b>confirmer ou infirmer la menace</b> sans s’exposer inutilement : observation à couvert, renseignement, non-précipitation.</li>
+<li>Ne pas se découvrir ; attendre les moyens adaptés ; partager un schéma d’action avant tout déplacement.</li>
+</ul></article>
+<article id="c56">
+<h3><span class="n">56</span>PPI – Intervention face à une agression armée à caractère meurtrier</h3>
+<ul>
+<li>Agression armée à caractère <b>meurtrier</b> (tuerie, attentat) : les primo-intervenants ont un rôle d’<b>arrêt de la tuerie</b> et de protection des victimes, selon les principes de progression du cours 58.</li>
+<li>Priorité : stopper l’auteur, informer, poser un périmètre, guider les renforts et les secours.</li>
+</ul></article>
+<article id="c57">
+<h3><span class="n">57</span>PPI – Intervention face à une agression armée à caractère crapuleux</h3>
+<ul>
+<li>Agression armée <b>crapuleuse</b> en cours (braquage) : ne pas bloquer les auteurs ni gêner leur départ tant que cela augmenterait le risque pour les otages ou les tiers.</li>
+<li>Le <b>tir sur un véhicule en fuite est proscrit</b>, sauf légitime défense.</li>
+</ul></article>
+<article id="c58">
+<h3><span class="n">58</span>PPI – Progression face à une tuerie de masse (intervenants 1<sup>er</sup> niveau)</h3>
+<ul>
+<li>Les intervenants de 1<sup>er</sup> niveau progressent pour <b>aller au contact de l’auteur</b> et arrêter la tuerie, sans attendre les unités spécialisées s’il y a un péril immédiat.</li>
+<li>Progression couverte, communication permanente, non-dispersion de l’équipage, traitement des menaces dans l’ordre de priorité (auteur actif d’abord).</li>
+</ul></article>
+<article id="c59">
+<h3><span class="n">59</span>Annexe DPN-3.1 – Glossaire tactique « Attentats »</h3>
+<ul>
+<li>Glossaire du schéma national d’intervention (annexe DPN-3.1) : vocabulaire commun des dispositifs « attentats » (périmètre, point de repli, sas, commandement, primo-intervenants, FIPN, etc.).</li>
+<li>S’en tenir aux termes du glossaire pour les comptes rendus et les liaisons radio, afin d’éviter toute ambiguïté en situation dégradée.</li>
+</ul></article>
+<article id="c60">
+<h3><span class="n">60</span>Instruction DPN-3.1.3 (07/2017) – objet suspect, arme d’épaule, engin explosif</h3>
+<ul>
+<li>Objet <b>abandonné</b> : laissé sans surveillance ; on cherche le propriétaire (annonces, vidéoprotection). Géré par l’exploitant ou les primo-intervenants, <b>sans les démineurs</b>.</li>
+<li>Il devient <b>suspect</b> si le propriétaire n’est pas identifié ou en cas de doute sur le contenu → gestion par les <b>seuls démineurs</b>. La <b>levée de doute</b> leur est exclusive (un chien, un détecteur ou une vidéo ne la remplacent pas).</li>
+<li>Périmètre à couvert : <b>100 m</b> pour un objet, <b>200 m</b> pour un véhicule (circulation interdite).</li>
+</ul></article>
+</section>
+<section id="refus">
+<h2>Refus d’obtempérer et interception</h2>
+<article id="c61">
+<h3><span class="n">61</span>Instruction commune DGGN-PP-DGPN 16/05/2025 – refus d’obtempérer et véhicules en fuite</h3>
+<ul>
+<li>Instruction commune du <b>16 mai 2025</b> (DGGN, PP, DGPN) : par principe, la poursuite est engagée (interception et interpellation), avec discernement.</li>
+<li>Le cadre d’emploi des armes sur un véhicule reste celui de la <b>légitime défense</b> et de l’<b>art. L. 435-1 CSI</b> ; pas de tir « pour arrêter le véhicule » hors ces conditions.</li>
+</ul></article>
+<article id="c62">
+<h3><span class="n">62</span>Fiche mémo – refus d’obtempérer et véhicules en fuite</h3>
+<ul>
+<li>Refus d’obtempérer (<b>art. L. 233-1 du code de la route</b>) : conducteur qui n’obéit pas à une sommation de s’arrêter d’un agent portant des <b>insignes apparents</b> → <b>2 ans</b> d’emprisonnement et <b>15 000 €</b> d’amende.</li>
+<li>Circonstance aggravante (<b>art. L. 233-1-1</b>) : autrui exposé directement à un risque de mort ou d’infirmité permanente.</li>
+<li>Appliquer la <b>méthode de raisonnement opérationnel</b> : analyser (vitesse, trafic, passagers, nature du délit), vérifier le cadre légal, puis décider de poursuivre, intercepter ou interrompre.</li>
+</ul></article>
+<article id="c63">
+<h3><span class="n">63</span>Instruction DGPN 2008 – dispositifs d’interception de véhicules (DIVA)</h3>
+<ul>
+<li>Les herses et autres <b>DIVA</b> s’emploient selon l’instruction DGPN de <b>2008</b> : cadre juridique, autorisation, choix du lieu (visibilité, échappatoires, tiers) et coordination de l’équipage.</li>
+<li>L’emploi doit rester proportionné ; informer le CIC ; sécuriser les abords avant et après le déploiement.</li>
+</ul></article>
+</section>
+<section id="aps">
+<h2>Activités physiques</h2>
+<article id="c64">
+<h3><span class="n">64</span>Instruction DGPN n°21/2025 – activités physiques et sportives (FSPN)</h3>
+<ul>
+<li>Instruction n° <b>21/2025</b> relative aux activités physiques et sportives dans le cadre de la <b>Fédération sportive de la police nationale (FSPN)</b>.</li>
+<li>La pratique s’inscrit dans le maintien de la condition physique des agents, selon les règles et autorisations prévues par l’instruction (encadrement, service, sécurité).</li>
+</ul></article>
+</section><p class="src">Sources : les 64 cours du programme (DocPro et guide du temps de travail, APORTT et circulaire du 26/01/2022, SNMO, AFI et armes, interpellation, intervention, refus d’obtempérer, instruction APS n°21/2025). Points repris des fiches de révisions détaillées, elles-mêmes tirées de tes cours.</p><button id="top" aria-label="Haut de page">↑</button><div id="mkbadge"><img alt="" src="data:image/png;base64,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">Made by Damien M. &amp; Grok Bot</div><script>(function(){var t=document.getElementById("top");window.addEventListener("scroll",function(){t.style.display=scrollY>400?"block":"none"});t.onclick=function(){scrollTo({top:0,behavior:"smooth"})};})();</script>
+<script data-goatcounter="https://sanarkor.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script src="desktop.js?v=20261116a"></script>
+<script src="lecture.js?v=20261115a"></script>
+</body></html>

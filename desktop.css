@@ -2,7 +2,7 @@
 @media (min-width:1024px){
 html.dk{--sb:248px;--navy:#0b1f4d;--red:#a3312a;--bg:#f5f7fb;--W:900px;--gut:max(40px,calc((100vw - var(--sb) - var(--W)) / 2));scroll-padding-top:24px}
 html.dk body{max-width:none!important;margin:0!important;box-sizing:border-box;min-height:100vh;padding:28px var(--gut) 72px calc(var(--sb) + var(--gut))!important;background:var(--bg)!important;font-size:16.5px;line-height:1.5}
-html.dk-index,html.dk-revdet,html.dk-rev,html.dk-scores{--W:1180px}
+html.dk-index,html.dk-revdet,html.dk-rev,html.dk-scores,html.dk-express{--W:1180px}
 html.dk-card{--W:860px}
 html.dk-fiche{--W:1080px}
 /* ---- barre latérale ---- */
@@ -148,7 +148,7 @@ html.dk-index #home .lec-rand-new{position:absolute;right:6px;bottom:3px;color:#
 #dk-side>.dk-brand,#dk-side>.dk-cd,#dk-side>.dk-links,#dk-side>.dk-help{width:calc(248px - 24px);box-sizing:border-box;flex:none}
 #dk-side .dk-brand>div,#dk-side>.dk-cd,#dk-side>.dk-links,#dk-side>.dk-help{opacity:1;visibility:visible}
 html.dk.dk-col{--sb:72px;--W:1076px}
-html.dk-col.dk-index,html.dk-col.dk-revdet,html.dk-col.dk-rev,html.dk-col.dk-scores{--W:1356px}
+html.dk-col.dk-index,html.dk-col.dk-revdet,html.dk-col.dk-rev,html.dk-col.dk-scores,html.dk-col.dk-express{--W:1356px}
 html.dk-col.dk-card{--W:1036px}
 html.dk-col.dk-fiche{--W:1256px}
 html.dk-col #dk-side{overflow:hidden}
@@ -166,4 +166,25 @@ html.dk-anim #dk-sign,html.dk-anim #lec-bar{transition:left .25s ease}
 @media (min-width:1024px){
 html.dk-col.dk-rev details,html.dk-col.dk-revdet details{max-width:1156px}
 html.dk-col.dk-revdet details.grp{max-width:none}
+}
+
+/* Fiche express (PC) : sommaire collant, tuile d’accueil */
+@media (min-width:1024px){
+html.dk-index #home #dk-express{text-decoration:none;color:#fff}html.dk-index #home #dk-express small{display:none}
+html.dk-express .toc a.dk-act{background:var(--navy);color:#fff;border-color:var(--navy)}
+html.dk-express .toc{font-size:.84em;padding:8px 8px 10px!important}
+html.dk-express .toc .tg{margin:5px 0 1px;line-height:1.25}
+html.dk-express .toc .nums{gap:2px;margin:0 0 2px}
+html.dk-express .toc .nums a{padding:1px 4px;min-width:1.55em;font-size:.92em}
+
+html.dk-express article h3{margin-top:0}
+}
+@media (min-width:1024px) and (max-width:1279px){
+html.dk-express body>.toc{position:sticky;top:0;z-index:40;margin:0 0 16px!important;box-shadow:0 4px 16px #0002}
+}
+@media (min-width:1280px){
+html.dk-express body{display:grid!important;grid-template-columns:200px minmax(0,1fr);column-gap:28px;align-items:start;align-content:start}
+html.dk-express body>*{grid-column:2}
+html.dk-express body>.toc{grid-column:1;grid-row:1 / span 400;position:sticky;top:16px;align-self:start;width:200px;box-sizing:border-box;max-height:calc(100vh - 72px);overflow:auto;margin:0!important;background:#fff;border-radius:0;box-shadow:0 1px 5px #0002;padding:12px 10px 14px}
+html.dk-express body>#dk-side,html.dk-express body>#mkbadge,html.dk-express body>#top,html.dk-express body>#dk-helpov,html.dk-express body>#dk-sign{grid-column:auto}
 }
