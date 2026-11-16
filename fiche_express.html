@@ -57,8 +57,9 @@ h3 .fx-cplay{margin-left:0;align-self:center}
   .toc-body{display:block!important}
 }
 @media (max-width:1023px){
-  html,body{max-width:100%;overflow-x:hidden}
-  body{padding:12px 10px 170px!important;font-size:16px;line-height:1.45}
+  /* overflow-x:hidden sur html+body bloque le scroll vertical sur iOS/Chrome mobile. */
+  html{max-width:100%;height:auto;min-height:0;overflow-x:clip;overflow-y:scroll;overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch}
+  body{max-width:100%;height:auto;overflow:visible;overscroll-behavior-y:contain;touch-action:pan-y;padding:12px 10px 170px!important;font-size:16px;line-height:1.45}
   h1{font-size:1.22em;margin:6px 0 4px}
   h2{font-size:1.05em;margin:16px 0 8px;padding-right:36px}
   h3{font-size:.95em;flex-wrap:wrap;gap:6px;align-items:flex-start}
@@ -92,7 +93,7 @@ h3 .fx-cplay{margin-left:0;align-self:center}
   #fx-player #fx-time{font:600 11.5px/1 system-ui,sans-serif;opacity:.85;white-space:nowrap}
   #fx-player label{display:flex;align-items:center;gap:4px;font:600 11px/1 system-ui,sans-serif;opacity:.95}
   #fx-player select{height:36px;border:0;background:#fff;color:#0b1f4d;font:600 13px system-ui,sans-serif;padding:0 6px}
-  #fx-themes{display:flex;gap:4px;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:6px;padding-bottom:2px}
+  #fx-themes{display:flex;gap:4px;overflow-x:auto;-webkit-overflow-scrolling:touch;touch-action:pan-x pan-y;margin-top:6px;padding-bottom:2px}
   .fx-tbtn{flex:none;display:flex;flex-direction:column;align-items:flex-start;gap:1px;min-width:7.2em;max-width:9.5em;padding:6px 8px!important;min-height:44px!important;background:#16356f!important;text-align:left}
   .fx-tbtn[aria-pressed="true"]{background:#a3312a!important}
   .fx-tn{font-size:10px;opacity:.8}
