@@ -478,12 +478,12 @@ def parse_fiche():
 def theme_script(theme: dict) -> list[dict]:
     """List of {kind, text} segments that will be spoken then concatenated."""
     segs = []
-    segs.append({"kind": "theme", "text": spoken(f"Thème. {theme['title']}.", is_title=True)})
+    segs.append({"kind": "theme", "text": spoken(f"Thème. {theme['title']}.", is_title=True), "course": None})
     for c in theme["courses"]:
-        segs.append({"kind": "course", "text": spoken(f"Cours {c['n']}. {c['title']}.", is_title=True)})
+        segs.append({"kind": "course", "text": spoken(f"Cours {c['n']}. {c['title']}.", is_title=True), "course": c["n"], "cid": c["id"], "ctitle": c["title"]})
         for p in c["points"]:
-            t = p if p.endswith((".", "?", "!", "…")) else p + "."
-            segs.append({"kind": "point", "text": spoken(t)})
+            pt = p if p.endswith((".", "?", "!", "…")) else p + "."
+            segs.append({"kind": "point", "text": spoken(pt), "course": c["n"], "cid": c["id"]})
     return segs
 
 
@@ -660,14 +660,71 @@ def duration(path: Path) -> float:
     return float(r.stdout.strip())
 
 
-def write_manifest(info):
+def concat_parts(parts, dest: Path):
+    lst = dest.with_suffix(".concat.txt")
+    lines = []
+    for p in parts:
+        if not p.exists() or p.stat().st_size < 200:
+            raise RuntimeError(f"clip manquant {p}")
+        lines.append(f"file '{p}'")
+    lst.write_text("\n".join(lines))
+    ff("-f", "concat", "-safe", "0", "-i", str(lst),
+       "-c:a", "libmp3lame", "-b:a", BITRATE, "-ac", "1", "-ar", AR,
+       "-write_xing", "1", str(dest))
+    lst.unlink(missing_ok=True)
+    return duration(dest)
+
+
+def concat_courses(themes, manifest_segs):
+    """Assemble un MP3 par cours à partir des clips déjà générés (sans le titre de thème)."""
+    out = []
+    for theme, th in zip(themes, manifest_segs):
+        groups = {}
+        order = []
+        chars = {}
+        for s in th["segs"]:
+            n = s.get("course")
+            if n is None:
+                continue
+            if n not in groups:
+                groups[n] = []
+                order.append(n)
+                chars[n] = 0
+            groups[n].append(s)
+            chars[n] += len(s["text"])
+        for n in order:
+            segs = groups[n]
+            parts = []
+            for i, s in enumerate(segs):
+                parts.append(RAW / f"{s['hash']}.mp3")
+                if i + 1 < len(segs):
+                    parts.append(RAW / "sil_point.mp3")
+            dest = OUT / f"c{n:02d}.mp3"
+            dur = concat_parts(parts, dest)
+            cobj = next(c for c in theme["courses"] if c["n"] == n)
+            info = {
+                "id": cobj["id"],
+                "n": n,
+                "theme": theme["id"],
+                "title": cobj["title"],
+                "file": f"lecture_audio/fiche_express/c{n:02d}.mp3",
+                "duration": round(dur, 2),
+                "chars": chars[n],
+                "segments": len(segs),
+            }
+            out.append(info)
+            print(f"  c{n:02d}.mp3: {dur:.1f}s  {dest.stat().st_size//1024} Ko  ({chars[n]} car.)", flush=True)
+    return out
+
+
+def write_manifest(info, courses=None):
     short = short_label("")
     out = {
         "voice": VOICE,
         "rate": RATE,
         "pitch": PITCH,
         "volume": VOLUME,
-        "version": "20261116c",
+        "version": "20261116d",
         "themes": [
             {
                 "id": t["id"],
@@ -685,8 +742,12 @@ def write_manifest(info):
         t["segments"] = len(raw["segs"])
         t["chars"] = raw["chars"]
     out["total_duration"] = round(sum(t["duration"] for t in out["themes"]), 2)
+    if courses:
+        out["courses"] = courses
+        out["courses_duration"] = round(sum(c["duration"] for c in courses), 2)
+        print("Cours", len(courses), "durée cumulée", f"{out['courses_duration']/60:.1f}", "min")
     (OUT / "manifest.json").write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print("Total", out["total_duration"], "s =", f"{out['total_duration']/60:.1f}", "min")
+    print("Total thèmes", out["total_duration"], "s =", f"{out['total_duration']/60:.1f}", "min")
     return out
 
 
@@ -718,7 +779,8 @@ def main():
     if args.texts:
         return
     info = asyncio.run(synthesize(segs, args.concurrency))
-    man = write_manifest(info)
+    courses = concat_courses(themes, info)
+    man = write_manifest(info, courses)
     if not sanity(info):
         sys.exit(3)
     print("OK", OUT)

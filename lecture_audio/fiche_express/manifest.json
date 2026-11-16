@@ -3,7 +3,7 @@
   "rate": "+18%",
   "pitch": "+0Hz",
   "volume": "+0%",
-  "version": "20261116c",
+  "version": "20261116d",
   "themes": [
     {
       "id": "tt",
@@ -86,5 +86,648 @@
       "chars": 439
     }
   ],
-  "total_duration": 2142.71
+  "total_duration": 2142.71,
+  "courses": [
+    {
+      "id": "c01",
+      "n": 1,
+      "theme": "tt",
+      "title": "DocPro – Gestion du temps de travail (avril 2026)",
+      "file": "lecture_audio/fiche_express/c01.mp3",
+      "duration": 51.46,
+      "chars": 1024,
+      "segments": 6
+    },
+    {
+      "id": "c02",
+      "n": 2,
+      "theme": "tt",
+      "title": "Guide des principales règles de gestion du temps de travail (ARTT, CET…)",
+      "file": "lecture_audio/fiche_express/c02.mp3",
+      "duration": 48.79,
+      "chars": 887,
+      "segments": 5
+    },
+    {
+      "id": "c03",
+      "n": 3,
+      "theme": "tt",
+      "title": "Présentation de l’APORTT (diaporama)",
+      "file": "lecture_audio/fiche_express/c03.mp3",
+      "duration": 28.22,
+      "chars": 469,
+      "segments": 5
+    },
+    {
+      "id": "c04",
+      "n": 4,
+      "theme": "tt",
+      "title": "L’APORTT en bref – Bilan 2020 (fiches 1 à 15)",
+      "file": "lecture_audio/fiche_express/c04.mp3",
+      "duration": 24.84,
+      "chars": 445,
+      "segments": 3
+    },
+    {
+      "id": "c05",
+      "n": 5,
+      "theme": "tt",
+      "title": "Circulaire DGPN du 26/01/2022 – plan prévisionnel annuel des départs en congés",
+      "file": "lecture_audio/fiche_express/c05.mp3",
+      "duration": 76.1,
+      "chars": 1520,
+      "segments": 7
+    },
+    {
+      "id": "c06",
+      "n": 6,
+      "theme": "tt",
+      "title": "APORTT Fiche 2 – Le temps de travail",
+      "file": "lecture_audio/fiche_express/c06.mp3",
+      "duration": 26.98,
+      "chars": 617,
+      "segments": 4
+    },
+    {
+      "id": "c07",
+      "n": 7,
+      "theme": "tt",
+      "title": "APORTT Fiche 3 – La durée du travail",
+      "file": "lecture_audio/fiche_express/c07.mp3",
+      "duration": 43.56,
+      "chars": 845,
+      "segments": 6
+    },
+    {
+      "id": "c08",
+      "n": 8,
+      "theme": "tt",
+      "title": "APORTT Fiche 4 – Le travail de nuit",
+      "file": "lecture_audio/fiche_express/c08.mp3",
+      "duration": 27.62,
+      "chars": 561,
+      "segments": 5
+    },
+    {
+      "id": "c09",
+      "n": 9,
+      "theme": "tt",
+      "title": "APORTT Fiche 5 – Les repos : principes généraux",
+      "file": "lecture_audio/fiche_express/c09.mp3",
+      "duration": 41.62,
+      "chars": 748,
+      "segments": 6
+    },
+    {
+      "id": "c10",
+      "n": 10,
+      "theme": "tt",
+      "title": "APORTT Fiche 7 – Les régimes cycliques",
+      "file": "lecture_audio/fiche_express/c10.mp3",
+      "duration": 54.96,
+      "chars": 919,
+      "segments": 8
+    },
+    {
+      "id": "c11",
+      "n": 11,
+      "theme": "tt",
+      "title": "APORTT Fiche 8 – Les congés : généralités",
+      "file": "lecture_audio/fiche_express/c11.mp3",
+      "duration": 35.5,
+      "chars": 655,
+      "segments": 5
+    },
+    {
+      "id": "c12",
+      "n": 12,
+      "theme": "tt",
+      "title": "APORTT Fiche 9 – Les différents types de congés (1)",
+      "file": "lecture_audio/fiche_express/c12.mp3",
+      "duration": 22.3,
+      "chars": 355,
+      "segments": 4
+    },
+    {
+      "id": "c13",
+      "n": 13,
+      "theme": "tt",
+      "title": "APORTT Fiche 10 – Les différents types de congés (2)",
+      "file": "lecture_audio/fiche_express/c13.mp3",
+      "duration": 57.79,
+      "chars": 950,
+      "segments": 5
+    },
+    {
+      "id": "c14",
+      "n": 14,
+      "theme": "tt",
+      "title": "APORTT Fiche 11 – Les services supplémentaires",
+      "file": "lecture_audio/fiche_express/c14.mp3",
+      "duration": 15.36,
+      "chars": 269,
+      "segments": 3
+    },
+    {
+      "id": "c15",
+      "n": 15,
+      "theme": "tt",
+      "title": "APORTT Fiche 12 – Services supplémentaires (1) : permanence et astreinte",
+      "file": "lecture_audio/fiche_express/c15.mp3",
+      "duration": 57.79,
+      "chars": 1086,
+      "segments": 5
+    },
+    {
+      "id": "c16",
+      "n": 16,
+      "theme": "tt",
+      "title": "APORTT Fiche 13 – Services supplémentaires (2) : dépassement, rappel, report",
+      "file": "lecture_audio/fiche_express/c16.mp3",
+      "duration": 62.74,
+      "chars": 1121,
+      "segments": 7
+    },
+    {
+      "id": "c17",
+      "n": 17,
+      "theme": "tt",
+      "title": "APORTT Fiche 14 – Dérogations aux temps de travail et de repos",
+      "file": "lecture_audio/fiche_express/c17.mp3",
+      "duration": 32.74,
+      "chars": 594,
+      "segments": 4
+    },
+    {
+      "id": "c18",
+      "n": 18,
+      "theme": "tt",
+      "title": "APORTT Fiche 15 – Restitution des repos manqués en cadre dérogatoire",
+      "file": "lecture_audio/fiche_express/c18.mp3",
+      "duration": 36.82,
+      "chars": 732,
+      "segments": 5
+    },
+    {
+      "id": "c19",
+      "n": 19,
+      "theme": "mo",
+      "title": "Schéma national du maintien de l’ordre (déc. 2021)",
+      "file": "lecture_audio/fiche_express/c19.mp3",
+      "duration": 95.28,
+      "chars": 1899,
+      "segments": 10
+    },
+    {
+      "id": "c20",
+      "n": 20,
+      "theme": "mo",
+      "title": "Les éléments du maintien de l’ordre (fiche)",
+      "file": "lecture_audio/fiche_express/c20.mp3",
+      "duration": 23.81,
+      "chars": 434,
+      "segments": 4
+    },
+    {
+      "id": "c21",
+      "n": 21,
+      "theme": "mo",
+      "title": "Usage des AFI en maintien de l’ordre (dispersion d’attroupement)",
+      "file": "lecture_audio/fiche_express/c21.mp3",
+      "duration": 24.46,
+      "chars": 462,
+      "segments": 4
+    },
+    {
+      "id": "c22",
+      "n": 22,
+      "theme": "mo",
+      "title": "Cadres légaux d’usage des armes de force intermédiaire",
+      "file": "lecture_audio/fiche_express/c22.mp3",
+      "duration": 34.56,
+      "chars": 683,
+      "segments": 4
+    },
+    {
+      "id": "c23",
+      "n": 23,
+      "theme": "mo",
+      "title": "Usage des AFI en violences urbaines",
+      "file": "lecture_audio/fiche_express/c23.mp3",
+      "duration": 22.99,
+      "chars": 466,
+      "segments": 4
+    },
+    {
+      "id": "c24",
+      "n": 24,
+      "theme": "mo",
+      "title": "Guide opérationnel des violences urbaines (PN, sept. 2025)",
+      "file": "lecture_audio/fiche_express/c24.mp3",
+      "duration": 44.95,
+      "chars": 807,
+      "segments": 5
+    },
+    {
+      "id": "c25",
+      "n": 25,
+      "theme": "armes",
+      "title": "Instruction DGPN n°3/2024 – arme individuelle ou de service",
+      "file": "lecture_audio/fiche_express/c25.mp3",
+      "duration": 75.58,
+      "chars": 1431,
+      "segments": 8
+    },
+    {
+      "id": "c26",
+      "n": 26,
+      "theme": "armes",
+      "title": "Instruction DGPN/DGGN du 2/08/2017 – usage et emploi des AFI",
+      "file": "lecture_audio/fiche_express/c26.mp3",
+      "duration": 66.94,
+      "chars": 1145,
+      "segments": 6
+    },
+    {
+      "id": "c27",
+      "n": 27,
+      "theme": "armes",
+      "title": "Instruction DGPN n°15/2025 – AFI des policiers adjoints et réservistes",
+      "file": "lecture_audio/fiche_express/c27.mp3",
+      "duration": 20.54,
+      "chars": 422,
+      "segments": 3
+    },
+    {
+      "id": "c28",
+      "n": 28,
+      "theme": "armes",
+      "title": "Les AFI et instructions spécifiques (tableau habilitation / recyclage)",
+      "file": "lecture_audio/fiche_express/c28.mp3",
+      "duration": 93.96,
+      "chars": 1430,
+      "segments": 10
+    },
+    {
+      "id": "c29",
+      "n": 29,
+      "theme": "armes",
+      "title": "Instruction DPN-1.9.4.1 – emploi du pistolet à impulsions électriques (PIE)",
+      "file": "lecture_audio/fiche_express/c29.mp3",
+      "duration": 31.92,
+      "chars": 532,
+      "segments": 4
+    },
+    {
+      "id": "c30",
+      "n": 30,
+      "theme": "armes",
+      "title": "Instruction DPN-1.9.2 (13/03/2017) – pistolets mitrailleurs 9 mm",
+      "file": "lecture_audio/fiche_express/c30.mp3",
+      "duration": 27.77,
+      "chars": 458,
+      "segments": 4
+    },
+    {
+      "id": "c31",
+      "n": 31,
+      "theme": "armes",
+      "title": "Instruction (mars 2016) – fusil d’assaut HK G36 5,56 mm",
+      "file": "lecture_audio/fiche_express/c31.mp3",
+      "duration": 21.98,
+      "chars": 331,
+      "segments": 3
+    },
+    {
+      "id": "c32",
+      "n": 32,
+      "theme": "armes",
+      "title": "Instruction DAPN 2004/40 – produits incapacitants en milieu fermé",
+      "file": "lecture_audio/fiche_express/c32.mp3",
+      "duration": 24.46,
+      "chars": 466,
+      "segments": 3
+    },
+    {
+      "id": "c33",
+      "n": 33,
+      "theme": "armes",
+      "title": "Télégramme DGPN 2020 – LBD 40 : binôme superviseur-tireur en MO",
+      "file": "lecture_audio/fiche_express/c33.mp3",
+      "duration": 18.41,
+      "chars": 337,
+      "segments": 3
+    },
+    {
+      "id": "c34",
+      "n": 34,
+      "theme": "armes",
+      "title": "Télégramme DGPN (L. Laugier) – nouvelles grenades à main à effet sonore",
+      "file": "lecture_audio/fiche_express/c34.mp3",
+      "duration": 55.08,
+      "chars": 1077,
+      "segments": 6
+    },
+    {
+      "id": "c35",
+      "n": 35,
+      "theme": "armes",
+      "title": "Télégramme DGPN 05/09/2025 – AFI (aérosol incapacitant / décontamination)",
+      "file": "lecture_audio/fiche_express/c35.mp3",
+      "duration": 21.53,
+      "chars": 374,
+      "segments": 3
+    },
+    {
+      "id": "c36",
+      "n": 36,
+      "theme": "armes",
+      "title": "Règles de sécurité – procédure d’emploi du pistolet automatique (affiche)",
+      "file": "lecture_audio/fiche_express/c36.mp3",
+      "duration": 20.04,
+      "chars": 431,
+      "segments": 3
+    },
+    {
+      "id": "c37",
+      "n": 37,
+      "theme": "armes",
+      "title": "Règles générales de sécurité – procédures d’emploi PA Glock 17/26",
+      "file": "lecture_audio/fiche_express/c37.mp3",
+      "duration": 20.64,
+      "chars": 373,
+      "segments": 3
+    },
+    {
+      "id": "c38",
+      "n": 38,
+      "theme": "armes",
+      "title": "Déclaration préalable d’intention de tir sportif avec l’arme individuelle",
+      "file": "lecture_audio/fiche_express/c38.mp3",
+      "duration": 15.74,
+      "chars": 324,
+      "segments": 3
+    },
+    {
+      "id": "c39",
+      "n": 39,
+      "theme": "armes",
+      "title": "Instruction DGPN 19/12/2011 – Traitement de suivi de l’usage des armes (TSUA)",
+      "file": "lecture_audio/fiche_express/c39.mp3",
+      "duration": 21.14,
+      "chars": 387,
+      "segments": 3
+    },
+    {
+      "id": "c40",
+      "n": 40,
+      "theme": "armes",
+      "title": "FAQ TSUA (suivi de l’usage des armes)",
+      "file": "lecture_audio/fiche_express/c40.mp3",
+      "duration": 17.74,
+      "chars": 278,
+      "segments": 3
+    },
+    {
+      "id": "c41",
+      "n": 41,
+      "theme": "interp",
+      "title": "Instruction DGPN/DGGN – palpations de sécurité (R. 434-16 CSI)",
+      "file": "lecture_audio/fiche_express/c41.mp3",
+      "duration": 20.74,
+      "chars": 350,
+      "segments": 3
+    },
+    {
+      "id": "c42",
+      "n": 42,
+      "theme": "interp",
+      "title": "TDI – La palpation de sécurité (vs 06-2021)",
+      "file": "lecture_audio/fiche_express/c42.mp3",
+      "duration": 16.97,
+      "chars": 295,
+      "segments": 3
+    },
+    {
+      "id": "c43",
+      "n": 43,
+      "theme": "interp",
+      "title": "TDI – Menottage (vs 01-2022)",
+      "file": "lecture_audio/fiche_express/c43.mp3",
+      "duration": 25.92,
+      "chars": 471,
+      "segments": 4
+    },
+    {
+      "id": "c44",
+      "n": 44,
+      "theme": "interp",
+      "title": "Note DGPN 13/09/2004 – droits et devoirs relatifs à l’utilisation des menottes",
+      "file": "lecture_audio/fiche_express/c44.mp3",
+      "duration": 20.23,
+      "chars": 422,
+      "segments": 3
+    },
+    {
+      "id": "c45",
+      "n": 45,
+      "theme": "interp",
+      "title": "TI – Les placements (vs 12-2022)",
+      "file": "lecture_audio/fiche_express/c45.mp3",
+      "duration": 17.64,
+      "chars": 322,
+      "segments": 3
+    },
+    {
+      "id": "c46",
+      "n": 46,
+      "theme": "interp",
+      "title": "TI – Protection, liaison, interpellation (PLI)",
+      "file": "lecture_audio/fiche_express/c46.mp3",
+      "duration": 17.69,
+      "chars": 306,
+      "segments": 3
+    },
+    {
+      "id": "c47",
+      "n": 47,
+      "theme": "interp",
+      "title": "TI – Points clés du signalement",
+      "file": "lecture_audio/fiche_express/c47.mp3",
+      "duration": 23.66,
+      "chars": 416,
+      "segments": 3
+    },
+    {
+      "id": "c48",
+      "n": 48,
+      "theme": "lieux",
+      "title": "TI FT n°11 – intervention selon les lieux (données sociologiques / topographiques)",
+      "file": "lecture_audio/fiche_express/c48.mp3",
+      "duration": 21.91,
+      "chars": 399,
+      "segments": 3
+    },
+    {
+      "id": "c49",
+      "n": 49,
+      "theme": "lieux",
+      "title": "TI FT n°20 – interventions dans les lieux publics",
+      "file": "lecture_audio/fiche_express/c49.mp3",
+      "duration": 15.58,
+      "chars": 271,
+      "segments": 3
+    },
+    {
+      "id": "c50",
+      "n": 50,
+      "theme": "lieux",
+      "title": "TI – Conflits dans les lieux privés",
+      "file": "lecture_audio/fiche_express/c50.mp3",
+      "duration": 18.94,
+      "chars": 351,
+      "segments": 3
+    },
+    {
+      "id": "c51",
+      "n": 51,
+      "theme": "lieux",
+      "title": "TI FT n°32 – Intervention sur un cambriolage en cours",
+      "file": "lecture_audio/fiche_express/c51.mp3",
+      "duration": 17.86,
+      "chars": 336,
+      "segments": 3
+    },
+    {
+      "id": "c52",
+      "n": 52,
+      "theme": "lieux",
+      "title": "TI FT n°42 – Aspects pratiques de la perquisition",
+      "file": "lecture_audio/fiche_express/c52.mp3",
+      "duration": 20.47,
+      "chars": 383,
+      "segments": 3
+    },
+    {
+      "id": "c53",
+      "n": 53,
+      "theme": "att",
+      "title": "TI – Conduite à tenir face à un forcené retranché",
+      "file": "lecture_audio/fiche_express/c53.mp3",
+      "duration": 17.88,
+      "chars": 347,
+      "segments": 3
+    },
+    {
+      "id": "c54",
+      "n": 54,
+      "theme": "att",
+      "title": "PPI – Les facteurs de prise de décision (vs 10-2015)",
+      "file": "lecture_audio/fiche_express/c54.mp3",
+      "duration": 67.27,
+      "chars": 1300,
+      "segments": 7
+    },
+    {
+      "id": "c55",
+      "n": 55,
+      "theme": "att",
+      "title": "PPI – Principes de levée de doute lors d’agressions armées",
+      "file": "lecture_audio/fiche_express/c55.mp3",
+      "duration": 16.87,
+      "chars": 343,
+      "segments": 3
+    },
+    {
+      "id": "c56",
+      "n": 56,
+      "theme": "att",
+      "title": "PPI – Intervention face à une agression armée à caractère meurtrier",
+      "file": "lecture_audio/fiche_express/c56.mp3",
+      "duration": 19.34,
+      "chars": 368,
+      "segments": 3
+    },
+    {
+      "id": "c57",
+      "n": 57,
+      "theme": "att",
+      "title": "PPI – Intervention face à une agression armée à caractère crapuleux",
+      "file": "lecture_audio/fiche_express/c57.mp3",
+      "duration": 15.38,
+      "chars": 312,
+      "segments": 3
+    },
+    {
+      "id": "c58",
+      "n": 58,
+      "theme": "att",
+      "title": "PPI – Progression face à une tuerie de masse (intervenants 1er niveau)",
+      "file": "lecture_audio/fiche_express/c58.mp3",
+      "duration": 19.49,
+      "chars": 404,
+      "segments": 3
+    },
+    {
+      "id": "c59",
+      "n": 59,
+      "theme": "att",
+      "title": "Annexe DPN-3.1 – Glossaire tactique « Attentats »",
+      "file": "lecture_audio/fiche_express/c59.mp3",
+      "duration": 21.53,
+      "chars": 385,
+      "segments": 3
+    },
+    {
+      "id": "c60",
+      "n": 60,
+      "theme": "att",
+      "title": "Instruction DPN-3.1.3 (07/2017) – objet suspect, arme d’épaule, engin explosif",
+      "file": "lecture_audio/fiche_express/c60.mp3",
+      "duration": 31.37,
+      "chars": 588,
+      "segments": 4
+    },
+    {
+      "id": "c61",
+      "n": 61,
+      "theme": "refus",
+      "title": "Instruction commune DGGN-PP-DGPN 16/05/2025 – refus d’obtempérer et véhicules en fuite",
+      "file": "lecture_audio/fiche_express/c61.mp3",
+      "duration": 23.95,
+      "chars": 431,
+      "segments": 3
+    },
+    {
+      "id": "c62",
+      "n": 62,
+      "theme": "refus",
+      "title": "Fiche mémo – refus d’obtempérer et véhicules en fuite",
+      "file": "lecture_audio/fiche_express/c62.mp3",
+      "duration": 30.34,
+      "chars": 598,
+      "segments": 4
+    },
+    {
+      "id": "c63",
+      "n": 63,
+      "theme": "refus",
+      "title": "Instruction DGPN 2008 – dispositifs d’interception de véhicules (DIVA)",
+      "file": "lecture_audio/fiche_express/c63.mp3",
+      "duration": 21.65,
+      "chars": 383,
+      "segments": 3
+    },
+    {
+      "id": "c64",
+      "n": 64,
+      "theme": "aps",
+      "title": "Instruction DGPN n°21/2025 – activités physiques et sportives (FSPN)",
+      "file": "lecture_audio/fiche_express/c64.mp3",
+      "duration": 22.18,
+      "chars": 412,
+      "segments": 3
+    }
+  ],
+  "courses_duration": 2089.57
 }
