@@ -1,6 +1,6 @@
 /* Lecteur de la fiche express : MP3 Vivienne, PC et smartphone. */
 (function(){
-var D=document, KEY="qcmbc:ficheExpressRate", VER="20261116e";
+var D=document, KEY="qcmbc:ficheExpressRate", VER="20261116f";
 var RATES=["0.75","1","1.25","1.5"];
 var MAN="lecture_audio/fiche_express/manifest.json?v="+VER;
 var st={themes:[],courses:[],item:null,queue:[],qi:-1,origin:null,all:false,mode:"idle",rate:"1"};

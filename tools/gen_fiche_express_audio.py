@@ -724,7 +724,7 @@ def write_manifest(info, courses=None):
         "rate": RATE,
         "pitch": PITCH,
         "volume": VOLUME,
-        "version": "20261116d",
+        "version": "20261116f",
         "themes": [
             {
                 "id": t["id"],
