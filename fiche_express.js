@@ -1,11 +1,11 @@
 /* Lecteur de la fiche express : MP3 Vivienne, PC et smartphone. */
 (function(){
-var D=document, KEY="qcmbc:ficheExpressRate", VER="20261116f";
+var D=document, KEY="qcmbc:ficheExpressRate", VER="20261116g";
 var RATES=["0.75","1","1.25","1.5"];
 var MAN="lecture_audio/fiche_express/manifest.json?v="+VER;
 var st={themes:[],courses:[],item:null,queue:[],qi:-1,origin:null,all:false,mode:"idle",rate:"1"};
 var ui={};
-var audio=null;
+var audio=null,pre=null;
 
 function $(s,r){return (r||D).querySelector(s);}
 function $$(s,r){return Array.prototype.slice.call((r||D).querySelectorAll(s));}
@@ -35,6 +35,39 @@ function getAudio(){
     st.mode="idle";updBtns();
   });
   return audio;
+}
+function sameSrc(el,file){
+  if(!el||!el.src||!file)return false;
+  try{return el.src.indexOf(file)>=0;}catch(e){return false;}
+}
+function preloadNext(){
+  var nx=st.queue[st.qi+1];
+  if(!nx||!nx.file)return;
+  try{
+    if(!pre){pre=new Audio();pre.preload="auto";pre.setAttribute("playsinline","true");}
+    if(!sameSrc(pre,nx.file)){pre.src=srcOf(nx.file);try{pre.load();}catch(e2){}}
+  }catch(e){}
+}
+function mediaMeta(){
+  if(!("mediaSession" in navigator))return;
+  try{
+    navigator.mediaSession.metadata=new MediaMetadata({
+      title:labelOf(st.item)||"Fiche express",
+      artist:"QCM SUEP B/C",
+      album:"Fiche express"
+    });
+    navigator.mediaSession.playbackState=st.mode==="playing"?"playing":(st.mode==="paused"?"paused":"none");
+  }catch(e){}
+}
+function mediaInit(){
+  if(!("mediaSession" in navigator))return;
+  try{
+    navigator.mediaSession.setActionHandler("play",function(){if(st.mode==="paused")resume();else if(st.item)playItem(st.item,true);});
+    navigator.mediaSession.setActionHandler("pause",function(){pause();});
+    navigator.mediaSession.setActionHandler("stop",function(){stop();});
+    navigator.mediaSession.setActionHandler("nexttrack",function(){if(st.qi+1<st.queue.length)playQueueAt(st.qi+1,false);});
+    navigator.mediaSession.setActionHandler("previoustrack",function(){if(st.qi>0)playQueueAt(st.qi-1,false);});
+  }catch(e){}
 }
 function applyRate(){
   var a=getAudio(),r=parseFloat(st.rate)||1;
@@ -107,12 +140,13 @@ function playItem(item,resume){
   applyRate();
   highlight(item);
   updBtns();
+  try{a.setAttribute("playsinline","true");}catch(e){}
   var pr=a.play();
   if(pr&&pr.catch)pr.catch(function(err){
-    if(err&&err.name==="NotAllowedError"){st.mode="paused";updBtns();}
+    if(err&&err.name==="NotAllowedError"){st.mode="paused";updBtns();mediaMeta();}
   });
-  var nx=st.queue[st.qi+1];
-  if(nx){try{fetch(srcOf(nx.file)).catch(function(){});}catch(e){}}
+  preloadNext();
+  mediaMeta();
 }
 function asCourse(c){
   return {type:"course",id:c.id,n:c.n,title:c.title,file:c.file,duration:c.duration,theme:c.theme};
@@ -137,7 +171,7 @@ function playQueueAt(i,resume){
 function pause(){
   if(st.mode!=="playing")return;
   try{getAudio().pause();}catch(e){}
-  st.mode="paused";updBtns();
+  st.mode="paused";updBtns();mediaMeta();
 }
 function resume(){
   if(st.mode!=="paused")return;
@@ -145,8 +179,8 @@ function resume(){
   if(a.src&&a.currentTime>0&&!a.ended){
     st.mode="playing";applyRate();
     var pr=a.play();
-    if(pr&&pr.catch)pr.catch(function(){st.mode="paused";});
-    updBtns();
+    if(pr&&pr.catch)pr.catch(function(){st.mode="paused";mediaMeta();});
+    updBtns();mediaMeta();
   }else if(st.queue.length&&st.qi>=0)playQueueAt(st.qi,false);
   else if(st.item)playItem(st.item,false);
 }
@@ -159,7 +193,8 @@ function toggle(){
 function stop(){
   st.mode="idle";st.all=false;st.item=null;st.queue=[];st.qi=-1;st.origin=null;
   if(audio){try{audio.pause();audio.removeAttribute("src");audio.load();}catch(e){}}
-  highlight(null);updBtns();
+  if(pre){try{pre.pause();pre.removeAttribute("src");}catch(e){}}
+  highlight(null);updBtns();mediaMeta();
 }
 function onEnded(){
   if(st.mode!=="playing")return;
@@ -272,8 +307,10 @@ function buildBar(){
     if(tg==="TEXTAREA"||tg==="SELECT"||(el&&el.isContentEditable)||(tg==="INPUT"&&el.type!=="checkbox"))return;
     if(e.key==="Escape"&&st.mode!=="idle"){e.preventDefault();stop();}
   });
-  window.addEventListener("pagehide",stop);
-  window.addEventListener("beforeunload",stop);
+  /* Ne pas arrêter ni mettre en pause sur pagehide / visibilitychange / blur :
+     la file MP3 (et le préchargement du fichier suivant) doit continuer hors focus,
+     y compris après Alt+Tab, un changement d'onglet ou l'écran du téléphone. */
+  mediaInit();
   updBtns();
 }
 function init(){
