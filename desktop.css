@@ -186,5 +186,5 @@ html.dk-express body>.toc{position:sticky;top:0;z-index:40;margin:0 0 16px!impor
 html.dk-express body{display:grid!important;grid-template-columns:200px minmax(0,1fr);column-gap:28px;align-items:start;align-content:start}
 html.dk-express body>*{grid-column:2}
 html.dk-express body>.toc{grid-column:1;grid-row:1 / span 400;position:sticky;top:16px;align-self:start;width:200px;box-sizing:border-box;max-height:calc(100vh - 72px);overflow:auto;margin:0!important;background:#fff;border-radius:0;box-shadow:0 1px 5px #0002;padding:12px 10px 14px}
-html.dk-express body>#dk-side,html.dk-express body>#mkbadge,html.dk-express body>#top,html.dk-express body>#dk-helpov,html.dk-express body>#dk-sign{grid-column:auto}
+html.dk-express body>#dk-side,html.dk-express body>#mkbadge,html.dk-express body>#top,html.dk-express body>#dk-helpov,html.dk-express body>#dk-sign,html.dk-express body>#fx-player{grid-column:auto}
 }

@@ -1,0 +1,89 @@
+{
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "rate": "-16%",
+  "pitch": "-4Hz",
+  "version": "20261116b",
+  "themes": [
+    {
+      "id": "tt",
+      "n": 1,
+      "title": "Temps de travail (APORTT)",
+      "short": "Temps de travail",
+      "file": "lecture_audio/fiche_express/01_tt.mp3",
+      "duration": 1074.38,
+      "segments": 94,
+      "chars": 13835
+    },
+    {
+      "id": "mo",
+      "n": 2,
+      "title": "Maintien de l’ordre et violences urbaines",
+      "short": "Maintien de l’ordre",
+      "file": "lecture_audio/fiche_express/02_mo.mp3",
+      "duration": 356.81,
+      "segments": 32,
+      "chars": 4800
+    },
+    {
+      "id": "armes",
+      "n": 3,
+      "title": "Armes, AFI, habilitation et TSUA",
+      "short": "Armes et AFI",
+      "file": "lecture_audio/fiche_express/03_armes.mp3",
+      "duration": 801.34,
+      "segments": 69,
+      "chars": 9838
+    },
+    {
+      "id": "interp",
+      "n": 4,
+      "title": "Interpellation, palpation, menottage et placements",
+      "short": "Interpellation",
+      "file": "lecture_audio/fiche_express/04_interp.mp3",
+      "duration": 214.25,
+      "segments": 23,
+      "chars": 2640
+    },
+    {
+      "id": "lieux",
+      "n": 5,
+      "title": "Interventions selon les lieux",
+      "short": "Lieux",
+      "file": "lecture_audio/fiche_express/05_lieux.mp3",
+      "duration": 141.65,
+      "segments": 16,
+      "chars": 1777
+    },
+    {
+      "id": "att",
+      "n": 6,
+      "title": "Forcené, agressions armées et attentats",
+      "short": "Forcené et attentats",
+      "file": "lecture_audio/fiche_express/06_att.mp3",
+      "duration": 307.39,
+      "segments": 30,
+      "chars": 4094
+    },
+    {
+      "id": "refus",
+      "n": 7,
+      "title": "Refus d’obtempérer et interception",
+      "short": "Refus d’obtempérer",
+      "file": "lecture_audio/fiche_express/07_refus.mp3",
+      "duration": 113.71,
+      "segments": 11,
+      "chars": 1454
+    },
+    {
+      "id": "aps",
+      "n": 8,
+      "title": "Activités physiques",
+      "short": "Activités physiques",
+      "file": "lecture_audio/fiche_express/08_aps.mp3",
+      "duration": 35.33,
+      "segments": 4,
+      "chars": 439
+    }
+  ],
+  "total_duration": 3044.86
+}
