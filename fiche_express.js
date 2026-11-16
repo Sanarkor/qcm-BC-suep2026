@@ -1,9 +1,9 @@
 /* Lecteur de la fiche express : MP3 Vivienne, PC et smartphone. */
 (function(){
-var D=document, KEY="qcmbc:ficheExpressRate", VER="20261116d";
+var D=document, KEY="qcmbc:ficheExpressRate", VER="20261116e";
 var RATES=["0.75","1","1.25","1.5"];
 var MAN="lecture_audio/fiche_express/manifest.json?v="+VER;
-var st={themes:[],courses:[],item:null,all:false,mode:"idle",rate:"1"};
+var st={themes:[],courses:[],item:null,queue:[],qi:-1,origin:null,all:false,mode:"idle",rate:"1"};
 var ui={};
 var audio=null;
 
@@ -29,6 +29,7 @@ function getAudio(){
   audio.addEventListener("loadedmetadata",updTime);
   audio.addEventListener("error",function(){
     if(st.mode!=="playing")return;
+    if(st.qi+1<st.queue.length){playQueueAt(st.qi+1,false);return;}
     ui.msg.textContent="Lecture indisponible pour cet extrait.";
     ui.msg.hidden=false;
     st.mode="idle";updBtns();
@@ -49,8 +50,8 @@ function updTime(){
 }
 function labelOf(item){
   if(!item)return "Lecture Vivienne";
-  if(item.type==="course")return "Cours "+(item.n<10?"0":"")+item.n;
-  return (st.all?"Tout · ":"")+(item.short||item.title||"Thème");
+  var num=item.type==="course"?("Cours "+(item.n<10?"0":"")+item.n): (item.short||item.title||"Thème");
+  return (st.all?"Tout · ":"")+num;
 }
 function sameItem(a,b){return !!(a&&b&&a.type===b.type&&a.file===b.file);}
 function highlight(item){
@@ -74,6 +75,10 @@ function highlight(item){
       var cb=art.querySelector(".fx-cplay");
       if(cb)cb.setAttribute("aria-pressed","true");
     }
+    if(item.theme){
+      var tb=$('.fx-tbtn[data-id="'+item.theme+'"]');
+      if(tb)tb.setAttribute("aria-pressed","true");
+    }
   }
 }
 function updBtns(){
@@ -93,9 +98,9 @@ function updBtns(){
   D.body.classList.toggle("fx-on",!idle);
   updTime();
 }
-function playItem(item,fromAll,resume){
+function playItem(item,resume){
   if(!item||!item.file){stop();return;}
-  st.item=item;st.all=!!fromAll;st.mode="playing";
+  st.item=item;st.mode="playing";
   if(ui.msg){ui.msg.hidden=true;ui.msg.textContent="";}
   var a=getAudio();
   if(!resume||!a.src||a.ended){a.src=srcOf(item.file);}
@@ -106,22 +111,28 @@ function playItem(item,fromAll,resume){
   if(pr&&pr.catch)pr.catch(function(err){
     if(err&&err.name==="NotAllowedError"){st.mode="paused";updBtns();}
   });
-  if(item.type==="theme"&&fromAll){
-    var i=themeIndex(item);
-    var nx=i>=0?st.themes[i+1]:null;
-    if(nx){try{fetch(srcOf(nx.file)).catch(function(){});}catch(e){}}
-  }
-}
-function themeIndex(item){
-  if(!item||item.type!=="theme")return -1;
-  for(var i=0;i<st.themes.length;i++){if(st.themes[i].id===item.id)return i;}
-  return -1;
-}
-function asTheme(t){
-  return {type:"theme",id:t.id,n:t.n,title:t.title,short:t.short,file:t.file,duration:t.duration};
+  var nx=st.queue[st.qi+1];
+  if(nx){try{fetch(srcOf(nx.file)).catch(function(){});}catch(e){}}
 }
 function asCourse(c){
   return {type:"course",id:c.id,n:c.n,title:c.title,file:c.file,duration:c.duration,theme:c.theme};
+}
+function coursesFrom(n){
+  return st.courses.filter(function(c){return c.n>=n;}).slice().sort(function(a,b){return a.n-b.n;}).map(asCourse);
+}
+function firstCourseOfTheme(tid){
+  var list=st.courses.filter(function(c){return c.theme===tid;}).slice().sort(function(a,b){return a.n-b.n;});
+  return list.length?list[0]:null;
+}
+function playQueue(queue,origin,all){
+  if(!queue||!queue.length){stop();return;}
+  st.queue=queue;st.qi=0;st.origin=origin||null;st.all=!!all;
+  playQueueAt(0,false);
+}
+function playQueueAt(i,resume){
+  if(i<0||i>=st.queue.length){stop();return;}
+  st.qi=i;
+  playItem(st.queue[i],!!resume);
 }
 function pause(){
   if(st.mode!=="playing")return;
@@ -136,46 +147,47 @@ function resume(){
     var pr=a.play();
     if(pr&&pr.catch)pr.catch(function(){st.mode="paused";});
     updBtns();
-  }else if(st.item)playItem(st.item,st.all,false);
+  }else if(st.queue.length&&st.qi>=0)playQueueAt(st.qi,false);
+  else if(st.item)playItem(st.item,false);
 }
 function toggle(){
   if(st.mode==="playing")pause();
   else if(st.mode==="paused")resume();
-  else if(st.item)playItem(st.item,st.all,false);
+  else if(st.queue.length&&st.qi>=0)playQueueAt(st.qi,false);
+  else if(st.item)playItem(st.item,false);
 }
 function stop(){
-  st.mode="idle";st.all=false;st.item=null;
+  st.mode="idle";st.all=false;st.item=null;st.queue=[];st.qi=-1;st.origin=null;
   if(audio){try{audio.pause();audio.removeAttribute("src");audio.load();}catch(e){}}
   highlight(null);updBtns();
 }
 function onEnded(){
   if(st.mode!=="playing")return;
-  if(st.all&&st.item&&st.item.type==="theme"){
-    var i=themeIndex(st.item);
-    if(i>=0&&i+1<st.themes.length){playItem(asTheme(st.themes[i+1]),true,false);return;}
-  }
+  if(st.qi+1<st.queue.length){playQueueAt(st.qi+1,false);return;}
   stop();
 }
-function playTheme(t,fromAll){
-  var item=asTheme(t);
-  if(sameItem(st.item,item)&&!fromAll){
-    if(st.mode==="playing"&&!st.all){pause();return;}
-    if(st.mode==="paused"&&!st.all){resume();return;}
-  }
-  playItem(item,!!fromAll,false);
-}
-function playCourse(c){
-  var item=asCourse(c);
-  if(sameItem(st.item,item)){
+function playTheme(t){
+  if(st.origin&&st.origin.type==="theme"&&st.origin.id===t.id&&st.mode!=="idle"){
     if(st.mode==="playing"){pause();return;}
     if(st.mode==="paused"){resume();return;}
   }
-  playItem(item,false,false);
+  var first=firstCourseOfTheme(t.id);
+  if(!first){stop();return;}
+  playQueue(coursesFrom(first.n),{type:"theme",id:t.id},false);
+}
+function playCourse(c){
+  if(st.item&&st.item.type==="course"&&st.item.n===c.n&&st.queue.length){
+    if(st.mode==="playing"){pause();return;}
+    if(st.mode==="paused"){resume();return;}
+  }
+  playQueue(coursesFrom(c.n),{type:"course",n:c.n},false);
 }
 function playAll(){
   if(st.all&&st.mode==="playing"){pause();return;}
   if(st.all&&st.mode==="paused"){resume();return;}
-  if(st.themes[0])playItem(asTheme(st.themes[0]),true,false);
+  if(!st.courses.length)return;
+  var first=st.courses.slice().sort(function(a,b){return a.n-b.n;})[0];
+  playQueue(coursesFrom(first.n),{type:"all"},true);
 }
 function addPlayBtn(host,cls,title,label,onClick,after){
   if(!host||host.querySelector("."+cls))return;
@@ -197,17 +209,17 @@ function buildThemes(){
     b.setAttribute("aria-pressed","false");
     b.setAttribute("aria-label","Lire : "+(t.short||t.title));
     b.innerHTML='<span class="fx-tn">'+(t.n||i+1)+'</span><span class="fx-tl">'+(t.short||t.title)+'</span>';
-    b.addEventListener("click",function(){playTheme(t,false);});
+    b.addEventListener("click",function(){playTheme(t);});
     ui.themes.appendChild(b);
     var sec=$("#"+t.id),h=sec&&sec.querySelector("h2");
-    addPlayBtn(h,"fx-hplay","Lire ce thème","Lire le thème : "+t.title,function(){playTheme(t,false);});
+    addPlayBtn(h,"fx-hplay","Lire ce thème et la suite","Lire le thème et la suite : "+t.title,function(){playTheme(t);});
   });
 }
 function buildCourses(){
   st.courses.forEach(function(c){
     var art=$("#"+c.id);
     var h=art&&art.querySelector("h3");
-    addPlayBtn(h,"fx-cplay","Lire cette fiche","Lire le cours "+c.n+" : "+c.title,function(){playCourse(c);},h.querySelector(".n"));
+    addPlayBtn(h,"fx-cplay","Lire cette fiche et la suite","Lire le cours "+c.n+" et la suite : "+c.title,function(){playCourse(c);},h.querySelector(".n"));
   });
 }
 function setupToc(){
@@ -273,7 +285,7 @@ function init(){
       return;
     }
     st.themes=d.themes;
-    st.courses=d.courses||[];
+    st.courses=(d.courses||[]).slice().sort(function(a,b){return a.n-b.n;});
     buildThemes();
     buildCourses();
     updBtns();
