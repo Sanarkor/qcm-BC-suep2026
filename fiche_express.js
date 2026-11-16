@@ -2,7 +2,7 @@
 (function(){
 var D=document, KEY="qcmbc:ficheExpressRate";
 var RATES=["0.75","1","1.25","1.5"];
-var MAN="lecture_audio/fiche_express/manifest.json?v=20261116b";
+var MAN="lecture_audio/fiche_express/manifest.json?v=20261116c";
 var st={themes:[],i:-1,all:false,mode:"idle",rate:"1"};
 var ui={};
 var audio=null;
@@ -90,7 +90,7 @@ function playAt(i,fromAll,resume){
   ui.msg.hidden=true;ui.msg.textContent="";
   var a=getAudio();
   if(!resume||!a.src||a.ended){
-    a.src=t.file+(t.file.indexOf("?")>=0?"":"?v=20261116b");
+    a.src=t.file+(t.file.indexOf("?")>=0?"":"?v=20261116c");
   }
   applyRate();
   highlight(i);
@@ -100,7 +100,7 @@ function playAt(i,fromAll,resume){
     if(err&&err.name==="NotAllowedError"){st.mode="paused";updBtns();}
   });
   var nx=st.themes[i+1];
-  if(nx){try{fetch(nx.file+(nx.file.indexOf("?")>=0?"":"?v=20261116b")).catch(function(){});}catch(e){}}
+  if(nx){try{fetch(nx.file+(nx.file.indexOf("?")>=0?"":"?v=20261116c")).catch(function(){});}catch(e){}}
 }
 function pause(){
   if(st.mode!=="playing")return;

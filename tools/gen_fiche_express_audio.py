@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Génère les MP3 de la fiche express (voix Vivienne, ton lent et bas).
+"""Génère les MP3 de la fiche express (voix Vivienne, ton neutre et rythme express).
 
   /workspace/ttsenv/bin/python tools/gen_fiche_express_audio.py --texts
   /workspace/ttsenv/bin/python tools/gen_fiche_express_audio.py
@@ -16,14 +16,15 @@ OUT = ROOT / "lecture_audio" / "fiche_express"
 RAW = Path("/tmp/fiche_express_raw")
 LEX = Path("/tmp/lecture_lexicon.json")
 VOICE = "fr-FR-VivienneMultilingualNeural"
-RATE = "-16%"
-PITCH = "-4Hz"
+RATE = "+18%"
+PITCH = "+0Hz"
+VOLUME = "+0%"
 BITRATE = "48k"
 AR = "24000"
 # Pauses (secondes) entre morceaux concaténés
-GAP_POINT = 0.55
-GAP_COURSE = 0.95
-GAP_THEME = 0.8
+GAP_POINT = 0.3
+GAP_COURSE = 0.5
+GAP_THEME = 0.4
 
 MONTHS = {
     1: "janvier", 2: "février", 3: "mars", 4: "avril",
@@ -431,6 +432,13 @@ def spoken(raw: str, *, is_title: bool = False) -> str:
     s = pron(speakable(expand_specials(raw, is_title=is_title)))
     # identifiants longs (NOR, etc.) : chiffres lus un à un, après unspace()
     s = re.sub(r"\b(\d{6,})\b", lambda m: " ".join(m.group(1)), s)
+    # courte pause entre le modèle et un calibre distinct : « H K G 36, 5,56 millimètres »
+    # (pas « 9 fois 19 millimètres », ni « L B D 40 millimètres », ni « calibre 5,56 »)
+    s = re.sub(
+        r"\b(G 36|Glock)\s+(\d+(?:,\d+)?\s+millimètres)\b",
+        r"\1, \2",
+        s,
+    )
     return s
 
 
@@ -536,7 +544,7 @@ def write_texts(themes):
 
 
 def clip_key(text: str) -> str:
-    return hashlib.sha1(f"{VOICE}|{RATE}|{PITCH}|{text}".encode()).hexdigest()[:16]
+    return hashlib.sha1(f"{VOICE}|{RATE}|{PITCH}|{VOLUME}|{text}".encode()).hexdigest()[:16]
 
 
 def ff(*args, check=True):
@@ -547,8 +555,6 @@ def ff(*args, check=True):
 
 
 def make_silence(seconds: float, dest: Path):
-    if dest.exists():
-        return
     ff(
         "-f", "lavfi", "-i", f"anullsrc=r={AR}:cl=mono",
         "-t", f"{seconds:.3f}",
@@ -565,7 +571,7 @@ async def tts_one(text: str, dest: Path, sem: asyncio.Semaphore, fail: list):
         tmp = dest.with_suffix(".part.mp3")
         for attempt in range(8):
             try:
-                com = edge_tts.Communicate(text, VOICE, rate=RATE, pitch=PITCH)
+                com = edge_tts.Communicate(text, VOICE, rate=RATE, pitch=PITCH, volume=VOLUME)
                 await asyncio.wait_for(com.save(str(tmp)), 90)
                 if tmp.exists() and tmp.stat().st_size > 500:
                     # normalize to constant bitrate / rate for concat
@@ -660,7 +666,8 @@ def write_manifest(info):
         "voice": VOICE,
         "rate": RATE,
         "pitch": PITCH,
-        "version": "20261116b",
+        "volume": VOLUME,
+        "version": "20261116c",
         "themes": [
             {
                 "id": t["id"],
